@@ -268,7 +268,7 @@ label.f>span{font-family:'Space Mono';font-size:10px;color:var(--mute);
 /* ================= config ================= */
 const COLLECTIONS = {
   games: {
-    label:'Games', file:'games.json', scale:10, idp:'g',
+    label:'Games', file:'games.json', scale:10, idp:'g', recentField:'yearPlayed',
     fields:[
       {k:'name',        l:'Title',        t:'text'},
       {k:'developer',   l:'Publisher / dev', t:'text'},
@@ -283,7 +283,7 @@ const COLLECTIONS = {
     pct: i => i.mainStoryPct, pctLabel:'story'
   },
   tv: {
-    label:'TV', file:'tv.json', scale:5, idp:'t',
+    label:'TV', file:'tv.json', scale:5, idp:'t', recentField:'lastSeasonYear',
     fields:[
       {k:'name',           l:'Title',    t:'text'},
       {k:'genre',          l:'Genre',    t:'text', list:true},
@@ -297,25 +297,25 @@ const COLLECTIONS = {
     pct: i => i.watchedPct, pctLabel:'watched'
   },
   films: {
-    label:'Films', file:'films.json', scale:10, idp:'f',
+    label:'Films', file:'films.json', scale:10, idp:'f', recentField:'yearWatched',
     fields:[
-      {k:'name',    l:'Title',    t:'text'},
-      {k:'director',l:'Director', t:'text', list:true},
-      {k:'year',    l:'Year',     t:'number', half:true},
-      {k:'watched', l:'Watched',  t:'text', half:true},
+      {k:'name',        l:'Title',    t:'text'},
+      {k:'director',    l:'Director', t:'text', list:true},
+      {k:'yearReleased',l:'Year',     t:'number', half:true},
+      {k:'yearWatched', l:'Watched',  t:'number', half:true},
     ],
-    sub: i => [i.director, i.year].filter(Boolean).join(' · '),
+    sub: i => [i.director, i.yearReleased].filter(Boolean).join(' · '),
     pct: () => null
   },
   books: {
-    label:'Books', file:'books.json', scale:5, idp:'b',
+    label:'Books', file:'books.json', scale:5, idp:'b', recentField:'yearRead',
     fields:[
-      {k:'name',  l:'Title',  t:'text'},
-      {k:'author',l:'Author', t:'text', list:true},
-      {k:'year',  l:'Year',   t:'number', half:true},
-      {k:'read',  l:'Read',   t:'text', half:true},
+      {k:'name',         l:'Title',  t:'text'},
+      {k:'author',       l:'Author', t:'text', list:true},
+      {k:'yearPublished',l:'Year',   t:'number', half:true},
+      {k:'yearRead',     l:'Read',   t:'number', half:true},
     ],
-    sub: i => [i.author, i.year].filter(Boolean).join(' · '),
+    sub: i => [i.author, i.yearPublished].filter(Boolean).join(' · '),
     pct: () => null
   }
 };
@@ -562,8 +562,9 @@ function filtered(){
   out.sort((a,b)=>{
     if(s.k==='name') return String(a.name||'').localeCompare(String(b.name||''))*s.d;
     if(s.k==='recent'){
-      const av=a.yearPlayed||a.lastSeasonYear||a.year||0, bv=b.yearPlayed||b.lastSeasonYear||b.year||0;
-      return (bv-av)||String(a.name).localeCompare(String(b.name));
+      const rf = c.recentField;
+      const av=(rf&&a[rf])||0, bv=(rf&&b[rf])||0;
+      return (bv-av)||String(a.name||'').localeCompare(String(b.name||''));
     }
     const rd = ((a.rating||0)-(b.rating||0))*s.d;
     return rd || String(a.name||'').localeCompare(String(b.name||''));
