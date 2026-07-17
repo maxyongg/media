@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "ratingScale": 10,
- "updatedAt": "2026-07-17T17:30:29.956Z",
+ "updatedAt": "2026-07-17T17:30:48.043Z",
  "items": [
   {
    "id": "g0001",
@@ -257,7 +257,7 @@
    "studioStatus": "Indie",
    "genre": "RPG",
    "console": "Switch",
-   "mainStoryPct": 50,
+   "mainStoryPct": "50",
    "yearReleased": 2015,
    "rating": 10,
    "datePlayed": "2025-08-15",
