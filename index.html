@@ -162,6 +162,11 @@ li.row{
   padding:7px 12px;border-radius:999px;
 }
 .stats-filter-chip .x{font-size:10px}
+.home-hero{text-align:center;padding:18px 0 4px}
+.home-hero-num{font-family:'Fraunces';font-weight:900;font-size:52px;letter-spacing:-.02em;line-height:1}
+.home-hero-label{font-family:'Space Mono';font-size:11px;color:var(--mute);text-transform:uppercase;letter-spacing:.06em;margin-top:6px}
+.home-recent-row{display:flex;align-items:center;gap:12px;padding:9px 4px;border-bottom:1px solid var(--line);cursor:pointer}
+.home-recent-row:last-child{border-bottom:none}
 
 /* ---------- fab ---------- */
 .fabs{
@@ -214,6 +219,8 @@ label.f>span{font-family:'Space Mono';font-size:10px;color:var(--mute);
 .note{font-family:'Space Mono';font-size:11px;color:var(--mute);line-height:1.6;
   border-left:2px solid var(--line);padding-left:10px;margin:0 0 14px}
 .note b{color:var(--ink)}
+.note.warn{color:var(--sig);border-color:var(--sig)}
+.note.ok{color:var(--acid);border-color:var(--acid)}
 .pushlog{font-family:'Space Mono';font-size:11px;color:var(--mute);
   background:var(--paper);border-radius:var(--r);padding:10px;margin-top:12px;
   white-space:pre-wrap;max-height:130px;overflow:auto;display:none}
@@ -291,6 +298,10 @@ label.f>span{font-family:'Space Mono';font-size:10px;color:var(--mute);
   <label class="f"><span>Branch</span><input class="in" id="branchIn" placeholder="main" autocomplete="off"></label>
   <label class="f"><span>Personal access token</span><input class="in" id="tokIn" type="password" placeholder="github_pat_…" autocomplete="off"></label>
   <label class="f"><span>Token expiry date — optional, for reminders</span><input class="in" id="expIn" type="date"></label>
+  <div class="acts" style="margin-top:2px">
+    <button class="btn ghost" id="testConnBtn">Test connection</button>
+  </div>
+  <p class="note" id="connHint" style="display:none"></p>
   <div class="acts">
     <button class="btn ghost" id="closeSet">Close</button>
     <button class="btn primary" id="saveSet">Save settings</button>
@@ -302,7 +313,7 @@ label.f>span{font-family:'Space Mono';font-size:10px;color:var(--mute);
 </div>
 
 <div class="toast" id="toast"></div>
-<div class="version">v2026.07.17</div>
+<div class="version">v2026.07.17b</div>
 
 <script>
 /* ================= config ================= */
@@ -369,7 +380,7 @@ const SORTS = [
 
 /* ================= state ================= */
 const S = {
-  tab:'games', q:'', sort:0, ratingFilter:new Set(),
+  tab:'home', q:'', sort:0, ratingFilter:new Set(),
   data:{}, shas:{}, dirty:new Set(), authError:null,
   cfg:{repo:'', branch:'main', token:'', expires:''},
   editing:null, statsCat:'overview', statsFilter:null
@@ -418,9 +429,45 @@ async function loadAll(){
   await Promise.all(Object.keys(COLLECTIONS).map(async k=>{
     if(cached && S.data[k]) return;
     try{ S.data[k] = await loadLocal(k); }
-    catch(e){ S.data[k] = {schemaVersion:1, ratingScale:COLLECTIONS[k].scale, items:[]}; }
+    catch(e){ S.data[k] = {schemaVersion:1, ratingScale:COLLECTIONS[k].scale, updatedAt:null, items:[]}; }
   }));
   render();
+  if(S.cfg.token && S.cfg.repo) await syncOnLoad();
+}
+
+/* compare local vs remote updatedAt per file; pull/push/no-op accordingly */
+async function syncOnLoad(){
+  setStatus('','syncing…');
+  let anyError = false;
+  for(const k of Object.keys(COLLECTIONS)){
+    try{
+      const g = await ghGet(COLLECTIONS[k].file);
+      if(!g){
+        // not in the repo yet — push local as the first commit
+        S.shas[k] = await ghPut(COLLECTIONS[k].file, S.data[k], null);
+        S.dirty.delete(k);
+        continue;
+      }
+      S.shas[k] = g.sha;
+      const remoteT = g.json.updatedAt ? new Date(g.json.updatedAt).getTime() : 0;
+      const localT  = S.data[k].updatedAt ? new Date(S.data[k].updatedAt).getTime() : 0;
+      if(remoteT > localT){
+        S.data[k] = g.json; S.dirty.delete(k);
+      } else if(localT > remoteT){
+        S.shas[k] = await ghPut(COLLECTIONS[k].file, S.data[k], g.sha);
+        S.dirty.delete(k);
+      }
+    }catch(e){
+      anyError = true;
+      S.authError = classifyError(e);
+    }
+  }
+  cacheData(); render(); checkToken();
+  if(anyError){
+    setStatus(S.dirty.size?'dirty':'dirty', S.authError ? 'sync error' : (S.dirty.size+' unsaved'));
+  } else {
+    setStatus(S.dirty.size?'dirty':'ok', S.dirty.size ? S.dirty.size+' unsaved' : 'synced');
+  }
 }
 
 function ghHeaders(){
@@ -566,9 +613,61 @@ function setStatus(cls,txt){
   const s=$('#status'); s.className='status '+cls; s.textContent=txt;
 }
 function markDirty(k){
+  S.data[k].updatedAt = new Date().toISOString();
   S.dirty.add(k); cacheData();
   setStatus('dirty', S.dirty.size+' unsaved');
   $('#pushBtn').style.display='flex';
+  if(S.cfg.token && S.cfg.repo) syncOne(k);
+}
+
+/* auto-push a single file right after an edit; falls back silently to the
+   dirty-flag + manual pushBtn if it fails (e.g. offline, bad token) */
+async function syncOne(k){
+  try{
+    let sha = S.shas[k];
+    if(!sha){ const g = await ghGet(COLLECTIONS[k].file); sha = g && g.sha; }
+    S.shas[k] = await ghPut(COLLECTIONS[k].file, S.data[k], sha);
+    S.dirty.delete(k);
+    cacheData(); S.authError=null;
+    setStatus(S.dirty.size?'dirty':'ok', S.dirty.size ? S.dirty.size+' unsaved' : 'saved');
+    render(); checkToken();
+  }catch(e){
+    S.authError = classifyError(e); checkToken();
+    setStatus('dirty', S.dirty.size+' unsaved');
+  }
+}
+
+/* explicit pre-save check, using the values currently typed into the settings
+   form (not yet saved) — reports success/failure inline before committing */
+async function testConnection(){
+  const repo = $('#repoIn').value.trim().replace(/^https?:\/\/github\.com\//,'').replace(/\/$/,'');
+  const branch = $('#branchIn').value.trim()||'main';
+  const token = $('#tokIn').value.trim();
+  const hint = $('#connHint');
+  hint.style.display='block'; hint.className='note'; hint.textContent='Checking…';
+  if(!repo || !token){
+    hint.className='note warn'; hint.textContent='Enter a repo and token first.';
+    return;
+  }
+  try{
+    const r = await fetch(`https://api.github.com/repos/${repo}`, {
+      headers:{'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'}
+    });
+    if(r.status===401){ hint.className='note warn'; hint.textContent='Token is invalid or expired (401).'; return; }
+    if(r.status===404){ hint.className='note warn'; hint.textContent='Repo not found, or token can\'t see it (404).'; return; }
+    if(!r.ok){ hint.className='note warn'; hint.textContent=`GitHub said ${r.status}.`; return; }
+    const j = await r.json();
+    if(j.permissions && j.permissions.push===false){
+      hint.className='note warn'; hint.textContent='Connected, but token lacks write access to this repo.'; return;
+    }
+    const b = await fetch(`https://api.github.com/repos/${repo}/branches/${encodeURIComponent(branch)}`, {
+      headers:{'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'}
+    });
+    if(!b.ok){ hint.className='note warn'; hint.textContent=`Connected with write access, but branch "${branch}" wasn't found.`; return; }
+    hint.className='note ok'; hint.textContent='✓ Connected — repo found, write access confirmed.';
+  }catch(e){
+    hint.className='note warn'; hint.textContent='Couldn\'t reach GitHub: '+e.message;
+  }
 }
 
 /* silent check: is the stored token still good? */
@@ -624,12 +723,81 @@ function filtered(){
 }
 
 function renderTabs(){
+  const homeTab = `<button class="tab" role="tab" data-k="home" aria-selected="${S.tab==='home'}">Home</button>`;
   const dataTabs = Object.entries(COLLECTIONS).map(([k,c])=>{
     const n = (S.data[k]&&S.data[k].items.length)||0;
     return `<button class="tab" role="tab" data-k="${k}" aria-selected="${k===S.tab}">${c.label}${n?' '+n:''}</button>`;
   }).join('');
   const statsTab = `<button class="tab" role="tab" data-k="stats" aria-selected="${S.tab==='stats'}">Stats</button>`;
-  $('#tabs').innerHTML = dataTabs + statsTab;
+  $('#tabs').innerHTML = homeTab + dataTabs + statsTab;
+}
+
+/* ---- home / landing ---- */
+function rateClassFor(r, sc){
+  if(!r) return 'lo';
+  if(r/sc >= 0.85) return 'hi';
+  if(r/sc >= 0.55) return 'mid';
+  return 'lo';
+}
+function computeHome(){
+  const cats = [
+    ['films','Films','Recently watched'],
+    ['games','Games','Recently played'],
+    ['tv','TV','Recently watched'],
+    ['books','Books','Recently read'],
+  ];
+  const recents = {};
+  let totalAll = 0;
+  const gc = {}, yc = {};
+  cats.forEach(([k])=>{
+    const c = COLLECTIONS[k];
+    const items = (S.data[k]&&S.data[k].items)||[];
+    totalAll += items.length;
+    const rf = (c.recentFields||[])[0];
+    const withDate = items.filter(i=>rf && i[rf]);
+    withDate.sort((a,b)=>String(b[rf]).localeCompare(String(a[rf])));
+    recents[k] = withDate.slice(0,3);
+    items.forEach(i=>{
+      genresOf(i).forEach(g=>{ gc[g]=(gc[g]||0)+1; });
+      const v = rf && i[rf];
+      const y = v && String(v).slice(0,4);
+      if(y && /^\d{4}$/.test(y)) yc[y]=(yc[y]||0)+1;
+    });
+  });
+  let topGenre=null, topN=0;
+  Object.entries(gc).forEach(([g,n])=>{ if(n>topN){topGenre=g;topN=n;} });
+  const years = Object.keys(yc).sort();
+  const latestYear = years.length ? years[years.length-1] : null;
+  const latestYearCount = latestYear ? yc[latestYear] : 0;
+  return {cats, recents, totalAll, topGenre, latestYear, latestYearCount};
+}
+function renderHomeTab(){
+  const h = computeHome();
+  const recentBlocks = h.cats.map(([k,label,verb])=>{
+    const c = COLLECTIONS[k];
+    const rows = h.recents[k].map(i=>`
+      <div class="home-recent-row" data-home-open="${k}:${i.id}">
+        <div class="rate ${rateClassFor(i.rating,c.scale)}">${i.rating??'–'}</div>
+        <div class="meta">
+          <div class="title">${esc(i.name||'Untitled')}</div>
+          <div class="sub">${esc(c.sub(i)||'')}</div>
+        </div>
+      </div>`).join('');
+    return `<div class="stats-section">
+      <div class="stats-h">${verb}</div>
+      ${rows || '<span class="stat-label">Nothing logged yet</span>'}
+    </div>`;
+  }).join('');
+  $('#list').innerHTML = `
+    <div class="home-hero">
+      <div class="home-hero-num">${h.totalAll}</div>
+      <div class="home-hero-label">films, games, shows &amp; books logged</div>
+    </div>
+    <div class="stats-chips" style="margin-top:14px">
+      ${h.latestYear?`<span class="stats-chip">${h.latestYearCount} logged in ${h.latestYear}</span>`:''}
+      ${h.topGenre?`<span class="stats-chip">${esc(h.topGenre)} is your top genre</span>`:''}
+    </div>
+    ${recentBlocks}`;
 }
 
 /* ---- stats tab: computed live from whatever's currently loaded, no separate file ---- */
@@ -847,13 +1015,13 @@ function render(){
   const controls = document.querySelector('.controls');
   const spineLabel = document.querySelector('.spinelabel');
   $('#pushBtn').style.display = S.dirty.size ? 'flex' : 'none';
-  if(S.tab==='stats'){
+  if(S.tab==='stats' || S.tab==='home'){
     $('#spine').style.display='none';
     if(spineLabel) spineLabel.style.display='none';
     if(controls) controls.style.display='none';
     $('#addBtn').style.display='none';
     $('#count').textContent='';
-    renderStatsTab();
+    if(S.tab==='stats') renderStatsTab(); else renderHomeTab();
     return;
   }
   $('#spine').style.display='';
@@ -971,6 +1139,7 @@ function openSet(){
   $('#branchIn').value = S.cfg.branch||'main';
   $('#tokIn').value = S.cfg.token||'';
   $('#expIn').value = S.cfg.expires||'';
+  $('#connHint').style.display='none';
   openSheet('#setSheet');
 }
 
@@ -989,6 +1158,14 @@ $('#spine').addEventListener('click', e=>{
 $('#q').addEventListener('input', e=>{ S.q = e.target.value; render(); });
 $('#sortbtn').addEventListener('click', ()=>{ S.sort = (S.sort+1)%SORTS.length; render(); });
 $('#list').addEventListener('click', e=>{
+  const ho = e.target.closest('[data-home-open]');
+  if(ho){
+    const [k,id] = ho.dataset.homeOpen.split(':');
+    S.tab = k; render();
+    const item = (S.data[k]&&S.data[k].items||[]).find(x=>x.id===id);
+    if(item) openEdit(item);
+    return;
+  }
   const st = e.target.closest('[data-statcat]');
   if(st){ S.statsCat = st.dataset.statcat; S.statsFilter = null; renderStatsTab(); return; }
   const clearF = e.target.closest('[data-clear-filter]');
@@ -1016,6 +1193,7 @@ $('#ratepick').addEventListener('click', e=>{
     x.setAttribute('aria-pressed', +x.dataset.r===S.editing.rating));
 });
 $('#bFix').addEventListener('click', openSet);
+$('#testConnBtn').addEventListener('click', testConnection);
 $('#saveSet').addEventListener('click', ()=>{
   S.cfg.repo = $('#repoIn').value.trim().replace(/^https?:\/\/github\.com\//,'').replace(/\/$/,'');
   S.cfg.branch = $('#branchIn').value.trim()||'main';

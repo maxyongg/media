@@ -1,6 +1,7 @@
 {
  "schemaVersion": 1,
  "ratingScale": 5,
+ "updatedAt": "2026-07-17T14:30:53Z",
  "items": [
   {
    "id": "b0001",
@@ -685,69 +686,6 @@
    "yearPublished": 1997,
    "rating": 3,
    "dateRead": null
-  },
-  {
-   "id": "b0077",
-   "name": "The Mixer: The Story of Premier League Tactics, from Route One to False Nines",
-   "author": "Michael  Cox",
-   "genre": "Unknown",
-   "yearPublished": 2017,
-   "yearRead": null,
-   "rating": 4
-  },
-  {
-   "id": "b0078",
-   "name": "Zonal Marking: The Making of Modern European Football",
-   "author": "Michael  Cox",
-   "genre": "Unknown",
-   "yearPublished": 2019,
-   "yearRead": 2019,
-   "rating": 4
-  },
-  {
-   "id": "b0079",
-   "name": "Human Acts",
-   "author": "Han Kang",
-   "genre": "Unknown",
-   "yearPublished": 2014,
-   "yearRead": 2025,
-   "rating": 2
-  },
-  {
-   "id": "b0080",
-   "name": "Shuggie Bain",
-   "author": "Douglas   Stuart",
-   "genre": "Unknown",
-   "yearPublished": 2020,
-   "yearRead": 2026,
-   "rating": 4
-  },
-  {
-   "id": "b0081",
-   "name": "Cloud Atlas",
-   "author": "David  Mitchell",
-   "genre": "Unknown",
-   "yearPublished": 2004,
-   "yearRead": null,
-   "rating": 3
-  },
-  {
-   "id": "b0082",
-   "name": "Twenty Thousand Leagues Under the Sea (Norton Critical Edition)",
-   "author": "Jules Verne",
-   "genre": "Unknown",
-   "yearPublished": 1869,
-   "yearRead": 2020,
-   "rating": 3
-  },
-  {
-   "id": "b0083",
-   "name": "Inverting the Pyramid: The History of Football Tactics",
-   "author": "Jonathan  Wilson",
-   "genre": "Unknown",
-   "yearPublished": 2008,
-   "yearRead": null,
-   "rating": 5
   }
  ]
 }
