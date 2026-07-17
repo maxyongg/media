@@ -268,7 +268,7 @@ label.f>span{font-family:'Space Mono';font-size:10px;color:var(--mute);
 /* ================= config ================= */
 const COLLECTIONS = {
   games: {
-    label:'Games', file:'games.json', scale:10, idp:'g', recentField:'datePlayed',
+    label:'Games', file:'games.json', scale:10, idp:'g', recentFields:['datePlayed'],
     fields:[
       {k:'name',        l:'Title',        t:'text'},
       {k:'developer',   l:'Publisher / dev', t:'text'},
@@ -283,7 +283,7 @@ const COLLECTIONS = {
     pct: i => i.mainStoryPct, pctLabel:'story'
   },
   tv: {
-    label:'TV', file:'tv.json', scale:5, idp:'t', recentField:'lastSeasonYear',
+    label:'TV', file:'tv.json', scale:5, idp:'t', recentFields:['lastSeasonYear','firstSeasonYear'],
     fields:[
       {k:'name',           l:'Title',    t:'text'},
       {k:'genre',          l:'Genre',    t:'text', list:true},
@@ -297,7 +297,7 @@ const COLLECTIONS = {
     pct: i => i.watchedPct, pctLabel:'watched'
   },
   films: {
-    label:'Films', file:'films.json', scale:10, idp:'f', recentField:'dateWatched',
+    label:'Films', file:'films.json', scale:10, idp:'f', recentFields:['dateWatched'],
     fields:[
       {k:'name',        l:'Title',    t:'text'},
       {k:'director',    l:'Director', t:'text', list:true},
@@ -308,7 +308,7 @@ const COLLECTIONS = {
     pct: () => null
   },
   books: {
-    label:'Books', file:'books.json', scale:5, idp:'b', recentField:'dateRead',
+    label:'Books', file:'books.json', scale:5, idp:'b', recentFields:['dateRead'],
     fields:[
       {k:'name',         l:'Title',  t:'text'},
       {k:'author',       l:'Author', t:'text', list:true},
@@ -316,6 +316,17 @@ const COLLECTIONS = {
       {k:'dateRead',     l:'Read',   t:'date',   half:true},
     ],
     sub: i => [i.author, i.yearPublished].filter(Boolean).join(' · '),
+    pct: () => null
+  },
+  albums: {
+    label:'Albums', file:'albums.json', scale:5, idp:'a', recentFields:['year'],
+    fields:[
+      {k:'name',  l:'Title',  t:'text'},
+      {k:'artist',l:'Artist', t:'text', list:true},
+      {k:'year',  l:'Year',   t:'number', half:true},
+      {k:'label', l:'Label',  t:'text', half:true, list:true},
+    ],
+    sub: i => [i.artist, i.year].filter(Boolean).join(' · '),
     pct: () => null
   }
 };
@@ -562,10 +573,18 @@ function filtered(){
   out.sort((a,b)=>{
     if(s.k==='name') return String(a.name||'').localeCompare(String(b.name||''))*s.d;
     if(s.k==='recent'){
-      const rf = c.recentField;
+      // recentFields is an ordered list of candidate fields; the first
+      // non-empty one wins (e.g. TV falls back to firstSeasonYear when a
+      // show is still airing and has no lastSeasonYear yet).
+      const pick = item => {
+        for(const f of (c.recentFields||[])){
+          if(item[f]!=null && item[f]!=='') return item[f];
+        }
+        return '';
+      };
       // string comparison works for both ISO dates ("2026-02-21") and
       // plain years ("2026") since both are left-padded/fixed-width
-      const av=String((rf&&a[rf])||''), bv=String((rf&&b[rf])||'');
+      const av=String(pick(a)), bv=String(pick(b));
       return bv.localeCompare(av) || String(a.name||'').localeCompare(String(b.name||''));
     }
     const rd = ((a.rating||0)-(b.rating||0))*s.d;
