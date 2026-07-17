@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "ratingScale": 10,
- "updatedAt": "2026-07-17T14:30:53Z",
+ "updatedAt": "2026-07-17T15:40:31.348Z",
  "items": [
   {
    "id": "g0001",
@@ -13,7 +13,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2026,
    "rating": 10,
-   "datePlayed": "2026-06-04"
+   "datePlayed": "2026-06-04",
+   "coverUrl": "https://media.rawg.io/media/games/9e5/9e5914a9b6537391752af07412cd8ce3.jpg"
   },
   {
    "id": "g0002",
@@ -25,7 +26,8 @@
    "mainStoryPct": "100",
    "yearReleased": 2005,
    "rating": 10,
-   "datePlayed": "2006-01-01"
+   "datePlayed": "2006-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/27e/27ece7c2f83920f0623a33f58775b98d.jpg"
   },
   {
    "id": "g0003",
@@ -37,7 +39,8 @@
    "mainStoryPct": "100",
    "yearReleased": 2017,
    "rating": 10,
-   "datePlayed": "2026-05-27"
+   "datePlayed": "2026-05-27",
+   "coverUrl": "https://media.rawg.io/media/games/9f4/9f418898f5415668ca47b5f4ab1ecfeb.jpg"
   },
   {
    "id": "g0004",
@@ -49,7 +52,8 @@
    "mainStoryPct": null,
    "yearReleased": null,
    "rating": 10,
-   "datePlayed": null
+   "datePlayed": null,
+   "coverUrl": "https://media.rawg.io/media/games/f87/f87de0e93f02007fd044e4bf04d453d8.jpg"
   },
   {
    "id": "g0005",
@@ -61,7 +65,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2025,
    "rating": 10,
-   "datePlayed": "2025-10-01"
+   "datePlayed": "2025-10-01",
+   "coverUrl": "https://media.rawg.io/media/screenshots/6d6/6d61e8ef67c0f27b29b4f16266dbd9bd.jpg"
   },
   {
    "id": "g0006",
@@ -73,7 +78,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2025,
    "rating": 10,
-   "datePlayed": "2025-09-11"
+   "datePlayed": "2025-09-11",
+   "coverUrl": "https://media.rawg.io/media/games/4cf/4cfc6b7f1850590a4634b08bfab308ab.jpg"
   },
   {
    "id": "g0007",
@@ -85,7 +91,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2025,
    "rating": 10,
-   "datePlayed": "2025-05-05"
+   "datePlayed": "2025-05-05",
+   "coverUrl": "https://media.rawg.io/media/games/466/4667f17fdee9ebbcea2049e54f8e2b96.jpg"
   },
   {
    "id": "g0008",
@@ -97,7 +104,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2025,
    "rating": 10,
-   "datePlayed": "2025-03-28"
+   "datePlayed": "2025-03-28",
+   "coverUrl": "https://media.rawg.io/media/screenshots/9ee/9ee6f8e95e3831fad1dbf83f165a64be.jpg"
   },
   {
    "id": "g0009",
@@ -109,7 +117,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2024,
    "rating": 10,
-   "datePlayed": "2024-11-01"
+   "datePlayed": "2024-11-01",
+   "coverUrl": "https://media.rawg.io/media/screenshots/b8f/b8f06d47c58c0bff52387cb048eda5a4.jpg"
   },
   {
    "id": "g0010",
@@ -121,7 +130,8 @@
    "mainStoryPct": "100",
    "yearReleased": 2024,
    "rating": 10,
-   "datePlayed": "2024-09-09"
+   "datePlayed": "2024-09-09",
+   "coverUrl": "https://media.rawg.io/media/games/b19/b19cdd6be95ffffd63fdd2d1fbac057a.jpg"
   },
   {
    "id": "g0011",
@@ -133,7 +143,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2024,
    "rating": 10,
-   "datePlayed": "2024-07-10"
+   "datePlayed": "2024-07-10",
+   "coverUrl": "https://media.rawg.io/media/games/b29/b294fdd866dcdb643e7bab370a552855.jpg"
   },
   {
    "id": "g0012",
@@ -145,7 +156,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2024,
    "rating": 10,
-   "datePlayed": "2024-04-21"
+   "datePlayed": "2024-04-21",
+   "coverUrl": "https://media.rawg.io/media/screenshots/e4d/e4d2d9720f0962ca4f6a6dd02cef331e.jpeg"
   },
   {
    "id": "g0013",
@@ -157,7 +169,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2012,
    "rating": 10,
-   "datePlayed": "2023-03-13"
+   "datePlayed": "2023-03-13",
+   "coverUrl": "https://media.rawg.io/media/games/b2c/b2c9c6115114c8f7d461b5430e8a7d4a.jpg"
   },
   {
    "id": "g0014",
@@ -169,7 +182,8 @@
    "mainStoryPct": "100",
    "yearReleased": 2023,
    "rating": 10,
-   "datePlayed": "2023-01-01"
+   "datePlayed": "2023-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/699/69907ecf13f172e9e144069769c3be73.jpg"
   },
   {
    "id": "g0015",
@@ -181,7 +195,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2023,
    "rating": 10,
-   "datePlayed": "2023-05-20"
+   "datePlayed": "2023-05-20",
+   "coverUrl": "https://media.rawg.io/media/games/f87/f87de0e93f02007fd044e4bf04d453d8.jpg"
   },
   {
    "id": "g0016",
@@ -193,7 +208,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2022,
    "rating": 10,
-   "datePlayed": "2022-01-01"
+   "datePlayed": "2022-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/b29/b294fdd866dcdb643e7bab370a552855.jpg"
   },
   {
    "id": "g0017",
@@ -205,7 +221,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2022,
    "rating": 10,
-   "datePlayed": "2022-01-01"
+   "datePlayed": "2022-01-01",
+   "coverUrl": "https://media.rawg.io/media/screenshots/3c4/3c4c51b66741363d83b56ce66b1240ec.jpg"
   },
   {
    "id": "g0018",
@@ -217,7 +234,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2016,
    "rating": 10,
-   "datePlayed": "2021-01-01"
+   "datePlayed": "2021-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/a9c/a9c789951de65da545d51f664b4f2ce0.jpg"
   },
   {
    "id": "g0019",
@@ -229,7 +247,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2020,
    "rating": 10,
-   "datePlayed": "2020-01-01"
+   "datePlayed": "2020-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/1f4/1f47a270b8f241e4676b14d39ec620f7.jpg"
   },
   {
    "id": "g0020",
@@ -241,7 +260,8 @@
    "mainStoryPct": 50,
    "yearReleased": 2015,
    "rating": 10,
-   "datePlayed": "2025-08-15"
+   "datePlayed": "2025-08-15",
+   "coverUrl": "https://media.rawg.io/media/games/ffe/ffed87105b14f5beff72ff44a7793fd5.jpg"
   },
   {
    "id": "g0021",
@@ -253,7 +273,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2014,
    "rating": 10,
-   "datePlayed": "2018-01-01"
+   "datePlayed": "2018-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/0a5/0a5085a3fbe26be9cf9f96ff8c12746d.jpg"
   },
   {
    "id": "g0022",
@@ -265,7 +286,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2016,
    "rating": 10,
-   "datePlayed": "2018-01-01"
+   "datePlayed": "2018-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/713/713269608dc8f2f40f5a670a14b2de94.jpg"
   },
   {
    "id": "g0023",
@@ -277,7 +299,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2016,
    "rating": 10,
-   "datePlayed": "2018-01-01"
+   "datePlayed": "2018-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/4cf/4cfc6b7f1850590a4634b08bfab308ab.jpg"
   },
   {
    "id": "g0024",
@@ -289,7 +312,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2017,
    "rating": 10,
-   "datePlayed": "2018-01-01"
+   "datePlayed": "2018-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/f87/f87de0e93f02007fd044e4bf04d453d8.jpg"
   },
   {
    "id": "g0025",
@@ -301,7 +325,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2018,
    "rating": 10,
-   "datePlayed": "2018-01-01"
+   "datePlayed": "2018-01-01",
+   "coverUrl": "https://media.rawg.io/media/screenshots/cd6/cd6825467cb0f6a478a016b242d5d247.jpg"
   },
   {
    "id": "g0026",
@@ -313,7 +338,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2011,
    "rating": 10,
-   "datePlayed": "2012-01-01"
+   "datePlayed": "2012-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/2ba/2bac0e87cf45e5b508f227d281c9252a.jpg"
   },
   {
    "id": "g0027",
@@ -325,7 +351,8 @@
    "mainStoryPct": "100",
    "yearReleased": 2005,
    "rating": 10,
-   "datePlayed": "2006-01-01"
+   "datePlayed": "2006-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/f87/f87de0e93f02007fd044e4bf04d453d8.jpg"
   },
   {
    "id": "g0028",
@@ -337,7 +364,8 @@
    "mainStoryPct": null,
    "yearReleased": null,
    "rating": 9,
-   "datePlayed": null
+   "datePlayed": null,
+   "coverUrl": "https://media.rawg.io/media/games/a9b/a9b87910722fd2ce7d14d8f9a7fa4d5a.jpg"
   },
   {
    "id": "g0029",
@@ -349,7 +377,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2024,
    "rating": 9,
-   "datePlayed": "2024-02-29"
+   "datePlayed": "2024-02-29",
+   "coverUrl": "https://media.rawg.io/media/games/29a/29a78d7b6be61673c910d588bf188e2c.jpg"
   },
   {
    "id": "g0030",
@@ -361,7 +390,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2024,
    "rating": 9,
-   "datePlayed": "2026-05-22"
+   "datePlayed": "2026-05-22",
+   "coverUrl": "https://media.rawg.io/media/games/472/4722e05c50b9ffe9b984dce11fce82c7.jpg"
   },
   {
    "id": "g0031",
@@ -373,7 +403,8 @@
    "mainStoryPct": null,
    "yearReleased": null,
    "rating": 9,
-   "datePlayed": null
+   "datePlayed": null,
+   "coverUrl": "https://media.rawg.io/media/games/b4e/b4e4c73d5aa4ec66bbf75375c4847a2b.jpg"
   },
   {
    "id": "g0032",
@@ -385,7 +416,8 @@
    "mainStoryPct": "100",
    "yearReleased": 2020,
    "rating": 9,
-   "datePlayed": "2025-07-18"
+   "datePlayed": "2025-07-18",
+   "coverUrl": "https://media.rawg.io/media/games/2ad/2ad87a4a69b1104f02435c14c5196095.jpg"
   },
   {
    "id": "g0033",
@@ -397,7 +429,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2025,
    "rating": 9,
-   "datePlayed": "2025-06-26"
+   "datePlayed": "2025-06-26",
+   "coverUrl": "https://media.rawg.io/media/games/17a/17ae991fdf4afd2b4167daa4083b018f.jpg"
   },
   {
    "id": "g0034",
@@ -409,7 +442,8 @@
    "mainStoryPct": 50,
    "yearReleased": 2025,
    "rating": 9,
-   "datePlayed": "2025-06-24"
+   "datePlayed": "2025-06-24",
+   "coverUrl": "https://media.rawg.io/media/games/18f/18fba094d4ba0dda019131ea9b585446.jpg"
   },
   {
    "id": "g0035",
@@ -421,7 +455,8 @@
    "mainStoryPct": "???",
    "yearReleased": 2025,
    "rating": 9,
-   "datePlayed": "2025-04-20"
+   "datePlayed": "2025-04-20",
+   "coverUrl": "https://media.rawg.io/media/games/258/258f88a911a4233d4f21c2f91dceb892.jpg"
   },
   {
    "id": "g0036",
@@ -433,7 +468,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2025,
    "rating": 9,
-   "datePlayed": "2025-10-15"
+   "datePlayed": "2025-10-15",
+   "coverUrl": "https://media.rawg.io/media/games/30b/30b195c2321d763f807366967ffad793.jpg"
   },
   {
    "id": "g0037",
@@ -445,7 +481,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2019,
    "rating": 9,
-   "datePlayed": "2024-09-04"
+   "datePlayed": "2024-09-04",
+   "coverUrl": "https://media.rawg.io/media/games/be8/be8896348e804287dfd44323bac7380e.jpg"
   },
   {
    "id": "g0038",
@@ -457,7 +494,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2022,
    "rating": 9,
-   "datePlayed": "2023-12-08"
+   "datePlayed": "2023-12-08",
+   "coverUrl": "https://media.rawg.io/media/games/1ee/1eec43616e3ff00a674124d746926b23.jpg"
   },
   {
    "id": "g0039",
@@ -469,7 +507,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2022,
    "rating": 9,
-   "datePlayed": "2023-01-01"
+   "datePlayed": "2023-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/54a/54a8908159b95eda884e91463529192b.jpg"
   },
   {
    "id": "g0040",
@@ -481,7 +520,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2019,
    "rating": 9,
-   "datePlayed": "2022-01-01"
+   "datePlayed": "2022-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/0af/0afe9e8ace196123d8c7cf22172cec63.jpg"
   },
   {
    "id": "g0041",
@@ -493,7 +533,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2020,
    "rating": 9,
-   "datePlayed": "2022-01-01"
+   "datePlayed": "2022-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/909/909974d1c7863c2027241e265fe7011f.jpg"
   },
   {
    "id": "g0042",
@@ -505,7 +546,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2022,
    "rating": 9,
-   "datePlayed": "2022-01-01"
+   "datePlayed": "2022-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/80a/80a3e1060b49c02f901e781b263cd881.jpg"
   },
   {
    "id": "g0043",
@@ -517,7 +559,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2022,
    "rating": 9,
-   "datePlayed": "2022-01-01"
+   "datePlayed": "2022-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/73e/73efc5c0ac6f354271dae610276f617c.jpg"
   },
   {
    "id": "g0044",
@@ -529,7 +572,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2022,
    "rating": 9,
-   "datePlayed": "2022-01-01"
+   "datePlayed": "2022-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/2c1/2c1984e128ac48b89953ed4de4904a3b.jpg"
   },
   {
    "id": "g0045",
@@ -541,7 +585,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2022,
    "rating": 9,
-   "datePlayed": "2022-01-01"
+   "datePlayed": "2022-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/bf7/bf73b105ccbba42107986bbcd96fcada.jpg"
   },
   {
    "id": "g0046",
@@ -553,7 +598,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2017,
    "rating": 9,
-   "datePlayed": "2021-01-01"
+   "datePlayed": "2021-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/b7d/b7d3f1715fa8381a4e780173a197a615.jpg"
   },
   {
    "id": "g0047",
@@ -565,7 +611,8 @@
    "mainStoryPct": "100",
    "yearReleased": 2017,
    "rating": 9,
-   "datePlayed": "2021-01-01"
+   "datePlayed": "2021-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/1aa/1aa4ca34a8a6bb57a2e065c8332dc230.jpg"
   },
   {
    "id": "g0048",
@@ -577,7 +624,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2020,
    "rating": 9,
-   "datePlayed": "2021-01-01"
+   "datePlayed": "2021-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/f24/f2493ea338fe7bd3c7d73750a85a0959.jpeg"
   },
   {
    "id": "g0049",
@@ -589,7 +637,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2016,
    "rating": 9,
-   "datePlayed": "2020-01-01"
+   "datePlayed": "2020-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/578/57885b9590c9a9f80ceea34d147a34c4.jpg"
   },
   {
    "id": "g0050",
@@ -601,7 +650,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2020,
    "rating": 9,
-   "datePlayed": "2020-01-01"
+   "datePlayed": "2020-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/718/71891d2484a592d871e91dc826707e1c.jpg"
   },
   {
    "id": "g0051",
@@ -613,7 +663,8 @@
    "mainStoryPct": "100",
    "yearReleased": 2017,
    "rating": 9,
-   "datePlayed": "2019-01-01"
+   "datePlayed": "2019-01-01",
+   "coverUrl": "https://media.rawg.io/media/screenshots/982/982962e3dc8e093bc51c1b1b55e992bc.jpg"
   },
   {
    "id": "g0052",
@@ -625,7 +676,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2019,
    "rating": 9,
-   "datePlayed": "2019-01-01"
+   "datePlayed": "2019-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/c38/c38deeb8f331a78c89e64ad71a1db361.jpg"
   },
   {
    "id": "g0053",
@@ -637,7 +689,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2019,
    "rating": 9,
-   "datePlayed": "2019-01-01"
+   "datePlayed": "2019-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/049/049346481c0f988bc2946f857e111834.jpg"
   },
   {
    "id": "g0054",
@@ -649,7 +702,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2018,
    "rating": 9,
-   "datePlayed": "2018-01-01"
+   "datePlayed": "2018-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/800/800d07ca648a9778a8230f40088e0866.jpg"
   },
   {
    "id": "g0055",
@@ -661,7 +715,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2017,
    "rating": 9,
-   "datePlayed": "2018-01-01"
+   "datePlayed": "2018-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/267/267bd0dbc496f52692487d07d014c061.jpg"
   },
   {
    "id": "g0056",
@@ -673,7 +728,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2017,
    "rating": 9,
-   "datePlayed": "2018-01-01"
+   "datePlayed": "2018-01-01",
+   "coverUrl": "https://media.rawg.io/media/screenshots/ff1/ff118744367a9e786b7ff8692efe7d61.jpg"
   },
   {
    "id": "g0057",
@@ -685,7 +741,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2018,
    "rating": 9,
-   "datePlayed": "2018-01-01"
+   "datePlayed": "2018-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/9aa/9aa42d16d425fa6f179fc9dc2f763647.jpg"
   },
   {
    "id": "g0058",
@@ -697,7 +754,8 @@
    "mainStoryPct": null,
    "yearReleased": null,
    "rating": 9,
-   "datePlayed": null
+   "datePlayed": null,
+   "coverUrl": "https://media.rawg.io/media/games/cef/cefedf18016cbab466861eb698daf988.jpg"
   },
   {
    "id": "g0059",
@@ -709,7 +767,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2007,
    "rating": 9,
-   "datePlayed": "2012-01-01"
+   "datePlayed": "2012-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/7fa/7fa0b586293c5861ee32490e953a4996.jpg"
   },
   {
    "id": "g0060",
@@ -721,7 +780,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2012,
    "rating": 9,
-   "datePlayed": "2012-01-01"
+   "datePlayed": "2012-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/4e6/4e6e8e7f50c237d76f38f3c885dae3d2.jpg"
   },
   {
    "id": "g0061",
@@ -733,7 +793,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2008,
    "rating": 9,
-   "datePlayed": "2010-01-01"
+   "datePlayed": "2010-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/5a4/5a4e70bb8a862829dbaa398aa5f66afc.jpg"
   },
   {
    "id": "g0062",
@@ -745,7 +806,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2009,
    "rating": 9,
-   "datePlayed": "2010-01-01"
+   "datePlayed": "2010-01-01",
+   "coverUrl": "https://media.rawg.io/media/screenshots/590/590aa45fbab8d43b57f93dd60027af7f.jpg"
   },
   {
    "id": "g0063",
@@ -757,7 +819,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2005,
    "rating": 9,
-   "datePlayed": "2006-01-01"
+   "datePlayed": "2006-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/92b/92b781d88f6d047b1c61b6e0d157343b.jpg"
   },
   {
    "id": "g0064",
@@ -769,7 +832,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2002,
    "rating": 9,
-   "datePlayed": "2004-01-01"
+   "datePlayed": "2004-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/0b7/0b746092287560e4ff5a6ceb5faaed8e.jpg"
   },
   {
    "id": "g0065",
@@ -781,7 +845,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2024,
    "rating": 8,
-   "datePlayed": "2024-05-15"
+   "datePlayed": "2024-05-15",
+   "coverUrl": "https://media.rawg.io/media/games/f0a/f0ae5322f985cda91e871adcfcb91f6f.jpg"
   },
   {
    "id": "g0066",
@@ -793,7 +858,8 @@
    "mainStoryPct": null,
    "yearReleased": null,
    "rating": 8,
-   "datePlayed": "2024-06-09"
+   "datePlayed": "2024-06-09",
+   "coverUrl": "https://media.rawg.io/media/screenshots/062/0622bec29ae3ef0e8762a9c9f3e7b0f4.jpg"
   },
   {
    "id": "g0067",
@@ -805,7 +871,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2023,
    "rating": 8,
-   "datePlayed": "2023-01-01"
+   "datePlayed": "2023-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/1de/1de8ff69ed31d7a47d4f7770f23f20b8.jpg"
   },
   {
    "id": "g0068",
@@ -817,7 +884,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2021,
    "rating": 8,
-   "datePlayed": "2023-07-12"
+   "datePlayed": "2023-07-12",
+   "coverUrl": "https://media.rawg.io/media/games/c26/c262f8b54b46edc72594c4a9bb8ee13e.jpg"
   },
   {
    "id": "g0069",
@@ -829,7 +897,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2025,
    "rating": 8,
-   "datePlayed": "2025-07-26"
+   "datePlayed": "2025-07-26",
+   "coverUrl": "https://media.rawg.io/media/games/db4/db4348b029d2cdaf826d7536bd75b71c.jpg"
   },
   {
    "id": "g0070",
@@ -853,7 +922,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2023,
    "rating": 8,
-   "datePlayed": "2023-02-23"
+   "datePlayed": "2023-02-23",
+   "coverUrl": "https://media.rawg.io/media/games/f2f/f2f9f11997ee841550ba2b8ccf3c51e9.jpg"
   },
   {
    "id": "g0072",
@@ -865,7 +935,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2026,
    "rating": 8,
-   "datePlayed": "2026-03-15"
+   "datePlayed": "2026-03-15",
+   "coverUrl": "https://media.rawg.io/media/games/43a/43a9694f5ffe22302bbf1cc93bca4ea1.jpg"
   },
   {
    "id": "g0073",
@@ -877,7 +948,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2026,
    "rating": 8,
-   "datePlayed": "2026-02-28"
+   "datePlayed": "2026-02-28",
+   "coverUrl": "https://media.rawg.io/media/games/18f/18f1e09f98c9a0e822b616d68d73c956.jpg"
   },
   {
    "id": "g0074",
@@ -889,7 +961,8 @@
    "mainStoryPct": null,
    "yearReleased": null,
    "rating": 8,
-   "datePlayed": null
+   "datePlayed": null,
+   "coverUrl": "https://media.rawg.io/media/games/173/1739bdc5c33e85a0fa54b499a173690b.jpg"
   },
   {
    "id": "g0075",
@@ -901,7 +974,8 @@
    "mainStoryPct": null,
    "yearReleased": null,
    "rating": 8,
-   "datePlayed": null
+   "datePlayed": null,
+   "coverUrl": "https://media.rawg.io/media/screenshots/68a/68a5dfb584c006bb3064b83881669aaf.jpg"
   },
   {
    "id": "g0076",
@@ -913,7 +987,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2015,
    "rating": 8,
-   "datePlayed": "2016-01-01"
+   "datePlayed": "2016-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/618/618c2031a07bbff6b4f611f10b6bcdbc.jpg"
   },
   {
    "id": "g0077",
@@ -925,7 +1000,8 @@
    "mainStoryPct": null,
    "yearReleased": null,
    "rating": 8,
-   "datePlayed": null
+   "datePlayed": null,
+   "coverUrl": "https://media.rawg.io/media/games/20a/20aa03a10cda45239fe22d035c0ebe64.jpg"
   },
   {
    "id": "g0078",
@@ -937,7 +1013,8 @@
    "mainStoryPct": null,
    "yearReleased": null,
    "rating": 8,
-   "datePlayed": null
+   "datePlayed": null,
+   "coverUrl": "https://media.rawg.io/media/games/b4e/b4e4c73d5aa4ec66bbf75375c4847a2b.jpg"
   },
   {
    "id": "g0079",
@@ -949,7 +1026,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2025,
    "rating": 8,
-   "datePlayed": "2025-11-24"
+   "datePlayed": "2025-11-24",
+   "coverUrl": "https://media.rawg.io/media/games/adb/adbb4ab0ecc7fc37e8dec23ec5db7154.jpg"
   },
   {
    "id": "g0080",
@@ -961,7 +1039,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2025,
    "rating": 8,
-   "datePlayed": "2025-08-07"
+   "datePlayed": "2025-08-07",
+   "coverUrl": "https://media.rawg.io/media/games/b85/b85bc300d42588af66fb516b7563f74f.jpg"
   },
   {
    "id": "g0081",
@@ -973,7 +1052,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2024,
    "rating": 8,
-   "datePlayed": "2024-01-01"
+   "datePlayed": "2024-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/821/821a40bd0cc0ac7dfb3fe97a7878dc1f.jpg"
   },
   {
    "id": "g0082",
@@ -985,7 +1065,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2023,
    "rating": 8,
-   "datePlayed": "2023-08-09"
+   "datePlayed": "2023-08-09",
+   "coverUrl": "https://media.rawg.io/media/games/776/776ebcf6f05c98eab89af736e6f38283.jpg"
   },
   {
    "id": "g0083",
@@ -997,7 +1078,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2023,
    "rating": 8,
-   "datePlayed": "2023-02-14"
+   "datePlayed": "2023-02-14",
+   "coverUrl": "https://media.rawg.io/media/games/044/044b2ee023930ca138deda151f40c18c.jpg"
   },
   {
    "id": "g0084",
@@ -1009,7 +1091,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2021,
    "rating": 8,
-   "datePlayed": "2022-01-01"
+   "datePlayed": "2022-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/018/01857c5ff9579c48fa8bd76b4d83a946.jpg"
   },
   {
    "id": "g0085",
@@ -1021,7 +1104,8 @@
    "mainStoryPct": 50,
    "yearReleased": 2021,
    "rating": 8,
-   "datePlayed": "2022-01-01"
+   "datePlayed": "2022-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/673/673f27be4c5dbf37ce3ed0ed5ddf9d8d.jpg"
   },
   {
    "id": "g0086",
@@ -1033,7 +1117,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2021,
    "rating": 8,
-   "datePlayed": "2022-01-01"
+   "datePlayed": "2022-01-01",
+   "coverUrl": "https://media.rawg.io/media/screenshots/294/294f3bd5a2aa79df10e10d6f3c6ed4a7.jpg"
   },
   {
    "id": "g0087",
@@ -1045,7 +1130,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2022,
    "rating": 8,
-   "datePlayed": "2022-01-01"
+   "datePlayed": "2022-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/ab8/ab8217a1fe2ced388a388722734e6d16.jpg"
   },
   {
    "id": "g0088",
@@ -1057,7 +1143,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2013,
    "rating": 8,
-   "datePlayed": "2022-01-01"
+   "datePlayed": "2022-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/a5a/a5a7fb8d9cb8063a8b42ee002b410db6.jpg"
   },
   {
    "id": "g0089",
@@ -1069,7 +1156,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2021,
    "rating": 8,
-   "datePlayed": "2021-01-01"
+   "datePlayed": "2021-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/cd2/cd22f0dcf8f080086c60f77eed7a8a93.jpg"
   },
   {
    "id": "g0090",
@@ -1081,7 +1169,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2021,
    "rating": 8,
-   "datePlayed": "2021-01-01"
+   "datePlayed": "2021-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/25d/25d487c4f86a18b1bfca322148957634.jpg"
   },
   {
    "id": "g0091",
@@ -1093,7 +1182,8 @@
    "mainStoryPct": null,
    "yearReleased": null,
    "rating": 8,
-   "datePlayed": "2023-04-07"
+   "datePlayed": "2023-04-07",
+   "coverUrl": "https://media.rawg.io/media/games/161/16107bc17254244531927450ad9716a7.jpg"
   },
   {
    "id": "g0092",
@@ -1105,7 +1195,8 @@
    "mainStoryPct": null,
    "yearReleased": null,
    "rating": 8,
-   "datePlayed": null
+   "datePlayed": null,
+   "coverUrl": "https://media.rawg.io/media/games/843/843499f98a871098e3e365a80b5c8768.jpg"
   },
   {
    "id": "g0093",
@@ -1117,7 +1208,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2019,
    "rating": 8,
-   "datePlayed": "2020-01-01"
+   "datePlayed": "2020-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/d37/d37e110ddcc0bd52d99f0f647b737a0a.jpg"
   },
   {
    "id": "g0094",
@@ -1129,7 +1221,8 @@
    "mainStoryPct": null,
    "yearReleased": null,
    "rating": 8,
-   "datePlayed": null
+   "datePlayed": null,
+   "coverUrl": "https://media.rawg.io/media/games/f8c/f8c6a262ead4c16b47e1219310210eb3.jpg"
   },
   {
    "id": "g0095",
@@ -1141,7 +1234,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2019,
    "rating": 8,
-   "datePlayed": "2019-01-01"
+   "datePlayed": "2019-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/199/1996ab6448cadb2ce4bea31536466333.jpg"
   },
   {
    "id": "g0096",
@@ -1153,7 +1247,8 @@
    "mainStoryPct": null,
    "yearReleased": null,
    "rating": 8,
-   "datePlayed": null
+   "datePlayed": null,
+   "coverUrl": "https://media.rawg.io/media/screenshots/82f/82f152cf71e5055a4119363998efd13c.jpg"
   },
   {
    "id": "g0097",
@@ -1165,7 +1260,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2019,
    "rating": 8,
-   "datePlayed": "2019-01-01"
+   "datePlayed": "2019-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/f52/f5206d55f918edf8ee07803101106fa6.jpg"
   },
   {
    "id": "g0098",
@@ -1177,7 +1273,8 @@
    "mainStoryPct": null,
    "yearReleased": 2015,
    "rating": 8,
-   "datePlayed": "2018-01-01"
+   "datePlayed": "2018-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/e88/e88ccd83bb2d69ad04d18b06c5e0df3d.jpg"
   },
   {
    "id": "g0099",
@@ -1189,7 +1286,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2017,
    "rating": 8,
-   "datePlayed": "2018-01-01"
+   "datePlayed": "2018-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/95a/95adc7a2135783dfd2204f694200c836.jpg"
   },
   {
    "id": "g0100",
@@ -1201,7 +1299,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2017,
    "rating": 8,
-   "datePlayed": "2018-01-01"
+   "datePlayed": "2018-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/226/2262cea0b385db6cf399f4be831603b0.jpg"
   },
   {
    "id": "g0101",
@@ -1213,7 +1312,8 @@
    "mainStoryPct": null,
    "yearReleased": 2017,
    "rating": 8,
-   "datePlayed": "2018-01-01"
+   "datePlayed": "2018-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/6f8/6f846e941c78cfbabe53cd67e55ced83.jpg"
   },
   {
    "id": "g0102",
@@ -1225,7 +1325,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2018,
    "rating": 8,
-   "datePlayed": "2018-01-01"
+   "datePlayed": "2018-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/594/59487800889ebac294c7c2c070d02356.jpg"
   },
   {
    "id": "g0103",
@@ -1237,7 +1338,8 @@
    "mainStoryPct": null,
    "yearReleased": 2018,
    "rating": 8,
-   "datePlayed": "2018-01-01"
+   "datePlayed": "2018-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/9f3/9f3c513b301d8d7250a64dd7e73c62df.jpg"
   },
   {
    "id": "g0104",
@@ -1249,7 +1351,8 @@
    "mainStoryPct": null,
    "yearReleased": 2017,
    "rating": 8,
-   "datePlayed": "2018-01-01"
+   "datePlayed": "2018-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/24b/24b68f500fd138c3146d8856f0dd55b4.jpg"
   },
   {
    "id": "g0105",
@@ -1261,7 +1364,8 @@
    "mainStoryPct": null,
    "yearReleased": null,
    "rating": 8,
-   "datePlayed": null
+   "datePlayed": null,
+   "coverUrl": "https://media.rawg.io/media/games/618/618c2031a07bbff6b4f611f10b6bcdbc.jpg"
   },
   {
    "id": "g0106",
@@ -1273,7 +1377,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2016,
    "rating": 8,
-   "datePlayed": "2016-01-01"
+   "datePlayed": "2016-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/270/270b412b66688081497b3d70c100b208.jpg"
   },
   {
    "id": "g0107",
@@ -1285,7 +1390,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2013,
    "rating": 8,
-   "datePlayed": "2014-01-01"
+   "datePlayed": "2014-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/b61/b6193c5c1f917f38dce568f335f80c16.jpg"
   },
   {
    "id": "g0108",
@@ -1297,7 +1403,8 @@
    "mainStoryPct": null,
    "yearReleased": null,
    "rating": 8,
-   "datePlayed": null
+   "datePlayed": null,
+   "coverUrl": "https://media.rawg.io/media/games/f87/f87de0e93f02007fd044e4bf04d453d8.jpg"
   },
   {
    "id": "g0109",
@@ -1309,7 +1416,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2010,
    "rating": 8,
-   "datePlayed": "2012-01-01"
+   "datePlayed": "2012-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/14a/14a83c56ff668baaced6e8c8704b6391.jpg"
   },
   {
    "id": "g0110",
@@ -1321,7 +1429,8 @@
    "mainStoryPct": null,
    "yearReleased": null,
    "rating": 8,
-   "datePlayed": null
+   "datePlayed": null,
+   "coverUrl": "https://media.rawg.io/media/games/3dd/3ddf27683a9aecf1cf39605100651a99.jpg"
   },
   {
    "id": "g0111",
@@ -1333,7 +1442,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2007,
    "rating": 8,
-   "datePlayed": "2007-01-01"
+   "datePlayed": "2007-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/936/936f0ffac0b3c9f5c8d185f610ed2631.jpg"
   },
   {
    "id": "g0112",
@@ -1345,7 +1455,8 @@
    "mainStoryPct": null,
    "yearReleased": null,
    "rating": 8,
-   "datePlayed": null
+   "datePlayed": null,
+   "coverUrl": "https://media.rawg.io/media/games/da4/da4ade8921158396e2f3513069ad714d.jpg"
   },
   {
    "id": "g0113",
@@ -1357,7 +1468,8 @@
    "mainStoryPct": null,
    "yearReleased": null,
    "rating": 8,
-   "datePlayed": null
+   "datePlayed": null,
+   "coverUrl": "https://media.rawg.io/media/screenshots/bf7/bf76ba791262ca3a3580fc776bdecb87.jpg"
   },
   {
    "id": "g0114",
@@ -1369,7 +1481,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2025,
    "rating": 7,
-   "datePlayed": "2025-11-24"
+   "datePlayed": "2025-11-24",
+   "coverUrl": "https://media.rawg.io/media/games/2f6/2f6c45362818859574ac0e37edf3d3c4.jpg"
   },
   {
    "id": "g0115",
@@ -1381,7 +1494,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2022,
    "rating": 7,
-   "datePlayed": "2024-02-12"
+   "datePlayed": "2024-02-12",
+   "coverUrl": "https://media.rawg.io/media/games/ae7/ae7cfc9a66232839112663899d2c8d8d.jpg"
   },
   {
    "id": "g0116",
@@ -1393,7 +1507,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2023,
    "rating": 7,
-   "datePlayed": "2023-11-06"
+   "datePlayed": "2023-11-06",
+   "coverUrl": "https://media.rawg.io/media/games/1fd/1fd3f030bee73452d46a0678084a7ed9.jpg"
   },
   {
    "id": "g0117",
@@ -1405,7 +1520,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2024,
    "rating": 7,
-   "datePlayed": "2024-10-15"
+   "datePlayed": "2024-10-15",
+   "coverUrl": "https://media.rawg.io/media/games/f87/f87de0e93f02007fd044e4bf04d453d8.jpg"
   },
   {
    "id": "g0118",
@@ -1417,7 +1533,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2026,
    "rating": 7,
-   "datePlayed": "2026-03-30"
+   "datePlayed": "2026-03-30",
+   "coverUrl": "https://media.rawg.io/media/games/67a/67a161425e620772ba69c3caa8f48a95.jpg"
   },
   {
    "id": "g0119",
@@ -1429,7 +1546,8 @@
    "mainStoryPct": null,
    "yearReleased": null,
    "rating": 7,
-   "datePlayed": null
+   "datePlayed": null,
+   "coverUrl": "https://media.rawg.io/media/screenshots/7e5/7e56cc0421adcea354ed6b85057f2caa.jpeg"
   },
   {
    "id": "g0120",
@@ -1441,7 +1559,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2026,
    "rating": 7,
-   "datePlayed": "2026-04-28"
+   "datePlayed": "2026-04-28",
+   "coverUrl": "https://media.rawg.io/media/games/9b2/9b20adbf00491d56ad6793654067f2fd.jpg"
   },
   {
    "id": "g0121",
@@ -1453,7 +1572,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2026,
    "rating": 7,
-   "datePlayed": "2026-01-01"
+   "datePlayed": "2026-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/be8/be86ee5cf3a427c784efec1661f9b194.jpg"
   },
   {
    "id": "g0122",
@@ -1465,7 +1585,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2000,
    "rating": 7,
-   "datePlayed": "2026-04-23"
+   "datePlayed": "2026-04-23",
+   "coverUrl": "https://media.rawg.io/media/games/f50/f5023ef71feabf852b538b1d45e6466c.jpg"
   },
   {
    "id": "g0123",
@@ -1477,7 +1598,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2026,
    "rating": 7,
-   "datePlayed": "2026-02-06"
+   "datePlayed": "2026-02-06",
+   "coverUrl": "https://media.rawg.io/media/games/e13/e1395f34907fdcc9da63e72e24d868f8.jpg"
   },
   {
    "id": "g0124",
@@ -1489,7 +1611,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2019,
    "rating": 7,
-   "datePlayed": "2025-01-01"
+   "datePlayed": "2025-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/2ad/2ad87a4a69b1104f02435c14c5196095.jpg"
   },
   {
    "id": "g0125",
@@ -1501,7 +1624,8 @@
    "mainStoryPct": 50,
    "yearReleased": 2024,
    "rating": 7,
-   "datePlayed": "2024-11-29"
+   "datePlayed": "2024-11-29",
+   "coverUrl": "https://media.rawg.io/media/games/cee/cee02d983e2e1e457caa562420f532fb.jpg"
   },
   {
    "id": "g0126",
@@ -1513,7 +1637,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2023,
    "rating": 7,
-   "datePlayed": "2024-08-29"
+   "datePlayed": "2024-08-29",
+   "coverUrl": "https://media.rawg.io/media/games/2d0/2d02bcfc07f4b5ed8623599ff999ee91.jpg"
   },
   {
    "id": "g0127",
@@ -1525,7 +1650,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2023,
    "rating": 7,
-   "datePlayed": "2023-07-30"
+   "datePlayed": "2023-07-30",
+   "coverUrl": "https://media.rawg.io/media/games/c2c/c2c9f1c026b6c1be5bc2160baf7224ea.jpg"
   },
   {
    "id": "g0128",
@@ -1537,7 +1663,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2023,
    "rating": 7,
-   "datePlayed": "2023-01-01"
+   "datePlayed": "2023-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/7ae/7ae5a14cdb4ab222a134c15f4629e430.jpg"
   },
   {
    "id": "g0129",
@@ -1549,7 +1676,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2020,
    "rating": 7,
-   "datePlayed": "2020-01-01"
+   "datePlayed": "2020-01-01",
+   "coverUrl": "https://media.rawg.io/media/screenshots/511/511265756e127eb7eaae06f36e24bb6f.jpg"
   },
   {
    "id": "g0130",
@@ -1561,7 +1689,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2020,
    "rating": 7,
-   "datePlayed": "2020-01-01"
+   "datePlayed": "2020-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/9dc/9dc9fbd2c2054a3a9b7c33a906546bea.jpg"
   },
   {
    "id": "g0131",
@@ -1573,7 +1702,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2019,
    "rating": 7,
-   "datePlayed": "2019-01-01"
+   "datePlayed": "2019-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/434/43431e04f0cd5419a3d8e31a5c8c3d5d.jpg"
   },
   {
    "id": "g0132",
@@ -1585,7 +1715,8 @@
    "mainStoryPct": null,
    "yearReleased": null,
    "rating": 7,
-   "datePlayed": null
+   "datePlayed": null,
+   "coverUrl": "https://media.rawg.io/media/games/d3c/d3c42a40030d2c80aa37824914026052.jpg"
   },
   {
    "id": "g0133",
@@ -1597,7 +1728,8 @@
    "mainStoryPct": null,
    "yearReleased": 2018,
    "rating": 7,
-   "datePlayed": "2018-01-01"
+   "datePlayed": "2018-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/655/655977041d1fcd25a71a54727b93bb2f.jpg"
   },
   {
    "id": "g0134",
@@ -1609,7 +1741,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2015,
    "rating": 7,
-   "datePlayed": "2015-01-01"
+   "datePlayed": "2015-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/d82/d82990b9c67ba0d2d09d4e6fa88885a7.jpg"
   },
   {
    "id": "g0135",
@@ -1621,7 +1754,8 @@
    "mainStoryPct": null,
    "yearReleased": null,
    "rating": 7,
-   "datePlayed": null
+   "datePlayed": null,
+   "coverUrl": "https://media.rawg.io/media/games/7cf/7cfc9220b401b7a300e409e539c9afd5.jpg"
   },
   {
    "id": "g0136",
@@ -1633,7 +1767,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2011,
    "rating": 7,
-   "datePlayed": "2012-01-01"
+   "datePlayed": "2012-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/f99/f9979698c43fd84c3ab69280576dd3af.jpg"
   },
   {
    "id": "g0137",
@@ -1645,7 +1780,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2012,
    "rating": 7,
-   "datePlayed": "2012-01-01"
+   "datePlayed": "2012-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/49c/49c3dfa4ce2f6f140cc4825868e858cb.jpg"
   },
   {
    "id": "g0138",
@@ -1657,7 +1793,8 @@
    "mainStoryPct": null,
    "yearReleased": null,
    "rating": 7,
-   "datePlayed": null
+   "datePlayed": null,
+   "coverUrl": "https://media.rawg.io/media/games/907/90749f6693d8b7e1a3c4ce8bfd44b80a.jpg"
   },
   {
    "id": "g0139",
@@ -1669,7 +1806,8 @@
    "mainStoryPct": null,
    "yearReleased": null,
    "rating": 7,
-   "datePlayed": null
+   "datePlayed": null,
+   "coverUrl": "https://media.rawg.io/media/games/f71/f71bb1d261493da6032df37669eb368d.jpg"
   },
   {
    "id": "g0140",
@@ -1681,7 +1819,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2026,
    "rating": 6,
-   "datePlayed": "2026-06-24"
+   "datePlayed": "2026-06-24",
+   "coverUrl": "https://media.rawg.io/media/games/86f/86f2dc1b9671f25a13ff92e069b51786.jpg"
   },
   {
    "id": "g0141",
@@ -1693,7 +1832,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2024,
    "rating": 6,
-   "datePlayed": "2024-04-07"
+   "datePlayed": "2024-04-07",
+   "coverUrl": "https://media.rawg.io/media/games/511/511995d5dfcf18965dbb354d2ba9e176.jpg"
   },
   {
    "id": "g0142",
@@ -1705,7 +1845,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2017,
    "rating": 6,
-   "datePlayed": "2024-08-25"
+   "datePlayed": "2024-08-25",
+   "coverUrl": "https://media.rawg.io/media/games/34e/34e100b1f648de99f32d477065f04653.jpg"
   },
   {
    "id": "g0143",
@@ -1717,7 +1858,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2021,
    "rating": 6,
-   "datePlayed": "2022-01-12"
+   "datePlayed": "2022-01-12",
+   "coverUrl": "https://media.rawg.io/media/games/d47/d479582ed0a46496ad34f65c7099d7e5.jpg"
   },
   {
    "id": "g0144",
@@ -1729,7 +1871,8 @@
    "mainStoryPct": 80,
    "yearReleased": 2025,
    "rating": 6,
-   "datePlayed": "2026-01-16"
+   "datePlayed": "2026-01-16",
+   "coverUrl": "https://media.rawg.io/media/games/798/798705b4f25e958e4ab8edf570e215f8.jpg"
   },
   {
    "id": "g0145",
@@ -1741,7 +1884,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2025,
    "rating": 6,
-   "datePlayed": "2025-12-22"
+   "datePlayed": "2025-12-22",
+   "coverUrl": "https://media.rawg.io/media/screenshots/aae/aaee2d143052bfafe7cae5806587485d.jpg"
   },
   {
    "id": "g0146",
@@ -1753,7 +1897,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2023,
    "rating": 6,
-   "datePlayed": "2025-11-26"
+   "datePlayed": "2025-11-26",
+   "coverUrl": "https://media.rawg.io/media/games/1fa/1fa542171e580af49fabd094bd232659.jpg"
   },
   {
    "id": "g0147",
@@ -1765,7 +1910,8 @@
    "mainStoryPct": null,
    "yearReleased": null,
    "rating": 6,
-   "datePlayed": "2024-03-11"
+   "datePlayed": "2024-03-11",
+   "coverUrl": "https://media.rawg.io/media/games/d89/d89bd0cf4fcdc10820892980cbba0f49.jpg"
   },
   {
    "id": "g0148",
@@ -1777,7 +1923,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2023,
    "rating": 6,
-   "datePlayed": "2023-01-01"
+   "datePlayed": "2023-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/4c4/4c41c96a4ecbbff9ed23f62590e9b720.jpg"
   },
   {
    "id": "g0149",
@@ -1789,7 +1936,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2023,
    "rating": 6,
-   "datePlayed": "2023-07-03"
+   "datePlayed": "2023-07-03",
+   "coverUrl": "https://media.rawg.io/media/games/22e/22e68bb62b3013283972cecf98ed51dc.jpg"
   },
   {
    "id": "g0150",
@@ -1801,7 +1949,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2022,
    "rating": 6,
-   "datePlayed": "2023-01-01"
+   "datePlayed": "2023-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/5ab/5abb8e4af55eb8c867410c3a740355b9.jpg"
   },
   {
    "id": "g0151",
@@ -1813,7 +1962,8 @@
    "mainStoryPct": 30,
    "yearReleased": 2022,
    "rating": 6,
-   "datePlayed": "2022-01-01"
+   "datePlayed": "2022-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/3a9/3a9ea2db24f879e61fe7b824f5888d2a.jpg"
   },
   {
    "id": "g0152",
@@ -1825,7 +1975,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2022,
    "rating": 6,
-   "datePlayed": "2022-01-01"
+   "datePlayed": "2022-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/cd3/cd3c9c7d3e95cb1608fd6250f1b90b7a.jpg"
   },
   {
    "id": "g0153",
@@ -1837,7 +1988,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2020,
    "rating": 6,
-   "datePlayed": "2022-01-01"
+   "datePlayed": "2022-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/9aa/9aa42d16d425fa6f179fc9dc2f763647.jpg"
   },
   {
    "id": "g0154",
@@ -1849,7 +2001,8 @@
    "mainStoryPct": 70,
    "yearReleased": 2021,
    "rating": 6,
-   "datePlayed": "2021-01-01"
+   "datePlayed": "2021-01-01",
+   "coverUrl": "https://media.rawg.io/media/screenshots/967/967d912c7ae0a728bd2f78bce076eb9c.jpg"
   },
   {
    "id": "g0155",
@@ -1861,7 +2014,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2021,
    "rating": 6,
-   "datePlayed": "2021-01-01"
+   "datePlayed": "2021-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/dbb/dbba6100aae179b5f24052c9141d426d.jpg"
   },
   {
    "id": "g0156",
@@ -1873,7 +2027,8 @@
    "mainStoryPct": null,
    "yearReleased": 2020,
    "rating": 6,
-   "datePlayed": "2020-01-01"
+   "datePlayed": "2020-01-01",
+   "coverUrl": "https://media.rawg.io/media/screenshots/8d8/8d84c9b411822404205342f53fb98285.jpg"
   },
   {
    "id": "g0157",
@@ -1885,7 +2040,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2020,
    "rating": 6,
-   "datePlayed": "2020-01-01"
+   "datePlayed": "2020-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/26d/26d4437715bee60138dab4a7c8c59c92.jpg"
   },
   {
    "id": "g0158",
@@ -1897,7 +2053,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2018,
    "rating": 6,
-   "datePlayed": "2019-01-01"
+   "datePlayed": "2019-01-01",
+   "coverUrl": "https://media.rawg.io/media/screenshots/2de/2deb8efe0d2e79a29c2c71f2c19de382.jpg"
   },
   {
    "id": "g0159",
@@ -1909,7 +2066,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2018,
    "rating": 6,
-   "datePlayed": "2019-01-01"
+   "datePlayed": "2019-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/01a/01a73c4a2d3d5b67e369047896749a95.jpg"
   },
   {
    "id": "g0160",
@@ -1921,7 +2079,8 @@
    "mainStoryPct": null,
    "yearReleased": null,
    "rating": 6,
-   "datePlayed": null
+   "datePlayed": null,
+   "coverUrl": "https://media.rawg.io/media/games/f67/f678872fd89487324cf1267cd2adba96.jpg"
   },
   {
    "id": "g0161",
@@ -1933,7 +2092,8 @@
    "mainStoryPct": 30,
    "yearReleased": 2015,
    "rating": 6,
-   "datePlayed": "2018-01-01"
+   "datePlayed": "2018-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/b47/b47da312357f548ceeb3a4d00021cd1d.jpg"
   },
   {
    "id": "g0162",
@@ -1945,7 +2105,8 @@
    "mainStoryPct": 80,
    "yearReleased": 2016,
    "rating": 6,
-   "datePlayed": "2018-01-01"
+   "datePlayed": "2018-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/3be/3be0e624424d3453005019799a760af2.jpg"
   },
   {
    "id": "g0163",
@@ -1957,7 +2118,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2016,
    "rating": 6,
-   "datePlayed": "2018-01-01"
+   "datePlayed": "2018-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/e49/e49256363789d1dec316edf8ebb27ccf.jpg"
   },
   {
    "id": "g0164",
@@ -1969,7 +2131,8 @@
    "mainStoryPct": null,
    "yearReleased": null,
    "rating": 6,
-   "datePlayed": null
+   "datePlayed": null,
+   "coverUrl": "https://media.rawg.io/media/games/ec4/ec4be61f0f41cf1d138501330a1b54ee.jpg"
   },
   {
    "id": "g0165",
@@ -1981,7 +2144,8 @@
    "mainStoryPct": 30,
    "yearReleased": 2016,
    "rating": 6,
-   "datePlayed": "2016-01-01"
+   "datePlayed": "2016-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/fd9/fd92f105dcd6491bc5d61135033d1f19.jpg"
   },
   {
    "id": "g0166",
@@ -1993,7 +2157,8 @@
    "mainStoryPct": null,
    "yearReleased": 2013,
    "rating": 6,
-   "datePlayed": "2016-01-01"
+   "datePlayed": "2016-01-01",
+   "coverUrl": "https://media.rawg.io/media/screenshots/8f0/8f0b94922ad5e59968852649697b2643.jpg"
   },
   {
    "id": "g0167",
@@ -2005,7 +2170,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2016,
    "rating": 6,
-   "datePlayed": "2016-01-01"
+   "datePlayed": "2016-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/f6b/f6bed028b02369d4cab548f4f9337e81.jpg"
   },
   {
    "id": "g0168",
@@ -2017,7 +2183,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2013,
    "rating": 6,
-   "datePlayed": "2013-01-01"
+   "datePlayed": "2013-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/6d3/6d33014a4ed48a19c30a77ead5a0f62e.jpg"
   },
   {
    "id": "g0169",
@@ -2029,7 +2196,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2013,
    "rating": 6,
-   "datePlayed": "2013-01-01"
+   "datePlayed": "2013-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/fc1/fc1307a2774506b5bd65d7e8424664a7.jpg"
   },
   {
    "id": "g0170",
@@ -2041,7 +2209,8 @@
    "mainStoryPct": null,
    "yearReleased": null,
    "rating": 6,
-   "datePlayed": null
+   "datePlayed": null,
+   "coverUrl": "https://media.rawg.io/media/screenshots/f2b/f2bd54a7aa57b901b7ad5291e738753f.jpg"
   },
   {
    "id": "g0171",
@@ -2053,7 +2222,8 @@
    "mainStoryPct": null,
    "yearReleased": null,
    "rating": 6,
-   "datePlayed": null
+   "datePlayed": null,
+   "coverUrl": "https://media.rawg.io/media/screenshots/47b/47b915b28e72ead7a1775f057af421f6.jpeg"
   },
   {
    "id": "g0172",
@@ -2065,7 +2235,8 @@
    "mainStoryPct": null,
    "yearReleased": null,
    "rating": 6,
-   "datePlayed": null
+   "datePlayed": null,
+   "coverUrl": "https://media.rawg.io/media/games/13a/13ae067ba723573466bd3d6ff7e30786.jpg"
   },
   {
    "id": "g0173",
@@ -2077,7 +2248,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2025,
    "rating": 5,
-   "datePlayed": "2025-11-14"
+   "datePlayed": "2025-11-14",
+   "coverUrl": "https://media.rawg.io/media/games/80a/80a3e1060b49c02f901e781b263cd881.jpg"
   },
   {
    "id": "g0174",
@@ -2089,7 +2261,8 @@
    "mainStoryPct": 98,
    "yearReleased": 2025,
    "rating": 5,
-   "datePlayed": "2025-11-01"
+   "datePlayed": "2025-11-01",
+   "coverUrl": "https://media.rawg.io/media/games/30c/30c067f9a6736000c8faf2efe4952a9b.jpg"
   },
   {
    "id": "g0175",
@@ -2101,7 +2274,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2024,
    "rating": 5,
-   "datePlayed": "2025-08-08"
+   "datePlayed": "2025-08-08",
+   "coverUrl": "https://media.rawg.io/media/games/e09/e09477c34646ca1967b0088ba65d20c0.jpg"
   },
   {
    "id": "g0176",
@@ -2113,7 +2287,8 @@
    "mainStoryPct": null,
    "yearReleased": null,
    "rating": 5,
-   "datePlayed": "2023-06-16"
+   "datePlayed": "2023-06-16",
+   "coverUrl": "https://media.rawg.io/media/games/77d/77d51f8f4a07c3eecb0f8504027b1bf0.jpg"
   },
   {
    "id": "g0177",
@@ -2125,7 +2300,8 @@
    "mainStoryPct": 10,
    "yearReleased": 2021,
    "rating": 5,
-   "datePlayed": "2022-01-01"
+   "datePlayed": "2022-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/126/126fbd5ceacddc6ad16fc96e50b1265b.jpg"
   },
   {
    "id": "g0178",
@@ -2137,7 +2313,8 @@
    "mainStoryPct": 50,
    "yearReleased": 2021,
    "rating": 5,
-   "datePlayed": "2022-01-01"
+   "datePlayed": "2022-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/cef/cef4c326dd57a8f39d696379eaa84411.jpg"
   },
   {
    "id": "g0179",
@@ -2149,7 +2326,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2021,
    "rating": 5,
-   "datePlayed": "2021-01-01"
+   "datePlayed": "2021-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/a3e/a3ea71c18e81d54ebaf982dadb9a8738.jpg"
   },
   {
    "id": "g0180",
@@ -2161,7 +2339,8 @@
    "mainStoryPct": null,
    "yearReleased": 2021,
    "rating": 5,
-   "datePlayed": "2021-01-01"
+   "datePlayed": "2021-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/92c/92cb7c505365879a95d08fe11cc6ac8b.jpg"
   },
   {
    "id": "g0181",
@@ -2173,7 +2352,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2021,
    "rating": 5,
-   "datePlayed": "2021-01-01"
+   "datePlayed": "2021-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/81b/81bf6b3cb4851f135b90091ec8ac5445.jpg"
   },
   {
    "id": "g0182",
@@ -2185,7 +2365,8 @@
    "mainStoryPct": 70,
    "yearReleased": 2017,
    "rating": 5,
-   "datePlayed": "2021-01-01"
+   "datePlayed": "2021-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/e63/e635b8c7fbe3ffd69ad6c1c586cd250e.jpg"
   },
   {
    "id": "g0183",
@@ -2197,7 +2378,8 @@
    "mainStoryPct": null,
    "yearReleased": null,
    "rating": 5,
-   "datePlayed": null
+   "datePlayed": null,
+   "coverUrl": "https://media.rawg.io/media/screenshots/4e0/4e01779807f21e9b21b315e510191c55.jpg"
   },
   {
    "id": "g0184",
@@ -2209,7 +2391,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2018,
    "rating": 5,
-   "datePlayed": "2019-01-01"
+   "datePlayed": "2019-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/f90/f90ee1a4239247a822771c40488e68c5.jpg"
   },
   {
    "id": "g0185",
@@ -2221,7 +2404,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2014,
    "rating": 5,
-   "datePlayed": "2018-01-01"
+   "datePlayed": "2018-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/56f/56f074a9deb83de61434c5498ab86b27.jpeg"
   },
   {
    "id": "g0186",
@@ -2233,7 +2417,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2018,
    "rating": 5,
-   "datePlayed": "2018-01-01"
+   "datePlayed": "2018-01-01",
+   "coverUrl": "https://media.rawg.io/media/screenshots/7d5/7d5ad1326497d1533461a4541afb32f3.jpg"
   },
   {
    "id": "g0187",
@@ -2245,7 +2430,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2018,
    "rating": 5,
-   "datePlayed": "2018-01-01"
+   "datePlayed": "2018-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/5c2/5c2b78d4ee2647849d0bfb5d772345c8.jpg"
   },
   {
    "id": "g0188",
@@ -2257,7 +2443,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2015,
    "rating": 5,
-   "datePlayed": "2018-01-01"
+   "datePlayed": "2018-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/70a/70a7a7b21d8fdf5f19622e5e14599bcd.jpg"
   },
   {
    "id": "g0189",
@@ -2269,7 +2456,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2014,
    "rating": 5,
-   "datePlayed": "2015-01-01"
+   "datePlayed": "2015-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/8e3/8e399167fd529da5e9e505e987ae63ff.jpg"
   },
   {
    "id": "g0190",
@@ -2281,7 +2469,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2014,
    "rating": 5,
-   "datePlayed": "2014-01-01"
+   "datePlayed": "2014-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/b39/b396dac1f3e0f538841aa0355dd066d3.jpg"
   },
   {
    "id": "g0191",
@@ -2293,7 +2482,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2012,
    "rating": 5,
-   "datePlayed": "2012-01-01"
+   "datePlayed": "2012-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/15c/15c95a4915f88a3e89c821526afe05fc.jpg"
   },
   {
    "id": "g0192",
@@ -2305,7 +2495,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2007,
    "rating": 5,
-   "datePlayed": "2007-01-01"
+   "datePlayed": "2007-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/f87/f87de0e93f02007fd044e4bf04d453d8.jpg"
   },
   {
    "id": "g0193",
@@ -2317,7 +2508,8 @@
    "mainStoryPct": null,
    "yearReleased": null,
    "rating": 5,
-   "datePlayed": null
+   "datePlayed": null,
+   "coverUrl": "https://media.rawg.io/media/games/088/0885c48293746aad6df30735f30d0836.jpg"
   },
   {
    "id": "g0194",
@@ -2329,7 +2521,8 @@
    "mainStoryPct": 95,
    "yearReleased": 2021,
    "rating": 4,
-   "datePlayed": "2025-01-07"
+   "datePlayed": "2025-01-07",
+   "coverUrl": "https://media.rawg.io/media/games/5a9/5a9e785af72ae88026380f7987f23d90.jpg"
   },
   {
    "id": "g0195",
@@ -2341,7 +2534,8 @@
    "mainStoryPct": null,
    "yearReleased": 2021,
    "rating": 4,
-   "datePlayed": "2021-01-01"
+   "datePlayed": "2021-01-01",
+   "coverUrl": "https://media.rawg.io/media/screenshots/aba/aba305582ea5fdd51451788ee43077f0.jpg"
   },
   {
    "id": "g0196",
@@ -2353,7 +2547,8 @@
    "mainStoryPct": 30,
    "yearReleased": 2021,
    "rating": 4,
-   "datePlayed": "2021-01-01"
+   "datePlayed": "2021-01-01",
+   "coverUrl": "https://media.rawg.io/media/screenshots/103/10353ba4b9cdc6b67fed15f478f27640.jpg"
   },
   {
    "id": "g0197",
@@ -2365,7 +2560,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2020,
    "rating": 4,
-   "datePlayed": "2020-01-01"
+   "datePlayed": "2020-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/727/727f889060e688bbdcba7b2a5d26a603.jpg"
   },
   {
    "id": "g0198",
@@ -2377,7 +2573,8 @@
    "mainStoryPct": null,
    "yearReleased": null,
    "rating": 4,
-   "datePlayed": null
+   "datePlayed": null,
+   "coverUrl": "https://media.rawg.io/media/screenshots/062/0622bec29ae3ef0e8762a9c9f3e7b0f4.jpg"
   },
   {
    "id": "g0199",
@@ -2389,7 +2586,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2020,
    "rating": 4,
-   "datePlayed": "2020-01-01"
+   "datePlayed": "2020-01-01",
+   "coverUrl": "https://media.rawg.io/media/screenshots/5ad/5ad4f07b3aa8a23f64378f0da28930b8.jpg"
   },
   {
    "id": "g0200",
@@ -2401,7 +2599,8 @@
    "mainStoryPct": null,
    "yearReleased": null,
    "rating": 4,
-   "datePlayed": null
+   "datePlayed": null,
+   "coverUrl": "https://media.rawg.io/media/games/f75/f751a9a43abb507bf95f9b96cc79feac.jpg"
   },
   {
    "id": "g0201",
@@ -2413,7 +2612,8 @@
    "mainStoryPct": null,
    "yearReleased": 2018,
    "rating": 4,
-   "datePlayed": "2019-01-01"
+   "datePlayed": "2019-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/d8b/d8bfed2209bf96866506cca8022db5b7.jpg"
   },
   {
    "id": "g0202",
@@ -2425,7 +2625,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2019,
    "rating": 4,
-   "datePlayed": "2019-01-01"
+   "datePlayed": "2019-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/f87/f87de0e93f02007fd044e4bf04d453d8.jpg"
   },
   {
    "id": "g0203",
@@ -2437,7 +2638,8 @@
    "mainStoryPct": 20,
    "yearReleased": 2010,
    "rating": 4,
-   "datePlayed": "2018-01-01"
+   "datePlayed": "2018-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/e04/e04963f3ac4c4fa83a1dc0b9231e50db.jpg"
   },
   {
    "id": "g0204",
@@ -2449,7 +2651,8 @@
    "mainStoryPct": 40,
    "yearReleased": 2017,
    "rating": 4,
-   "datePlayed": "2018-01-01"
+   "datePlayed": "2018-01-01",
+   "coverUrl": "https://media.rawg.io/media/screenshots/0fb/0fbc557f78de00eac6b6ae7de6c1dcb5.jpg"
   },
   {
    "id": "g0205",
@@ -2461,7 +2664,8 @@
    "mainStoryPct": 90,
    "yearReleased": 2018,
    "rating": 4,
-   "datePlayed": "2018-01-01"
+   "datePlayed": "2018-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/d11/d11470677a829e34562e95a4002c2c7f.jpg"
   },
   {
    "id": "g0206",
@@ -2473,7 +2677,8 @@
    "mainStoryPct": null,
    "yearReleased": null,
    "rating": 4,
-   "datePlayed": null
+   "datePlayed": null,
+   "coverUrl": "https://media.rawg.io/media/screenshots/a00/a0013d8c9ddb1878c2d1030c822b7525.jpg"
   },
   {
    "id": "g0207",
@@ -2485,7 +2690,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2017,
    "rating": 3,
-   "datePlayed": "2022-01-01"
+   "datePlayed": "2022-01-01",
+   "coverUrl": "https://media.rawg.io/media/screenshots/81c/81c498e43b5d4565732b946cc768288a.jpg"
   },
   {
    "id": "g0208",
@@ -2497,7 +2703,8 @@
    "mainStoryPct": null,
    "yearReleased": null,
    "rating": 3,
-   "datePlayed": null
+   "datePlayed": null,
+   "coverUrl": "https://media.rawg.io/media/screenshots/81c/81c498e43b5d4565732b946cc768288a.jpg"
   },
   {
    "id": "g0209",
@@ -2509,7 +2716,8 @@
    "mainStoryPct": 30,
    "yearReleased": 2020,
    "rating": 3,
-   "datePlayed": "2020-01-01"
+   "datePlayed": "2020-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/977/97759451a8b0fcb16ac9357c24140008.jpg"
   },
   {
    "id": "g0210",
@@ -2521,7 +2729,8 @@
    "mainStoryPct": 40,
    "yearReleased": 2020,
    "rating": 3,
-   "datePlayed": "2022-02-19"
+   "datePlayed": "2022-02-19",
+   "coverUrl": "https://media.rawg.io/media/screenshots/e14/e140f042238c52917ed09d1f58581f78.jpg"
   },
   {
    "id": "g0211",
@@ -2533,7 +2742,8 @@
    "mainStoryPct": 50,
    "yearReleased": 2019,
    "rating": 3,
-   "datePlayed": "2020-01-01"
+   "datePlayed": "2020-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/0e4/0e4d3e51d6366a64997d8a41749b6681.jpg"
   },
   {
    "id": "g0212",
@@ -2545,7 +2755,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2019,
    "rating": 3,
-   "datePlayed": "2019-01-01"
+   "datePlayed": "2019-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/75b/75b91d05160c819fa6bbafe920548300.jpg"
   },
   {
    "id": "g0213",
@@ -2557,7 +2768,8 @@
    "mainStoryPct": null,
    "yearReleased": 2019,
    "rating": 3,
-   "datePlayed": "2019-01-01"
+   "datePlayed": "2019-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/25f/25f1b4a7b6ed811a5f6e34e43d6cc550.jpg"
   },
   {
    "id": "g0214",
@@ -2569,7 +2781,8 @@
    "mainStoryPct": 70,
    "yearReleased": 2017,
    "rating": 3,
-   "datePlayed": "2019-01-01"
+   "datePlayed": "2019-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/5be/5befaab8379bd48b8e9b97cc60b0f5e6.jpg"
   },
   {
    "id": "g0215",
@@ -2581,7 +2794,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2017,
    "rating": 3,
-   "datePlayed": "2019-01-01"
+   "datePlayed": "2019-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/a38/a3857b2445c70ac5dbe73b210a827ad8.jpg"
   },
   {
    "id": "g0216",
@@ -2593,7 +2807,8 @@
    "mainStoryPct": 10,
    "yearReleased": 2018,
    "rating": 3,
-   "datePlayed": "2019-01-01"
+   "datePlayed": "2019-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/511/5118aff5091cb3efec399c808f8c598f.jpg"
   },
   {
    "id": "g0217",
@@ -2605,7 +2820,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2018,
    "rating": 3,
-   "datePlayed": "2019-01-01"
+   "datePlayed": "2019-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/e23/e2345c839b323a94b6811705fda5af73.jpg"
   },
   {
    "id": "g0218",
@@ -2617,7 +2833,8 @@
    "mainStoryPct": 20,
    "yearReleased": 2019,
    "rating": 3,
-   "datePlayed": "2019-01-01"
+   "datePlayed": "2019-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/892/892181b6c1acd9f527e7346137b0e1a3.jpg"
   },
   {
    "id": "g0219",
@@ -2629,7 +2846,8 @@
    "mainStoryPct": 40,
    "yearReleased": 2016,
    "rating": 3,
-   "datePlayed": "2018-01-01"
+   "datePlayed": "2018-01-01",
+   "coverUrl": "https://media.rawg.io/media/screenshots/000/0007accc8ea02abcc8b3d0271da5eb3a.jpg"
   },
   {
    "id": "g0220",
@@ -2641,7 +2859,8 @@
    "mainStoryPct": null,
    "yearReleased": 2016,
    "rating": 3,
-   "datePlayed": "2018-01-01"
+   "datePlayed": "2018-01-01",
+   "coverUrl": "https://media.rawg.io/media/screenshots/5a0/5a0b7abffb6b0cea6739cebe7829d036.jpg"
   },
   {
    "id": "g0221",
@@ -2653,7 +2872,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2010,
    "rating": 3,
-   "datePlayed": "2010-01-01"
+   "datePlayed": "2010-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/f29/f29dfda4bbdfcd5b6d15d408643a2bbd.jpg"
   },
   {
    "id": "g0222",
@@ -2665,7 +2885,8 @@
    "mainStoryPct": null,
    "yearReleased": null,
    "rating": 2,
-   "datePlayed": null
+   "datePlayed": null,
+   "coverUrl": "https://media.rawg.io/media/screenshots/7af/7afce909f5f8510015209451984b683e.jpg"
   },
   {
    "id": "g0223",
@@ -2677,7 +2898,8 @@
    "mainStoryPct": 20,
    "yearReleased": 2018,
    "rating": 2,
-   "datePlayed": "2020-01-01"
+   "datePlayed": "2020-01-01",
+   "coverUrl": "https://media.rawg.io/media/screenshots/3cd/3cd488dcccb38d73dc8d881e6c83701d.jpg"
   },
   {
    "id": "g0224",
@@ -2689,7 +2911,8 @@
    "mainStoryPct": 50,
    "yearReleased": 2020,
    "rating": 2,
-   "datePlayed": "2020-01-01"
+   "datePlayed": "2020-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/1b5/1b5d958d5a1956319211822a0f2792e4.jpg"
   },
   {
    "id": "g0225",
@@ -2701,7 +2924,8 @@
    "mainStoryPct": 30,
    "yearReleased": 2019,
    "rating": 2,
-   "datePlayed": "2019-01-01"
+   "datePlayed": "2019-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/3d9/3d972802b9ee793098b73ecf676b687e.jpeg"
   },
   {
    "id": "g0226",
@@ -2713,7 +2937,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2019,
    "rating": 2,
-   "datePlayed": "2019-01-01"
+   "datePlayed": "2019-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/968/968e6210715fd61237139e3caa193be0.jpg"
   },
   {
    "id": "g0227",
@@ -2725,7 +2950,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2019,
    "rating": 2,
-   "datePlayed": "2019-01-01"
+   "datePlayed": "2019-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/b0a/b0a72481e578a70abb8940827ccf1d2d.jpg"
   },
   {
    "id": "g0228",
@@ -2737,7 +2963,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2012,
    "rating": 2,
-   "datePlayed": "2018-01-01"
+   "datePlayed": "2018-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/61c/61cf09a86fe686a01a0c9863fc4230a7.jpeg"
   },
   {
    "id": "g0229",
@@ -2749,7 +2976,8 @@
    "mainStoryPct": 100,
    "yearReleased": 2014,
    "rating": 2,
-   "datePlayed": "2018-01-01"
+   "datePlayed": "2018-01-01",
+   "coverUrl": "https://media.rawg.io/media/screenshots/6df/6df71f3ff0f6d6bbac306cb9adf935ee.jpg"
   },
   {
    "id": "g0230",
@@ -2761,7 +2989,8 @@
    "mainStoryPct": 80,
    "yearReleased": 2016,
    "rating": 2,
-   "datePlayed": "2016-01-01"
+   "datePlayed": "2016-01-01",
+   "coverUrl": "https://media.rawg.io/media/screenshots/dfc/dfceb16cb2856f7b8ac27ffa17ecc900.jpeg"
   },
   {
    "id": "g0231",
@@ -2773,7 +3002,8 @@
    "mainStoryPct": null,
    "yearReleased": null,
    "rating": null,
-   "datePlayed": null
+   "datePlayed": null,
+   "coverUrl": "https://media.rawg.io/media/games/8f8/8f848239e24815506ff20eab31c6d6a9.jpg"
   },
   {
    "id": "g0232",
@@ -2785,7 +3015,8 @@
    "mainStoryPct": null,
    "yearReleased": null,
    "rating": null,
-   "datePlayed": null
+   "datePlayed": null,
+   "coverUrl": "https://media.rawg.io/media/games/998/9980c4296f311d8bcc5b451ca51e4fe1.jpg"
   },
   {
    "id": "g0233",
@@ -2797,7 +3028,8 @@
    "mainStoryPct": null,
    "yearReleased": null,
    "rating": null,
-   "datePlayed": null
+   "datePlayed": null,
+   "coverUrl": "https://media.rawg.io/media/games/9c4/9c47f320eb73c9a02d462e12f6206b26.jpg"
   },
   {
    "id": "g0234",
@@ -2809,7 +3041,8 @@
    "mainStoryPct": null,
    "yearReleased": null,
    "rating": null,
-   "datePlayed": null
+   "datePlayed": null,
+   "coverUrl": "https://media.rawg.io/media/games/5af/5af62b2725a440cf6858ce66b30151e5.jpg"
   },
   {
    "id": "g0235",
@@ -2821,7 +3054,8 @@
    "mainStoryPct": null,
    "yearReleased": null,
    "rating": null,
-   "datePlayed": null
+   "datePlayed": null,
+   "coverUrl": "https://media.rawg.io/media/games/19a/19a1814d28ea396b3fd46404b1638a98.jpg"
   },
   {
    "id": "g0236",
@@ -2833,7 +3067,8 @@
    "mainStoryPct": null,
    "yearReleased": null,
    "rating": null,
-   "datePlayed": null
+   "datePlayed": null,
+   "coverUrl": "https://media.rawg.io/media/games/b11/b11127b9ee3c3701bd15b9af3286d20e.jpg"
   },
   {
    "id": "g0237",
@@ -2845,7 +3080,8 @@
    "mainStoryPct": null,
    "yearReleased": null,
    "rating": null,
-   "datePlayed": null
+   "datePlayed": null,
+   "coverUrl": "https://media.rawg.io/media/screenshots/97a/97ab26a9d092783e68190dc686916b0b.jpg"
   },
   {
    "id": "g0238",
@@ -2857,7 +3093,8 @@
    "mainStoryPct": null,
    "yearReleased": null,
    "rating": null,
-   "datePlayed": null
+   "datePlayed": null,
+   "coverUrl": "https://media.rawg.io/media/screenshots/e6e/e6e4a23d51a5fe13c8bb155371516436.jpg"
   },
   {
    "id": "g0239",
@@ -2869,7 +3106,8 @@
    "mainStoryPct": null,
    "yearReleased": null,
    "rating": null,
-   "datePlayed": null
+   "datePlayed": null,
+   "coverUrl": "https://media.rawg.io/media/games/bc0/bc06a29ceac58652b684deefe7d56099.jpg"
   },
   {
    "id": "g0240",
@@ -2881,7 +3119,8 @@
    "mainStoryPct": 100,
    "yearReleased": 1996,
    "rating": null,
-   "datePlayed": "2006-01-01"
+   "datePlayed": "2006-01-01",
+   "coverUrl": "https://media.rawg.io/media/games/1d5/1d565b99cad46c44b534d9803e27bd49.jpg"
   },
   {
    "id": "g0241",
@@ -2893,7 +3132,8 @@
    "mainStoryPct": null,
    "yearReleased": null,
    "rating": null,
-   "datePlayed": null
+   "datePlayed": null,
+   "coverUrl": "https://media.rawg.io/media/games/786/786f9a212646c793ccbad196cba2cf36.jpg"
   },
   {
    "id": "g0242",
@@ -2905,7 +3145,8 @@
    "mainStoryPct": null,
    "yearReleased": null,
    "rating": null,
-   "datePlayed": null
+   "datePlayed": null,
+   "coverUrl": "https://media.rawg.io/media/games/9c5/9c5bc0b6e67102bc96dcf1ba41509e42.jpg"
   },
   {
    "id": "g0243",
@@ -2917,7 +3158,8 @@
    "mainStoryPct": null,
    "yearReleased": null,
    "rating": null,
-   "datePlayed": null
+   "datePlayed": null,
+   "coverUrl": "https://media.rawg.io/media/games/9c5/9c5bc0b6e67102bc96dcf1ba41509e42.jpg"
   },
   {
    "id": "g0244",
@@ -2929,7 +3171,8 @@
    "mainStoryPct": null,
    "yearReleased": null,
    "rating": null,
-   "datePlayed": null
+   "datePlayed": null,
+   "coverUrl": "https://media.rawg.io/media/games/d58/d588947d4286e7b5e0e12e1bea7d9844.jpg"
   }
  ]
 }
