@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#111014">
+<title>Ledger</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#111014;
+  --ink-2:#191820;
+  --ink-3:#22212b;
+  --line:#2f2e3a;
+  --paper:#edeae4;
+  --mute:#8a8798;
+  --acid:#c8ff2e;
+  --sig:#ff5d3a;
+  --r:10px;
+  --safe-b:env(safe-area-inset-bottom,0px);
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;padding:0}
+body{
+  background:var(--ink);color:var(--paper);
+  font-family:'Archivo',system-ui,sans-serif;
+  font-size:16px;line-height:1.4;
+  overscroll-behavior-y:none;
+}
+button,input,select,textarea{font-family:inherit;font-size:16px;color:inherit}
+button{cursor:pointer;border:none;background:none}
+
+/* ---------- shell ---------- */
+.wrap{max-width:760px;margin:0 auto;padding:0 14px calc(96px + var(--safe-b))}
+
+header.top{
+  position:sticky;top:0;z-index:40;background:var(--ink);
+  padding:14px 0 10px;border-bottom:1px solid var(--line);
+}
+.brandrow{display:flex;align-items:baseline;gap:10px}
+.brand{font-family:'Archivo Black';font-size:22px;letter-spacing:-.02em}
+.brand em{font-style:normal;color:var(--sig)}
+.count{font-family:'Space Mono';font-size:11px;color:var(--mute);margin-left:auto}
+.status{font-family:'Space Mono';font-size:11px;color:var(--mute)}
+.status.dirty{color:var(--sig)}
+.status.ok{color:var(--acid)}
+
+/* tabs */
+nav.tabs{display:flex;gap:6px;margin-top:12px;overflow-x:auto;scrollbar-width:none}
+nav.tabs::-webkit-scrollbar{display:none}
+.tab{
+  flex:0 0 auto;padding:8px 13px;border-radius:999px;
+  font-family:'Space Mono';font-size:12px;letter-spacing:.04em;text-transform:uppercase;
+  color:var(--mute);border:1px solid var(--line);white-space:nowrap;
+}
+.tab[aria-selected="true"]{background:var(--paper);color:var(--ink);border-color:var(--paper);font-weight:700}
+
+/* controls */
+.controls{display:flex;gap:8px;margin-top:10px}
+.search{
+  flex:1;background:var(--ink-2);border:1px solid var(--line);border-radius:var(--r);
+  padding:10px 12px;color:var(--paper);min-width:0;
+}
+.search::placeholder{color:var(--mute)}
+.sortbtn{
+  background:var(--ink-2);border:1px solid var(--line);border-radius:var(--r);
+  padding:0 12px;font-family:'Space Mono';font-size:12px;color:var(--mute);white-space:nowrap;
+}
+
+/* ---------- signature: rating spine ---------- */
+.spine{display:flex;gap:3px;margin:14px 0 4px;height:34px;align-items:flex-end}
+.sbar{
+  flex:1;background:var(--ink-3);border-radius:3px 3px 0 0;position:relative;
+  display:flex;align-items:flex-start;justify-content:center;
+  transition:background .15s;
+}
+.sbar span{
+  font-family:'Space Mono';font-size:9px;color:var(--ink);font-weight:700;
+  margin-top:2px;opacity:0;
+}
+.sbar[data-on="1"]{background:var(--acid)}
+.sbar[data-on="1"] span{opacity:1}
+.sbar[aria-pressed="true"]{outline:2px solid var(--sig);outline-offset:1px}
+.spinelabel{
+  font-family:'Space Mono';font-size:10px;color:var(--mute);
+  display:flex;justify-content:space-between;letter-spacing:.05em;
+}
+
+/* ---------- list ---------- */
+ul.list{list-style:none;margin:14px 0 0;padding:0}
+li.row{
+  display:flex;align-items:center;gap:12px;
+  padding:11px 4px;border-bottom:1px solid var(--line);
+}
+.rate{
+  flex:0 0 40px;height:40px;border-radius:var(--r);
+  background:var(--ink-3);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Archivo Black';font-size:19px;line-height:1;
+}
+.rate.hi{background:var(--acid);color:var(--ink)}
+.rate.mid{background:#4a5c1a;color:var(--paper)}
+.rate.lo{background:var(--ink-3);color:var(--mute)}
+.meta{flex:1;min-width:0}
+.title{font-weight:600;font-size:15px;letter-spacing:-.01em;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sub{font-family:'Space Mono';font-size:11px;color:var(--mute);
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-top:2px}
+.partial{color:var(--sig)}
+.empty{text-align:center;color:var(--mute);font-family:'Space Mono';font-size:13px;padding:50px 20px}
+.empty b{display:block;color:var(--paper);font-family:'Archivo';font-size:16px;margin-bottom:6px}
+
+/* ---------- fab ---------- */
+.fabs{
+  position:fixed;right:14px;bottom:calc(14px + var(--safe-b));z-index:45;
+  display:flex;flex-direction:column;gap:10px;
+}
+.fab{
+  width:54px;height:54px;border-radius:50%;background:var(--sig);color:#fff;
+  font-size:26px;font-weight:700;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 6px 24px rgba(0,0,0,.5);
+}
+.fab.ghost{background:var(--ink-3);color:var(--paper);width:44px;height:44px;font-size:17px;
+  border:1px solid var(--line);align-self:flex-end}
+.fab.push{background:var(--acid);color:var(--ink)}
+
+/* ---------- sheet ---------- */
+.scrim{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:50;display:none}
+.scrim.on{display:block}
+.sheet{
+  position:fixed;left:0;right:0;bottom:0;z-index:51;
+  background:var(--ink-2);border-top:1px solid var(--line);
+  border-radius:18px 18px 0 0;
+  padding:8px 16px calc(20px + var(--safe-b));
+  max-height:92vh;overflow-y:auto;
+  transform:translateY(100%);transition:transform .22s ease;
+}
+.sheet.on{transform:translateY(0)}
+.grab{width:38px;height:4px;border-radius:2px;background:var(--line);margin:6px auto 14px}
+.sheet h2{font-family:'Archivo Black';font-size:17px;margin:0 0 14px;letter-spacing:-.01em}
+label.f{display:block;margin-bottom:12px}
+label.f>span{font-family:'Space Mono';font-size:10px;color:var(--mute);
+  text-transform:uppercase;letter-spacing:.08em;display:block;margin-bottom:5px}
+.in{
+  width:100%;background:var(--ink);border:1px solid var(--line);
+  border-radius:var(--r);padding:11px 12px;color:var(--paper);
+}
+.in:focus,.search:focus{outline:2px solid var(--sig);outline-offset:1px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ratepick{display:flex;gap:5px}
+.ratepick button{
+  flex:1;padding:12px 0;border-radius:var(--r);background:var(--ink);
+  border:1px solid var(--line);font-family:'Archivo Black';font-size:15px;color:var(--mute);
+}
+.ratepick button[aria-pressed="true"]{background:var(--acid);color:var(--ink);border-color:var(--acid)}
+.acts{display:flex;gap:10px;margin-top:18px}
+.btn{flex:1;padding:14px;border-radius:var(--r);font-weight:600;font-size:15px}
+.btn.primary{background:var(--paper);color:var(--ink)}
+.btn.ghost{background:var(--ink-3);color:var(--paper);border:1px solid var(--line)}
+.btn.danger{background:none;color:var(--sig);border:1px solid var(--sig);flex:0 0 auto;padding:14px 16px}
+.note{font-family:'Space Mono';font-size:11px;color:var(--mute);line-height:1.6;
+  border-left:2px solid var(--line);padding-left:10px;margin:0 0 14px}
+.note b{color:var(--paper)}
+.pushlog{font-family:'Space Mono';font-size:11px;color:var(--mute);
+  background:var(--ink);border-radius:var(--r);padding:10px;margin-top:12px;
+  white-space:pre-wrap;max-height:130px;overflow:auto;display:none}
+.pushlog.on{display:block}
+.toast{
+  position:fixed;left:50%;transform:translateX(-50%) translateY(20px);
+  bottom:calc(84px + var(--safe-b));z-index:60;
+  background:var(--paper);color:var(--ink);font-family:'Space Mono';font-size:12px;font-weight:700;
+  padding:10px 16px;border-radius:999px;opacity:0;transition:.2s;pointer-events:none;
+}
+.toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brandrow">
+      <div class="brand">LED<em>G</em>ER</div>
+      <div class="status" id="status">local</div>
+      <div class="count" id="count"></div>
+    </div>
+    <nav class="tabs" id="tabs" role="tablist"></nav>
+    <div class="controls">
+      <input class="search" id="q" placeholder="Search titles, genres, studios…" autocomplete="off">
+      <button class="sortbtn" id="sortbtn">RATING ↓</button>
+    </div>
+  </header>
+
+  <div class="spine" id="spine"></div>
+  <div class="spinelabel"><span id="spineLo"></span><span id="spineHi">filter by rating</span></div>
+
+  <ul class="list" id="list"></ul>
+</div>
+
+<div class="fabs">
+  <button class="fab ghost" id="settingsBtn" aria-label="Settings">⚙</button>
+  <button class="fab push" id="pushBtn" aria-label="Save to GitHub" style="display:none">↑</button>
+  <button class="fab" id="addBtn" aria-label="Add item">+</button>
+</div>
+
+<div class="scrim" id="scrim"></div>
+
+<!-- edit sheet -->
+<div class="sheet" id="editSheet" role="dialog" aria-modal="true">
+  <div class="grab"></div>
+  <h2 id="editTitle">Add item</h2>
+  <div id="fields"></div>
+  <label class="f"><span id="rlabel">Rating</span><div class="ratepick" id="ratepick"></div></label>
+  <div class="acts">
+    <button class="btn ghost" id="cancelEdit">Cancel</button>
+    <button class="btn primary" id="saveEdit">Save</button>
+    <button class="btn danger" id="delEdit" style="display:none">Delete</button>
+  </div>
+</div>
+
+<!-- settings sheet -->
+<div class="sheet" id="setSheet" role="dialog" aria-modal="true">
+  <div class="grab"></div>
+  <h2>Settings</h2>
+  <p class="note">Your token stays in this browser's storage and is sent only to <b>api.github.com</b>. It is never shown to anyone else. Clearing your browser data removes it — you'd paste it again.</p>
+  <label class="f"><span>GitHub repo</span><input class="in" id="repoIn" placeholder="maxyongg/media" autocomplete="off"></label>
+  <label class="f"><span>Branch</span><input class="in" id="branchIn" placeholder="main" autocomplete="off"></label>
+  <label class="f"><span>Personal access token</span><input class="in" id="tokIn" type="password" placeholder="github_pat_…" autocomplete="off"></label>
+  <div class="acts">
+    <button class="btn ghost" id="closeSet">Close</button>
+    <button class="btn primary" id="saveSet">Save settings</button>
+  </div>
+  <div class="acts" style="margin-top:10px">
+    <button class="btn ghost" id="pullBtn">Reload from GitHub</button>
+    <button class="btn danger" id="forgetBtn">Forget token</button>
+  </div>
+  <div class="pushlog" id="pushlog"></div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ================= config ================= */
+const COLLECTIONS = {
+  games: {
+    label:'Games', file:'games.json', scale:7, idp:'g',
+    fields:[
+      {k:'name',        l:'Title',        t:'text'},
+      {k:'developer',   l:'Publisher / dev', t:'text'},
+      {k:'studioStatus',l:'Studio',       t:'select', opts:['AAA','AA','Indie']},
+      {k:'genre',       l:'Genre',        t:'text', list:true},
+      {k:'console',     l:'Console',      t:'text', list:true},
+      {k:'mainStoryPct',l:'Main story %', t:'text', half:true},
+      {k:'yearPlayed',  l:'Year played',  t:'number', half:true},
+      {k:'yearReleased',l:'Year released',t:'number', half:true},
+    ],
+    sub: i => [i.developer, i.console, i.yearReleased].filter(Boolean).join(' · '),
+    pct: i => i.mainStoryPct, pctLabel:'story'
+  },
+  tv: {
+    label:'TV', file:'tv.json', scale:5, idp:'t',
+    fields:[
+      {k:'name',           l:'Title',    t:'text'},
+      {k:'genre',          l:'Genre',    t:'text', list:true},
+      {k:'network',        l:'Network',  t:'text', list:true},
+      {k:'seasons',        l:'Seasons',  t:'text', half:true},
+      {k:'watchedPct',     l:'Watched %',t:'text', half:true},
+      {k:'firstSeasonYear',l:'First season', t:'number', half:true},
+      {k:'lastSeasonYear', l:'Last season',  t:'number', half:true},
+    ],
+    sub: i => [i.network, i.genre, i.seasons?i.seasons+' seasons':null].filter(Boolean).join(' · '),
+    pct: i => i.watchedPct, pctLabel:'watched'
+  },
+  films: {
+    label:'Films', file:'films.json', scale:5, idp:'f',
+    fields:[
+      {k:'name',    l:'Title',    t:'text'},
+      {k:'director',l:'Director', t:'text', list:true},
+      {k:'year',    l:'Year',     t:'number', half:true},
+      {k:'watched', l:'Watched',  t:'text', half:true},
+    ],
+    sub: i => [i.director, i.year].filter(Boolean).join(' · '),
+    pct: () => null
+  },
+  books: {
+    label:'Books', file:'books.json', scale:5, idp:'b',
+    fields:[
+      {k:'name',  l:'Title',  t:'text'},
+      {k:'author',l:'Author', t:'text', list:true},
+      {k:'year',  l:'Year',   t:'number', half:true},
+      {k:'read',  l:'Read',   t:'text', half:true},
+    ],
+    sub: i => [i.author, i.year].filter(Boolean).join(' · '),
+    pct: () => null
+  },
+  albums: {
+    label:'Albums', file:'albums.json', scale:5, idp:'a',
+    fields:[
+      {k:'name',  l:'Title',  t:'text'},
+      {k:'artist',l:'Artist', t:'text', list:true},
+      {k:'year',  l:'Year',   t:'number', half:true},
+      {k:'label', l:'Label',  t:'text', half:true, list:true},
+    ],
+    sub: i => [i.artist, i.year].filter(Boolean).join(' · '),
+    pct: () => null
+  }
+};
+const SORTS = [
+  {k:'rating', d:-1, l:'RATING ↓'},
+  {k:'rating', d: 1, l:'RATING ↑'},
+  {k:'name',   d: 1, l:'A–Z'},
+  {k:'recent', d:-1, l:'NEWEST'}
+];
+
+/* ================= state ================= */
+const S = {
+  tab:'games', q:'', sort:0, ratingFilter:new Set(),
+  data:{}, shas:{}, dirty:new Set(),
+  cfg:{repo:'', branch:'main', token:''},
+  editing:null
+};
+const $ = s => document.querySelector(s);
+const LS = 'ledger.v1';
+
+function loadCfg(){
+  try{
+    const c = JSON.parse(localStorage.getItem(LS+'.cfg')||'{}');
+    Object.assign(S.cfg, c);
+  }catch(e){}
+  if(!S.cfg.repo){
+    // sensible default from the Pages URL: user.github.io/repo/
+    const m = location.hostname.match(/^([^.]+)\.github\.io$/);
+    const p = location.pathname.split('/').filter(Boolean)[0];
+    if(m && p) S.cfg.repo = m[1]+'/'+p;
+  }
+}
+function saveCfg(){ localStorage.setItem(LS+'.cfg', JSON.stringify(S.cfg)); }
+function cacheData(){ localStorage.setItem(LS+'.data', JSON.stringify({d:S.data, dirty:[...S.dirty]})); }
+function loadCache(){
+  try{
+    const c = JSON.parse(localStorage.getItem(LS+'.data')||'null');
+    if(c && c.d){ S.data = c.d; S.dirty = new Set(c.dirty||[]); return true; }
+  }catch(e){}
+  return false;
+}
+
+/* ================= toast ================= */
+let tT;
+function toast(msg){
+  const t=$('#toast'); t.textContent=msg; t.classList.add('on');
+  clearTimeout(tT); tT=setTimeout(()=>t.classList.remove('on'),2200);
+}
+
+/* ================= data io ================= */
+async function loadLocal(key){
+  const c = COLLECTIONS[key];
+  const r = await fetch(c.file+'?t='+Date.now());
+  if(!r.ok) throw new Error(c.file+' — '+r.status);
+  return await r.json();
+}
+async function loadAll(){
+  const cached = loadCache();
+  await Promise.all(Object.keys(COLLECTIONS).map(async k=>{
+    if(cached && S.data[k]) return;
+    try{ S.data[k] = await loadLocal(k); }
+    catch(e){ S.data[k] = {schemaVersion:1, ratingScale:COLLECTIONS[k].scale, items:[]}; }
+  }));
+  render();
+}
+
+function ghHeaders(){
+  return {
+    'Authorization':'Bearer '+S.cfg.token,
+    'Accept':'application/vnd.github+json',
+    'X-GitHub-Api-Version':'2022-11-28'
+  };
+}
+function b64(str){
+  return btoa(String.fromCharCode(...new TextEncoder().encode(str)));
+}
+function unb64(str){
+  const bin = atob(str.replace(/\s/g,''));
+  return new TextDecoder().decode(Uint8Array.from(bin, c=>c.charCodeAt(0)));
+}
+async function ghGet(file){
+  const u = `https://api.github.com/repos/${S.cfg.repo}/contents/${file}?ref=${encodeURIComponent(S.cfg.branch||'main')}`;
+  const r = await fetch(u, {headers: ghHeaders()});
+  if(r.status===404) return null;
+  if(!r.ok) throw new Error(`${file}: ${r.status} ${(await r.json()).message||''}`);
+  const j = await r.json();
+  return {sha:j.sha, json:JSON.parse(unb64(j.content))};
+}
+async function ghPut(file, obj, sha){
+  const u = `https://api.github.com/repos/${S.cfg.repo}/contents/${file}`;
+  const body = {
+    message:`ledger: update ${file}`,
+    content: b64(JSON.stringify(obj,null,1)),
+    branch: S.cfg.branch||'main'
+  };
+  if(sha) body.sha = sha;
+  const r = await fetch(u, {method:'PUT', headers:{...ghHeaders(),'Content-Type':'application/json'}, body: JSON.stringify(body)});
+  const j = await r.json();
+  if(!r.ok) throw new Error(`${file}: ${r.status} ${j.message||''}`);
+  return j.content.sha;
+}
+
+async function pull(){
+  if(!S.cfg.token || !S.cfg.repo) return toast('Add repo + token first');
+  const log=$('#pushlog'); log.classList.add('on'); log.textContent='Reading…\n';
+  try{
+    for(const k of Object.keys(COLLECTIONS)){
+      const g = await ghGet(COLLECTIONS[k].file);
+      if(g){ S.data[k]=g.json; S.shas[k]=g.sha; log.textContent+=`${COLLECTIONS[k].file} ✓ ${g.json.items.length} items\n`; }
+      else log.textContent+=`${COLLECTIONS[k].file} — not in repo yet\n`;
+    }
+    S.dirty.clear(); cacheData(); render();
+    setStatus('ok','synced'); toast('Reloaded from GitHub');
+  }catch(e){ log.textContent+='ERROR '+e.message+'\n'; setStatus('dirty','error'); }
+}
+
+async function push(){
+  if(!S.cfg.token || !S.cfg.repo){ openSet(); return toast('Add repo + token first'); }
+  if(!S.dirty.size) return toast('Nothing to save');
+  const log=$('#pushlog'); log.classList.add('on'); log.textContent='Saving…\n';
+  setStatus('','saving…');
+  try{
+    for(const k of [...S.dirty]){
+      let sha = S.shas[k];
+      if(!sha){ const g = await ghGet(COLLECTIONS[k].file); sha = g && g.sha; }
+      S.shas[k] = await ghPut(COLLECTIONS[k].file, S.data[k], sha);
+      S.dirty.delete(k);
+      log.textContent += `${COLLECTIONS[k].file} committed\n`;
+    }
+    cacheData(); setStatus('ok','saved'); toast('Saved to GitHub'); render();
+  }catch(e){
+    log.textContent += 'ERROR '+e.message+'\n';
+    setStatus('dirty', S.dirty.size+' unsaved');
+    toast('Save failed — see settings');
+  }
+}
+function setStatus(cls,txt){
+  const s=$('#status'); s.className='status '+cls; s.textContent=txt;
+}
+function markDirty(k){
+  S.dirty.add(k); cacheData();
+  setStatus('dirty', S.dirty.size+' unsaved');
+  $('#pushBtn').style.display='flex';
+}
+
+/* ================= render ================= */
+function scale(){ return COLLECTIONS[S.tab].scale; }
+function items(){ return (S.data[S.tab]&&S.data[S.tab].items)||[]; }
+
+function filtered(){
+  const c = COLLECTIONS[S.tab];
+  const q = S.q.trim().toLowerCase();
+  let out = items().filter(i=>{
+    if(S.ratingFilter.size && !S.ratingFilter.has(i.rating)) return false;
+    if(!q) return true;
+    return Object.values(i).some(v => v!=null && String(v).toLowerCase().includes(q));
+  });
+  const s = SORTS[S.sort];
+  out.sort((a,b)=>{
+    if(s.k==='name') return String(a.name||'').localeCompare(String(b.name||''))*s.d;
+    if(s.k==='recent'){
+      const av=a.yearPlayed||a.lastSeasonYear||a.year||0, bv=b.yearPlayed||b.lastSeasonYear||b.year||0;
+      return (bv-av)||String(a.name).localeCompare(String(b.name));
+    }
+    const rd = ((a.rating||0)-(b.rating||0))*s.d;
+    return rd || String(a.name||'').localeCompare(String(b.name||''));
+  });
+  return out;
+}
+
+function renderTabs(){
+  $('#tabs').innerHTML = Object.entries(COLLECTIONS).map(([k,c])=>{
+    const n = (S.data[k]&&S.data[k].items.length)||0;
+    return `<button class="tab" role="tab" data-k="${k}" aria-selected="${k===S.tab}">${c.label}${n?' '+n:''}</button>`;
+  }).join('');
+}
+
+function renderSpine(){
+  const sc = scale(), counts = {};
+  for(let r=1;r<=sc;r++) counts[r]=0;
+  items().forEach(i=>{ if(counts[i.rating]!=null) counts[i.rating]++; });
+  const max = Math.max(1,...Object.values(counts));
+  $('#spine').innerHTML = Array.from({length:sc},(_,x)=>{
+    const r=x+1, n=counts[r], h=14+Math.round((n/max)*20);
+    const on = S.ratingFilter.size===0 || S.ratingFilter.has(r);
+    return `<button class="sbar" data-r="${r}" data-on="${on?1:0}"
+      aria-pressed="${S.ratingFilter.has(r)}" aria-label="Rating ${r}, ${n} items"
+      style="height:${h}px"><span>${r}</span></button>`;
+  }).join('');
+  $('#spineLo').textContent = S.ratingFilter.size
+    ? 'showing '+[...S.ratingFilter].sort().join(', ')
+    : `1 → ${sc}`;
+}
+
+function rateClass(r){
+  const sc=scale();
+  if(!r) return 'lo';
+  if(r/sc >= 0.85) return 'hi';
+  if(r/sc >= 0.55) return 'mid';
+  return 'lo';
+}
+
+function render(){
+  renderTabs(); renderSpine();
+  const c = COLLECTIONS[S.tab], rows = filtered();
+  $('#count').textContent = rows.length+'/'+items().length;
+  $('#sortbtn').textContent = SORTS[S.sort].l;
+  $('#pushBtn').style.display = S.dirty.size ? 'flex' : 'none';
+
+  if(!rows.length){
+    $('#list').innerHTML = `<div class="empty"><b>${items().length ? 'No matches' : 'Nothing here yet'}</b>${
+      items().length ? 'Try a different search or clear the rating filter.' : 'Tap + to add your first '+c.label.toLowerCase().replace(/s$/,'')+'.'}</div>`;
+    return;
+  }
+  $('#list').innerHTML = rows.map(i=>{
+    const p = c.pct(i);
+    const partial = (p!=null && p!=='' && p!==100 && p!=='100');
+    const sub = [c.sub(i), partial?`<span class="partial">${p}% ${c.pctLabel}</span>`:''].filter(Boolean).join(' · ');
+    return `<li class="row" data-id="${i.id}">
+      <div class="rate ${rateClass(i.rating)}">${i.rating??'–'}</div>
+      <div class="meta">
+        <div class="title">${esc(i.name||'Untitled')}</div>
+        <div class="sub">${sub||'&nbsp;'}</div>
+      </div>
+    </li>`;
+  }).join('');
+}
+function esc(s){ return String(s).replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m])); }
+
+/* ================= datalists ================= */
+function optionsFor(key){
+  const set=new Set();
+  items().forEach(i=>{ if(i[key]) set.add(i[key]); });
+  return [...set].sort();
+}
+
+/* ================= edit sheet ================= */
+function openEdit(item){
+  const c = COLLECTIONS[S.tab];
+  S.editing = item ? {...item} : {id:null, rating:null};
+  $('#editTitle').textContent = item ? 'Edit' : 'Add '+c.label.toLowerCase().replace(/s$/,'');
+  $('#delEdit').style.display = item ? 'block' : 'none';
+  $('#rlabel').textContent = `Rating / ${c.scale}`;
+
+  let html='', pend='';
+  c.fields.forEach(f=>{
+    const v = S.editing[f.k] ?? '';
+    const dl = f.list ? ` list="dl_${f.k}"` : '';
+    const dlEl = f.list ? `<datalist id="dl_${f.k}">${optionsFor(f.k).map(o=>`<option value="${esc(o)}">`).join('')}</datalist>` : '';
+    let input;
+    if(f.t==='select'){
+      input = `<select class="in" data-k="${f.k}"><option value=""></option>${
+        f.opts.map(o=>`<option ${o===v?'selected':''}>${o}</option>`).join('')}</select>`;
+    } else {
+      input = `<input class="in" data-k="${f.k}" type="${f.t==='number'?'number':'text'}"
+        inputmode="${f.t==='number'?'numeric':'text'}" value="${esc(v)}"${dl}>${dlEl}`;
+    }
+    const block = `<label class="f"><span>${f.l}</span>${input}</label>`;
+    if(f.half){ pend += block; } else { html += block; }
+  });
+  if(pend) html += `<div class="two">${pend}</div>`;
+  $('#fields').innerHTML = html;
+
+  $('#ratepick').innerHTML = Array.from({length:c.scale},(_,x)=>{
+    const r=x+1;
+    return `<button data-r="${r}" aria-pressed="${S.editing.rating===r}">${r}</button>`;
+  }).join('');
+
+  openSheet('#editSheet');
+}
+function readEdit(){
+  const c = COLLECTIONS[S.tab], o = {...S.editing};
+  $('#fields').querySelectorAll('[data-k]').forEach(el=>{
+    const f = c.fields.find(x=>x.k===el.dataset.k);
+    let v = el.value.trim();
+    if(v==='') { o[f.k]=null; return; }
+    o[f.k] = (f.t==='number' && !isNaN(+v)) ? +v : v;
+  });
+  return o;
+}
+function saveEdit(){
+  const c = COLLECTIONS[S.tab], o = readEdit();
+  if(!o.name){ toast('A title is required'); return; }
+  const arr = S.data[S.tab].items;
+  if(o.id){
+    const ix = arr.findIndex(x=>x.id===o.id);
+    arr[ix] = o;
+  } else {
+    let n=1; const used=new Set(arr.map(x=>x.id));
+    while(used.has(c.idp+String(n).padStart(4,'0'))) n++;
+    o.id = c.idp+String(n).padStart(4,'0');
+    arr.unshift(o);
+  }
+  markDirty(S.tab); closeSheets(); render();
+  toast(o.id ? 'Saved locally — tap ↑ to commit' : 'Added');
+}
+function delEdit(){
+  if(!S.editing.id) return;
+  if(!confirm('Delete "'+S.editing.name+'"? This removes it from the list.')) return;
+  S.data[S.tab].items = S.data[S.tab].items.filter(x=>x.id!==S.editing.id);
+  markDirty(S.tab); closeSheets(); render(); toast('Deleted — tap ↑ to commit');
+}
+
+/* ================= sheets ================= */
+function openSheet(sel){ $('#scrim').classList.add('on'); $(sel).classList.add('on'); }
+function closeSheets(){
+  $('#scrim').classList.remove('on');
+  document.querySelectorAll('.sheet').forEach(s=>s.classList.remove('on'));
+}
+function openSet(){
+  $('#repoIn').value = S.cfg.repo||'';
+  $('#branchIn').value = S.cfg.branch||'main';
+  $('#tokIn').value = S.cfg.token||'';
+  openSheet('#setSheet');
+}
+
+/* ================= events ================= */
+$('#tabs').addEventListener('click', e=>{
+  const b = e.target.closest('.tab'); if(!b) return;
+  S.tab = b.dataset.k; S.ratingFilter.clear(); render();
+  window.scrollTo({top:0});
+});
+$('#spine').addEventListener('click', e=>{
+  const b = e.target.closest('.sbar'); if(!b) return;
+  const r = +b.dataset.r;
+  S.ratingFilter.has(r) ? S.ratingFilter.delete(r) : S.ratingFilter.add(r);
+  render();
+});
+$('#q').addEventListener('input', e=>{ S.q = e.target.value; render(); });
+$('#sortbtn').addEventListener('click', ()=>{ S.sort = (S.sort+1)%SORTS.length; render(); });
+$('#list').addEventListener('click', e=>{
+  const li = e.target.closest('.row'); if(!li) return;
+  openEdit(items().find(i=>i.id===li.dataset.id));
+});
+$('#addBtn').addEventListener('click', ()=>openEdit(null));
+$('#pushBtn').addEventListener('click', push);
+$('#settingsBtn').addEventListener('click', openSet);
+$('#scrim').addEventListener('click', closeSheets);
+$('#cancelEdit').addEventListener('click', closeSheets);
+$('#saveEdit').addEventListener('click', saveEdit);
+$('#delEdit').addEventListener('click', delEdit);
+$('#closeSet').addEventListener('click', closeSheets);
+$('#ratepick').addEventListener('click', e=>{
+  const b = e.target.closest('button[data-r]'); if(!b) return;
+  const r = +b.dataset.r;
+  S.editing.rating = (S.editing.rating===r) ? null : r;
+  $('#ratepick').querySelectorAll('button').forEach(x=>
+    x.setAttribute('aria-pressed', +x.dataset.r===S.editing.rating));
+});
+$('#saveSet').addEventListener('click', ()=>{
+  S.cfg.repo = $('#repoIn').value.trim().replace(/^https?:\/\/github\.com\//,'').replace(/\/$/,'');
+  S.cfg.branch = $('#branchIn').value.trim()||'main';
+  S.cfg.token = $('#tokIn').value.trim();
+  saveCfg(); toast('Settings saved');
+});
+$('#pullBtn').addEventListener('click', pull);
+$('#forgetBtn').addEventListener('click', ()=>{
+  S.cfg.token=''; $('#tokIn').value=''; saveCfg(); toast('Token removed from this browser');
+});
+window.addEventListener('beforeunload', e=>{
+  if(S.dirty.size){ e.preventDefault(); e.returnValue=''; }
+});
+
+/* ================= go ================= */
+loadCfg();
+loadAll().then(()=>{
+  if(S.dirty.size) setStatus('dirty', S.dirty.size+' unsaved');
+});
+</script>
+</body>
+</html>
