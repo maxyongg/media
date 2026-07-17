@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "ratingScale": 10,
- "updatedAt": "2026-07-17T15:40:31.348Z",
+ "updatedAt": "2026-07-17T17:29:46.612Z",
  "items": [
   {
    "id": "g0001",
@@ -309,11 +309,11 @@
    "studioStatus": "AAA",
    "genre": "Open World",
    "console": "Switch",
-   "mainStoryPct": 100,
+   "mainStoryPct": "100",
    "yearReleased": 2017,
    "rating": 10,
    "datePlayed": "2018-01-01",
-   "coverUrl": "https://media.rawg.io/media/games/f87/f87de0e93f02007fd044e4bf04d453d8.jpg"
+   "coverUrl": "https://media.rawg.io/media/games/cc1/cc196a5ad763955d6532cdba236f730c.jpg"
   },
   {
    "id": "g0025",
