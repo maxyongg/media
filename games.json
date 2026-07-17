@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "ratingScale": 10,
- "updatedAt": "2026-07-17T17:30:48.043Z",
+ "updatedAt": "2026-07-17T17:44:01.684Z",
  "items": [
   {
    "id": "g0001",
@@ -123,7 +123,7 @@
   {
    "id": "g0010",
    "name": "Astro Bot",
-   "developer": "Playstation Studios",
+   "developer": "Sony Interactive",
    "studioStatus": "AAA",
    "genre": "3D Platformer",
    "console": "PS5",
