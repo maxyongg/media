@@ -222,6 +222,7 @@ label.f>span{font-family:'Space Mono';font-size:10px;color:var(--mute);
 
 <div class="fabs">
   <button class="fab ghost" id="settingsBtn" aria-label="Settings">⚙</button>
+  <button class="fab ghost" id="fetchFab" aria-label="Fetch from Letterboxd/Goodreads">⚡</button>
   <button class="fab ghost" id="reloadFab" aria-label="Reload from GitHub">⟳</button>
   <button class="fab push" id="pushBtn" aria-label="Save to GitHub" style="display:none">↑</button>
   <button class="fab" id="addBtn" aria-label="Add item">+</button>
@@ -471,6 +472,31 @@ async function pull(){
   }catch(e){
     log.textContent+='ERROR '+e.message+'\n'; setStatus('dirty','error');
     S.authError = classifyError(e); checkToken();
+  }
+}
+
+async function triggerSync(){
+  if(!S.cfg.token || !S.cfg.repo){ openSet(); return toast('Add repo + token first'); }
+  toast('Triggering fetch…');
+  try{
+    const u = `https://api.github.com/repos/${S.cfg.repo}/actions/workflows/sync-media.yml/dispatches`;
+    const r = await fetch(u, {
+      method:'POST',
+      headers:{...ghHeaders(),'Content-Type':'application/json'},
+      body: JSON.stringify({ref: S.cfg.branch||'main'})
+    });
+    if(r.status===204){
+      toast('Fetch started — check back in a minute');
+    } else if(r.status===404){
+      toast('Workflow not found — add sync-media.yml first');
+    } else if(r.status===401 || r.status===403){
+      toast('Token needs Actions: write permission');
+    } else {
+      const j = await r.json().catch(()=>({}));
+      toast('Trigger failed: '+(j.message||r.status));
+    }
+  }catch(e){
+    toast('Trigger failed: '+e.message);
   }
 }
 
@@ -734,6 +760,7 @@ $('#saveSet').addEventListener('click', ()=>{
   saveCfg(); S.authError=null; toast('Settings saved'); closeSheets(); verifyToken();
 });
 $('#reloadFab').addEventListener('click', pull);
+$('#fetchFab').addEventListener('click', triggerSync);
 $('#forgetBtn').addEventListener('click', ()=>{
   S.cfg.token=''; $('#tokIn').value=''; saveCfg(); S.authError=null;
   toast('Token removed from this browser'); checkToken();
