@@ -88,6 +88,23 @@ nav.tabs::-webkit-scrollbar{display:none}
   display:flex;justify-content:space-between;letter-spacing:.05em;
 }
 
+/* ---------- banner ---------- */
+.banner{
+  display:flex;align-items:center;gap:10px;margin-top:14px;
+  background:var(--ink-2);border:1px solid var(--sig);border-left-width:3px;
+  border-radius:var(--r);padding:11px 12px;
+}
+.banner[hidden]{display:none}
+.banner.warn{border-color:#c9a227}
+.btxt{flex:1;min-width:0;font-size:13px;line-height:1.45}
+.btxt b{display:block;font-size:13px;margin-bottom:1px}
+.btxt span{color:var(--mute);font-family:'Space Mono';font-size:11px}
+.bfix{
+  flex:0 0 auto;background:var(--paper);color:var(--ink);
+  border-radius:999px;padding:12px 15px;font-weight:600;font-size:13px;
+  min-height:44px;
+}
+
 /* ---------- list ---------- */
 ul.list{list-style:none;margin:14px 0 0;padding:0}
 li.row{
@@ -195,6 +212,11 @@ label.f>span{font-family:'Space Mono';font-size:10px;color:var(--mute);
   <div class="spine" id="spine"></div>
   <div class="spinelabel"><span id="spineLo"></span><span id="spineHi">filter by rating</span></div>
 
+  <div class="banner" id="banner" hidden>
+    <div class="btxt"><b id="bTitle"></b><span id="bBody"></span></div>
+    <button class="bfix" id="bFix">Fix</button>
+  </div>
+
   <ul class="list" id="list"></ul>
 </div>
 
@@ -227,6 +249,7 @@ label.f>span{font-family:'Space Mono';font-size:10px;color:var(--mute);
   <label class="f"><span>GitHub repo</span><input class="in" id="repoIn" placeholder="maxyongg/media" autocomplete="off"></label>
   <label class="f"><span>Branch</span><input class="in" id="branchIn" placeholder="main" autocomplete="off"></label>
   <label class="f"><span>Personal access token</span><input class="in" id="tokIn" type="password" placeholder="github_pat_…" autocomplete="off"></label>
+  <label class="f"><span>Token expiry date — optional, for reminders</span><input class="in" id="expIn" type="date"></label>
   <div class="acts">
     <button class="btn ghost" id="closeSet">Close</button>
     <button class="btn primary" id="saveSet">Save settings</button>
@@ -316,8 +339,8 @@ const SORTS = [
 /* ================= state ================= */
 const S = {
   tab:'games', q:'', sort:0, ratingFilter:new Set(),
-  data:{}, shas:{}, dirty:new Set(),
-  cfg:{repo:'', branch:'main', token:''},
+  data:{}, shas:{}, dirty:new Set(), authError:null,
+  cfg:{repo:'', branch:'main', token:'', expires:''},
   editing:null
 };
 const $ = s => document.querySelector(s);
@@ -387,7 +410,7 @@ async function ghGet(file){
   const u = `https://api.github.com/repos/${S.cfg.repo}/contents/${file}?ref=${encodeURIComponent(S.cfg.branch||'main')}`;
   const r = await fetch(u, {headers: ghHeaders()});
   if(r.status===404) return null;
-  if(!r.ok) throw new Error(`${file}: ${r.status} ${(await r.json()).message||''}`);
+  if(!r.ok){ const e = new Error(`${file}: ${r.status} ${(await r.json().catch(()=>({}))).message||''}`); e.status = r.status; throw e; }
   const j = await r.json();
   return {sha:j.sha, json:JSON.parse(unb64(j.content))};
 }
@@ -400,9 +423,49 @@ async function ghPut(file, obj, sha){
   };
   if(sha) body.sha = sha;
   const r = await fetch(u, {method:'PUT', headers:{...ghHeaders(),'Content-Type':'application/json'}, body: JSON.stringify(body)});
-  const j = await r.json();
-  if(!r.ok) throw new Error(`${file}: ${r.status} ${j.message||''}`);
+  const j = await r.json().catch(()=>({}));
+  if(!r.ok){ const e = new Error(`${file}: ${r.status} ${j.message||''}`); e.status = r.status; throw e; }
   return j.content.sha;
+}
+
+/* ---- token health ---- */
+function bannerFor(kind, extra){
+  const B = $('#banner');
+  if(!kind){ B.hidden = true; return; }
+  const M = {
+    notoken: ['Not connected to GitHub', 'Edits save on this phone only. Add a token to sync.', 'sig', 'Set up'],
+    expired: ['Token expired or revoked', 'GitHub rejected it (401). Generate a new one to save again.', 'sig', 'Replace'],
+    denied:  ['Token lacks write access', 'Needs Contents: Read and write on this repo (403).', 'sig', 'Fix'],
+    norepo:  ['Repo not found', 'Check the repo name and that the token can see it (404).', 'sig', 'Fix'],
+    soon:    ['Token expires soon', extra||'', 'warn', 'Renew'],
+    gone:    ['Token has expired', 'Generate a new one to start saving again.', 'sig', 'Replace']
+  }[kind];
+  if(!M) { B.hidden = true; return; }
+  $('#bTitle').textContent = M[0];
+  $('#bBody').textContent  = M[1];
+  B.className = 'banner' + (M[2]==='warn' ? ' warn' : '');
+  $('#bFix').textContent = M[3];
+  B.hidden = false;
+}
+function checkToken(){
+  if(S.authError){ bannerFor(S.authError); return; }
+  if(!S.cfg.token){ bannerFor('notoken'); return; }
+  if(S.cfg.expires){
+    const days = Math.ceil((new Date(S.cfg.expires+'T23:59:59') - Date.now())/86400000);
+    if(days < 0){ bannerFor('gone'); return; }
+    if(days <= 14){
+      bannerFor('soon', days===0 ? 'Expires today. Generate a new one to keep syncing.'
+        : `Expires in ${days} day${days===1?'':'s'}. Generate a new one to keep syncing.`);
+      return;
+    }
+  }
+  bannerFor(null);
+}
+function classifyError(e){
+  if(e && e.status===401) return 'expired';
+  if(e && e.status===403) return 'denied';
+  if(e && e.status===404) return 'norepo';
+  return null;
 }
 
 async function pull(){
@@ -414,9 +477,12 @@ async function pull(){
       if(g){ S.data[k]=g.json; S.shas[k]=g.sha; log.textContent+=`${COLLECTIONS[k].file} ✓ ${g.json.items.length} items\n`; }
       else log.textContent+=`${COLLECTIONS[k].file} — not in repo yet\n`;
     }
-    S.dirty.clear(); cacheData(); render();
-    setStatus('ok','synced'); toast('Reloaded from GitHub');
-  }catch(e){ log.textContent+='ERROR '+e.message+'\n'; setStatus('dirty','error'); }
+    S.dirty.clear(); S.authError=null; cacheData(); render();
+    setStatus('ok','synced'); toast('Reloaded from GitHub'); checkToken();
+  }catch(e){
+    log.textContent+='ERROR '+e.message+'\n'; setStatus('dirty','error');
+    S.authError = classifyError(e); checkToken();
+  }
 }
 
 async function push(){
@@ -432,11 +498,12 @@ async function push(){
       S.dirty.delete(k);
       log.textContent += `${COLLECTIONS[k].file} committed\n`;
     }
-    cacheData(); setStatus('ok','saved'); toast('Saved to GitHub'); render();
+    cacheData(); S.authError=null; setStatus('ok','saved'); toast('Saved to GitHub'); render(); checkToken();
   }catch(e){
     log.textContent += 'ERROR '+e.message+'\n';
     setStatus('dirty', S.dirty.size+' unsaved');
-    toast('Save failed — see settings');
+    S.authError = classifyError(e); checkToken();
+    toast(S.authError ? 'Token problem — see banner' : 'Save failed — see settings');
   }
 }
 function setStatus(cls,txt){
@@ -446,6 +513,22 @@ function markDirty(k){
   S.dirty.add(k); cacheData();
   setStatus('dirty', S.dirty.size+' unsaved');
   $('#pushBtn').style.display='flex';
+}
+
+/* silent check: is the stored token still good? */
+async function verifyToken(){
+  if(!S.cfg.token || !S.cfg.repo){ checkToken(); return; }
+  try{
+    const r = await fetch(`https://api.github.com/repos/${S.cfg.repo}`, {headers: ghHeaders()});
+    if(r.status===401){ S.authError='expired'; checkToken(); return; }
+    if(r.status===404){ S.authError='norepo'; checkToken(); return; }
+    if(r.ok){
+      const j = await r.json();
+      if(j.permissions && j.permissions.push === false){ S.authError='denied'; checkToken(); return; }
+      S.authError = null;
+    }
+    checkToken();
+  }catch(e){ checkToken(); }
 }
 
 /* ================= render ================= */
@@ -616,6 +699,7 @@ function openSet(){
   $('#repoIn').value = S.cfg.repo||'';
   $('#branchIn').value = S.cfg.branch||'main';
   $('#tokIn').value = S.cfg.token||'';
+  $('#expIn').value = S.cfg.expires||'';
   openSheet('#setSheet');
 }
 
@@ -652,15 +736,18 @@ $('#ratepick').addEventListener('click', e=>{
   $('#ratepick').querySelectorAll('button').forEach(x=>
     x.setAttribute('aria-pressed', +x.dataset.r===S.editing.rating));
 });
+$('#bFix').addEventListener('click', openSet);
 $('#saveSet').addEventListener('click', ()=>{
   S.cfg.repo = $('#repoIn').value.trim().replace(/^https?:\/\/github\.com\//,'').replace(/\/$/,'');
   S.cfg.branch = $('#branchIn').value.trim()||'main';
   S.cfg.token = $('#tokIn').value.trim();
-  saveCfg(); toast('Settings saved');
+  S.cfg.expires = $('#expIn').value || '';
+  saveCfg(); S.authError=null; toast('Settings saved'); closeSheets(); verifyToken();
 });
 $('#pullBtn').addEventListener('click', pull);
 $('#forgetBtn').addEventListener('click', ()=>{
-  S.cfg.token=''; $('#tokIn').value=''; saveCfg(); toast('Token removed from this browser');
+  S.cfg.token=''; $('#tokIn').value=''; saveCfg(); S.authError=null;
+  toast('Token removed from this browser'); checkToken();
 });
 window.addEventListener('beforeunload', e=>{
   if(S.dirty.size){ e.preventDefault(); e.returnValue=''; }
@@ -670,6 +757,7 @@ window.addEventListener('beforeunload', e=>{
 loadCfg();
 loadAll().then(()=>{
   if(S.dirty.size) setStatus('dirty', S.dirty.size+' unsaved');
+  verifyToken();
 });
 </script>
 </body>
