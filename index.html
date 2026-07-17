@@ -3,28 +3,28 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#111014">
+<meta name="theme-color" content="#F2E9D8">
 <title>Reviews</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600..900&family=Archivo:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#111014;
-  --ink-2:#191820;
-  --ink-3:#22212b;
-  --line:#2f2e3a;
-  --paper:#edeae4;
-  --mute:#8a8798;
-  --acid:#c8ff2e;
-  --sig:#ff5d3a;
+  --ink:#2b2318;
+  --ink-2:#ece0c4;
+  --ink-3:#e3d6b0;
+  --line:#cbb98c;
+  --paper:#f2e9d8;
+  --mute:#8c7b5c;
+  --acid:#d6a429;
+  --sig:#c1502f;
   --r:10px;
   --safe-b:env(safe-area-inset-bottom,0px);
 }
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{margin:0;padding:0}
 body{
-  background:var(--ink);color:var(--paper);
+  background:var(--paper);color:var(--ink);
   font-family:'Archivo',system-ui,sans-serif;
   font-size:16px;line-height:1.4;
   overscroll-behavior-y:none;
@@ -36,11 +36,11 @@ button{cursor:pointer;border:none;background:none}
 .wrap{max-width:760px;margin:0 auto;padding:0 14px calc(96px + var(--safe-b))}
 
 header.top{
-  position:sticky;top:0;z-index:40;background:var(--ink);
+  position:sticky;top:0;z-index:40;background:var(--paper);
   padding:14px 0 10px;border-bottom:1px solid var(--line);
 }
 .brandrow{display:flex;align-items:baseline;gap:10px}
-.brand{font-family:'Archivo Black';font-size:22px;letter-spacing:-.02em}
+.brand{font-family:'Fraunces';font-weight:700;font-size:22px;letter-spacing:-.02em}
 .brand em{font-style:normal;color:var(--sig)}
 .count{font-family:'Space Mono';font-size:11px;color:var(--mute);margin-left:auto}
 .status{font-family:'Space Mono';font-size:11px;color:var(--mute)}
@@ -55,13 +55,13 @@ nav.tabs::-webkit-scrollbar{display:none}
   font-family:'Space Mono';font-size:12px;letter-spacing:.04em;text-transform:uppercase;
   color:var(--mute);border:1px solid var(--line);white-space:nowrap;
 }
-.tab[aria-selected="true"]{background:var(--paper);color:var(--ink);border-color:var(--paper);font-weight:700}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink);font-weight:700}
 
 /* controls */
 .controls{display:flex;gap:8px;margin-top:10px}
 .search{
   flex:1;background:var(--ink-2);border:1px solid var(--line);border-radius:var(--r);
-  padding:10px 12px;color:var(--paper);min-width:0;
+  padding:10px 12px;color:var(--ink);min-width:0;
 }
 .search::placeholder{color:var(--mute)}
 .sortbtn{
@@ -100,7 +100,7 @@ nav.tabs::-webkit-scrollbar{display:none}
 .btxt b{display:block;font-size:13px;margin-bottom:1px}
 .btxt span{color:var(--mute);font-family:'Space Mono';font-size:11px}
 .bfix{
-  flex:0 0 auto;background:var(--paper);color:var(--ink);
+  flex:0 0 auto;background:var(--ink);color:var(--paper);
   border-radius:999px;padding:12px 15px;font-weight:600;font-size:13px;
   min-height:44px;
 }
@@ -115,10 +115,10 @@ li.row{
   flex:0 0 40px;height:40px;border-radius:var(--r);
   background:var(--ink-3);
   display:flex;align-items:center;justify-content:center;
-  font-family:'Archivo Black';font-size:17px;line-height:1;letter-spacing:-.03em;
+  font-family:'Fraunces';font-weight:700;font-size:17px;line-height:1;letter-spacing:-.03em;
 }
 .rate.hi{background:var(--acid);color:var(--ink)}
-.rate.mid{background:#4a5c1a;color:var(--paper)}
+.rate.mid{background:#c99a3e;color:var(--ink)}
 .rate.lo{background:var(--ink-3);color:var(--mute)}
 .meta{flex:1;min-width:0}
 .title{font-weight:600;font-size:15px;letter-spacing:-.01em;
@@ -127,7 +127,21 @@ li.row{
   overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-top:2px}
 .partial{color:var(--sig)}
 .empty{text-align:center;color:var(--mute);font-family:'Space Mono';font-size:13px;padding:50px 20px}
-.empty b{display:block;color:var(--paper);font-family:'Archivo';font-size:16px;margin-bottom:6px}
+.empty b{display:block;color:var(--ink);font-family:'Archivo';font-size:16px;margin-bottom:6px}
+
+/* ---------- stats ---------- */
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-top:14px}
+.stat-card{background:var(--ink-2);border-radius:var(--r);padding:14px}
+.stat-num{font-family:'Fraunces';font-weight:700;font-size:26px;letter-spacing:-.02em}
+.stat-label{font-family:'Space Mono';font-size:10px;color:var(--mute);text-transform:uppercase;letter-spacing:.06em;margin-top:2px}
+.stats-section{margin-top:26px}
+.stats-h{font-family:'Space Mono';font-size:10px;color:var(--mute);text-transform:uppercase;letter-spacing:.08em;margin-bottom:18px}
+.yearbars{display:flex;gap:6px;align-items:flex-end;height:90px}
+.yearbar{flex:1;background:var(--acid);border-radius:3px 3px 0 0;position:relative;min-height:2px}
+.yearbar span{position:absolute;top:-16px;left:0;right:0;text-align:center;font-family:'Space Mono';font-size:9px;color:var(--mute)}
+.yearbar b{position:absolute;bottom:-16px;left:0;right:0;text-align:center;font-family:'Space Mono';font-size:9px;color:var(--mute);font-weight:400}
+.stats-chips{display:flex;flex-wrap:wrap;gap:6px}
+.stats-chip{font-family:'Space Mono';font-size:11px;background:var(--ink-3);border-radius:999px;padding:5px 10px;color:var(--ink)}
 
 /* ---------- fab ---------- */
 .fabs{
@@ -139,7 +153,7 @@ li.row{
   font-size:26px;font-weight:700;display:flex;align-items:center;justify-content:center;
   box-shadow:0 6px 24px rgba(0,0,0,.5);
 }
-.fab.ghost{background:var(--ink-3);color:var(--paper);width:44px;height:44px;font-size:17px;
+.fab.ghost{background:var(--ink-3);color:var(--ink);width:44px;height:44px;font-size:17px;
   border:1px solid var(--line);align-self:flex-end}
 .fab.push{background:var(--acid);color:var(--ink)}
 
@@ -156,38 +170,38 @@ li.row{
 }
 .sheet.on{transform:translateY(0)}
 .grab{width:38px;height:4px;border-radius:2px;background:var(--line);margin:6px auto 14px}
-.sheet h2{font-family:'Archivo Black';font-size:17px;margin:0 0 14px;letter-spacing:-.01em}
+.sheet h2{font-family:'Fraunces';font-weight:700;font-size:17px;margin:0 0 14px;letter-spacing:-.01em}
 label.f{display:block;margin-bottom:12px}
 label.f>span{font-family:'Space Mono';font-size:10px;color:var(--mute);
   text-transform:uppercase;letter-spacing:.08em;display:block;margin-bottom:5px}
 .in{
-  width:100%;background:var(--ink);border:1px solid var(--line);
-  border-radius:var(--r);padding:11px 12px;color:var(--paper);
+  width:100%;background:var(--paper);border:1px solid var(--line);
+  border-radius:var(--r);padding:11px 12px;color:var(--ink);
 }
 .in:focus,.search:focus{outline:2px solid var(--sig);outline-offset:1px}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .ratepick{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
 .ratepick button{
-  padding:13px 0;border-radius:var(--r);background:var(--ink);
-  border:1px solid var(--line);font-family:'Archivo Black';font-size:15px;color:var(--mute);
+  padding:13px 0;border-radius:var(--r);background:var(--paper);
+  border:1px solid var(--line);font-family:'Fraunces';font-weight:700;font-size:15px;color:var(--mute);
 }
 .ratepick button[aria-pressed="true"]{background:var(--acid);color:var(--ink);border-color:var(--acid)}
 .acts{display:flex;gap:10px;margin-top:18px}
 .btn{flex:1;padding:14px;border-radius:var(--r);font-weight:600;font-size:15px}
-.btn.primary{background:var(--paper);color:var(--ink)}
-.btn.ghost{background:var(--ink-3);color:var(--paper);border:1px solid var(--line)}
+.btn.primary{background:var(--ink);color:var(--paper)}
+.btn.ghost{background:var(--ink-3);color:var(--ink);border:1px solid var(--line)}
 .btn.danger{background:none;color:var(--sig);border:1px solid var(--sig);flex:0 0 auto;padding:14px 16px}
 .note{font-family:'Space Mono';font-size:11px;color:var(--mute);line-height:1.6;
   border-left:2px solid var(--line);padding-left:10px;margin:0 0 14px}
-.note b{color:var(--paper)}
+.note b{color:var(--ink)}
 .pushlog{font-family:'Space Mono';font-size:11px;color:var(--mute);
-  background:var(--ink);border-radius:var(--r);padding:10px;margin-top:12px;
+  background:var(--paper);border-radius:var(--r);padding:10px;margin-top:12px;
   white-space:pre-wrap;max-height:130px;overflow:auto;display:none}
 .pushlog.on{display:block}
 .toast{
   position:fixed;left:50%;transform:translateX(-50%) translateY(20px);
   bottom:calc(84px + var(--safe-b));z-index:60;
-  background:var(--paper);color:var(--ink);font-family:'Space Mono';font-size:12px;font-weight:700;
+  background:var(--ink);color:var(--paper);font-family:'Space Mono';font-size:12px;font-weight:700;
   padding:10px 16px;border-radius:999px;opacity:0;transition:.2s;pointer-events:none;
 }
 .toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
@@ -590,10 +604,65 @@ function filtered(){
 }
 
 function renderTabs(){
-  $('#tabs').innerHTML = Object.entries(COLLECTIONS).map(([k,c])=>{
+  const dataTabs = Object.entries(COLLECTIONS).map(([k,c])=>{
     const n = (S.data[k]&&S.data[k].items.length)||0;
     return `<button class="tab" role="tab" data-k="${k}" aria-selected="${k===S.tab}">${c.label}${n?' '+n:''}</button>`;
   }).join('');
+  const statsTab = `<button class="tab" role="tab" data-k="stats" aria-selected="${S.tab==='stats'}">Stats</button>`;
+  $('#tabs').innerHTML = dataTabs + statsTab;
+}
+
+/* ---- stats tab: computed live from whatever's currently loaded, no separate file ---- */
+function computeStats(){
+  const cats = [['films','Films'],['games','Games'],['tv','TV'],['books','Books']];
+  const totals={}, avg={}, topGenre={}, yearTrend={};
+  cats.forEach(([k])=>{
+    const items = (S.data[k]&&S.data[k].items)||[];
+    totals[k] = items.length;
+    const rated = items.filter(i=>i.rating);
+    avg[k] = rated.length ? rated.reduce((s,i)=>s+i.rating,0)/rated.length : 0;
+    const gc = {};
+    items.forEach(i=>{
+      String(i.genre||'').split(/[\/,]/).forEach(g=>{ g=g.trim(); if(g) gc[g]=(gc[g]||0)+1; });
+    });
+    let bestG=null,bestN=0;
+    Object.entries(gc).forEach(([g,n])=>{ if(n>bestN){bestG=g;bestN=n;} });
+    topGenre[k]=bestG;
+    const rf = (COLLECTIONS[k].recentFields||[])[0];
+    items.forEach(i=>{
+      const v = rf && i[rf];
+      const y = v && String(v).slice(0,4);
+      if(y && /^\d{4}$/.test(y)) yearTrend[y]=(yearTrend[y]||0)+1;
+    });
+  });
+  return {totals, avg, topGenre, yearTrend, cats};
+}
+function renderStatsTab(){
+  const s = computeStats();
+  const cards = s.cats.map(([k,label])=>
+    `<div class="stat-card"><div class="stat-num">${s.totals[k]}</div><div class="stat-label">${label}</div></div>`
+  ).join('');
+  const years = Object.keys(s.yearTrend).sort();
+  const max = Math.max(1, ...years.map(y=>s.yearTrend[y]));
+  const bars = years.map(y=>{
+    const n = s.yearTrend[y], h = Math.round((n/max)*80)+4;
+    return `<div class="yearbar" style="height:${h}px"><span>${n}</span><b>${y}</b></div>`;
+  }).join('');
+  const chips = s.cats.map(([k,label])=>{
+    const a = s.avg[k] ? s.avg[k].toFixed(1) : '–';
+    const g = s.topGenre[k] || '–';
+    return `<span class="stats-chip">${label}: ${a} avg &middot; ${esc(g)}</span>`;
+  }).join('');
+  $('#list').innerHTML = `
+    <div class="stats-grid">${cards}</div>
+    <div class="stats-section">
+      <div class="stats-h">Watched / read / played per year</div>
+      <div class="yearbars">${bars || '<span class="stat-label">Not enough dated items yet</span>'}</div>
+    </div>
+    <div class="stats-section">
+      <div class="stats-h">Averages &amp; top genres</div>
+      <div class="stats-chips">${chips}</div>
+    </div>`;
 }
 
 function renderSpine(){
@@ -622,11 +691,27 @@ function rateClass(r){
 }
 
 function render(){
-  renderTabs(); renderSpine();
+  renderTabs();
+  const controls = document.querySelector('.controls');
+  const spineLabel = document.querySelector('.spinelabel');
+  $('#pushBtn').style.display = S.dirty.size ? 'flex' : 'none';
+  if(S.tab==='stats'){
+    $('#spine').style.display='none';
+    if(spineLabel) spineLabel.style.display='none';
+    if(controls) controls.style.display='none';
+    $('#addBtn').style.display='none';
+    $('#count').textContent='';
+    renderStatsTab();
+    return;
+  }
+  $('#spine').style.display='';
+  if(spineLabel) spineLabel.style.display='';
+  if(controls) controls.style.display='';
+  $('#addBtn').style.display='flex';
+  renderSpine();
   const c = COLLECTIONS[S.tab], rows = filtered();
   $('#count').textContent = rows.length+'/'+items().length;
   $('#sortbtn').textContent = SORTS[S.sort].l;
-  $('#pushBtn').style.display = S.dirty.size ? 'flex' : 'none';
 
   if(!rows.length){
     $('#list').innerHTML = `<div class="empty"><b>${items().length ? 'No matches' : 'Nothing here yet'}</b>${
