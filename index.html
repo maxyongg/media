@@ -191,6 +191,11 @@ label.f>span{font-family:'Space Mono';font-size:10px;color:var(--mute);
   padding:10px 16px;border-radius:999px;opacity:0;transition:.2s;pointer-events:none;
 }
 .toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+.version{
+  position:fixed;right:8px;bottom:calc(4px + var(--safe-b));z-index:44;
+  font-family:'Space Mono';font-size:9px;color:var(--line);
+  pointer-events:none;user-select:none;
+}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 </head>
@@ -263,6 +268,7 @@ label.f>span{font-family:'Space Mono';font-size:10px;color:var(--mute);
 </div>
 
 <div class="toast" id="toast"></div>
+<div class="version">v2026.07.17</div>
 
 <script>
 /* ================= config ================= */
@@ -283,7 +289,7 @@ const COLLECTIONS = {
     pct: i => i.mainStoryPct, pctLabel:'story'
   },
   tv: {
-    label:'TV', file:'tv.json', scale:5, idp:'t', recentFields:['lastSeasonYear','firstSeasonYear'],
+    label:'TV', file:'tv.json', scale:5, idp:'t', recentFields:['dateWatched','lastSeasonYear','firstSeasonYear'],
     fields:[
       {k:'name',           l:'Title',    t:'text'},
       {k:'genre',          l:'Genre',    t:'text', list:true},
@@ -292,6 +298,7 @@ const COLLECTIONS = {
       {k:'watchedPct',     l:'Watched %',t:'text', half:true},
       {k:'firstSeasonYear',l:'First season', t:'number', half:true},
       {k:'lastSeasonYear', l:'Last season',  t:'number', half:true},
+      {k:'dateWatched',    l:'Watched',      t:'date',   half:true},
     ],
     sub: i => [i.network, i.genre, i.seasons?i.seasons+' seasons':null].filter(Boolean).join(' · '),
     pct: i => i.watchedPct, pctLabel:'watched'
@@ -316,17 +323,6 @@ const COLLECTIONS = {
       {k:'dateRead',     l:'Read',   t:'date',   half:true},
     ],
     sub: i => [i.author, i.yearPublished].filter(Boolean).join(' · '),
-    pct: () => null
-  },
-  albums: {
-    label:'Albums', file:'albums.json', scale:5, idp:'a', recentFields:['year'],
-    fields:[
-      {k:'name',  l:'Title',  t:'text'},
-      {k:'artist',l:'Artist', t:'text', list:true},
-      {k:'year',  l:'Year',   t:'number', half:true},
-      {k:'label', l:'Label',  t:'text', half:true, list:true},
-    ],
-    sub: i => [i.artist, i.year].filter(Boolean).join(' · '),
     pct: () => null
   }
 };
