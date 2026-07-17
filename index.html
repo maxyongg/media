@@ -70,7 +70,7 @@ nav.tabs::-webkit-scrollbar{display:none}
 }
 
 /* ---------- signature: rating spine ---------- */
-.spine{display:flex;gap:3px;margin:14px 0 4px;height:34px;align-items:flex-end}
+.spine{display:flex;gap:3px;margin:14px 0 4px;height:38px;align-items:flex-end}
 .sbar{
   flex:1;background:var(--ink-3);border-radius:3px 3px 0 0;position:relative;
   display:flex;align-items:flex-start;justify-content:center;
@@ -98,7 +98,7 @@ li.row{
   flex:0 0 40px;height:40px;border-radius:var(--r);
   background:var(--ink-3);
   display:flex;align-items:center;justify-content:center;
-  font-family:'Archivo Black';font-size:19px;line-height:1;
+  font-family:'Archivo Black';font-size:17px;line-height:1;letter-spacing:-.03em;
 }
 .rate.hi{background:var(--acid);color:var(--ink)}
 .rate.mid{background:#4a5c1a;color:var(--paper)}
@@ -149,9 +149,9 @@ label.f>span{font-family:'Space Mono';font-size:10px;color:var(--mute);
 }
 .in:focus,.search:focus{outline:2px solid var(--sig);outline-offset:1px}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.ratepick{display:flex;gap:5px}
+.ratepick{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
 .ratepick button{
-  flex:1;padding:12px 0;border-radius:var(--r);background:var(--ink);
+  padding:13px 0;border-radius:var(--r);background:var(--ink);
   border:1px solid var(--line);font-family:'Archivo Black';font-size:15px;color:var(--mute);
 }
 .ratepick button[aria-pressed="true"]{background:var(--acid);color:var(--ink);border-color:var(--acid)}
@@ -244,7 +244,7 @@ label.f>span{font-family:'Space Mono';font-size:10px;color:var(--mute);
 /* ================= config ================= */
 const COLLECTIONS = {
   games: {
-    label:'Games', file:'games.json', scale:7, idp:'g',
+    label:'Games', file:'games.json', scale:10, idp:'g',
     fields:[
       {k:'name',        l:'Title',        t:'text'},
       {k:'developer',   l:'Publisher / dev', t:'text'},
@@ -486,7 +486,7 @@ function renderSpine(){
   items().forEach(i=>{ if(counts[i.rating]!=null) counts[i.rating]++; });
   const max = Math.max(1,...Object.values(counts));
   $('#spine').innerHTML = Array.from({length:sc},(_,x)=>{
-    const r=x+1, n=counts[r], h=14+Math.round((n/max)*20);
+    const r=x+1, n=counts[r], h=16+Math.round((n/max)*22);
     const on = S.ratingFilter.size===0 || S.ratingFilter.has(r);
     return `<button class="sbar" data-r="${r}" data-on="${on?1:0}"
       aria-pressed="${S.ratingFilter.has(r)}" aria-label="Rating ${r}, ${n} items"
