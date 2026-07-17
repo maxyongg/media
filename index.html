@@ -33,7 +33,7 @@ button,input,select,textarea{font-family:inherit;font-size:16px;color:inherit}
 button{cursor:pointer;border:none;background:none}
 
 /* ---------- shell ---------- */
-.wrap{max-width:760px;margin:0 auto;padding:0 14px calc(96px + var(--safe-b))}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px calc(96px + var(--safe-b))}
 
 header.top{
   position:sticky;top:0;z-index:40;background:var(--paper);
@@ -144,6 +144,17 @@ li.row{
 .stat-label{font-family:'Inter';font-size:10px;color:var(--mute);text-transform:uppercase;letter-spacing:.06em;margin-top:2px}
 .stats-section{margin-top:26px}
 .stats-h{font-family:'Inter';font-size:10px;color:var(--mute);text-transform:uppercase;letter-spacing:.08em;margin-bottom:18px}
+.stats-tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin-top:14px}
+.stats-tile{
+  background:var(--ink-2);border-radius:14px;padding:16px;
+  border:1px solid var(--line);min-width:0;
+}
+.stats-tile.wide{grid-column:1/-1}
+.stats-tile .stats-h{margin-bottom:14px}
+.stats-tile-int{cursor:pointer;transition:background .12s,border-color .12s}
+.stats-tile-int:active{background:var(--ink-3);border-color:var(--mute)}
+.yearbar-click{cursor:pointer}
+.yearbar-click:active{opacity:.65}
 .yearbars{display:flex;gap:6px;align-items:flex-end;height:90px}
 .yearbar{flex:1;background:var(--acid);border-radius:3px 3px 0 0;position:relative;min-height:2px}
 .yearbar span{position:absolute;top:-16px;left:0;right:0;text-align:center;font-family:'Inter';font-size:9px;color:var(--mute)}
@@ -161,7 +172,7 @@ li.row{
 .stats-hbar-fill{background:var(--acid);height:100%;border-radius:4px}
 .stats-hbar-n{font-family:'Inter';font-size:11px;color:var(--mute);width:22px;text-align:right;flex:0 0 auto}
 .stats-hbar-row{cursor:pointer;padding:3px 0;border-radius:6px}
-.stats-hbar-row:active{background:var(--ink-2)}
+.stats-hbar-row:active{background:var(--ink-3)}
 .stats-chip-click{cursor:pointer}
 .stats-chip-click:active{background:var(--line)}
 .stats-filter-chip{
@@ -331,7 +342,7 @@ label.f>span{font-family:'Inter';font-size:10px;color:var(--mute);
 </div>
 
 <div class="toast" id="toast"></div>
-<div class="version">v2026.07.17f</div>
+<div class="version">v2026.07.17g</div>
 
 <script>
 /* ================= config ================= */
@@ -944,7 +955,7 @@ function computeStats(){
 function renderOverviewStats(){
   const s = computeStats();
   const cards = s.cats.map(([k,label])=>
-    `<div class="stat-card"><div class="stat-num">${s.totals[k]}</div><div class="stat-label">${label}</div></div>`
+    `<div class="stat-card stats-tile-int" data-statcat="${k}" role="button" tabindex="0"><div class="stat-num">${s.totals[k]}</div><div class="stat-label">${label}</div></div>`
   ).join('');
   const years = Object.keys(s.yearTrend).sort();
   const max = Math.max(1, ...years.map(y=>s.yearTrend[y]));
@@ -955,34 +966,38 @@ function renderOverviewStats(){
   const chips = s.cats.map(([k,label])=>{
     const a = s.avg[k] ? s.avg[k].toFixed(1) : '–';
     const g = s.topGenre[k] || '–';
-    return `<span class="stats-chip">${label}: ${a} avg &middot; ${esc(g)}</span>`;
+    return `<span class="stats-chip stats-chip-click" data-statcat="${k}" role="button" tabindex="0">${label}: ${a} avg &middot; ${esc(g)}</span>`;
   }).join('');
   return `
     <div class="stats-grid">${cards}</div>
-    <div class="stats-section">
-      <div class="stats-h">Watched / read / played per year</div>
-      <div class="yearbars">${bars || '<span class="stat-label">Not enough dated items yet</span>'}</div>
-    </div>
-    <div class="stats-section">
-      <div class="stats-h">Averages &amp; top genres</div>
-      <div class="stats-chips">${chips}</div>
+    <div class="stats-tiles">
+      <div class="stats-tile wide">
+        <div class="stats-h">Watched / read / played per year</div>
+        <div class="yearbars">${bars || '<span class="stat-label">Not enough dated items yet</span>'}</div>
+      </div>
+      <div class="stats-tile wide">
+        <div class="stats-h">Averages &amp; top genres &mdash; tap to open a category</div>
+        <div class="stats-chips">${chips}</div>
+      </div>
     </div>`;
 }
 
 /* ---- per-category deep dive ---- */
 function genresOf(item){ return String(item.genre||'').split(/[\/,]/).map(g=>g.trim()).filter(Boolean); }
 function creatorsOf(item, field){ return String(item[field]||'').split(/\s*&\s*/).map(x=>x.trim()).filter(Boolean); }
-function applyStatsFilter(items, creatorField, filter){
+function applyStatsFilter(items, creatorField, filter, dateField){
   if(!filter) return items;
   if(filter.type==='genre') return items.filter(i=>genresOf(i).includes(filter.value));
   if(filter.type==='creator') return items.filter(i=>creatorsOf(i,creatorField).includes(filter.value));
+  if(filter.type==='year') return items.filter(i=>dateField && i[dateField] && String(i[dateField]).slice(0,4)===filter.value);
   return items;
 }
 function computeCategoryStats(k, filter){
   const c = COLLECTIONS[k];
   const creatorField = {films:'director', games:'developer', tv:'network', books:'author'}[k];
+  const dateField = (c.recentFields||[])[0];
   const allItems = (S.data[k]&&S.data[k].items)||[];
-  const items = applyStatsFilter(allItems, creatorField, filter);
+  const items = applyStatsFilter(allItems, creatorField, filter, dateField);
   const sc = c.scale;
   const dist = {};
   for(let r=1;r<=sc;r++) dist[r]=0;
@@ -1024,7 +1039,15 @@ function computeCategoryStats(k, filter){
     extra.decades = Object.entries(dc).sort((a,b)=>a[0]-b[0]);
   }
 
-  return {sc, dist, genres, creators, creatorField, avgRating, perfect, extra, total: items.length};
+  const yc = {};
+  items.forEach(i=>{
+    const v = dateField && i[dateField];
+    const y = v && String(v).slice(0,4);
+    if(y && /^\d{4}$/.test(y)) yc[y]=(yc[y]||0)+1;
+  });
+  const yearTrend = Object.entries(yc).sort((a,b)=>a[0]-b[0]);
+
+  return {sc, dist, genres, creators, creatorField, dateField, yearTrend, avgRating, perfect, extra, total: items.length};
 }
 function renderCategoryStats(k){
   const c = COLLECTIONS[k];
@@ -1053,21 +1076,25 @@ function renderCategoryStats(k){
     ? `<div class="stats-filter-chip" data-clear-filter="1">Filtered: ${esc(filter.value)} <span class="x">✕</span></div>`
     : '';
 
-  let extraHtml = '';
+  const dateLabel = {dateWatched:'Watched', datePlayed:'Played', dateRead:'Read'}[s.dateField] || 'Logged';
+  const yearMax = Math.max(1, ...s.yearTrend.map(([,n])=>n));
+  const yearBars = s.yearTrend.map(([y,n])=>`
+    <div class="yearbar yearbar-click" data-year-filter="${y}" role="button" tabindex="0" style="height:${Math.round(n/yearMax*80)+4}px"><span>${n}</span><b>${y}</b></div>`).join('');
+
+  let extraLabel = '', extraChips = '';
   if(k==='films'){
-    extraHtml = `<div class="stats-section"><div class="stats-h">Viewing habits</div>
-      <div class="stats-chips">${s.extra.avgGap!=null?`<span class="stats-chip">${s.extra.avgGap.toFixed(1)} yr avg gap between release &amp; watch</span>`:''}
-      <span class="stats-chip">${s.perfect} perfect ${c.scale}/${c.scale}</span></div></div>`;
+    extraLabel = 'Viewing habits';
+    extraChips = `${s.extra.avgGap!=null?`<span class="stats-chip">${s.extra.avgGap.toFixed(1)} yr avg gap between release &amp; watch</span>`:''}<span class="stats-chip">${s.perfect} perfect ${c.scale}/${c.scale}</span>`;
   } else if(k==='games'){
+    extraLabel = 'Studio size &amp; completion';
     const chips = Object.entries(s.extra.studioStatus||{}).map(([lbl,n])=>`<span class="stats-chip">${esc(lbl)}: ${n}</span>`).join('');
-    extraHtml = `<div class="stats-section"><div class="stats-h">Studio size &amp; completion</div>
-      <div class="stats-chips">${chips}${s.extra.avgPct!=null?`<span class="stats-chip">${Math.round(s.extra.avgPct)}% avg story completion</span>`:''}</div></div>`;
+    extraChips = `${chips}${s.extra.avgPct!=null?`<span class="stats-chip">${Math.round(s.extra.avgPct)}% avg story completion</span>`:''}`;
   } else if(k==='tv'){
-    extraHtml = `<div class="stats-section"><div class="stats-h">Completion</div>
-      <div class="stats-chips">${s.extra.avgPct!=null?`<span class="stats-chip">${Math.round(s.extra.avgPct)}% avg watched</span>`:''}${s.extra.avgSeasons!=null?`<span class="stats-chip">${s.extra.avgSeasons.toFixed(1)} avg seasons</span>`:''}</div></div>`;
+    extraLabel = 'Completion';
+    extraChips = `${s.extra.avgPct!=null?`<span class="stats-chip">${Math.round(s.extra.avgPct)}% avg watched</span>`:''}${s.extra.avgSeasons!=null?`<span class="stats-chip">${s.extra.avgSeasons.toFixed(1)} avg seasons</span>`:''}`;
   } else if(k==='books'){
-    const chips = s.extra.decades.map(([d,n])=>`<span class="stats-chip">${d}s: ${n}</span>`).join('');
-    extraHtml = `<div class="stats-section"><div class="stats-h">Published by decade</div><div class="stats-chips">${chips || '<span class="stat-label">No publication years logged</span>'}</div></div>`;
+    extraLabel = 'Published by decade';
+    extraChips = s.extra.decades.map(([d,n])=>`<span class="stats-chip">${d}s: ${n}</span>`).join('') || '<span class="stat-label">No publication years logged</span>';
   }
 
   return `
@@ -1077,19 +1104,28 @@ function renderCategoryStats(k){
       <div class="stat-card"><div class="stat-num">${s.avgRating?s.avgRating.toFixed(1):'–'}</div><div class="stat-label">Avg rating</div></div>
       <div class="stat-card"><div class="stat-num">${s.perfect}</div><div class="stat-label">Perfect ${c.scale}/${c.scale}</div></div>
     </div>
-    <div class="stats-section">
-      <div class="stats-h">Rating distribution</div>
-      <div class="yearbars">${distBars}</div>
-    </div>
-    <div class="stats-section">
-      <div class="stats-h">Top genres &mdash; tap to filter</div>
-      <div class="stats-hbars">${genreRows || '<span class="stat-label">No genre data</span>'}</div>
-    </div>
-    <div class="stats-section">
-      <div class="stats-h">Top ${creatorLabel} &mdash; tap to filter</div>
-      <div class="stats-chips">${creatorChips || '<span class="stat-label">No data</span>'}</div>
-    </div>
-    ${extraHtml}`;
+    <div class="stats-tiles">
+      <div class="stats-tile">
+        <div class="stats-h">Rating distribution</div>
+        <div class="yearbars">${distBars}</div>
+      </div>
+      <div class="stats-tile">
+        <div class="stats-h">${dateLabel} by year &mdash; tap to filter</div>
+        <div class="yearbars">${yearBars || '<span class="stat-label">No dated items yet</span>'}</div>
+      </div>
+      <div class="stats-tile">
+        <div class="stats-h">Top genres &mdash; tap to filter</div>
+        <div class="stats-hbars">${genreRows || '<span class="stat-label">No genre data</span>'}</div>
+      </div>
+      <div class="stats-tile">
+        <div class="stats-h">Top ${creatorLabel} &mdash; tap to filter</div>
+        <div class="stats-chips">${creatorChips || '<span class="stat-label">No data</span>'}</div>
+      </div>
+      <div class="stats-tile wide">
+        <div class="stats-h">${extraLabel}</div>
+        <div class="stats-chips">${extraChips}</div>
+      </div>
+    </div>`;
 }
 
 function renderStatsTab(){
@@ -1294,6 +1330,8 @@ $('#list').addEventListener('click', e=>{
   if(gf){ S.statsFilter = {type:'genre', value: gf.dataset.genreFilter}; renderStatsTab(); return; }
   const cf = e.target.closest('[data-creator-filter]');
   if(cf){ S.statsFilter = {type:'creator', value: cf.dataset.creatorFilter}; renderStatsTab(); return; }
+  const yf = e.target.closest('[data-year-filter]');
+  if(yf){ S.statsFilter = {type:'year', value: yf.dataset.yearFilter}; renderStatsTab(); return; }
   const li = e.target.closest('.row'); if(!li) return;
   openEdit(items().find(i=>i.id===li.dataset.id));
 });
