@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "ratingScale": 10,
- "updatedAt": "2026-07-17T17:29:46.612Z",
+ "updatedAt": "2026-07-17T17:30:01.708Z",
  "items": [
   {
    "id": "g0001",
@@ -44,7 +44,7 @@
   },
   {
    "id": "g0004",
-   "name": "The Legend of Zelda: Ocarina of Time",
+   "name": "The Legend of Zelda Ocarina of Time",
    "developer": null,
    "studioStatus": null,
    "genre": null,
@@ -53,7 +53,7 @@
    "yearReleased": null,
    "rating": 10,
    "datePlayed": null,
-   "coverUrl": "https://media.rawg.io/media/games/f87/f87de0e93f02007fd044e4bf04d453d8.jpg"
+   "coverUrl": "https://media.rawg.io/media/games/3a0/3a0c8e9ed3a711c542218831b893a0fa.jpg"
   },
   {
    "id": "g0005",
