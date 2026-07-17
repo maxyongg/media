@@ -1,5 +1,690 @@
 {
- "schemaVersion": 1,
- "ratingScale": 5,
- "items": []
+  "schemaVersion": 1,
+  "ratingScale": 5,
+  "items": [
+    {
+      "id": "b0001",
+      "name": "Pale Fire",
+      "author": "Vladimir Nabokov",
+      "genre": "Fiction/Classics/Poetry",
+      "yearPublished": 1962,
+      "yearRead": 2026,
+      "rating": 5
+    },
+    {
+      "id": "b0002",
+      "name": "Children of Ruin (Children of Time, #2)",
+      "author": "Adrian Tchaikovsky",
+      "genre": "Science Fiction/Fiction/Audiobook",
+      "yearPublished": 2019,
+      "yearRead": 2026,
+      "rating": 4
+    },
+    {
+      "id": "b0003",
+      "name": "Children of Time (Children of Time, #1)",
+      "author": "Adrian Tchaikovsky",
+      "genre": "Science Fiction/Fiction/Audiobook",
+      "yearPublished": 2015,
+      "yearRead": 2026,
+      "rating": 4
+    },
+    {
+      "id": "b0004",
+      "name": "The Third Realm (Morgenstjernen, #3)",
+      "author": "Karl Ove Knausgård",
+      "genre": "Fiction/Horror/Magical Realism",
+      "yearPublished": 2022,
+      "yearRead": 2026,
+      "rating": 5
+    },
+    {
+      "id": "b0005",
+      "name": "The Wolves of Eternity (Morgenstjernen, #2)",
+      "author": "Karl Ove Knausgård",
+      "genre": "Fiction/Literary Fiction/Literature",
+      "yearPublished": 2021,
+      "yearRead": 2026,
+      "rating": 5
+    },
+    {
+      "id": "b0006",
+      "name": "The Morning Star (Morgenstjernen, #1)",
+      "author": "Karl Ove Knausgård",
+      "genre": "Fiction/Literary Fiction/Horror",
+      "yearPublished": 2020,
+      "yearRead": 2026,
+      "rating": 4
+    },
+    {
+      "id": "b0007",
+      "name": "The Metamorphosis, In the Penal Colony, and Other Stories: The Great Short Works of Franz Kafka",
+      "author": "Franz Kafka",
+      "genre": "Fiction/Classics/Short Stories",
+      "yearPublished": 1915,
+      "yearRead": 2026,
+      "rating": 4
+    },
+    {
+      "id": "b0008",
+      "name": "The Myth of Sisyphus",
+      "author": "Albert Camus",
+      "genre": "Philosophy/Classics/Nonfiction",
+      "yearPublished": 1942,
+      "yearRead": null,
+      "rating": 4
+    },
+    {
+      "id": "b0009",
+      "name": "The School of Night",
+      "author": "Karl Ove Knausgård",
+      "genre": "Fiction/Literary Fiction/Fantasy",
+      "yearPublished": 2023,
+      "yearRead": 2026,
+      "rating": 5
+    },
+    {
+      "id": "b0010",
+      "name": "Ficciones",
+      "author": "Jorge Luis Borges",
+      "genre": "Fiction/Short Stories/Classics",
+      "yearPublished": 1944,
+      "yearRead": 2026,
+      "rating": 5
+    },
+    {
+      "id": "b0011",
+      "name": "Shuggie Bain",
+      "author": "Douglas Stuart",
+      "genre": "Fiction/Historical Fiction/Book Club",
+      "yearPublished": 2020,
+      "yearRead": 2026,
+      "rating": 4
+    },
+    {
+      "id": "b0012",
+      "name": "The Book of Disquiet",
+      "author": "Fernando Pessoa",
+      "genre": "Fiction/Classics/Poetry",
+      "yearPublished": 1982,
+      "yearRead": null,
+      "rating": null
+    },
+    {
+      "id": "b0013",
+      "name": "My Name is Stramer",
+      "author": "Mikołaj Łoziński",
+      "genre": "Fiction/Polish Literature/Poland",
+      "yearPublished": 2019,
+      "yearRead": 2026,
+      "rating": 5
+    },
+    {
+      "id": "b0014",
+      "name": "Iza's Ballad",
+      "author": "Magda Szabó",
+      "genre": "Fiction/Hungary/Classics",
+      "yearPublished": 1963,
+      "yearRead": 2026,
+      "rating": 4
+    },
+    {
+      "id": "b0015",
+      "name": "Beware of Pity",
+      "author": "Stefan Zweig",
+      "genre": "Fiction/Classics/Historical Fiction",
+      "yearPublished": 1939,
+      "yearRead": 2025,
+      "rating": 4
+    },
+    {
+      "id": "b0016",
+      "name": "Question 7",
+      "author": "Richard Flanagan",
+      "genre": "Nonfiction/Memoir/History",
+      "yearPublished": 2023,
+      "yearRead": 2025,
+      "rating": 3
+    },
+    {
+      "id": "b0017",
+      "name": "A Short Stay in Hell",
+      "author": "Steven L. Peck",
+      "genre": "Horror/Fiction/Fantasy",
+      "yearPublished": 2011,
+      "yearRead": 2026,
+      "rating": 4
+    },
+    {
+      "id": "b0018",
+      "name": "Playground",
+      "author": "Richard Powers",
+      "genre": "Fiction/Book Club/Science Fiction",
+      "yearPublished": 2024,
+      "yearRead": 2025,
+      "rating": 3
+    },
+    {
+      "id": "b0019",
+      "name": "James",
+      "author": "Percival Everett",
+      "genre": "Fiction/Historical Fiction/Book Club",
+      "yearPublished": 2024,
+      "yearRead": 2025,
+      "rating": 4
+    },
+    {
+      "id": "b0020",
+      "name": "Satantango",
+      "author": "László Krasznahorkai",
+      "genre": "Fiction/Hungary/Hungarian Literature",
+      "yearPublished": 1985,
+      "yearRead": 2026,
+      "rating": 5
+    },
+    {
+      "id": "b0021",
+      "name": "Human Acts",
+      "author": "Kang Han",
+      "genre": "Fiction/Historical Fiction/Historical",
+      "yearPublished": 2014,
+      "yearRead": 2025,
+      "rating": 2
+    },
+    {
+      "id": "b0022",
+      "name": "Demon Copperhead",
+      "author": "Barbara Kingsolver",
+      "genre": "Fiction/Book Club/Historical Fiction",
+      "yearPublished": 2022,
+      "yearRead": 2025,
+      "rating": 4
+    },
+    {
+      "id": "b0023",
+      "name": "Martyr!",
+      "author": "Kaveh Akbar",
+      "genre": "Fiction/Book Club/Literary Fiction",
+      "yearPublished": 2024,
+      "yearRead": 2025,
+      "rating": 4
+    },
+    {
+      "id": "b0024",
+      "name": "The Maniac",
+      "author": "Benjamín Labatut",
+      "genre": "Fiction/Historical Fiction/Philosophy",
+      "yearPublished": 2023,
+      "yearRead": 2025,
+      "rating": 4
+    },
+    {
+      "id": "b0025",
+      "name": "The Wise Man's Fear (The Kingkiller Chronicle, #2)",
+      "author": "Patrick Rothfuss",
+      "genre": "Fantasy/Fiction/Epic Fantasy",
+      "yearPublished": 2011,
+      "yearRead": null,
+      "rating": 5
+    },
+    {
+      "id": "b0026",
+      "name": "Holes (Holes, #1)",
+      "author": "Louis Sachar",
+      "genre": "Young Adult/Fiction/Middle Grade",
+      "yearPublished": 1998,
+      "yearRead": 2006,
+      "rating": 5
+    },
+    {
+      "id": "b0027",
+      "name": "The Magic Strings of Frankie Presto",
+      "author": "Mitch Albom",
+      "genre": "Fiction/Historical Fiction/Book Club",
+      "yearPublished": 2012,
+      "yearRead": 2015,
+      "rating": 4
+    },
+    {
+      "id": "b0028",
+      "name": "The Five People You Meet in Heaven",
+      "author": "Mitch Albom",
+      "genre": "Fiction/Contemporary/Inspirational",
+      "yearPublished": 2003,
+      "yearRead": 2013,
+      "rating": 3
+    },
+    {
+      "id": "b0029",
+      "name": "Blood Over Bright Haven",
+      "author": "M.L. Wang",
+      "genre": "Fantasy/Dark Academia/Fiction",
+      "yearPublished": 2023,
+      "yearRead": 2025,
+      "rating": 3
+    },
+    {
+      "id": "b0030",
+      "name": "The Long Way to a Small, Angry Planet (Wayfarers, #1)",
+      "author": "Becky Chambers",
+      "genre": "Science Fiction/Fiction/LGBT",
+      "yearPublished": 2014,
+      "yearRead": 2025,
+      "rating": 2
+    },
+    {
+      "id": "b0031",
+      "name": "The Master and Margarita",
+      "author": "Mikhail Bulgakov",
+      "genre": "Classics/Fiction/Fantasy",
+      "yearPublished": 1967,
+      "yearRead": 2025,
+      "rating": 4
+    },
+    {
+      "id": "b0032",
+      "name": "One Hundred Years of Solitude",
+      "author": "Gabriel García Márquez",
+      "genre": "Classics/Fiction/Magical Realism",
+      "yearPublished": 1967,
+      "yearRead": 2025,
+      "rating": 5
+    },
+    {
+      "id": "b0033",
+      "name": "The Silent Patient",
+      "author": "Alex Michaelides",
+      "genre": "Thriller/Mystery/Fiction",
+      "yearPublished": 2019,
+      "yearRead": 2025,
+      "rating": 1
+    },
+    {
+      "id": "b0034",
+      "name": "Strange Pictures",
+      "author": "Uketsu",
+      "genre": "Horror/Mystery/Thriller",
+      "yearPublished": 2022,
+      "yearRead": 2025,
+      "rating": 3
+    },
+    {
+      "id": "b0035",
+      "name": "The Paper Menagerie and Other Stories",
+      "author": "Ken Liu",
+      "genre": "Horror/Mystery/Thriller",
+      "yearPublished": 2022,
+      "yearRead": null,
+      "rating": 3
+    },
+    {
+      "id": "b0036",
+      "name": "Cloud Atlas",
+      "author": "David Mitchell",
+      "genre": "Fiction/Science Fiction/Fantasy",
+      "yearPublished": 2004,
+      "yearRead": null,
+      "rating": 3
+    },
+    {
+      "id": "b0037",
+      "name": "The Unbearable Lightness of Being",
+      "author": "Milan Kundera",
+      "genre": "Fiction/Classics/Philosophy",
+      "yearPublished": 1984,
+      "yearRead": null,
+      "rating": 5
+    },
+    {
+      "id": "b0038",
+      "name": "Wool Omnibus (Silo, #1)",
+      "author": "Hugh Howey",
+      "genre": "Science Fiction/Fiction/Dystopia",
+      "yearPublished": 2012,
+      "yearRead": null,
+      "rating": 3
+    },
+    {
+      "id": "b0039",
+      "name": "Dungeon Crawler Carl (Dungeon Crawler Carl, #1)",
+      "author": "Matt Dinniman",
+      "genre": "Fantasy/Science Fiction/Audiobook",
+      "yearPublished": 2020,
+      "yearRead": 2025,
+      "rating": 3
+    },
+    {
+      "id": "b0040",
+      "name": "The Shadow of the Wind (The Cemetery of Forgotten Books, #1)",
+      "author": "Carlos Ruiz Zafón",
+      "genre": "Fiction/Historical Fiction/Mystery",
+      "yearPublished": 2001,
+      "yearRead": 2025,
+      "rating": 4
+    },
+    {
+      "id": "b0041",
+      "name": "Babel",
+      "author": "R.F. Kuang",
+      "genre": "Fantasy/Historical Fiction/Dark Academia",
+      "yearPublished": 2022,
+      "yearRead": 2025,
+      "rating": 2
+    },
+    {
+      "id": "b0042",
+      "name": "Piranesi",
+      "author": "Susanna Clarke",
+      "genre": "Fantasy/Fiction/Mystery",
+      "yearPublished": 2020,
+      "yearRead": 2022,
+      "rating": 5
+    },
+    {
+      "id": "b0043",
+      "name": "The Midnight Library (The Midnight World, #1)",
+      "author": "Matt Haig",
+      "genre": "Fiction/Fantasy/Book Club",
+      "yearPublished": 2020,
+      "yearRead": null,
+      "rating": 3
+    },
+    {
+      "id": "b0044",
+      "name": "The Past Is Red",
+      "author": "Catherynne M. Valente",
+      "genre": "Science Fiction/Novella/Fiction",
+      "yearPublished": 2021,
+      "yearRead": null,
+      "rating": 1
+    },
+    {
+      "id": "b0045",
+      "name": "Project Hail Mary",
+      "author": "Andy Weir",
+      "genre": "Science Fiction/Fiction/Audiobook",
+      "yearPublished": 2021,
+      "yearRead": null,
+      "rating": 5
+    },
+    {
+      "id": "b0046",
+      "name": "Stories of Your Life and Others",
+      "author": "Ted Chiang",
+      "genre": "Short Stories/Science Fiction/Fiction",
+      "yearPublished": 2002,
+      "yearRead": 2020,
+      "rating": 5
+    },
+    {
+      "id": "b0047",
+      "name": "Recursion",
+      "author": "Blake Crouch",
+      "genre": "Science Fiction/Fiction/Thriller",
+      "yearPublished": 2019,
+      "yearRead": 2020,
+      "rating": 2
+    },
+    {
+      "id": "b0048",
+      "name": "Slaughterhouse-Five",
+      "author": "Kurt Vonnegut Jr.",
+      "genre": "Classics/Fiction/Science Fiction",
+      "yearPublished": 1969,
+      "yearRead": null,
+      "rating": 5
+    },
+    {
+      "id": "b0049",
+      "name": "Twenty Thousand Leagues Under the Sea",
+      "author": "Jules Verne",
+      "genre": "Classics/Science Fiction/Fiction",
+      "yearPublished": 1870,
+      "yearRead": 2020,
+      "rating": 3
+    },
+    {
+      "id": "b0050",
+      "name": "The Outsider",
+      "author": "Albert Camus",
+      "genre": "Classics/Fiction/Philosophy",
+      "yearPublished": 1942,
+      "yearRead": 2019,
+      "rating": 5
+    },
+    {
+      "id": "b0051",
+      "name": "Zonal Marking: The Making of Modern European Football",
+      "author": "Michael Cox",
+      "genre": "Football/Sports/Nonfiction",
+      "yearPublished": 2019,
+      "yearRead": 2019,
+      "rating": 4
+    },
+    {
+      "id": "b0052",
+      "name": "Brief Answers to the Big Questions",
+      "author": "Stephen W. Hawking",
+      "genre": "Science/Nonfiction/Physics",
+      "yearPublished": 2018,
+      "yearRead": 2019,
+      "rating": 3
+    },
+    {
+      "id": "b0053",
+      "name": "Exhalation",
+      "author": "Ted Chiang",
+      "genre": "Short Stories/Science Fiction/Fiction",
+      "yearPublished": 2019,
+      "yearRead": 2019,
+      "rating": 5
+    },
+    {
+      "id": "b0054",
+      "name": "Inverting the Pyramid: The History of Football Tactics",
+      "author": "Jonathan Wilson",
+      "genre": "Football/Sports/Nonfiction",
+      "yearPublished": 2008,
+      "yearRead": null,
+      "rating": 5
+    },
+    {
+      "id": "b0055",
+      "name": "The Mixer: The Story of Premier League Tactics, from Route One to False Nines",
+      "author": "Michael Cox",
+      "genre": "Football/Sports/Nonfiction",
+      "yearPublished": 2017,
+      "yearRead": null,
+      "rating": 4
+    },
+    {
+      "id": "b0056",
+      "name": "Ready Player One (Ready Player One, #1)",
+      "author": "Ernest Cline",
+      "genre": "Science Fiction/Fiction/Young Adult",
+      "yearPublished": 2011,
+      "yearRead": null,
+      "rating": 3
+    },
+    {
+      "id": "b0057",
+      "name": "The Martian",
+      "author": "Andy Weir",
+      "genre": "Science Fiction/Fiction/Audiobook",
+      "yearPublished": 2011,
+      "yearRead": null,
+      "rating": 4
+    },
+    {
+      "id": "b0058",
+      "name": "The Hitchhiker’s Guide to the Galaxy (The Hitchhiker's Guide to the Galaxy, #1)",
+      "author": "Douglas Adams",
+      "genre": "Science Fiction/Fiction/Classics",
+      "yearPublished": 1979,
+      "yearRead": null,
+      "rating": 3
+    },
+    {
+      "id": "b0059",
+      "name": "The Man Who Mistook His Wife for a Hat and Other Clinical Tales",
+      "author": "Oliver Sacks",
+      "genre": "Nonfiction/Psychology/Science",
+      "yearPublished": 1985,
+      "yearRead": null,
+      "rating": 4
+    },
+    {
+      "id": "b0060",
+      "name": "Homo Deus: A History of Tomorrow",
+      "author": "Yuval Noah Harari",
+      "genre": "Nonfiction/History/Science",
+      "yearPublished": 2015,
+      "yearRead": null,
+      "rating": 4
+    },
+    {
+      "id": "b0061",
+      "name": "The Interpretation of Dreams",
+      "author": "Sigmund Freud",
+      "genre": "Psychology/Nonfiction/Philosophy",
+      "yearPublished": 1899,
+      "yearRead": null,
+      "rating": 4
+    },
+    {
+      "id": "b0062",
+      "name": "A Brief History of Time",
+      "author": "Stephen W. Hawking",
+      "genre": "Science/Nonfiction/Physics",
+      "yearPublished": 1988,
+      "yearRead": null,
+      "rating": 4
+    },
+    {
+      "id": "b0063",
+      "name": "Norse Mythology",
+      "author": "Neil Gaiman",
+      "genre": "Fantasy/Mythology/Fiction",
+      "yearPublished": 2017,
+      "yearRead": null,
+      "rating": 3
+    },
+    {
+      "id": "b0064",
+      "name": "Sapiens: A Brief History of Humankind",
+      "author": "Yuval Noah Harari",
+      "genre": "Nonfiction/History/Science",
+      "yearPublished": 2011,
+      "yearRead": 2019,
+      "rating": 5
+    },
+    {
+      "id": "b0065",
+      "name": "The Curious Incident of the Dog in the Night-Time",
+      "author": "Mark Haddon",
+      "genre": "Fiction/Mystery/Young Adult",
+      "yearPublished": 2003,
+      "yearRead": null,
+      "rating": 4
+    },
+    {
+      "id": "b0066",
+      "name": "Animal Farm",
+      "author": "George Orwell",
+      "genre": "Classics/Fiction/Dystopia",
+      "yearPublished": 1945,
+      "yearRead": null,
+      "rating": 5
+    },
+    {
+      "id": "b0067",
+      "name": "Harry Potter and the Deathly Hallows (Harry Potter, #7)",
+      "author": "J.K. Rowling",
+      "genre": "Fantasy/Fiction/Young Adult",
+      "yearPublished": 2007,
+      "yearRead": null,
+      "rating": 2
+    },
+    {
+      "id": "b0068",
+      "name": "1984",
+      "author": "George Orwell",
+      "genre": "Classics/Fiction/Science Fiction",
+      "yearPublished": 1948,
+      "yearRead": null,
+      "rating": 5
+    },
+    {
+      "id": "b0069",
+      "name": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "genre": "Classics/Fiction/Historical Fiction",
+      "yearPublished": 1960,
+      "yearRead": null,
+      "rating": 5
+    },
+    {
+      "id": "b0070",
+      "name": "Good Omens: The Nice and Accurate Prophecies of Agnes Nutter, Witch",
+      "author": "Terry Pratchett",
+      "genre": "Fantasy/Fiction/Humor",
+      "yearPublished": 1990,
+      "yearRead": null,
+      "rating": 5
+    },
+    {
+      "id": "b0071",
+      "name": "The Lightning Thief (Percy Jackson and the Olympians, #1)",
+      "author": "Rick Riordan",
+      "genre": "Fantasy/Young Adult/Mythology",
+      "yearPublished": 2005,
+      "yearRead": null,
+      "rating": 5
+    },
+    {
+      "id": "b0072",
+      "name": "American Gods (American Gods, #1)",
+      "author": "Neil Gaiman",
+      "genre": "Fantasy/Fiction/Mythology",
+      "yearPublished": 2001,
+      "yearRead": null,
+      "rating": 3
+    },
+    {
+      "id": "b0073",
+      "name": "The Lion, the Witch and the Wardrobe (Chronicles of Narnia, #1)",
+      "author": "C.S. Lewis",
+      "genre": "Fantasy/Classics/Fiction",
+      "yearPublished": 1950,
+      "yearRead": null,
+      "rating": 3
+    },
+    {
+      "id": "b0074",
+      "name": "The Name of the Wind (The Kingkiller Chronicle, #1)",
+      "author": "Patrick Rothfuss",
+      "genre": "Fantasy/Fiction/Epic Fantasy",
+      "yearPublished": 2007,
+      "yearRead": null,
+      "rating": 5
+    },
+    {
+      "id": "b0075",
+      "name": "The Battle of the Labyrinth (Percy Jackson and the Olympians, #4)",
+      "author": "Rick Riordan",
+      "genre": "Fantasy/Young Adult/Mythology",
+      "yearPublished": 2008,
+      "yearRead": null,
+      "rating": null
+    },
+    {
+      "id": "b0076",
+      "name": "Harry Potter and the Sorcerer's Stone (Harry Potter, #1)",
+      "author": "J.K. Rowling",
+      "genre": "Fantasy/Fiction/Young Adult",
+      "yearPublished": 1997,
+      "yearRead": null,
+      "rating": 3
+    }
+  ]
 }
