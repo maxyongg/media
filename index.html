@@ -116,7 +116,7 @@ li.row{
   display:flex;align-items:center;justify-content:center;
 }
 .cover{
-  flex:0 0 auto;width:38px;height:54px;border-radius:6px;
+  flex:0 0 auto;width:54px;height:78px;border-radius:7px;
   object-fit:cover;background:var(--ink-3);
 }
 .stars{position:relative;display:inline-block;width:76px;height:15px}
@@ -289,7 +289,7 @@ label.f>span{font-family:'Inter';font-size:10px;color:var(--mute);
   <div class="grab"></div>
   <h2 id="editTitle">Add item</h2>
   <div style="display:flex;align-items:center;gap:10px;margin:0 0 12px">
-    <img id="coverPreview" style="width:38px;height:54px;border-radius:6px;object-fit:cover;background:var(--ink-3);display:none">
+    <img id="coverPreview" style="width:54px;height:78px;border-radius:7px;object-fit:cover;background:var(--ink-3);display:none">
     <button class="btn ghost" type="button" id="fetchCoverBtn" style="flex:0 0 auto;padding:10px 14px">Fetch cover</button>
   </div>
   <div id="fields"></div>
@@ -331,7 +331,7 @@ label.f>span{font-family:'Inter';font-size:10px;color:var(--mute);
 </div>
 
 <div class="toast" id="toast"></div>
-<div class="version">v2026.07.17d</div>
+<div class="version">v2026.07.17f</div>
 
 <script>
 /* ================= config ================= */
@@ -402,7 +402,7 @@ const SORTS = [
 
 /* ================= state ================= */
 const S = {
-  tab:'home', q:'', sort:0, ratingFilter:new Set(),
+  tab:'home', q:'', sort:3, ratingFilter:new Set(),
   data:{}, shas:{}, dirty:new Set(), authError:null,
   cfg:{repo:'', branch:'main', token:'', expires:'', tmdbKey:'', rawgKey:''},
   editing:null, statsCat:'overview', statsFilter:null
