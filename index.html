@@ -268,7 +268,7 @@ label.f>span{font-family:'Space Mono';font-size:10px;color:var(--mute);
 /* ================= config ================= */
 const COLLECTIONS = {
   games: {
-    label:'Games', file:'games.json', scale:10, idp:'g', recentField:'yearPlayed',
+    label:'Games', file:'games.json', scale:10, idp:'g', recentField:'datePlayed',
     fields:[
       {k:'name',        l:'Title',        t:'text'},
       {k:'developer',   l:'Publisher / dev', t:'text'},
@@ -276,7 +276,7 @@ const COLLECTIONS = {
       {k:'genre',       l:'Genre',        t:'text', list:true},
       {k:'console',     l:'Console',      t:'text', list:true},
       {k:'mainStoryPct',l:'Main story %', t:'text', half:true},
-      {k:'yearPlayed',  l:'Year played',  t:'number', half:true},
+      {k:'datePlayed',  l:'Date played',  t:'date', half:true},
       {k:'yearReleased',l:'Year released',t:'number', half:true},
     ],
     sub: i => [i.developer, i.console, i.yearReleased].filter(Boolean).join(' · '),
@@ -297,23 +297,23 @@ const COLLECTIONS = {
     pct: i => i.watchedPct, pctLabel:'watched'
   },
   films: {
-    label:'Films', file:'films.json', scale:10, idp:'f', recentField:'yearWatched',
+    label:'Films', file:'films.json', scale:10, idp:'f', recentField:'dateWatched',
     fields:[
       {k:'name',        l:'Title',    t:'text'},
       {k:'director',    l:'Director', t:'text', list:true},
       {k:'yearReleased',l:'Year',     t:'number', half:true},
-      {k:'yearWatched', l:'Watched',  t:'number', half:true},
+      {k:'dateWatched', l:'Watched',  t:'date',   half:true},
     ],
     sub: i => [i.director, i.yearReleased].filter(Boolean).join(' · '),
     pct: () => null
   },
   books: {
-    label:'Books', file:'books.json', scale:5, idp:'b', recentField:'yearRead',
+    label:'Books', file:'books.json', scale:5, idp:'b', recentField:'dateRead',
     fields:[
       {k:'name',         l:'Title',  t:'text'},
       {k:'author',       l:'Author', t:'text', list:true},
       {k:'yearPublished',l:'Year',   t:'number', half:true},
-      {k:'yearRead',     l:'Read',   t:'number', half:true},
+      {k:'dateRead',     l:'Read',   t:'date',   half:true},
     ],
     sub: i => [i.author, i.yearPublished].filter(Boolean).join(' · '),
     pct: () => null
@@ -563,8 +563,10 @@ function filtered(){
     if(s.k==='name') return String(a.name||'').localeCompare(String(b.name||''))*s.d;
     if(s.k==='recent'){
       const rf = c.recentField;
-      const av=(rf&&a[rf])||0, bv=(rf&&b[rf])||0;
-      return (bv-av)||String(a.name||'').localeCompare(String(b.name||''));
+      // string comparison works for both ISO dates ("2026-02-21") and
+      // plain years ("2026") since both are left-padded/fixed-width
+      const av=String((rf&&a[rf])||''), bv=String((rf&&b[rf])||'');
+      return bv.localeCompare(av) || String(a.name||'').localeCompare(String(b.name||''));
     }
     const rd = ((a.rating||0)-(b.rating||0))*s.d;
     return rd || String(a.name||'').localeCompare(String(b.name||''));
@@ -656,7 +658,8 @@ function openEdit(item){
       input = `<select class="in" data-k="${f.k}"><option value=""></option>${
         f.opts.map(o=>`<option ${o===v?'selected':''}>${o}</option>`).join('')}</select>`;
     } else {
-      input = `<input class="in" data-k="${f.k}" type="${f.t==='number'?'number':'text'}"
+      const inType = f.t==='number' ? 'number' : f.t==='date' ? 'date' : 'text';
+      input = `<input class="in" data-k="${f.k}" type="${inType}"
         inputmode="${f.t==='number'?'numeric':'text'}" value="${esc(v)}"${dl}>${dlEl}`;
     }
     const block = `<label class="f"><span>${f.l}</span>${input}</label>`;

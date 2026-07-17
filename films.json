@@ -8,8 +8,8 @@
    "director": "Sidney Lumet",
    "genre": "Drama",
    "yearReleased": 1957,
-   "yearWatched": 2023,
-   "rating": 10
+   "rating": 10,
+   "dateWatched": "2023-09-29"
   },
   {
    "id": "f0002",
@@ -17,8 +17,8 @@
    "director": "Sam Mendes",
    "genre": "Drama/War",
    "yearReleased": 2019,
-   "yearWatched": null,
-   "rating": 9
+   "rating": 9,
+   "dateWatched": null
   },
   {
    "id": "f0003",
@@ -26,8 +26,8 @@
    "director": "Stanley Kubrick",
    "genre": "Science Fiction/Adventure",
    "yearReleased": 1968,
-   "yearWatched": 2024,
-   "rating": 9
+   "rating": 9,
+   "dateWatched": "2024-08-04"
   },
   {
    "id": "f0004",
@@ -35,8 +35,8 @@
    "director": "Mike Mills",
    "genre": "Drama",
    "yearReleased": 2016,
-   "yearWatched": null,
-   "rating": 9
+   "rating": 9,
+   "dateWatched": null
   },
   {
    "id": "f0005",
@@ -44,8 +44,8 @@
    "director": "Phil Lord & Christopher Miller",
    "genre": "Crime/Action",
    "yearReleased": 2012,
-   "yearWatched": null,
-   "rating": 7
+   "rating": 7,
+   "dateWatched": null
   },
   {
    "id": "f0006",
@@ -53,8 +53,8 @@
    "director": "James Gray",
    "genre": "Science Fiction/Drama",
    "yearReleased": 2019,
-   "yearWatched": null,
-   "rating": 5
+   "rating": 5,
+   "dateWatched": null
   },
   {
    "id": "f0007",
@@ -62,8 +62,8 @@
    "director": "Philip Barantini",
    "genre": "Drama/Crime",
    "yearReleased": 2025,
-   "yearWatched": null,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": null
   },
   {
    "id": "f0008",
@@ -71,8 +71,8 @@
    "director": "Martin Scorsese",
    "genre": "Thriller/Comedy",
    "yearReleased": 1985,
-   "yearWatched": 2026,
-   "rating": 10
+   "rating": 10,
+   "dateWatched": "2026-01-09"
   },
   {
    "id": "f0009",
@@ -80,8 +80,8 @@
    "director": "Justine Triet",
    "genre": "Drama/Comedy",
    "yearReleased": 2013,
-   "yearWatched": 2024,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": "2024-02-01"
   },
   {
    "id": "f0010",
@@ -89,8 +89,8 @@
    "director": "Robert Rodriguez",
    "genre": "Adventure/Science Fiction",
    "yearReleased": 2019,
-   "yearWatched": 2024,
-   "rating": 5
+   "rating": 5,
+   "dateWatched": "2024-06-24"
   },
   {
    "id": "f0011",
@@ -98,8 +98,8 @@
    "director": "Mary Harron",
    "genre": "Crime/Drama",
    "yearReleased": 2000,
-   "yearWatched": null,
-   "rating": 7
+   "rating": 7,
+   "dateWatched": null
   },
   {
    "id": "f0012",
@@ -107,8 +107,8 @@
    "director": "Jean-Pierre Jeunet",
    "genre": "Romance/Comedy",
    "yearReleased": 2001,
-   "yearWatched": null,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": null
   },
   {
    "id": "f0013",
@@ -116,8 +116,8 @@
    "director": "Justine Triet",
    "genre": "Crime/Thriller",
    "yearReleased": 2023,
-   "yearWatched": 2024,
-   "rating": 10
+   "rating": 10,
+   "dateWatched": "2024-02-03"
   },
   {
    "id": "f0014",
@@ -125,8 +125,8 @@
    "director": "Duke Johnson & Charlie Kaufman",
    "genre": "Romance/Animation",
    "yearReleased": 2015,
-   "yearWatched": 2024,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": "2024-02-26"
   },
   {
    "id": "f0015",
@@ -134,8 +134,8 @@
    "director": "Sean Baker",
    "genre": "Drama/Romance",
    "yearReleased": 2024,
-   "yearWatched": 2024,
-   "rating": 10
+   "rating": 10,
+   "dateWatched": "2024-11-17"
   },
   {
    "id": "f0016",
@@ -143,8 +143,8 @@
    "director": "Peyton Reed",
    "genre": "Adventure/Science Fiction",
    "yearReleased": 2015,
-   "yearWatched": null,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": null
   },
   {
    "id": "f0017",
@@ -152,8 +152,8 @@
    "director": "Peyton Reed",
    "genre": "Adventure/Action",
    "yearReleased": 2018,
-   "yearWatched": null,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": null
   },
   {
    "id": "f0018",
@@ -161,8 +161,8 @@
    "director": "Denis Villeneuve",
    "genre": "Mystery/Science Fiction",
    "yearReleased": 2016,
-   "yearWatched": null,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": null
   },
   {
    "id": "f0019",
@@ -170,8 +170,8 @@
    "director": "Wes Anderson",
    "genre": "Drama/Comedy",
    "yearReleased": 2023,
-   "yearWatched": 2023,
-   "rating": 7
+   "rating": 7,
+   "dateWatched": "2023-08-08"
   },
   {
    "id": "f0020",
@@ -179,8 +179,8 @@
    "director": "Lauren Montgomery",
    "genre": "Animation/Fantasy",
    "yearReleased": 2026,
-   "yearWatched": 2026,
-   "rating": 3
+   "rating": 3,
+   "dateWatched": "2026-04-17"
   },
   {
    "id": "f0021",
@@ -188,8 +188,8 @@
    "director": "James Cameron",
    "genre": "Science Fiction/Action",
    "yearReleased": 2022,
-   "yearWatched": null,
-   "rating": 3
+   "rating": 3,
+   "dateWatched": null
   },
   {
    "id": "f0022",
@@ -197,8 +197,8 @@
    "director": "Joss Whedon",
    "genre": "Science Fiction/Action",
    "yearReleased": 2015,
-   "yearWatched": null,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": null
   },
   {
    "id": "f0023",
@@ -206,8 +206,8 @@
    "director": "Anthony Russo & Joe Russo",
    "genre": "Science Fiction/Action",
    "yearReleased": 2019,
-   "yearWatched": null,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": null
   },
   {
    "id": "f0024",
@@ -215,8 +215,8 @@
    "director": "Anthony Russo & Joe Russo",
    "genre": "Action/Science Fiction",
    "yearReleased": 2018,
-   "yearWatched": null,
-   "rating": 10
+   "rating": 10,
+   "dateWatched": null
   },
   {
    "id": "f0025",
@@ -224,8 +224,8 @@
    "director": "Edgar Wright",
    "genre": "Crime/Action",
    "yearReleased": 2017,
-   "yearWatched": null,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": null
   },
   {
    "id": "f0026",
@@ -233,8 +233,8 @@
    "director": "Robert Zemeckis",
    "genre": "Adventure/Comedy",
    "yearReleased": 1985,
-   "yearWatched": null,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": null
   },
   {
    "id": "f0027",
@@ -242,8 +242,8 @@
    "director": "Robert Zemeckis",
    "genre": "Science Fiction/Comedy",
    "yearReleased": 1989,
-   "yearWatched": null,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": null
   },
   {
    "id": "f0028",
@@ -251,8 +251,8 @@
    "director": "Robert Zemeckis",
    "genre": "Comedy/Adventure",
    "yearReleased": 1990,
-   "yearWatched": null,
-   "rating": 7
+   "rating": 7,
+   "dateWatched": null
   },
   {
    "id": "f0029",
@@ -260,8 +260,8 @@
    "director": "Kane Parsons",
    "genre": "Mystery/Science Fiction",
    "yearReleased": 2026,
-   "yearWatched": 2026,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": "2026-06-10"
   },
   {
    "id": "f0030",
@@ -269,8 +269,8 @@
    "director": "Zach Cregger",
    "genre": "Horror/Mystery",
    "yearReleased": 2022,
-   "yearWatched": 2023,
-   "rating": 5
+   "rating": 5,
+   "dateWatched": "2023-01-18"
   },
   {
    "id": "f0031",
@@ -278,8 +278,8 @@
    "director": "Greta Gerwig",
    "genre": "Comedy/Fantasy",
    "yearReleased": 2023,
-   "yearWatched": 2023,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": "2023-07-21"
   },
   {
    "id": "f0032",
@@ -287,8 +287,8 @@
    "director": "Christopher Nolan",
    "genre": "Crime/Action",
    "yearReleased": 2005,
-   "yearWatched": null,
-   "rating": 4
+   "rating": 4,
+   "dateWatched": null
   },
   {
    "id": "f0033",
@@ -296,8 +296,8 @@
    "director": "Zack Snyder",
    "genre": "Action/Fantasy",
    "yearReleased": 2016,
-   "yearWatched": null,
-   "rating": 4
+   "rating": 4,
+   "dateWatched": null
   },
   {
    "id": "f0034",
@@ -305,8 +305,8 @@
    "director": "Mike Mills",
    "genre": "Comedy/Romance",
    "yearReleased": 2010,
-   "yearWatched": null,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": null
   },
   {
    "id": "f0035",
@@ -314,8 +314,8 @@
    "director": "Spike Jonze",
    "genre": "Comedy/Drama",
    "yearReleased": 1999,
-   "yearWatched": 2024,
-   "rating": 7
+   "rating": 7,
+   "dateWatched": "2024-02-14"
   },
   {
    "id": "f0036",
@@ -323,8 +323,8 @@
    "director": "Don Hall & Chris Williams",
    "genre": "Science Fiction/Comedy",
    "yearReleased": 2014,
-   "yearWatched": null,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": null
   },
   {
    "id": "f0037",
@@ -332,8 +332,8 @@
    "director": "Alejandro G. Iñárritu",
    "genre": "Drama/Comedy",
    "yearReleased": 2014,
-   "yearWatched": null,
-   "rating": 9
+   "rating": 9,
+   "dateWatched": null
   },
   {
    "id": "f0038",
@@ -341,8 +341,8 @@
    "director": "Darren Aronofsky",
    "genre": "Drama/Thriller",
    "yearReleased": 2010,
-   "yearWatched": null,
-   "rating": null
+   "rating": null,
+   "dateWatched": null
   },
   {
    "id": "f0039",
@@ -350,8 +350,8 @@
    "director": "Cate Shortland",
    "genre": "Action/Adventure",
    "yearReleased": 2021,
-   "yearWatched": null,
-   "rating": 4
+   "rating": 4,
+   "dateWatched": null
   },
   {
    "id": "f0040",
@@ -359,8 +359,8 @@
    "director": "Denis Villeneuve",
    "genre": "Science Fiction/Drama",
    "yearReleased": 2017,
-   "yearWatched": null,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": null
   },
   {
    "id": "f0041",
@@ -368,8 +368,8 @@
    "director": "Halina Reijn",
    "genre": "Comedy/Horror",
    "yearReleased": 2022,
-   "yearWatched": 2023,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": "2023-08-11"
   },
   {
    "id": "f0042",
@@ -377,8 +377,8 @@
    "director": "Bryan Singer",
    "genre": "Music/Drama",
    "yearReleased": 2018,
-   "yearWatched": null,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": null
   },
   {
    "id": "f0043",
@@ -386,8 +386,8 @@
    "director": "Richard Linklater",
    "genre": "Drama",
    "yearReleased": 2014,
-   "yearWatched": null,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": null
   },
   {
    "id": "f0044",
@@ -395,8 +395,8 @@
    "director": "Michael Philippou & Danny Philippou",
    "genre": "Horror",
    "yearReleased": 2025,
-   "yearWatched": 2025,
-   "rating": 4
+   "rating": 4,
+   "dateWatched": "2025-07-27"
   },
   {
    "id": "f0045",
@@ -404,8 +404,8 @@
    "director": "Yorgos Lanthimos",
    "genre": "Thriller/Science Fiction",
    "yearReleased": 2025,
-   "yearWatched": 2025,
-   "rating": 7
+   "rating": 7,
+   "dateWatched": "2025-12-04"
   },
   {
    "id": "f0046",
@@ -413,8 +413,8 @@
    "director": "David Leitch",
    "genre": "Comedy/Thriller",
    "yearReleased": 2022,
-   "yearWatched": 2024,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": "2024-11-10"
   },
   {
    "id": "f0047",
@@ -422,8 +422,8 @@
    "director": "Mike Mills",
    "genre": "Drama",
    "yearReleased": 2021,
-   "yearWatched": null,
-   "rating": 9
+   "rating": 9,
+   "dateWatched": null
   },
   {
    "id": "f0048",
@@ -431,8 +431,8 @@
    "director": "Joe Russo & Anthony Russo",
    "genre": "Adventure/Action",
    "yearReleased": 2016,
-   "yearWatched": null,
-   "rating": 5
+   "rating": 5,
+   "dateWatched": null
   },
   {
    "id": "f0049",
@@ -440,8 +440,8 @@
    "director": "Joe Johnston",
    "genre": "Action/Adventure",
    "yearReleased": 2011,
-   "yearWatched": null,
-   "rating": 4
+   "rating": 4,
+   "dateWatched": null
   },
   {
    "id": "f0050",
@@ -449,8 +449,8 @@
    "director": "Joe Russo & Anthony Russo",
    "genre": "Adventure/Science Fiction",
    "yearReleased": 2014,
-   "yearWatched": null,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": null
   },
   {
    "id": "f0051",
@@ -458,8 +458,8 @@
    "director": "Ryan Fleck & Anna Boden",
    "genre": "Science Fiction/Action",
    "yearReleased": 2019,
-   "yearWatched": null,
-   "rating": 4
+   "rating": 4,
+   "dateWatched": null
   },
   {
    "id": "f0052",
@@ -467,8 +467,8 @@
    "director": "John Lasseter",
    "genre": "Adventure/Comedy",
    "yearReleased": 2006,
-   "yearWatched": null,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": null
   },
   {
    "id": "f0053",
@@ -476,8 +476,8 @@
    "director": "Steven Spielberg",
    "genre": "Drama/Crime",
    "yearReleased": 2002,
-   "yearWatched": 2025,
-   "rating": 4
+   "rating": 4,
+   "dateWatched": "2025-08-30"
   },
   {
    "id": "f0054",
@@ -485,8 +485,8 @@
    "director": "Cooper Raiff",
    "genre": "Romance/Drama",
    "yearReleased": 2022,
-   "yearWatched": 2023,
-   "rating": 7
+   "rating": 7,
+   "dateWatched": "2023-02-16"
   },
   {
    "id": "f0055",
@@ -494,8 +494,8 @@
    "director": "Luca Guadagnino",
    "genre": "Romance/Drama",
    "yearReleased": 2024,
-   "yearWatched": 2024,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": "2024-11-06"
   },
   {
    "id": "f0056",
@@ -503,8 +503,8 @@
    "director": "Wong Kar-Wai",
    "genre": "Comedy/Drama",
    "yearReleased": 1994,
-   "yearWatched": null,
-   "rating": 9
+   "rating": 9,
+   "dateWatched": null
   },
   {
    "id": "f0057",
@@ -512,8 +512,8 @@
    "director": "Fernando Meirelles",
    "genre": "Drama/Crime",
    "yearReleased": 2002,
-   "yearWatched": 2025,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": "2025-09-19"
   },
   {
    "id": "f0058",
@@ -521,8 +521,8 @@
    "director": "Elizabeth Banks",
    "genre": "Crime/Comedy",
    "yearReleased": 2023,
-   "yearWatched": 2023,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": "2023-11-15"
   },
   {
    "id": "f0059",
@@ -530,8 +530,8 @@
    "director": "Lee Unkrich",
    "genre": "Adventure/Animation",
    "yearReleased": 2017,
-   "yearWatched": null,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": null
   },
   {
    "id": "f0060",
@@ -539,8 +539,8 @@
    "director": "James Ward Byrkit",
    "genre": "Science Fiction/Thriller",
    "yearReleased": 2013,
-   "yearWatched": 2024,
-   "rating": 9
+   "rating": 9,
+   "dateWatched": "2024-12-24"
   },
   {
    "id": "f0061",
@@ -548,8 +548,8 @@
    "director": "Paweł Pawlikowski",
    "genre": "Romance/Music",
    "yearReleased": 2018,
-   "yearWatched": null,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": null
   },
   {
    "id": "f0062",
@@ -557,8 +557,8 @@
    "director": "Drew Hancock",
    "genre": "Thriller/Science Fiction",
    "yearReleased": 2025,
-   "yearWatched": 2025,
-   "rating": 4
+   "rating": 4,
+   "dateWatched": "2025-06-03"
   },
   {
    "id": "f0063",
@@ -566,8 +566,8 @@
    "director": "Edward Berger",
    "genre": "Drama/Thriller",
    "yearReleased": 2024,
-   "yearWatched": 2025,
-   "rating": 5
+   "rating": 5,
+   "dateWatched": "2025-01-24"
   },
   {
    "id": "f0064",
@@ -575,8 +575,8 @@
    "director": "Glenn Ficarra & John Requa",
    "genre": "Comedy/Romance",
    "yearReleased": 2011,
-   "yearWatched": null,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": null
   },
   {
    "id": "f0065",
@@ -584,8 +584,8 @@
    "director": "Kiyoshi Kurosawa",
    "genre": "Crime/Mystery",
    "yearReleased": 1997,
-   "yearWatched": 2025,
-   "rating": 7
+   "rating": 7,
+   "dateWatched": "2025-01-18"
   },
   {
    "id": "f0066",
@@ -593,8 +593,8 @@
    "director": "Jean-Marc Vallée",
    "genre": "History/Drama",
    "yearReleased": 2013,
-   "yearWatched": null,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": null
   },
   {
    "id": "f0067",
@@ -602,8 +602,8 @@
    "director": "Tim Miller",
    "genre": "Action/Adventure",
    "yearReleased": 2016,
-   "yearWatched": null,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": null
   },
   {
    "id": "f0068",
@@ -611,8 +611,8 @@
    "director": "Shawn Levy",
    "genre": "Science Fiction/Action",
    "yearReleased": 2024,
-   "yearWatched": 2024,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": "2024-08-05"
   },
   {
    "id": "f0069",
@@ -620,8 +620,8 @@
    "director": "David Leitch",
    "genre": "Action/Comedy",
    "yearReleased": 2018,
-   "yearWatched": null,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": null
   },
   {
    "id": "f0070",
@@ -629,8 +629,8 @@
    "director": "Robert Zemeckis",
    "genre": "Comedy/Fantasy",
    "yearReleased": 1992,
-   "yearWatched": 2026,
-   "rating": 7
+   "rating": 7,
+   "dateWatched": "2026-02-21"
   },
   {
    "id": "f0071",
@@ -638,8 +638,8 @@
    "director": "Quentin Tarantino",
    "genre": "Drama/Western",
    "yearReleased": 2012,
-   "yearWatched": null,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": null
   },
   {
    "id": "f0072",
@@ -647,8 +647,8 @@
    "director": "Scott Derrickson",
    "genre": "Fantasy/Action",
    "yearReleased": 2016,
-   "yearWatched": null,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": null
   },
   {
    "id": "f0073",
@@ -656,8 +656,8 @@
    "director": "Sam Raimi",
    "genre": "Fantasy/Action",
    "yearReleased": 2022,
-   "yearWatched": null,
-   "rating": 3
+   "rating": 3,
+   "dateWatched": null
   },
   {
    "id": "f0074",
@@ -665,8 +665,8 @@
    "director": "Yorgos Lanthimos",
    "genre": "Drama",
    "yearReleased": 2009,
-   "yearWatched": 2024,
-   "rating": 9
+   "rating": 9,
+   "dateWatched": "2024-01-29"
   },
   {
    "id": "f0075",
@@ -674,8 +674,8 @@
    "director": "Richard Kelly",
    "genre": "Drama/Fantasy",
    "yearReleased": 2001,
-   "yearWatched": 2025,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": "2025-09-06"
   },
   {
    "id": "f0076",
@@ -683,8 +683,8 @@
    "director": "Stanley Kubrick",
    "genre": "Comedy/War",
    "yearReleased": 1964,
-   "yearWatched": 2024,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": "2024-02-02"
   },
   {
    "id": "f0077",
@@ -692,8 +692,8 @@
    "director": "Kristoffer Borgli",
    "genre": "Comedy/Fantasy",
    "yearReleased": 2023,
-   "yearWatched": 2024,
-   "rating": 7
+   "rating": 7,
+   "dateWatched": "2024-05-01"
   },
   {
    "id": "f0078",
@@ -701,8 +701,8 @@
    "director": "Ryusuke Hamaguchi",
    "genre": "Drama",
    "yearReleased": 2021,
-   "yearWatched": null,
-   "rating": 10
+   "rating": 10,
+   "dateWatched": null
   },
   {
    "id": "f0079",
@@ -710,8 +710,8 @@
    "director": "Denis Villeneuve",
    "genre": "War/Science Fiction",
    "yearReleased": 2021,
-   "yearWatched": null,
-   "rating": 4
+   "rating": 4,
+   "dateWatched": null
   },
   {
    "id": "f0080",
@@ -719,8 +719,8 @@
    "director": "Denis Villeneuve",
    "genre": "Adventure/Science Fiction",
    "yearReleased": 2024,
-   "yearWatched": 2024,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": "2024-06-15"
   },
   {
    "id": "f0081",
@@ -728,8 +728,8 @@
    "director": "Christopher Nolan",
    "genre": "Action/Drama",
    "yearReleased": 2017,
-   "yearWatched": null,
-   "rating": 7
+   "rating": 7,
+   "dateWatched": null
   },
   {
    "id": "f0082",
@@ -737,8 +737,8 @@
    "director": "Vince Gilligan",
    "genre": "Crime/Drama",
    "yearReleased": 2019,
-   "yearWatched": null,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": null
   },
   {
    "id": "f0083",
@@ -746,8 +746,8 @@
    "director": "Harry Bradbeer",
    "genre": "Mystery/Crime",
    "yearReleased": 2020,
-   "yearWatched": null,
-   "rating": 4
+   "rating": 4,
+   "dateWatched": null
   },
   {
    "id": "f0084",
@@ -755,8 +755,8 @@
    "director": "Michel Gondry",
    "genre": "Science Fiction/Romance",
    "yearReleased": 2004,
-   "yearWatched": 2023,
-   "rating": 9
+   "rating": 9,
+   "dateWatched": "2023-02-14"
   },
   {
    "id": "f0085",
@@ -764,8 +764,8 @@
    "director": "Daniel Scheinert & Daniel Kwan",
    "genre": "Science Fiction/Adventure",
    "yearReleased": 2022,
-   "yearWatched": null,
-   "rating": 10
+   "rating": 10,
+   "dateWatched": null
   },
   {
    "id": "f0086",
@@ -773,8 +773,8 @@
    "director": "Jang Jae-hyun",
    "genre": "Thriller/Horror",
    "yearReleased": 2024,
-   "yearWatched": 2025,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": "2025-01-05"
   },
   {
    "id": "f0087",
@@ -782,8 +782,8 @@
    "director": "Genki Kawamura",
    "genre": "Mystery/Horror",
    "yearReleased": 2025,
-   "yearWatched": 2026,
-   "rating": 7
+   "rating": 7,
+   "dateWatched": "2026-04-29"
   },
   {
    "id": "f0088",
@@ -791,8 +791,8 @@
    "director": "Wong Kar-Wai",
    "genre": "Crime/Romance",
    "yearReleased": 1995,
-   "yearWatched": 2024,
-   "rating": 7
+   "rating": 7,
+   "dateWatched": "2024-01-30"
   },
   {
    "id": "f0089",
@@ -800,8 +800,8 @@
    "director": "Wes Anderson",
    "genre": "Comedy/Animation",
    "yearReleased": 2009,
-   "yearWatched": null,
-   "rating": 10
+   "rating": 10,
+   "dateWatched": null
   },
   {
    "id": "f0090",
@@ -809,8 +809,8 @@
    "director": "Joel Coen",
    "genre": "Crime/Comedy",
    "yearReleased": 1996,
-   "yearWatched": null,
-   "rating": 9
+   "rating": 9,
+   "dateWatched": null
   },
   {
    "id": "f0091",
@@ -818,8 +818,8 @@
    "director": "John Hughes",
    "genre": "Comedy",
    "yearReleased": 1986,
-   "yearWatched": 2026,
-   "rating": 9
+   "rating": 9,
+   "dateWatched": "2026-01-20"
   },
   {
    "id": "f0092",
@@ -827,8 +827,8 @@
    "director": "David Fincher",
    "genre": "Drama/Thriller",
    "yearReleased": 1999,
-   "yearWatched": null,
-   "rating": 7
+   "rating": 7,
+   "dateWatched": null
   },
   {
    "id": "f0093",
@@ -836,8 +836,8 @@
    "director": "Andrew Stanton",
    "genre": "Adventure/Family",
    "yearReleased": 2003,
-   "yearWatched": null,
-   "rating": null
+   "rating": null,
+   "dateWatched": null
   },
   {
    "id": "f0094",
@@ -845,8 +845,8 @@
    "director": "Shunji Iwai",
    "genre": "Drama/Romance",
    "yearReleased": 1993,
-   "yearWatched": 2023,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": "2023-08-28"
   },
   {
    "id": "f0095",
@@ -854,8 +854,8 @@
    "director": "Gints Zilbalodis",
    "genre": "Family/Animation",
    "yearReleased": 2024,
-   "yearWatched": 2025,
-   "rating": 5
+   "rating": 5,
+   "dateWatched": "2025-06-03"
   },
   {
    "id": "f0096",
@@ -863,8 +863,8 @@
    "director": "James Mangold",
    "genre": "Drama/Action",
    "yearReleased": 2019,
-   "yearWatched": null,
-   "rating": 7
+   "rating": 7,
+   "dateWatched": null
   },
   {
    "id": "f0097",
@@ -872,8 +872,8 @@
    "director": "Robert Zemeckis",
    "genre": "Drama/Romance",
    "yearReleased": 1994,
-   "yearWatched": null,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": null
   },
   {
    "id": "f0098",
@@ -881,8 +881,8 @@
    "director": "Noah Baumbach",
    "genre": "Comedy/Drama",
    "yearReleased": 2012,
-   "yearWatched": 2023,
-   "rating": 9
+   "rating": 9,
+   "dateWatched": "2023-08-05"
   },
   {
    "id": "f0099",
@@ -890,8 +890,8 @@
    "director": "Shawn Levy",
    "genre": "Comedy/Adventure",
    "yearReleased": 2021,
-   "yearWatched": null,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": null
   },
   {
    "id": "f0100",
@@ -899,8 +899,8 @@
    "director": "Jordan Peele",
    "genre": "Horror/Mystery",
    "yearReleased": 2017,
-   "yearWatched": null,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": null
   },
   {
    "id": "f0101",
@@ -908,8 +908,8 @@
    "director": "Rian Johnson",
    "genre": "Crime/Mystery",
    "yearReleased": 2022,
-   "yearWatched": null,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": null
   },
   {
    "id": "f0102",
@@ -917,8 +917,8 @@
    "director": "Gus Van Sant",
    "genre": "Drama",
    "yearReleased": 1997,
-   "yearWatched": 2023,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": "2023-02-24"
   },
   {
    "id": "f0103",
@@ -926,8 +926,8 @@
    "director": "Alfonso Cuarón",
    "genre": "Thriller/Science Fiction",
    "yearReleased": 2013,
-   "yearWatched": null,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": null
   },
   {
    "id": "f0104",
@@ -935,8 +935,8 @@
    "director": "James Gunn",
    "genre": "Adventure/Action",
    "yearReleased": 2014,
-   "yearWatched": null,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": null
   },
   {
    "id": "f0105",
@@ -944,8 +944,8 @@
    "director": "James Gunn",
    "genre": "Action/Science Fiction",
    "yearReleased": 2017,
-   "yearWatched": null,
-   "rating": 5
+   "rating": 5,
+   "dateWatched": null
   },
   {
    "id": "f0106",
@@ -953,8 +953,8 @@
    "director": "James Gunn",
    "genre": "Action/Science Fiction",
    "yearReleased": 2023,
-   "yearWatched": 2023,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": "2023-05-08"
   },
   {
    "id": "f0107",
@@ -962,8 +962,8 @@
    "director": "Mark Gustafson & Guillermo del Toro",
    "genre": "Drama/Adventure",
    "yearReleased": 2022,
-   "yearWatched": 2023,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": "2023-03-16"
   },
   {
    "id": "f0108",
@@ -971,8 +971,8 @@
    "director": "Mel Gibson",
    "genre": "War/Drama",
    "yearReleased": 2016,
-   "yearWatched": null,
-   "rating": 7
+   "rating": 7,
+   "dateWatched": null
   },
   {
    "id": "f0109",
@@ -980,8 +980,8 @@
    "director": "Chloé Zhao",
    "genre": "Drama/Romance",
    "yearReleased": 2025,
-   "yearWatched": 2026,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": "2026-01-28"
   },
   {
    "id": "f0110",
@@ -989,8 +989,8 @@
    "director": "Chris Columbus",
    "genre": "Adventure/Fantasy",
    "yearReleased": 2002,
-   "yearWatched": null,
-   "rating": 4
+   "rating": 4,
+   "dateWatched": null
   },
   {
    "id": "f0111",
@@ -998,8 +998,8 @@
    "director": "David Yates",
    "genre": "Adventure/Fantasy",
    "yearReleased": 2010,
-   "yearWatched": null,
-   "rating": 4
+   "rating": 4,
+   "dateWatched": null
   },
   {
    "id": "f0112",
@@ -1007,8 +1007,8 @@
    "director": "David Yates",
    "genre": "Fantasy/Adventure",
    "yearReleased": 2011,
-   "yearWatched": null,
-   "rating": 4
+   "rating": 4,
+   "dateWatched": null
   },
   {
    "id": "f0113",
@@ -1016,8 +1016,8 @@
    "director": "Mike Newell",
    "genre": "Adventure/Fantasy",
    "yearReleased": 2005,
-   "yearWatched": null,
-   "rating": 5
+   "rating": 5,
+   "dateWatched": null
   },
   {
    "id": "f0114",
@@ -1025,8 +1025,8 @@
    "director": "David Yates",
    "genre": "Adventure/Fantasy",
    "yearReleased": 2007,
-   "yearWatched": null,
-   "rating": 4
+   "rating": 4,
+   "dateWatched": null
   },
   {
    "id": "f0115",
@@ -1034,8 +1034,8 @@
    "director": "Chris Columbus",
    "genre": "Adventure/Fantasy",
    "yearReleased": 2001,
-   "yearWatched": null,
-   "rating": 4
+   "rating": 4,
+   "dateWatched": null
   },
   {
    "id": "f0116",
@@ -1043,8 +1043,8 @@
    "director": "Alfonso Cuarón",
    "genre": "Adventure/Fantasy",
    "yearReleased": 2004,
-   "yearWatched": null,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": null
   },
   {
    "id": "f0117",
@@ -1052,8 +1052,8 @@
    "director": "Spike Jonze",
    "genre": "Science Fiction/Romance",
    "yearReleased": 2013,
-   "yearWatched": null,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": null
   },
   {
    "id": "f0118",
@@ -1061,8 +1061,8 @@
    "director": "Ari Aster",
    "genre": "Thriller/Horror",
    "yearReleased": 2018,
-   "yearWatched": 2023,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": "2023-03-10"
   },
   {
    "id": "f0119",
@@ -1070,8 +1070,8 @@
    "director": "Scott Beck & Bryan Woods",
    "genre": "Thriller/Horror",
    "yearReleased": 2024,
-   "yearWatched": 2024,
-   "rating": 5
+   "rating": 5,
+   "dateWatched": "2024-12-14"
   },
   {
    "id": "f0120",
@@ -1079,8 +1079,8 @@
    "director": "Kenny Ortega",
    "genre": "Comedy/Family",
    "yearReleased": 2006,
-   "yearWatched": null,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": null
   },
   {
    "id": "f0121",
@@ -1088,8 +1088,8 @@
    "director": "Richard Linklater",
    "genre": "Comedy/Crime",
    "yearReleased": 2023,
-   "yearWatched": 2024,
-   "rating": 7
+   "rating": 7,
+   "dateWatched": "2024-09-18"
   },
   {
    "id": "f0122",
@@ -1097,8 +1097,8 @@
    "director": "Damian McCarthy",
    "genre": "Horror",
    "yearReleased": 2026,
-   "yearWatched": 2026,
-   "rating": 3
+   "rating": 3,
+   "dateWatched": "2026-05-25"
   },
   {
    "id": "f0123",
@@ -1106,8 +1106,8 @@
    "director": "Edgar Wright",
    "genre": "Action/Crime",
    "yearReleased": 2007,
-   "yearWatched": null,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": null
   },
   {
    "id": "f0124",
@@ -1115,8 +1115,8 @@
    "director": "Hayao Miyazaki",
    "genre": "Animation/Fantasy",
    "yearReleased": 2004,
-   "yearWatched": null,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": null
   },
   {
    "id": "f0125",
@@ -1124,8 +1124,8 @@
    "director": "Francis Lawrence",
    "genre": "Drama/Thriller",
    "yearReleased": 2007,
-   "yearWatched": null,
-   "rating": 4
+   "rating": 4,
+   "dateWatched": null
   },
   {
    "id": "f0126",
@@ -1133,8 +1133,8 @@
    "director": "Jane Schoenbrun",
    "genre": "Drama/Horror",
    "yearReleased": 2024,
-   "yearWatched": 2024,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": "2024-11-10"
   },
   {
    "id": "f0127",
@@ -1142,8 +1142,8 @@
    "director": "Charlie Kaufman",
    "genre": "Fantasy/Thriller",
    "yearReleased": 2020,
-   "yearWatched": null,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": null
   },
   {
    "id": "f0128",
@@ -1151,8 +1151,8 @@
    "director": "Denis Villeneuve",
    "genre": "Mystery/Drama",
    "yearReleased": 2010,
-   "yearWatched": 2025,
-   "rating": 7
+   "rating": 7,
+   "dateWatched": "2025-12-12"
   },
   {
    "id": "f0129",
@@ -1160,8 +1160,8 @@
    "director": "Christopher Nolan",
    "genre": "Action/Adventure",
    "yearReleased": 2010,
-   "yearWatched": 2023,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": "2023-04-05"
   },
   {
    "id": "f0130",
@@ -1169,8 +1169,8 @@
    "director": "Andrew Lau Wai-Keung & Alan Mak Siu-Fai",
    "genre": "Crime/Drama",
    "yearReleased": 2003,
-   "yearWatched": null,
-   "rating": 9
+   "rating": 9,
+   "dateWatched": null
   },
   {
    "id": "f0131",
@@ -1178,8 +1178,8 @@
    "director": "James Wan",
    "genre": "Horror/Thriller",
    "yearReleased": 2010,
-   "yearWatched": null,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": null
   },
   {
    "id": "f0132",
@@ -1187,8 +1187,8 @@
    "director": "Christopher Nolan",
    "genre": "Science Fiction/Drama",
    "yearReleased": 2014,
-   "yearWatched": 2025,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": "2025-02-08"
   },
   {
    "id": "f0133",
@@ -1196,8 +1196,8 @@
    "director": "Jon Favreau",
    "genre": "Adventure/Science Fiction",
    "yearReleased": 2008,
-   "yearWatched": null,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": null
   },
   {
    "id": "f0134",
@@ -1205,8 +1205,8 @@
    "director": "Jon Favreau",
    "genre": "Adventure/Science Fiction",
    "yearReleased": 2010,
-   "yearWatched": null,
-   "rating": 4
+   "rating": 4,
+   "dateWatched": null
   },
   {
    "id": "f0135",
@@ -1214,8 +1214,8 @@
    "director": "Shane Black",
    "genre": "Action/Adventure",
    "yearReleased": 2013,
-   "yearWatched": null,
-   "rating": 4
+   "rating": 4,
+   "dateWatched": null
   },
   {
    "id": "f0136",
@@ -1223,8 +1223,8 @@
    "director": "Wes Anderson",
    "genre": "Comedy/Animation",
    "yearReleased": 2018,
-   "yearWatched": null,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": null
   },
   {
    "id": "f0137",
@@ -1232,8 +1232,8 @@
    "director": "Greg Jardin",
    "genre": "Science Fiction/Comedy",
    "yearReleased": 2024,
-   "yearWatched": 2024,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": "2024-11-07"
   },
   {
    "id": "f0138",
@@ -1241,8 +1241,8 @@
    "director": "Karyn Kusama",
    "genre": "Horror/Comedy",
    "yearReleased": 2009,
-   "yearWatched": null,
-   "rating": 4
+   "rating": 4,
+   "dateWatched": null
   },
   {
    "id": "f0139",
@@ -1250,8 +1250,8 @@
    "director": "Taika Waititi",
    "genre": "War/Comedy",
    "yearReleased": 2019,
-   "yearWatched": null,
-   "rating": 9
+   "rating": 9,
+   "dateWatched": null
   },
   {
    "id": "f0140",
@@ -1259,8 +1259,8 @@
    "director": "Todd Phillips",
    "genre": "Drama/Thriller",
    "yearReleased": 2019,
-   "yearWatched": null,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": null
   },
   {
    "id": "f0141",
@@ -1268,8 +1268,8 @@
    "director": "Jason Reitman",
    "genre": "Comedy/Romance",
    "yearReleased": 2007,
-   "yearWatched": null,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": null
   },
   {
    "id": "f0142",
@@ -1277,8 +1277,8 @@
    "director": "Matthew Vaughn",
    "genre": "Crime/Action",
    "yearReleased": 2010,
-   "yearWatched": null,
-   "rating": 7
+   "rating": 7,
+   "dateWatched": null
   },
   {
    "id": "f0143",
@@ -1286,8 +1286,8 @@
    "director": "Hayao Miyazaki",
    "genre": "Fantasy/Animation",
    "yearReleased": 1989,
-   "yearWatched": 2024,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": "2024-10-07"
   },
   {
    "id": "f0144",
@@ -1295,8 +1295,8 @@
    "director": "Martin Scorsese",
    "genre": "Crime/History",
    "yearReleased": 2023,
-   "yearWatched": 2024,
-   "rating": 5
+   "rating": 5,
+   "dateWatched": "2024-02-09"
   },
   {
    "id": "f0145",
@@ -1304,8 +1304,8 @@
    "director": "Yorgos Lanthimos",
    "genre": "Comedy/Horror",
    "yearReleased": 2024,
-   "yearWatched": 2024,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": "2024-08-30"
   },
   {
    "id": "f0146",
@@ -1313,8 +1313,8 @@
    "director": "Matthew Vaughn",
    "genre": "Action/Comedy",
    "yearReleased": 2014,
-   "yearWatched": null,
-   "rating": 7
+   "rating": 7,
+   "dateWatched": null
   },
   {
    "id": "f0147",
@@ -1322,8 +1322,8 @@
    "director": "Rian Johnson",
    "genre": "Mystery/Comedy",
    "yearReleased": 2019,
-   "yearWatched": null,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": null
   },
   {
    "id": "f0148",
@@ -1331,8 +1331,8 @@
    "director": "Mike Mitchell",
    "genre": "Adventure/Comedy",
    "yearReleased": 2024,
-   "yearWatched": 2024,
-   "rating": 4
+   "rating": 4,
+   "dateWatched": "2024-03-18"
   },
   {
    "id": "f0149",
@@ -1340,8 +1340,8 @@
    "director": "Alice Rohrwacher",
    "genre": "Drama/Comedy",
    "yearReleased": 2023,
-   "yearWatched": 2024,
-   "rating": 9
+   "rating": 9,
+   "dateWatched": "2024-06-05"
   },
   {
    "id": "f0150",
@@ -1349,8 +1349,8 @@
    "director": "Mathieu Kassovitz",
    "genre": "Drama",
    "yearReleased": 1995,
-   "yearWatched": 2023,
-   "rating": 10
+   "rating": 10,
+   "dateWatched": "2023-03-03"
   },
   {
    "id": "f0151",
@@ -1358,8 +1358,8 @@
    "director": "Chris Marker",
    "genre": "Romance/Science Fiction",
    "yearReleased": 1962,
-   "yearWatched": null,
-   "rating": null
+   "rating": null,
+   "dateWatched": null
   },
   {
    "id": "f0152",
@@ -1367,8 +1367,8 @@
    "director": "Damien Chazelle",
    "genre": "Drama/Comedy",
    "yearReleased": 2016,
-   "yearWatched": null,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": null
   },
   {
    "id": "f0153",
@@ -1376,8 +1376,8 @@
    "director": "Greta Gerwig",
    "genre": "Comedy/Drama",
    "yearReleased": 2017,
-   "yearWatched": null,
-   "rating": 9
+   "rating": 9,
+   "dateWatched": null
   },
   {
    "id": "f0154",
@@ -1385,8 +1385,8 @@
    "director": "Theo Angelopoulos",
    "genre": "Drama",
    "yearReleased": 1988,
-   "yearWatched": 2026,
-   "rating": null
+   "rating": null,
+   "dateWatched": "2026-06-14"
   },
   {
    "id": "f0155",
@@ -1394,8 +1394,8 @@
    "director": "Edgar Wright",
    "genre": "Horror/Mystery",
    "yearReleased": 2021,
-   "yearWatched": null,
-   "rating": 7
+   "rating": 7,
+   "dateWatched": null
   },
   {
    "id": "f0156",
@@ -1403,8 +1403,8 @@
    "director": "Cameron Cairnes & Colin Cairnes",
    "genre": "Horror",
    "yearReleased": 2023,
-   "yearWatched": 2024,
-   "rating": 7
+   "rating": 7,
+   "dateWatched": "2024-04-16"
   },
   {
    "id": "f0157",
@@ -1412,8 +1412,8 @@
    "director": "David Lean",
    "genre": "Adventure/War",
    "yearReleased": 1962,
-   "yearWatched": 2026,
-   "rating": 9
+   "rating": 9,
+   "dateWatched": "2026-03-25"
   },
   {
    "id": "f0158",
@@ -1421,8 +1421,8 @@
    "director": "Jean-Pierre Melville",
    "genre": "Drama/Thriller",
    "yearReleased": 1967,
-   "yearWatched": 2024,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": "2024-11-30"
   },
   {
    "id": "f0159",
@@ -1430,8 +1430,8 @@
    "director": "Greta Gerwig",
    "genre": "Drama/Romance",
    "yearReleased": 2019,
-   "yearWatched": null,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": null
   },
   {
    "id": "f0160",
@@ -1439,8 +1439,8 @@
    "director": "James Mangold",
    "genre": "Drama/Science Fiction",
    "yearReleased": 2017,
-   "yearWatched": null,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": null
   },
   {
    "id": "f0161",
@@ -1448,8 +1448,8 @@
    "director": "Osgood Perkins",
    "genre": "Crime/Horror",
    "yearReleased": 2024,
-   "yearWatched": 2024,
-   "rating": 4
+   "rating": 4,
+   "dateWatched": "2024-07-18"
   },
   {
    "id": "f0162",
@@ -1457,8 +1457,8 @@
    "director": "Sofia Coppola",
    "genre": "Comedy/Romance",
    "yearReleased": 2003,
-   "yearWatched": null,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": null
   },
   {
    "id": "f0163",
@@ -1466,8 +1466,8 @@
    "director": "Hugh Welchman & DK Welchman",
    "genre": "Drama/Animation",
    "yearReleased": 2017,
-   "yearWatched": null,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": null
   },
   {
    "id": "f0164",
@@ -1475,8 +1475,8 @@
    "director": "Luc Besson",
    "genre": "Action/Science Fiction",
    "yearReleased": 2014,
-   "yearWatched": null,
-   "rating": 4
+   "rating": 4,
+   "dateWatched": null
   },
   {
    "id": "f0165",
@@ -1484,8 +1484,8 @@
    "director": "Luc Besson",
    "genre": "Crime/Action",
    "yearReleased": 1994,
-   "yearWatched": null,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": null
   },
   {
    "id": "f0166",
@@ -1493,8 +1493,8 @@
    "director": "John Slattery",
    "genre": "Comedy/Mystery",
    "yearReleased": 2023,
-   "yearWatched": 2023,
-   "rating": 4
+   "rating": 4,
+   "dateWatched": "2023-11-23"
   },
   {
    "id": "f0167",
@@ -1502,8 +1502,8 @@
    "director": "Paul Thomas Anderson",
    "genre": "Drama",
    "yearReleased": 1999,
-   "yearWatched": 2025,
-   "rating": 7
+   "rating": 7,
+   "dateWatched": "2025-08-17"
   },
   {
    "id": "f0168",
@@ -1511,8 +1511,8 @@
    "director": "Phyllida Lloyd",
    "genre": "Comedy/Romance",
    "yearReleased": 2008,
-   "yearWatched": null,
-   "rating": 7
+   "rating": 7,
+   "dateWatched": null
   },
   {
    "id": "f0169",
@@ -1520,8 +1520,8 @@
    "director": "Ol Parker",
    "genre": "Comedy/Romance",
    "yearReleased": 2018,
-   "yearWatched": null,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": null
   },
   {
    "id": "f0170",
@@ -1529,8 +1529,8 @@
    "director": "Dean Fleischer Camp",
    "genre": "Animation/Drama",
    "yearReleased": 2021,
-   "yearWatched": 2023,
-   "rating": 9
+   "rating": 9,
+   "dateWatched": "2023-03-30"
   },
   {
    "id": "f0171",
@@ -1538,8 +1538,8 @@
    "director": "Anca Damian",
    "genre": "Family/Drama",
    "yearReleased": 2019,
-   "yearWatched": 2024,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": "2024-03-10"
   },
   {
    "id": "f0172",
@@ -1547,8 +1547,8 @@
    "director": "Noah Baumbach",
    "genre": "Drama",
    "yearReleased": 2019,
-   "yearWatched": null,
-   "rating": 7
+   "rating": 7,
+   "dateWatched": null
   },
   {
    "id": "f0173",
@@ -1556,8 +1556,8 @@
    "director": "Josh Safdie",
    "genre": "Thriller/Drama",
    "yearReleased": 2025,
-   "yearWatched": 2026,
-   "rating": 9
+   "rating": 9,
+   "dateWatched": "2026-02-27"
   },
   {
    "id": "f0174",
@@ -1565,8 +1565,8 @@
    "director": "Will Lovelace & Dylan Southern",
    "genre": "Music/Documentary",
    "yearReleased": 2022,
-   "yearWatched": 2023,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": "2023-08-27"
   },
   {
    "id": "f0175",
@@ -1574,8 +1574,8 @@
    "director": "Christopher Nolan",
    "genre": "Thriller/Mystery",
    "yearReleased": 2000,
-   "yearWatched": null,
-   "rating": 9
+   "rating": 9,
+   "dateWatched": null
   },
   {
    "id": "f0176",
@@ -1583,8 +1583,8 @@
    "director": "Woody Allen",
    "genre": "Comedy/Fantasy",
    "yearReleased": 2011,
-   "yearWatched": null,
-   "rating": 9
+   "rating": 9,
+   "dateWatched": null
   },
   {
    "id": "f0177",
@@ -1592,8 +1592,8 @@
    "director": "Nicholas D. Johnson & Will Merrick",
    "genre": "Thriller/Mystery",
    "yearReleased": 2023,
-   "yearWatched": 2023,
-   "rating": 7
+   "rating": 7,
+   "dateWatched": "2023-12-26"
   },
   {
    "id": "f0178",
@@ -1601,8 +1601,8 @@
    "director": "Pete Docter",
    "genre": "Comedy/Animation",
    "yearReleased": 2001,
-   "yearWatched": null,
-   "rating": null
+   "rating": null,
+   "dateWatched": null
   },
   {
    "id": "f0179",
@@ -1610,8 +1610,8 @@
    "director": "Duncan Jones",
    "genre": "Science Fiction/Drama",
    "yearReleased": 2009,
-   "yearWatched": 2024,
-   "rating": 7
+   "rating": 7,
+   "dateWatched": "2024-01-04"
   },
   {
    "id": "f0180",
@@ -1619,8 +1619,8 @@
    "director": "Barry Jenkins",
    "genre": "Drama",
    "yearReleased": 2016,
-   "yearWatched": null,
-   "rating": 5
+   "rating": 5,
+   "dateWatched": null
   },
   {
    "id": "f0181",
@@ -1628,8 +1628,8 @@
    "director": "Wes Anderson",
    "genre": "Romance/Drama",
    "yearReleased": 2012,
-   "yearWatched": null,
-   "rating": 9
+   "rating": 9,
+   "dateWatched": null
   },
   {
    "id": "f0182",
@@ -1637,8 +1637,8 @@
    "director": "Baz Luhrmann",
    "genre": "Romance/Music",
    "yearReleased": 2001,
-   "yearWatched": null,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": null
   },
   {
    "id": "f0183",
@@ -1646,8 +1646,8 @@
    "director": "David Lynch",
    "genre": "Drama/Mystery",
    "yearReleased": 2001,
-   "yearWatched": null,
-   "rating": 9
+   "rating": 9,
+   "dateWatched": null
   },
   {
    "id": "f0184",
@@ -1655,8 +1655,8 @@
    "director": "Hayao Miyazaki",
    "genre": "Fantasy/Animation",
    "yearReleased": 1988,
-   "yearWatched": null,
-   "rating": 9
+   "rating": 9,
+   "dateWatched": null
   },
   {
    "id": "f0185",
@@ -1664,8 +1664,8 @@
    "director": "Dan Gilroy",
    "genre": "Crime/Drama",
    "yearReleased": 2014,
-   "yearWatched": null,
-   "rating": 7
+   "rating": 7,
+   "dateWatched": null
   },
   {
    "id": "f0186",
@@ -1673,8 +1673,8 @@
    "director": "Matt Johnson",
    "genre": "Music/Comedy",
    "yearReleased": 2025,
-   "yearWatched": 2026,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": "2026-05-10"
   },
   {
    "id": "f0187",
@@ -1682,8 +1682,8 @@
    "director": "Joel Coen & Ethan Coen",
    "genre": "Crime/Thriller",
    "yearReleased": 2007,
-   "yearWatched": 2026,
-   "rating": 9
+   "rating": 9,
+   "dateWatched": "2026-05-02"
   },
   {
    "id": "f0188",
@@ -1691,8 +1691,8 @@
    "director": "Gene Stupnitsky",
    "genre": "Comedy/Romance",
    "yearReleased": 2023,
-   "yearWatched": 2023,
-   "rating": 4
+   "rating": 4,
+   "dateWatched": "2023-12-23"
   },
   {
    "id": "f0189",
@@ -1700,8 +1700,8 @@
    "director": "Cary Joji Fukunaga",
    "genre": "Action/Adventure",
    "yearReleased": 2021,
-   "yearWatched": null,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": null
   },
   {
    "id": "f0190",
@@ -1709,8 +1709,8 @@
    "director": "Jordan Peele",
    "genre": "Science Fiction/Horror",
    "yearReleased": 2022,
-   "yearWatched": null,
-   "rating": 5
+   "rating": 5,
+   "dateWatched": null
   },
   {
    "id": "f0191",
@@ -1718,8 +1718,8 @@
    "director": "Alfred Hitchcock",
    "genre": "Mystery/Adventure",
    "yearReleased": 1959,
-   "yearWatched": 2026,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": "2026-04-22"
   },
   {
    "id": "f0192",
@@ -1727,8 +1727,8 @@
    "director": "Louis Leterrier",
    "genre": "Thriller/Crime",
    "yearReleased": 2013,
-   "yearWatched": null,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": null
   },
   {
    "id": "f0193",
@@ -1736,8 +1736,8 @@
    "director": "Jon M. Chu",
    "genre": "Thriller/Crime",
    "yearReleased": 2016,
-   "yearWatched": null,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": null
   },
   {
    "id": "f0194",
@@ -1745,8 +1745,8 @@
    "director": "Bong Joon Ho",
    "genre": "Drama/Science Fiction",
    "yearReleased": 2017,
-   "yearWatched": null,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": null
   },
   {
    "id": "f0195",
@@ -1754,8 +1754,8 @@
    "director": "Park Chan-wook",
    "genre": "Thriller/Mystery",
    "yearReleased": 2003,
-   "yearWatched": 2026,
-   "rating": 7
+   "rating": 7,
+   "dateWatched": "2026-01-10"
   },
   {
    "id": "f0196",
@@ -1763,8 +1763,8 @@
    "director": "Quentin Tarantino",
    "genre": "Thriller/Drama",
    "yearReleased": 2019,
-   "yearWatched": null,
-   "rating": 9
+   "rating": 9,
+   "dateWatched": null
   },
   {
    "id": "f0197",
@@ -1772,8 +1772,8 @@
    "director": "Paul Thomas Anderson",
    "genre": "Thriller/Comedy",
    "yearReleased": 2025,
-   "yearWatched": 2025,
-   "rating": 9
+   "rating": 9,
+   "dateWatched": "2025-09-26"
   },
   {
    "id": "f0198",
@@ -1781,8 +1781,8 @@
    "director": "Christopher Nolan",
    "genre": "Drama/History",
    "yearReleased": 2023,
-   "yearWatched": 2023,
-   "rating": 9
+   "rating": 9,
+   "dateWatched": "2023-08-16"
   },
   {
    "id": "f0199",
@@ -1790,8 +1790,8 @@
    "director": "Paul King",
    "genre": "Comedy/Family",
    "yearReleased": 2017,
-   "yearWatched": null,
-   "rating": 9
+   "rating": 9,
+   "dateWatched": null
   },
   {
    "id": "f0200",
@@ -1799,8 +1799,8 @@
    "director": "Dougal Wilson",
    "genre": "Comedy/Family",
    "yearReleased": 2024,
-   "yearWatched": 2025,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": "2025-06-03"
   },
   {
    "id": "f0201",
@@ -1808,8 +1808,8 @@
    "director": "Satoshi Kon",
    "genre": "Animation/Thriller",
    "yearReleased": 2006,
-   "yearWatched": 2024,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": "2024-01-31"
   },
   {
    "id": "f0202",
@@ -1817,8 +1817,8 @@
    "director": "Bong Joon Ho",
    "genre": "Thriller/Comedy",
    "yearReleased": 2019,
-   "yearWatched": null,
-   "rating": 9
+   "rating": 9,
+   "dateWatched": null
   },
   {
    "id": "f0203",
@@ -1826,8 +1826,8 @@
    "director": "Wim Wenders",
    "genre": "Drama",
    "yearReleased": 1984,
-   "yearWatched": 2024,
-   "rating": 10
+   "rating": 10,
+   "dateWatched": "2024-03-03"
   },
   {
    "id": "f0204",
@@ -1835,8 +1835,8 @@
    "director": "Celine Song",
    "genre": "Drama/Romance",
    "yearReleased": 2023,
-   "yearWatched": 2023,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": "2023-08-25"
   },
   {
    "id": "f0205",
@@ -1844,8 +1844,8 @@
    "director": "Satoshi Kon",
    "genre": "Thriller/Animation",
    "yearReleased": 1997,
-   "yearWatched": 2026,
-   "rating": 9
+   "rating": 9,
+   "dateWatched": "2026-01-08"
   },
   {
    "id": "f0206",
@@ -1853,8 +1853,8 @@
    "director": "Wim Wenders",
    "genre": "Drama",
    "yearReleased": 2023,
-   "yearWatched": 2024,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": "2024-02-25"
   },
   {
    "id": "f0207",
@@ -1862,8 +1862,8 @@
    "director": "Paul Thomas Anderson",
    "genre": "Drama/Romance",
    "yearReleased": 2017,
-   "yearWatched": null,
-   "rating": 5
+   "rating": 5,
+   "dateWatched": null
   },
   {
    "id": "f0208",
@@ -1871,8 +1871,8 @@
    "director": "Gore Verbinski",
    "genre": "Fantasy/Adventure",
    "yearReleased": 2003,
-   "yearWatched": null,
-   "rating": null
+   "rating": null,
+   "dateWatched": null
   },
   {
    "id": "f0209",
@@ -1880,8 +1880,8 @@
    "director": "Jason Moore",
    "genre": "Music/Comedy",
    "yearReleased": 2012,
-   "yearWatched": null,
-   "rating": 5
+   "rating": 5,
+   "dateWatched": null
   },
   {
    "id": "f0210",
@@ -1889,8 +1889,8 @@
    "director": "Hayao Miyazaki",
    "genre": "Animation/Family",
    "yearReleased": 2008,
-   "yearWatched": 2024,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": "2024-10-08"
   },
   {
    "id": "f0211",
@@ -1898,8 +1898,8 @@
    "director": "Hayao Miyazaki",
    "genre": "Fantasy/Adventure",
    "yearReleased": 1997,
-   "yearWatched": null,
-   "rating": 9
+   "rating": 9,
+   "dateWatched": null
   },
   {
    "id": "f0212",
@@ -1907,8 +1907,8 @@
    "director": "Denis Villeneuve",
    "genre": "Thriller/Crime",
    "yearReleased": 2013,
-   "yearWatched": null,
-   "rating": 7
+   "rating": 7,
+   "dateWatched": null
   },
   {
    "id": "f0213",
@@ -1916,8 +1916,8 @@
    "director": "Julio Torres",
    "genre": "Comedy",
    "yearReleased": 2023,
-   "yearWatched": 2026,
-   "rating": 7
+   "rating": 7,
+   "dateWatched": "2026-01-01"
   },
   {
    "id": "f0214",
@@ -1925,8 +1925,8 @@
    "director": "Phil Lord & Christopher Miller",
    "genre": "Comedy/Science Fiction",
    "yearReleased": 2026,
-   "yearWatched": 2026,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": "2026-03-31"
   },
   {
    "id": "f0215",
@@ -1934,8 +1934,8 @@
    "director": "Quentin Tarantino",
    "genre": "Comedy/Thriller",
    "yearReleased": 1994,
-   "yearWatched": null,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": null
   },
   {
    "id": "f0216",
@@ -1943,8 +1943,8 @@
    "director": "Jessica Yu",
    "genre": "Comedy",
    "yearReleased": 2023,
-   "yearWatched": 2025,
-   "rating": 7
+   "rating": 7,
+   "dateWatched": "2025-01-04"
   },
   {
    "id": "f0217",
@@ -1952,8 +1952,8 @@
    "director": "Brad Bird",
    "genre": "Family/Fantasy",
    "yearReleased": 2007,
-   "yearWatched": null,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": null
   },
   {
    "id": "f0218",
@@ -1961,8 +1961,8 @@
    "director": "Matt Bettinelli-Olpin & Tyler Gillett",
    "genre": "Horror/Comedy",
    "yearReleased": 2019,
-   "yearWatched": null,
-   "rating": 4
+   "rating": 4,
+   "dateWatched": null
   },
   {
    "id": "f0219",
@@ -1970,8 +1970,8 @@
    "director": "Steven Spielberg",
    "genre": "Science Fiction/Adventure",
    "yearReleased": 2018,
-   "yearWatched": null,
-   "rating": 7
+   "rating": 7,
+   "dateWatched": null
   },
   {
    "id": "f0220",
@@ -1979,8 +1979,8 @@
    "director": "Shawn Levy",
    "genre": "Drama/Action",
    "yearReleased": 2011,
-   "yearWatched": null,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": null
   },
   {
    "id": "f0221",
@@ -1988,8 +1988,8 @@
    "director": "Darren Aronofsky",
    "genre": "Drama/Crime",
    "yearReleased": 2000,
-   "yearWatched": 2024,
-   "rating": 7
+   "rating": 7,
+   "dateWatched": "2024-03-03"
   },
   {
    "id": "f0222",
@@ -1997,8 +1997,8 @@
    "director": "Edgar Wright",
    "genre": "Romance/Action",
    "yearReleased": 2010,
-   "yearWatched": 2025,
-   "rating": 10
+   "rating": 10,
+   "dateWatched": "2025-10-30"
   },
   {
    "id": "f0223",
@@ -2006,8 +2006,8 @@
    "director": "Jay Chou",
    "genre": "Thriller/Drama",
    "yearReleased": 2007,
-   "yearWatched": null,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": null
   },
   {
    "id": "f0224",
@@ -2015,8 +2015,8 @@
    "director": "Tom George",
    "genre": "Comedy/Crime",
    "yearReleased": 2022,
-   "yearWatched": 2023,
-   "rating": 4
+   "rating": 4,
+   "dateWatched": "2023-03-20"
   },
   {
    "id": "f0225",
@@ -2024,8 +2024,8 @@
    "director": "Joachim Trier",
    "genre": "Drama",
    "yearReleased": 2025,
-   "yearWatched": 2026,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": "2026-01-22"
   },
   {
    "id": "f0226",
@@ -2033,8 +2033,8 @@
    "director": "Akira Kurosawa",
    "genre": "Action/Drama",
    "yearReleased": 1954,
-   "yearWatched": 2024,
-   "rating": 7
+   "rating": 7,
+   "dateWatched": "2024-10-20"
   },
   {
    "id": "f0227",
@@ -2042,8 +2042,8 @@
    "director": "Destin Daniel Cretton",
    "genre": "Adventure/Fantasy",
    "yearReleased": 2021,
-   "yearWatched": null,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": null
   },
   {
    "id": "f0228",
@@ -2051,8 +2051,8 @@
    "director": "Edgar Wright",
    "genre": "Horror/Comedy",
    "yearReleased": 2004,
-   "yearWatched": 2023,
-   "rating": 7
+   "rating": 7,
+   "dateWatched": "2023-11-15"
   },
   {
    "id": "f0229",
@@ -2060,8 +2060,8 @@
    "director": "David F. Sandberg",
    "genre": "Action/Comedy",
    "yearReleased": 2019,
-   "yearWatched": null,
-   "rating": 4
+   "rating": 4,
+   "dateWatched": null
   },
   {
    "id": "f0230",
@@ -2069,8 +2069,8 @@
    "director": "Martin Scorsese",
    "genre": "Mystery/Drama",
    "yearReleased": 2010,
-   "yearWatched": null,
-   "rating": 7
+   "rating": 7,
+   "dateWatched": null
   },
   {
    "id": "f0231",
@@ -2078,8 +2078,8 @@
    "director": "David O. Russell",
    "genre": "Romance/Drama",
    "yearReleased": 2012,
-   "yearWatched": null,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": null
   },
   {
    "id": "f0232",
@@ -2087,8 +2087,8 @@
    "director": "Ryan Coogler",
    "genre": "Thriller/Action",
    "yearReleased": 2025,
-   "yearWatched": 2026,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": "2026-03-13"
   },
   {
    "id": "f0233",
@@ -2096,8 +2096,8 @@
    "director": "Parker Finn",
    "genre": "Horror/Mystery",
    "yearReleased": 2022,
-   "yearWatched": 2023,
-   "rating": 5
+   "rating": 5,
+   "dateWatched": "2023-03-30"
   },
   {
    "id": "f0234",
@@ -2105,8 +2105,8 @@
    "director": "Parker Finn",
    "genre": "Mystery/Horror",
    "yearReleased": 2024,
-   "yearWatched": 2025,
-   "rating": 5
+   "rating": 5,
+   "dateWatched": "2025-06-03"
   },
   {
    "id": "f0235",
@@ -2114,8 +2114,8 @@
    "director": "J. A. Bayona",
    "genre": "History/Drama",
    "yearReleased": 2023,
-   "yearWatched": 2024,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": "2024-02-12"
   },
   {
    "id": "f0236",
@@ -2123,8 +2123,8 @@
    "director": "Andrei Tarkovsky",
    "genre": "Mystery/Science Fiction",
    "yearReleased": 1972,
-   "yearWatched": 2026,
-   "rating": 9
+   "rating": 9,
+   "dateWatched": "2026-07-05"
   },
   {
    "id": "f0237",
@@ -2132,8 +2132,8 @@
    "director": "Boots Riley",
    "genre": "Fantasy/Science Fiction",
    "yearReleased": 2018,
-   "yearWatched": null,
-   "rating": 5
+   "rating": 5,
+   "dateWatched": null
   },
   {
    "id": "f0238",
@@ -2141,8 +2141,8 @@
    "director": "Justin K. Thompson & Kemp Powers & Joaquim Dos Santos",
    "genre": "Animation/Science Fiction",
    "yearReleased": 2023,
-   "yearWatched": 2023,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": "2023-06-02"
   },
   {
    "id": "f0239",
@@ -2150,8 +2150,8 @@
    "director": "Jon Watts",
    "genre": "Science Fiction/Adventure",
    "yearReleased": 2019,
-   "yearWatched": null,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": null
   },
   {
    "id": "f0240",
@@ -2159,8 +2159,8 @@
    "director": "Jon Watts",
    "genre": "Action/Adventure",
    "yearReleased": 2017,
-   "yearWatched": null,
-   "rating": 7
+   "rating": 7,
+   "dateWatched": null
   },
   {
    "id": "f0241",
@@ -2168,8 +2168,8 @@
    "director": "Bob Persichetti & Peter Ramsey & Rodney Rothman",
    "genre": "Adventure/Animation",
    "yearReleased": 2018,
-   "yearWatched": null,
-   "rating": 9
+   "rating": 9,
+   "dateWatched": null
   },
   {
    "id": "f0242",
@@ -2177,8 +2177,8 @@
    "director": "Jon Watts",
    "genre": "Adventure/Action",
    "yearReleased": 2021,
-   "yearWatched": null,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": null
   },
   {
    "id": "f0243",
@@ -2186,8 +2186,8 @@
    "director": "Hayao Miyazaki",
    "genre": "Family/Fantasy",
    "yearReleased": 2001,
-   "yearWatched": null,
-   "rating": 10
+   "rating": 10,
+   "dateWatched": null
   },
   {
    "id": "f0244",
@@ -2195,8 +2195,8 @@
    "director": "M. Night Shyamalan",
    "genre": "Horror/Thriller",
    "yearReleased": 2016,
-   "yearWatched": null,
-   "rating": 4
+   "rating": 4,
+   "dateWatched": null
   },
   {
    "id": "f0245",
@@ -2204,8 +2204,8 @@
    "director": "Tom McCarthy",
    "genre": "History/Drama",
    "yearReleased": 2015,
-   "yearWatched": null,
-   "rating": null
+   "rating": null,
+   "dateWatched": null
   },
   {
    "id": "f0246",
@@ -2213,8 +2213,8 @@
    "director": "Greg Mottola",
    "genre": "Comedy",
    "yearReleased": 2007,
-   "yearWatched": null,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": null
   },
   {
    "id": "f0247",
@@ -2222,8 +2222,8 @@
    "director": "James Gunn",
    "genre": "Science Fiction/Adventure",
    "yearReleased": 2025,
-   "yearWatched": 2025,
-   "rating": 4
+   "rating": 4,
+   "dateWatched": "2025-08-18"
   },
   {
    "id": "f0248",
@@ -2231,8 +2231,8 @@
    "director": "Makoto Shinkai",
    "genre": "Fantasy/Animation",
    "yearReleased": 2022,
-   "yearWatched": 2024,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": "2024-06-15"
   },
   {
    "id": "f0249",
@@ -2240,8 +2240,8 @@
    "director": "Michael Philippou & Danny Philippou",
    "genre": "Horror",
    "yearReleased": 2022,
-   "yearWatched": 2023,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": "2023-11-15"
   },
   {
    "id": "f0250",
@@ -2249,8 +2249,8 @@
    "director": "Seth MacFarlane",
    "genre": "Comedy/Fantasy",
    "yearReleased": 2012,
-   "yearWatched": null,
-   "rating": 4
+   "rating": 4,
+   "dateWatched": null
   },
   {
    "id": "f0251",
@@ -2258,8 +2258,8 @@
    "director": "Christopher Nolan",
    "genre": "Science Fiction/Action",
    "yearReleased": 2020,
-   "yearWatched": null,
-   "rating": 7
+   "rating": 7,
+   "dateWatched": null
   },
   {
    "id": "f0252",
@@ -2267,8 +2267,8 @@
    "director": "Joss Whedon",
    "genre": "Science Fiction/Adventure",
    "yearReleased": 2012,
-   "yearWatched": null,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": null
   },
   {
    "id": "f0253",
@@ -2276,8 +2276,8 @@
    "director": "Martin McDonagh",
    "genre": "Comedy/Drama",
    "yearReleased": 2022,
-   "yearWatched": 2024,
-   "rating": 9
+   "rating": 9,
+   "dateWatched": "2024-02-10"
   },
   {
    "id": "f0254",
@@ -2285,8 +2285,8 @@
    "director": "Matt Reeves",
    "genre": "Crime/Mystery",
    "yearReleased": 2022,
-   "yearWatched": null,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": null
   },
   {
    "id": "f0255",
@@ -2294,8 +2294,8 @@
    "director": "Gillo Pontecorvo",
    "genre": "History/Drama",
    "yearReleased": 1966,
-   "yearWatched": 2025,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": "2025-10-11"
   },
   {
    "id": "f0256",
@@ -2303,8 +2303,8 @@
    "director": "Joel Coen",
    "genre": "Comedy/Crime",
    "yearReleased": 1998,
-   "yearWatched": null,
-   "rating": 9
+   "rating": 9,
+   "dateWatched": null
   },
   {
    "id": "f0257",
@@ -2312,8 +2312,8 @@
    "director": "Adam McKay",
    "genre": "Drama/Comedy",
    "yearReleased": 2015,
-   "yearWatched": null,
-   "rating": 7
+   "rating": 7,
+   "dateWatched": null
   },
   {
    "id": "f0258",
@@ -2321,8 +2321,8 @@
    "director": "Daniel Myrick & Eduardo Sánchez",
    "genre": "Mystery/Horror",
    "yearReleased": 1999,
-   "yearWatched": null,
-   "rating": 7
+   "rating": 7,
+   "dateWatched": null
   },
   {
    "id": "f0259",
@@ -2330,8 +2330,8 @@
    "director": "Rob Savage",
    "genre": "Horror",
    "yearReleased": 2023,
-   "yearWatched": 2023,
-   "rating": 4
+   "rating": 4,
+   "dateWatched": "2023-11-22"
   },
   {
    "id": "f0260",
@@ -2339,8 +2339,8 @@
    "director": "Hayao Miyazaki",
    "genre": "Animation/Fantasy",
    "yearReleased": 2023,
-   "yearWatched": 2024,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": "2024-02-06"
   },
   {
    "id": "f0261",
@@ -2348,8 +2348,8 @@
    "director": "John Hughes",
    "genre": "Drama/Comedy",
    "yearReleased": 1985,
-   "yearWatched": null,
-   "rating": 7
+   "rating": 7,
+   "dateWatched": null
   },
   {
    "id": "f0262",
@@ -2357,8 +2357,8 @@
    "director": "Alexandre de La Patellière & Matthieu Delaporte",
    "genre": "Drama/Action",
    "yearReleased": 2024,
-   "yearWatched": 2025,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": "2025-01-01"
   },
   {
    "id": "f0263",
@@ -2366,8 +2366,8 @@
    "director": "Christopher Nolan",
    "genre": "Thriller/Action",
    "yearReleased": 2008,
-   "yearWatched": null,
-   "rating": 9
+   "rating": 9,
+   "dateWatched": null
   },
   {
    "id": "f0264",
@@ -2375,8 +2375,8 @@
    "director": "Christopher Nolan",
    "genre": "Thriller/Crime",
    "yearReleased": 2012,
-   "yearWatched": null,
-   "rating": 4
+   "rating": 4,
+   "dateWatched": null
   },
   {
    "id": "f0265",
@@ -2384,8 +2384,8 @@
    "director": "Martin Scorsese",
    "genre": "Thriller/Crime",
    "yearReleased": 2006,
-   "yearWatched": null,
-   "rating": 10
+   "rating": 10,
+   "dateWatched": null
   },
   {
    "id": "f0266",
@@ -2393,8 +2393,8 @@
    "director": "David Frankel",
    "genre": "Comedy/Drama",
    "yearReleased": 2006,
-   "yearWatched": null,
-   "rating": 7
+   "rating": 7,
+   "dateWatched": null
   },
   {
    "id": "f0267",
@@ -2402,8 +2402,8 @@
    "director": "David Frankel",
    "genre": "Comedy/Drama",
    "yearReleased": 2026,
-   "yearWatched": 2026,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": "2026-05-27"
   },
   {
    "id": "f0268",
@@ -2411,8 +2411,8 @@
    "director": "James Franco",
    "genre": "Drama/Comedy",
    "yearReleased": 2017,
-   "yearWatched": null,
-   "rating": 7
+   "rating": 7,
+   "dateWatched": null
   },
   {
    "id": "f0269",
@@ -2420,8 +2420,8 @@
    "director": "Kristoffer Borgli",
    "genre": "Romance/Drama",
    "yearReleased": 2026,
-   "yearWatched": 2026,
-   "rating": 7
+   "rating": 7,
+   "dateWatched": "2026-04-19"
   },
   {
    "id": "f0270",
@@ -2429,8 +2429,8 @@
    "director": "David Leitch",
    "genre": "Action/Romance",
    "yearReleased": 2024,
-   "yearWatched": null,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": null
   },
   {
    "id": "f0271",
@@ -2438,8 +2438,8 @@
    "director": "Matt Shakman",
    "genre": "Action/Science Fiction",
    "yearReleased": 2025,
-   "yearWatched": 2025,
-   "rating": 7
+   "rating": 7,
+   "dateWatched": "2025-08-04"
   },
   {
    "id": "f0272",
@@ -2447,8 +2447,8 @@
    "director": "Yorgos Lanthimos",
    "genre": "Drama/Comedy",
    "yearReleased": 2018,
-   "yearWatched": 2024,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": "2024-02-06"
   },
   {
    "id": "f0273",
@@ -2456,8 +2456,8 @@
    "director": "Wes Anderson",
    "genre": "Drama/Comedy",
    "yearReleased": 2021,
-   "yearWatched": null,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": null
   },
   {
    "id": "f0274",
@@ -2465,8 +2465,8 @@
    "director": "Francis Ford Coppola",
    "genre": "Crime/Drama",
    "yearReleased": 1972,
-   "yearWatched": 2024,
-   "rating": 4
+   "rating": 4,
+   "dateWatched": "2024-03-04"
   },
   {
    "id": "f0275",
@@ -2474,8 +2474,8 @@
    "director": "Francis Ford Coppola",
    "genre": "Drama/Crime",
    "yearReleased": 1974,
-   "yearWatched": 2024,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": "2024-03-07"
   },
   {
    "id": "f0276",
@@ -2483,8 +2483,8 @@
    "director": "Wes Anderson",
    "genre": "Comedy/Drama",
    "yearReleased": 2014,
-   "yearWatched": null,
-   "rating": 9
+   "rating": 9,
+   "dateWatched": null
   },
   {
    "id": "f0277",
@@ -2492,8 +2492,8 @@
    "director": "Todd Phillips",
    "genre": "Comedy",
    "yearReleased": 2009,
-   "yearWatched": null,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": null
   },
   {
    "id": "f0278",
@@ -2501,8 +2501,8 @@
    "director": "Alexander Payne",
    "genre": "Drama/Comedy",
    "yearReleased": 2023,
-   "yearWatched": 2024,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": "2024-02-16"
   },
   {
    "id": "f0279",
@@ -2510,8 +2510,8 @@
    "director": "Brad Bird",
    "genre": "Animation/Family",
    "yearReleased": 2004,
-   "yearWatched": null,
-   "rating": null
+   "rating": null,
+   "dateWatched": null
   },
   {
    "id": "f0280",
@@ -2519,8 +2519,8 @@
    "director": "Olivia Wilde",
    "genre": "Drama/Comedy",
    "yearReleased": 2026,
-   "yearWatched": 2026,
-   "rating": 9
+   "rating": 9,
+   "dateWatched": "2026-01-01"
   },
   {
    "id": "f0281",
@@ -2528,8 +2528,8 @@
    "director": "Phil Lord & Christopher Miller",
    "genre": "Family/Fantasy",
    "yearReleased": 2014,
-   "yearWatched": null,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": null
   },
   {
    "id": "f0282",
@@ -2537,8 +2537,8 @@
    "director": "Yorgos Lanthimos",
    "genre": "Romance/Drama",
    "yearReleased": 2015,
-   "yearWatched": null,
-   "rating": 7
+   "rating": 7,
+   "dateWatched": null
   },
   {
    "id": "f0283",
@@ -2546,8 +2546,8 @@
    "director": "Ridley Scott",
    "genre": "Drama/Science Fiction",
    "yearReleased": 2015,
-   "yearWatched": null,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": null
   },
   {
    "id": "f0284",
@@ -2555,8 +2555,8 @@
    "director": "Wes Ball",
    "genre": "Science Fiction/Thriller",
    "yearReleased": 2014,
-   "yearWatched": null,
-   "rating": 4
+   "rating": 4,
+   "dateWatched": null
   },
   {
    "id": "f0285",
@@ -2564,8 +2564,8 @@
    "director": "Mark Mylod",
    "genre": "Comedy/Horror",
    "yearReleased": 2022,
-   "yearWatched": null,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": null
   },
   {
    "id": "f0286",
@@ -2573,8 +2573,8 @@
    "director": "Christopher Nolan",
    "genre": "Adventure/Action",
    "yearReleased": 2026,
-   "yearWatched": 2026,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": "2026-07-16"
   },
   {
    "id": "f0287",
@@ -2582,8 +2582,8 @@
    "director": "Stephen Chbosky",
    "genre": "Drama",
    "yearReleased": 2012,
-   "yearWatched": null,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": null
   },
   {
    "id": "f0288",
@@ -2591,8 +2591,8 @@
    "director": "Wes Anderson",
    "genre": "Adventure/Comedy",
    "yearReleased": 2025,
-   "yearWatched": 2025,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": "2025-07-07"
   },
   {
    "id": "f0289",
@@ -2600,8 +2600,8 @@
    "director": "Christopher Nolan",
    "genre": "Science Fiction/Drama",
    "yearReleased": 2006,
-   "yearWatched": null,
-   "rating": 10
+   "rating": 10,
+   "dateWatched": null
   },
   {
    "id": "f0290",
@@ -2609,8 +2609,8 @@
    "director": "Tommy Wiseau",
    "genre": "Drama/Romance",
    "yearReleased": 2003,
-   "yearWatched": null,
-   "rating": 2
+   "rating": 2,
+   "dateWatched": null
   },
   {
    "id": "f0291",
@@ -2618,8 +2618,8 @@
    "director": "Pedro Almodóvar",
    "genre": "Drama/Comedy",
    "yearReleased": 2024,
-   "yearWatched": 2024,
-   "rating": 5
+   "rating": 5,
+   "dateWatched": "2024-12-15"
   },
   {
    "id": "f0292",
@@ -2627,8 +2627,8 @@
    "director": "Wes Anderson",
    "genre": "Drama/Comedy",
    "yearReleased": 2001,
-   "yearWatched": null,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": null
   },
   {
    "id": "f0293",
@@ -2636,8 +2636,8 @@
    "director": "Michel Gondry",
    "genre": "Comedy/Fantasy",
    "yearReleased": 2006,
-   "yearWatched": 2023,
-   "rating": 5
+   "rating": 5,
+   "dateWatched": "2023-08-10"
   },
   {
    "id": "f0294",
@@ -2645,8 +2645,8 @@
    "director": "Ben Stiller",
    "genre": "Comedy/Fantasy",
    "yearReleased": 2013,
-   "yearWatched": null,
-   "rating": 9
+   "rating": 9,
+   "dateWatched": null
   },
   {
    "id": "f0295",
@@ -2654,8 +2654,8 @@
    "director": "Guillermo del Toro",
    "genre": "Fantasy/Drama",
    "yearReleased": 2017,
-   "yearWatched": null,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": null
   },
   {
    "id": "f0296",
@@ -2663,8 +2663,8 @@
    "director": "Frank Darabont",
    "genre": "Crime/Drama",
    "yearReleased": 1994,
-   "yearWatched": null,
-   "rating": null
+   "rating": null,
+   "dateWatched": null
   },
   {
    "id": "f0297",
@@ -2672,8 +2672,8 @@
    "director": "Kyle Balda",
    "genre": "Mystery/Family",
    "yearReleased": 2026,
-   "yearWatched": 2026,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": "2026-07-03"
   },
   {
    "id": "f0298",
@@ -2681,8 +2681,8 @@
    "director": "Stanley Kubrick",
    "genre": "Horror/Thriller",
    "yearReleased": 1980,
-   "yearWatched": null,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": null
   },
   {
    "id": "f0299",
@@ -2690,8 +2690,8 @@
    "director": "M. Night Shyamalan",
    "genre": "Thriller/Mystery",
    "yearReleased": 1999,
-   "yearWatched": null,
-   "rating": 7
+   "rating": 7,
+   "dateWatched": null
   },
   {
    "id": "f0300",
@@ -2699,8 +2699,8 @@
    "director": "David Fincher",
    "genre": "Drama",
    "yearReleased": 2010,
-   "yearWatched": null,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": null
   },
   {
    "id": "f0301",
@@ -2708,8 +2708,8 @@
    "director": "Coralie Fargeat",
    "genre": "Horror/Thriller",
    "yearReleased": 2024,
-   "yearWatched": 2024,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": "2024-10-12"
   },
   {
    "id": "f0302",
@@ -2717,8 +2717,8 @@
    "director": "James Gunn",
    "genre": "Action/Comedy",
    "yearReleased": 2021,
-   "yearWatched": null,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": null
   },
   {
    "id": "f0303",
@@ -2726,8 +2726,8 @@
    "director": "Aaron Horvath & Michael Jelenic",
    "genre": "Adventure/Animation",
    "yearReleased": 2023,
-   "yearWatched": 2023,
-   "rating": 7
+   "rating": 7,
+   "dateWatched": "2023-04-06"
   },
   {
    "id": "f0304",
@@ -2735,8 +2735,8 @@
    "director": "John Carpenter",
    "genre": "Mystery/Science Fiction",
    "yearReleased": 1982,
-   "yearWatched": 2026,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": "2026-07-12"
   },
   {
    "id": "f0305",
@@ -2744,8 +2744,8 @@
    "director": "Peter Weir",
    "genre": "Comedy/Drama",
    "yearReleased": 1998,
-   "yearWatched": null,
-   "rating": 9
+   "rating": 9,
+   "dateWatched": null
   },
   {
    "id": "f0306",
@@ -2753,8 +2753,8 @@
    "director": "Tom Gormican",
    "genre": "Crime/Action",
    "yearReleased": 2022,
-   "yearWatched": 2023,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": "2023-05-07"
   },
   {
    "id": "f0307",
@@ -2762,8 +2762,8 @@
    "director": "Bryan Singer",
    "genre": "Thriller/Drama",
    "yearReleased": 1995,
-   "yearWatched": null,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": null
   },
   {
    "id": "f0308",
@@ -2771,8 +2771,8 @@
    "director": "Chris Sanders",
    "genre": "Adventure/Animation",
    "yearReleased": 2024,
-   "yearWatched": 2025,
-   "rating": 7
+   "rating": 7,
+   "dateWatched": "2025-01-04"
   },
   {
    "id": "f0309",
@@ -2780,8 +2780,8 @@
    "director": "Joachim Trier",
    "genre": "Drama/Romance",
    "yearReleased": 2021,
-   "yearWatched": null,
-   "rating": 9
+   "rating": 9,
+   "dateWatched": null
   },
   {
    "id": "f0310",
@@ -2789,8 +2789,8 @@
    "director": "Jonathan Glazer",
    "genre": "Drama/War",
    "yearReleased": 2023,
-   "yearWatched": 2024,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": "2024-04-26"
   },
   {
    "id": "f0311",
@@ -2798,8 +2798,8 @@
    "director": "Taika Waititi",
    "genre": "Action/Fantasy",
    "yearReleased": 2022,
-   "yearWatched": null,
-   "rating": 3
+   "rating": 3,
+   "dateWatched": null
   },
   {
    "id": "f0312",
@@ -2807,8 +2807,8 @@
    "director": "Taika Waititi",
    "genre": "Comedy/Science Fiction",
    "yearReleased": 2017,
-   "yearWatched": null,
-   "rating": 9
+   "rating": 9,
+   "dateWatched": null
   },
   {
    "id": "f0313",
@@ -2816,8 +2816,8 @@
    "director": "Martin McDonagh",
    "genre": "Crime/Drama",
    "yearReleased": 2017,
-   "yearWatched": null,
-   "rating": 10
+   "rating": 10,
+   "dateWatched": null
   },
   {
    "id": "f0314",
@@ -2825,8 +2825,8 @@
    "director": "Jake Schreier",
    "genre": "Science Fiction/Adventure",
    "yearReleased": 2025,
-   "yearWatched": 2025,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": "2025-05-05"
   },
   {
    "id": "f0315",
@@ -2834,8 +2834,8 @@
    "director": "Lin-Manuel Miranda",
    "genre": "Drama/Music",
    "yearReleased": 2021,
-   "yearWatched": null,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": null
   },
   {
    "id": "f0316",
@@ -2843,8 +2843,8 @@
    "director": "John Lasseter",
    "genre": "Adventure/Comedy",
    "yearReleased": 1995,
-   "yearWatched": null,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": null
   },
   {
    "id": "f0317",
@@ -2852,8 +2852,8 @@
    "director": "Josh Cooley",
    "genre": "Adventure/Animation",
    "yearReleased": 2019,
-   "yearWatched": null,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": null
   },
   {
    "id": "f0318",
@@ -2861,8 +2861,8 @@
    "director": "Michael Bay",
    "genre": "Action/Science Fiction",
    "yearReleased": 2007,
-   "yearWatched": null,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": null
   },
   {
    "id": "f0319",
@@ -2870,8 +2870,8 @@
    "director": "Ben Stiller",
    "genre": "War/Comedy",
    "yearReleased": 2008,
-   "yearWatched": null,
-   "rating": 9
+   "rating": 9,
+   "dateWatched": null
   },
   {
    "id": "f0320",
@@ -2879,8 +2879,8 @@
    "director": "Josh Safdie & Benny Safdie",
    "genre": "Crime/Thriller",
    "yearReleased": 2019,
-   "yearWatched": null,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": null
   },
   {
    "id": "f0321",
@@ -2888,8 +2888,8 @@
    "director": "Jordan Peele",
    "genre": "Horror/Mystery",
    "yearReleased": 2019,
-   "yearWatched": null,
-   "rating": 7
+   "rating": 7,
+   "dateWatched": null
   },
   {
    "id": "f0322",
@@ -2897,8 +2897,8 @@
    "director": "B.J. Novak",
    "genre": "Mystery/Comedy",
    "yearReleased": 2022,
-   "yearWatched": null,
-   "rating": 6
+   "rating": 6,
+   "dateWatched": null
   },
   {
    "id": "f0323",
@@ -2906,8 +2906,8 @@
    "director": "Alfred Hitchcock",
    "genre": "Thriller/Romance",
    "yearReleased": 1958,
-   "yearWatched": 2024,
-   "rating": 8
+   "rating": 8,
+   "dateWatched": "2024-02-14"
   },
   {
    "id": "f0324",
@@ -2915,8 +2915,8 @@
    "director": "Rian Johnson",
    "genre": "Comedy/Thriller",
    "yearReleased": 2025,
-   "yearWatched": 2026,
-   "rating": 7
+   "rating": 7,
+   "dateWatched": "2026-01-01"
   },
   {
    "id": "f0325",
@@ -2924,8 +2924,8 @@
    "director": "Chloe Okuno",
    "genre": "Thriller/Mystery",
    "yearReleased": 2022,
-   "yearWatched": 2024,
-   "rating": 3
+   "rating": 3,
+   "dateWatched": "2024-11-09"
   },
   {
    "id": "f0326",
@@ -2933,8 +2933,8 @@
    "director": "Zach Cregger",
    "genre": "Horror/Mystery",
    "yearReleased": 2025,
-   "yearWatched": 2026,
-   "rating": 4
+   "rating": 4,
+   "dateWatched": "2026-03-15"
   },
   {
    "id": "f0327",
@@ -2942,8 +2942,8 @@
    "director": "Damien Chazelle",
    "genre": "Drama/Music",
    "yearReleased": 2014,
-   "yearWatched": null,
-   "rating": 9
+   "rating": 9,
+   "dateWatched": null
   },
   {
    "id": "f0328",
@@ -2951,8 +2951,8 @@
    "director": "Marc Forster",
    "genre": "Action/Science Fiction",
    "yearReleased": 2013,
-   "yearWatched": null,
-   "rating": 4
+   "rating": 4,
+   "dateWatched": null
   },
   {
    "id": "f0329",
@@ -2960,8 +2960,8 @@
    "director": "Edward Yang",
    "genre": "Drama",
    "yearReleased": 2000,
-   "yearWatched": 2026,
-   "rating": 10
+   "rating": 10,
+   "dateWatched": "2026-04-05"
   },
   {
    "id": "f0330",
@@ -2969,8 +2969,8 @@
    "director": "Makoto Shinkai",
    "genre": "Romance/Animation",
    "yearReleased": 2016,
-   "yearWatched": null,
-   "rating": 10
+   "rating": 10,
+   "dateWatched": null
   },
   {
    "id": "f0331",
@@ -2978,8 +2978,8 @@
    "director": "Ruben Fleischer",
    "genre": "Comedy/Horror",
    "yearReleased": 2009,
-   "yearWatched": null,
-   "rating": 5
+   "rating": 5,
+   "dateWatched": null
   }
  ]
 }

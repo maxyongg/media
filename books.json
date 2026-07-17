@@ -8,8 +8,8 @@
    "author": "Vladimir Nabokov",
    "genre": "Fiction/Classics/Poetry",
    "yearPublished": 1962,
-   "yearRead": 2026,
-   "rating": 5
+   "rating": 5,
+   "dateRead": "2026-07-17"
   },
   {
    "id": "b0002",
@@ -17,8 +17,8 @@
    "author": "Adrian Tchaikovsky",
    "genre": "Science Fiction/Fiction/Audiobook",
    "yearPublished": 2019,
-   "yearRead": 2026,
-   "rating": 4
+   "rating": 4,
+   "dateRead": "2026-01-01"
   },
   {
    "id": "b0003",
@@ -26,8 +26,8 @@
    "author": "Adrian Tchaikovsky",
    "genre": "Science Fiction/Fiction/Audiobook",
    "yearPublished": 2015,
-   "yearRead": 2026,
-   "rating": 4
+   "rating": 4,
+   "dateRead": "2026-01-01"
   },
   {
    "id": "b0004",
@@ -35,8 +35,8 @@
    "author": "Karl Ove Knausgård",
    "genre": "Fiction/Horror/Magical Realism",
    "yearPublished": 2022,
-   "yearRead": 2026,
-   "rating": 5
+   "rating": 5,
+   "dateRead": "2026-01-01"
   },
   {
    "id": "b0005",
@@ -44,8 +44,8 @@
    "author": "Karl Ove Knausgård",
    "genre": "Fiction/Literary Fiction/Literature",
    "yearPublished": 2021,
-   "yearRead": 2026,
-   "rating": 5
+   "rating": 5,
+   "dateRead": "2026-01-01"
   },
   {
    "id": "b0006",
@@ -53,8 +53,8 @@
    "author": "Karl Ove Knausgård",
    "genre": "Fiction/Literary Fiction/Horror",
    "yearPublished": 2020,
-   "yearRead": 2026,
-   "rating": 4
+   "rating": 4,
+   "dateRead": "2026-01-01"
   },
   {
    "id": "b0007",
@@ -62,8 +62,8 @@
    "author": "Franz Kafka",
    "genre": "Fiction/Classics/Short Stories",
    "yearPublished": 1915,
-   "yearRead": 2026,
-   "rating": 4
+   "rating": 4,
+   "dateRead": "2026-01-01"
   },
   {
    "id": "b0008",
@@ -71,8 +71,8 @@
    "author": "Albert Camus",
    "genre": "Philosophy/Classics/Nonfiction",
    "yearPublished": 1942,
-   "yearRead": null,
-   "rating": 4
+   "rating": 4,
+   "dateRead": null
   },
   {
    "id": "b0009",
@@ -80,8 +80,8 @@
    "author": "Karl Ove Knausgård",
    "genre": "Fiction/Literary Fiction/Fantasy",
    "yearPublished": 2023,
-   "yearRead": 2026,
-   "rating": 5
+   "rating": 5,
+   "dateRead": "2026-06-28"
   },
   {
    "id": "b0010",
@@ -89,8 +89,8 @@
    "author": "Jorge Luis Borges",
    "genre": "Fiction/Short Stories/Classics",
    "yearPublished": 1944,
-   "yearRead": 2026,
-   "rating": 5
+   "rating": 5,
+   "dateRead": "2026-05-06"
   },
   {
    "id": "b0011",
@@ -98,8 +98,8 @@
    "author": "Douglas Stuart",
    "genre": "Fiction/Historical Fiction/Book Club",
    "yearPublished": 2020,
-   "yearRead": 2026,
-   "rating": 4
+   "rating": 4,
+   "dateRead": "2026-02-02"
   },
   {
    "id": "b0012",
@@ -107,8 +107,8 @@
    "author": "Fernando Pessoa",
    "genre": "Fiction/Classics/Poetry",
    "yearPublished": 1982,
-   "yearRead": null,
-   "rating": null
+   "rating": null,
+   "dateRead": null
   },
   {
    "id": "b0013",
@@ -116,8 +116,8 @@
    "author": "Mikołaj Łoziński",
    "genre": "Fiction/Polish Literature/Poland",
    "yearPublished": 2019,
-   "yearRead": 2026,
-   "rating": 5
+   "rating": 5,
+   "dateRead": "2026-01-13"
   },
   {
    "id": "b0014",
@@ -125,8 +125,8 @@
    "author": "Magda Szabó",
    "genre": "Fiction/Hungary/Classics",
    "yearPublished": 1963,
-   "yearRead": 2026,
-   "rating": 4
+   "rating": 4,
+   "dateRead": "2026-02-14"
   },
   {
    "id": "b0015",
@@ -134,8 +134,8 @@
    "author": "Stefan Zweig",
    "genre": "Fiction/Classics/Historical Fiction",
    "yearPublished": 1939,
-   "yearRead": 2025,
-   "rating": 4
+   "rating": 4,
+   "dateRead": "2025-12-08"
   },
   {
    "id": "b0016",
@@ -143,8 +143,8 @@
    "author": "Richard Flanagan",
    "genre": "Nonfiction/Memoir/History",
    "yearPublished": 2023,
-   "yearRead": 2025,
-   "rating": 3
+   "rating": 3,
+   "dateRead": "2025-11-26"
   },
   {
    "id": "b0017",
@@ -152,8 +152,8 @@
    "author": "Steven L. Peck",
    "genre": "Horror/Fiction/Fantasy",
    "yearPublished": 2011,
-   "yearRead": 2026,
-   "rating": 4
+   "rating": 4,
+   "dateRead": "2026-02-04"
   },
   {
    "id": "b0018",
@@ -161,8 +161,8 @@
    "author": "Richard Powers",
    "genre": "Fiction/Book Club/Science Fiction",
    "yearPublished": 2024,
-   "yearRead": 2025,
-   "rating": 3
+   "rating": 3,
+   "dateRead": "2025-11-14"
   },
   {
    "id": "b0019",
@@ -170,8 +170,8 @@
    "author": "Percival Everett",
    "genre": "Fiction/Historical Fiction/Book Club",
    "yearPublished": 2024,
-   "yearRead": 2025,
-   "rating": 4
+   "rating": 4,
+   "dateRead": "2025-10-19"
   },
   {
    "id": "b0020",
@@ -179,8 +179,8 @@
    "author": "László Krasznahorkai",
    "genre": "Fiction/Hungary/Hungarian Literature",
    "yearPublished": 1985,
-   "yearRead": 2026,
-   "rating": 5
+   "rating": 5,
+   "dateRead": "2026-01-04"
   },
   {
    "id": "b0021",
@@ -188,8 +188,8 @@
    "author": "Kang Han",
    "genre": "Fiction/Historical Fiction/Historical",
    "yearPublished": 2014,
-   "yearRead": 2025,
-   "rating": 2
+   "rating": 2,
+   "dateRead": "2025-09-24"
   },
   {
    "id": "b0022",
@@ -197,8 +197,8 @@
    "author": "Barbara Kingsolver",
    "genre": "Fiction/Book Club/Historical Fiction",
    "yearPublished": 2022,
-   "yearRead": 2025,
-   "rating": 4
+   "rating": 4,
+   "dateRead": "2025-09-11"
   },
   {
    "id": "b0023",
@@ -206,8 +206,8 @@
    "author": "Kaveh Akbar",
    "genre": "Fiction/Book Club/Literary Fiction",
    "yearPublished": 2024,
-   "yearRead": 2025,
-   "rating": 4
+   "rating": 4,
+   "dateRead": "2025-11-19"
   },
   {
    "id": "b0024",
@@ -215,8 +215,8 @@
    "author": "Benjamín Labatut",
    "genre": "Fiction/Historical Fiction/Philosophy",
    "yearPublished": 2023,
-   "yearRead": 2025,
-   "rating": 4
+   "rating": 4,
+   "dateRead": "2025-08-24"
   },
   {
    "id": "b0025",
@@ -224,8 +224,8 @@
    "author": "Patrick Rothfuss",
    "genre": "Fantasy/Fiction/Epic Fantasy",
    "yearPublished": 2011,
-   "yearRead": null,
-   "rating": 5
+   "rating": 5,
+   "dateRead": null
   },
   {
    "id": "b0026",
@@ -233,8 +233,8 @@
    "author": "Louis Sachar",
    "genre": "Young Adult/Fiction/Middle Grade",
    "yearPublished": 1998,
-   "yearRead": 2006,
-   "rating": 5
+   "rating": 5,
+   "dateRead": "2006-01-01"
   },
   {
    "id": "b0027",
@@ -242,8 +242,8 @@
    "author": "Mitch Albom",
    "genre": "Fiction/Historical Fiction/Book Club",
    "yearPublished": 2012,
-   "yearRead": 2015,
-   "rating": 4
+   "rating": 4,
+   "dateRead": "2015-01-01"
   },
   {
    "id": "b0028",
@@ -251,8 +251,8 @@
    "author": "Mitch Albom",
    "genre": "Fiction/Contemporary/Inspirational",
    "yearPublished": 2003,
-   "yearRead": 2013,
-   "rating": 3
+   "rating": 3,
+   "dateRead": "2013-01-01"
   },
   {
    "id": "b0029",
@@ -260,8 +260,8 @@
    "author": "M.L. Wang",
    "genre": "Fantasy/Dark Academia/Fiction",
    "yearPublished": 2023,
-   "yearRead": 2025,
-   "rating": 3
+   "rating": 3,
+   "dateRead": "2025-07-30"
   },
   {
    "id": "b0030",
@@ -269,8 +269,8 @@
    "author": "Becky Chambers",
    "genre": "Science Fiction/Fiction/LGBT",
    "yearPublished": 2014,
-   "yearRead": 2025,
-   "rating": 2
+   "rating": 2,
+   "dateRead": "2025-01-01"
   },
   {
    "id": "b0031",
@@ -278,8 +278,8 @@
    "author": "Mikhail Bulgakov",
    "genre": "Classics/Fiction/Fantasy",
    "yearPublished": 1967,
-   "yearRead": 2025,
-   "rating": 4
+   "rating": 4,
+   "dateRead": "2025-07-24"
   },
   {
    "id": "b0032",
@@ -287,8 +287,8 @@
    "author": "Gabriel García Márquez",
    "genre": "Classics/Fiction/Magical Realism",
    "yearPublished": 1967,
-   "yearRead": 2025,
-   "rating": 5
+   "rating": 5,
+   "dateRead": "2025-06-20"
   },
   {
    "id": "b0033",
@@ -296,8 +296,8 @@
    "author": "Alex Michaelides",
    "genre": "Thriller/Mystery/Fiction",
    "yearPublished": 2019,
-   "yearRead": 2025,
-   "rating": 1
+   "rating": 1,
+   "dateRead": "2025-01-01"
   },
   {
    "id": "b0034",
@@ -305,8 +305,8 @@
    "author": "Uketsu",
    "genre": "Horror/Mystery/Thriller",
    "yearPublished": 2022,
-   "yearRead": 2025,
-   "rating": 3
+   "rating": 3,
+   "dateRead": "2025-03-16"
   },
   {
    "id": "b0035",
@@ -314,8 +314,8 @@
    "author": "Ken Liu",
    "genre": "Horror/Mystery/Thriller",
    "yearPublished": 2022,
-   "yearRead": null,
-   "rating": 3
+   "rating": 3,
+   "dateRead": null
   },
   {
    "id": "b0036",
@@ -323,8 +323,8 @@
    "author": "David Mitchell",
    "genre": "Fiction/Science Fiction/Fantasy",
    "yearPublished": 2004,
-   "yearRead": null,
-   "rating": 3
+   "rating": 3,
+   "dateRead": null
   },
   {
    "id": "b0037",
@@ -332,8 +332,8 @@
    "author": "Milan Kundera",
    "genre": "Fiction/Classics/Philosophy",
    "yearPublished": 1984,
-   "yearRead": null,
-   "rating": 5
+   "rating": 5,
+   "dateRead": null
   },
   {
    "id": "b0038",
@@ -341,8 +341,8 @@
    "author": "Hugh Howey",
    "genre": "Science Fiction/Fiction/Dystopia",
    "yearPublished": 2012,
-   "yearRead": null,
-   "rating": 3
+   "rating": 3,
+   "dateRead": null
   },
   {
    "id": "b0039",
@@ -350,8 +350,8 @@
    "author": "Matt Dinniman",
    "genre": "Fantasy/Science Fiction/Audiobook",
    "yearPublished": 2020,
-   "yearRead": 2025,
-   "rating": 3
+   "rating": 3,
+   "dateRead": "2025-01-01"
   },
   {
    "id": "b0040",
@@ -359,8 +359,8 @@
    "author": "Carlos Ruiz Zafón",
    "genre": "Fiction/Historical Fiction/Mystery",
    "yearPublished": 2001,
-   "yearRead": 2025,
-   "rating": 4
+   "rating": 4,
+   "dateRead": "2025-01-01"
   },
   {
    "id": "b0041",
@@ -368,8 +368,8 @@
    "author": "R.F. Kuang",
    "genre": "Fantasy/Historical Fiction/Dark Academia",
    "yearPublished": 2022,
-   "yearRead": 2025,
-   "rating": 2
+   "rating": 2,
+   "dateRead": "2025-02-13"
   },
   {
    "id": "b0042",
@@ -377,8 +377,8 @@
    "author": "Susanna Clarke",
    "genre": "Fantasy/Fiction/Mystery",
    "yearPublished": 2020,
-   "yearRead": 2022,
-   "rating": 5
+   "rating": 5,
+   "dateRead": "2022-01-01"
   },
   {
    "id": "b0043",
@@ -386,8 +386,8 @@
    "author": "Matt Haig",
    "genre": "Fiction/Fantasy/Book Club",
    "yearPublished": 2020,
-   "yearRead": null,
-   "rating": 3
+   "rating": 3,
+   "dateRead": null
   },
   {
    "id": "b0044",
@@ -395,8 +395,8 @@
    "author": "Catherynne M. Valente",
    "genre": "Science Fiction/Novella/Fiction",
    "yearPublished": 2021,
-   "yearRead": null,
-   "rating": 1
+   "rating": 1,
+   "dateRead": null
   },
   {
    "id": "b0045",
@@ -404,8 +404,8 @@
    "author": "Andy Weir",
    "genre": "Science Fiction/Fiction/Audiobook",
    "yearPublished": 2021,
-   "yearRead": null,
-   "rating": 5
+   "rating": 5,
+   "dateRead": null
   },
   {
    "id": "b0046",
@@ -413,8 +413,8 @@
    "author": "Ted Chiang",
    "genre": "Short Stories/Science Fiction/Fiction",
    "yearPublished": 2002,
-   "yearRead": 2020,
-   "rating": 5
+   "rating": 5,
+   "dateRead": "2020-01-01"
   },
   {
    "id": "b0047",
@@ -422,8 +422,8 @@
    "author": "Blake Crouch",
    "genre": "Science Fiction/Fiction/Thriller",
    "yearPublished": 2019,
-   "yearRead": 2020,
-   "rating": 2
+   "rating": 2,
+   "dateRead": "2020-01-01"
   },
   {
    "id": "b0048",
@@ -431,8 +431,8 @@
    "author": "Kurt Vonnegut Jr.",
    "genre": "Classics/Fiction/Science Fiction",
    "yearPublished": 1969,
-   "yearRead": null,
-   "rating": 5
+   "rating": 5,
+   "dateRead": null
   },
   {
    "id": "b0049",
@@ -440,8 +440,8 @@
    "author": "Jules Verne",
    "genre": "Classics/Science Fiction/Fiction",
    "yearPublished": 1870,
-   "yearRead": 2020,
-   "rating": 3
+   "rating": 3,
+   "dateRead": "2020-01-01"
   },
   {
    "id": "b0050",
@@ -449,8 +449,8 @@
    "author": "Albert Camus",
    "genre": "Classics/Fiction/Philosophy",
    "yearPublished": 1942,
-   "yearRead": 2019,
-   "rating": 5
+   "rating": 5,
+   "dateRead": "2019-01-01"
   },
   {
    "id": "b0051",
@@ -458,8 +458,8 @@
    "author": "Michael Cox",
    "genre": "Football/Sports/Nonfiction",
    "yearPublished": 2019,
-   "yearRead": 2019,
-   "rating": 4
+   "rating": 4,
+   "dateRead": "2019-01-01"
   },
   {
    "id": "b0052",
@@ -467,8 +467,8 @@
    "author": "Stephen W. Hawking",
    "genre": "Science/Nonfiction/Physics",
    "yearPublished": 2018,
-   "yearRead": 2019,
-   "rating": 3
+   "rating": 3,
+   "dateRead": "2019-01-01"
   },
   {
    "id": "b0053",
@@ -476,8 +476,8 @@
    "author": "Ted Chiang",
    "genre": "Short Stories/Science Fiction/Fiction",
    "yearPublished": 2019,
-   "yearRead": 2019,
-   "rating": 5
+   "rating": 5,
+   "dateRead": "2019-01-01"
   },
   {
    "id": "b0054",
@@ -485,8 +485,8 @@
    "author": "Jonathan Wilson",
    "genre": "Football/Sports/Nonfiction",
    "yearPublished": 2008,
-   "yearRead": null,
-   "rating": 5
+   "rating": 5,
+   "dateRead": null
   },
   {
    "id": "b0055",
@@ -494,8 +494,8 @@
    "author": "Michael Cox",
    "genre": "Football/Sports/Nonfiction",
    "yearPublished": 2017,
-   "yearRead": null,
-   "rating": 4
+   "rating": 4,
+   "dateRead": null
   },
   {
    "id": "b0056",
@@ -503,8 +503,8 @@
    "author": "Ernest Cline",
    "genre": "Science Fiction/Fiction/Young Adult",
    "yearPublished": 2011,
-   "yearRead": null,
-   "rating": 3
+   "rating": 3,
+   "dateRead": null
   },
   {
    "id": "b0057",
@@ -512,8 +512,8 @@
    "author": "Andy Weir",
    "genre": "Science Fiction/Fiction/Audiobook",
    "yearPublished": 2011,
-   "yearRead": null,
-   "rating": 4
+   "rating": 4,
+   "dateRead": null
   },
   {
    "id": "b0058",
@@ -521,8 +521,8 @@
    "author": "Douglas Adams",
    "genre": "Science Fiction/Fiction/Classics",
    "yearPublished": 1979,
-   "yearRead": null,
-   "rating": 3
+   "rating": 3,
+   "dateRead": null
   },
   {
    "id": "b0059",
@@ -530,8 +530,8 @@
    "author": "Oliver Sacks",
    "genre": "Nonfiction/Psychology/Science",
    "yearPublished": 1985,
-   "yearRead": null,
-   "rating": 4
+   "rating": 4,
+   "dateRead": null
   },
   {
    "id": "b0060",
@@ -539,8 +539,8 @@
    "author": "Yuval Noah Harari",
    "genre": "Nonfiction/History/Science",
    "yearPublished": 2015,
-   "yearRead": null,
-   "rating": 4
+   "rating": 4,
+   "dateRead": null
   },
   {
    "id": "b0061",
@@ -548,8 +548,8 @@
    "author": "Sigmund Freud",
    "genre": "Psychology/Nonfiction/Philosophy",
    "yearPublished": 1899,
-   "yearRead": null,
-   "rating": 4
+   "rating": 4,
+   "dateRead": null
   },
   {
    "id": "b0062",
@@ -557,8 +557,8 @@
    "author": "Stephen W. Hawking",
    "genre": "Science/Nonfiction/Physics",
    "yearPublished": 1988,
-   "yearRead": null,
-   "rating": 4
+   "rating": 4,
+   "dateRead": null
   },
   {
    "id": "b0063",
@@ -566,8 +566,8 @@
    "author": "Neil Gaiman",
    "genre": "Fantasy/Mythology/Fiction",
    "yearPublished": 2017,
-   "yearRead": null,
-   "rating": 3
+   "rating": 3,
+   "dateRead": null
   },
   {
    "id": "b0064",
@@ -575,8 +575,8 @@
    "author": "Yuval Noah Harari",
    "genre": "Nonfiction/History/Science",
    "yearPublished": 2011,
-   "yearRead": 2019,
-   "rating": 5
+   "rating": 5,
+   "dateRead": "2019-01-01"
   },
   {
    "id": "b0065",
@@ -584,8 +584,8 @@
    "author": "Mark Haddon",
    "genre": "Fiction/Mystery/Young Adult",
    "yearPublished": 2003,
-   "yearRead": null,
-   "rating": 4
+   "rating": 4,
+   "dateRead": null
   },
   {
    "id": "b0066",
@@ -593,8 +593,8 @@
    "author": "George Orwell",
    "genre": "Classics/Fiction/Dystopia",
    "yearPublished": 1945,
-   "yearRead": null,
-   "rating": 5
+   "rating": 5,
+   "dateRead": null
   },
   {
    "id": "b0067",
@@ -602,8 +602,8 @@
    "author": "J.K. Rowling",
    "genre": "Fantasy/Fiction/Young Adult",
    "yearPublished": 2007,
-   "yearRead": null,
-   "rating": 2
+   "rating": 2,
+   "dateRead": null
   },
   {
    "id": "b0068",
@@ -611,8 +611,8 @@
    "author": "George Orwell",
    "genre": "Classics/Fiction/Science Fiction",
    "yearPublished": 1948,
-   "yearRead": null,
-   "rating": 5
+   "rating": 5,
+   "dateRead": null
   },
   {
    "id": "b0069",
@@ -620,8 +620,8 @@
    "author": "Harper Lee",
    "genre": "Classics/Fiction/Historical Fiction",
    "yearPublished": 1960,
-   "yearRead": null,
-   "rating": 5
+   "rating": 5,
+   "dateRead": null
   },
   {
    "id": "b0070",
@@ -629,8 +629,8 @@
    "author": "Terry Pratchett",
    "genre": "Fantasy/Fiction/Humor",
    "yearPublished": 1990,
-   "yearRead": null,
-   "rating": 5
+   "rating": 5,
+   "dateRead": null
   },
   {
    "id": "b0071",
@@ -638,8 +638,8 @@
    "author": "Rick Riordan",
    "genre": "Fantasy/Young Adult/Mythology",
    "yearPublished": 2005,
-   "yearRead": null,
-   "rating": 5
+   "rating": 5,
+   "dateRead": null
   },
   {
    "id": "b0072",
@@ -647,8 +647,8 @@
    "author": "Neil Gaiman",
    "genre": "Fantasy/Fiction/Mythology",
    "yearPublished": 2001,
-   "yearRead": null,
-   "rating": 3
+   "rating": 3,
+   "dateRead": null
   },
   {
    "id": "b0073",
@@ -656,8 +656,8 @@
    "author": "C.S. Lewis",
    "genre": "Fantasy/Classics/Fiction",
    "yearPublished": 1950,
-   "yearRead": null,
-   "rating": 3
+   "rating": 3,
+   "dateRead": null
   },
   {
    "id": "b0074",
@@ -665,8 +665,8 @@
    "author": "Patrick Rothfuss",
    "genre": "Fantasy/Fiction/Epic Fantasy",
    "yearPublished": 2007,
-   "yearRead": null,
-   "rating": 5
+   "rating": 5,
+   "dateRead": null
   },
   {
    "id": "b0075",
@@ -674,8 +674,8 @@
    "author": "Rick Riordan",
    "genre": "Fantasy/Young Adult/Mythology",
    "yearPublished": 2008,
-   "yearRead": null,
-   "rating": null
+   "rating": null,
+   "dateRead": null
   },
   {
    "id": "b0076",
@@ -683,71 +683,8 @@
    "author": "J.K. Rowling",
    "genre": "Fantasy/Fiction/Young Adult",
    "yearPublished": 1997,
-   "yearRead": null,
-   "rating": 3
-  },
-  {
-   "id": "b0077",
-   "name": "The Mixer: The Story of Premier League Tactics, from Route One to False Nines",
-   "author": "Michael  Cox",
-   "genre": "Unknown",
-   "yearPublished": 2017,
-   "yearRead": null,
-   "rating": 4
-  },
-  {
-   "id": "b0078",
-   "name": "Zonal Marking: The Making of Modern European Football",
-   "author": "Michael  Cox",
-   "genre": "Unknown",
-   "yearPublished": 2019,
-   "yearRead": 2019,
-   "rating": 4
-  },
-  {
-   "id": "b0079",
-   "name": "Human Acts",
-   "author": "Han Kang",
-   "genre": "Unknown",
-   "yearPublished": 2014,
-   "yearRead": 2025,
-   "rating": 2
-  },
-  {
-   "id": "b0080",
-   "name": "Shuggie Bain",
-   "author": "Douglas   Stuart",
-   "genre": "Unknown",
-   "yearPublished": 2020,
-   "yearRead": 2026,
-   "rating": 4
-  },
-  {
-   "id": "b0081",
-   "name": "Cloud Atlas",
-   "author": "David  Mitchell",
-   "genre": "Unknown",
-   "yearPublished": 2004,
-   "yearRead": null,
-   "rating": 3
-  },
-  {
-   "id": "b0082",
-   "name": "Twenty Thousand Leagues Under the Sea (Norton Critical Edition)",
-   "author": "Jules Verne",
-   "genre": "Unknown",
-   "yearPublished": 1869,
-   "yearRead": 2020,
-   "rating": 3
-  },
-  {
-   "id": "b0083",
-   "name": "Inverting the Pyramid: The History of Football Tactics",
-   "author": "Jonathan  Wilson",
-   "genre": "Unknown",
-   "yearPublished": 2008,
-   "yearRead": null,
-   "rating": 5
+   "rating": 3,
+   "dateRead": null
   }
  ]
 }
