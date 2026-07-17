@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "ratingScale": 10,
- "updatedAt": "2026-07-17T17:30:18.706Z",
+ "updatedAt": "2026-07-17T17:30:29.956Z",
  "items": [
   {
    "id": "g0001",
@@ -352,7 +352,7 @@
    "yearReleased": 2005,
    "rating": 10,
    "datePlayed": "2006-01-01",
-   "coverUrl": "https://media.rawg.io/media/games/f87/f87de0e93f02007fd044e4bf04d453d8.jpg"
+   "coverUrl": "https://media.rawg.io/media/games/25d/25d9592abbd02dccd67d83108ae79582.jpg"
   },
   {
    "id": "g0028",
