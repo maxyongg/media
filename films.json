@@ -1,5 +1,2985 @@
 {
  "schemaVersion": 1,
- "ratingScale": 5,
- "items": []
+ "ratingScale": 10,
+ "items": [
+  {
+   "id": "f0001",
+   "name": "12 Angry Men",
+   "director": "Sidney Lumet",
+   "genre": "Drama",
+   "yearReleased": 1957,
+   "yearWatched": null,
+   "rating": 10
+  },
+  {
+   "id": "f0002",
+   "name": "1917",
+   "director": "Sam Mendes",
+   "genre": "Drama/War",
+   "yearReleased": 2019,
+   "yearWatched": null,
+   "rating": 9
+  },
+  {
+   "id": "f0003",
+   "name": "2001: A Space Odyssey",
+   "director": "Stanley Kubrick",
+   "genre": "Science Fiction/Adventure",
+   "yearReleased": 1968,
+   "yearWatched": null,
+   "rating": 9
+  },
+  {
+   "id": "f0004",
+   "name": "20th Century Women",
+   "director": "Mike Mills",
+   "genre": "Drama",
+   "yearReleased": 2016,
+   "yearWatched": null,
+   "rating": 9
+  },
+  {
+   "id": "f0005",
+   "name": "21 Jump Street",
+   "director": "Phil Lord & Christopher Miller",
+   "genre": "Crime/Action",
+   "yearReleased": 2012,
+   "yearWatched": null,
+   "rating": 7
+  },
+  {
+   "id": "f0006",
+   "name": "Ad Astra",
+   "director": "James Gray",
+   "genre": "Science Fiction/Drama",
+   "yearReleased": 2019,
+   "yearWatched": null,
+   "rating": 5
+  },
+  {
+   "id": "f0007",
+   "name": "Adolescence",
+   "director": "Philip Barantini",
+   "genre": "Drama/Crime",
+   "yearReleased": 2025,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0008",
+   "name": "After Hours",
+   "director": "Martin Scorsese",
+   "genre": "Thriller/Comedy",
+   "yearReleased": 1985,
+   "yearWatched": 2026,
+   "rating": 10
+  },
+  {
+   "id": "f0009",
+   "name": "Age of Panic",
+   "director": "Justine Triet",
+   "genre": "Drama/Comedy",
+   "yearReleased": 2013,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0010",
+   "name": "Alita: Battle Angel",
+   "director": "Robert Rodriguez",
+   "genre": "Adventure/Science Fiction",
+   "yearReleased": 2019,
+   "yearWatched": null,
+   "rating": 5
+  },
+  {
+   "id": "f0011",
+   "name": "American Psycho",
+   "director": "Mary Harron",
+   "genre": "Crime/Drama",
+   "yearReleased": 2000,
+   "yearWatched": null,
+   "rating": 7
+  },
+  {
+   "id": "f0012",
+   "name": "Amélie",
+   "director": "Jean-Pierre Jeunet",
+   "genre": "Romance/Comedy",
+   "yearReleased": 2001,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0013",
+   "name": "Anatomy of a Fall",
+   "director": "Justine Triet",
+   "genre": "Crime/Thriller",
+   "yearReleased": 2023,
+   "yearWatched": null,
+   "rating": 10
+  },
+  {
+   "id": "f0014",
+   "name": "Anomalisa",
+   "director": "Duke Johnson & Charlie Kaufman",
+   "genre": "Romance/Animation",
+   "yearReleased": 2015,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0015",
+   "name": "Anora",
+   "director": "Sean Baker",
+   "genre": "Drama/Romance",
+   "yearReleased": 2024,
+   "yearWatched": null,
+   "rating": 10
+  },
+  {
+   "id": "f0016",
+   "name": "Ant-Man",
+   "director": "Peyton Reed",
+   "genre": "Adventure/Science Fiction",
+   "yearReleased": 2015,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0017",
+   "name": "Ant-Man and the Wasp",
+   "director": "Peyton Reed",
+   "genre": "Adventure/Action",
+   "yearReleased": 2018,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0018",
+   "name": "Arrival",
+   "director": "Denis Villeneuve",
+   "genre": "Mystery/Science Fiction",
+   "yearReleased": 2016,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0019",
+   "name": "Asteroid City",
+   "director": "Wes Anderson",
+   "genre": "Drama/Comedy",
+   "yearReleased": 2023,
+   "yearWatched": null,
+   "rating": 7
+  },
+  {
+   "id": "f0020",
+   "name": "Avatar Aang: The Last Airbender",
+   "director": "Lauren Montgomery",
+   "genre": "Animation/Fantasy",
+   "yearReleased": 2026,
+   "yearWatched": 2026,
+   "rating": 3
+  },
+  {
+   "id": "f0021",
+   "name": "Avatar: The Way of Water",
+   "director": "James Cameron",
+   "genre": "Science Fiction/Action",
+   "yearReleased": 2022,
+   "yearWatched": null,
+   "rating": 3
+  },
+  {
+   "id": "f0022",
+   "name": "Avengers: Age of Ultron",
+   "director": "Joss Whedon",
+   "genre": "Science Fiction/Action",
+   "yearReleased": 2015,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0023",
+   "name": "Avengers: Endgame",
+   "director": "Anthony Russo & Joe Russo",
+   "genre": "Science Fiction/Action",
+   "yearReleased": 2019,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0024",
+   "name": "Avengers: Infinity War",
+   "director": "Anthony Russo & Joe Russo",
+   "genre": "Action/Science Fiction",
+   "yearReleased": 2018,
+   "yearWatched": null,
+   "rating": 10
+  },
+  {
+   "id": "f0025",
+   "name": "Baby Driver",
+   "director": "Edgar Wright",
+   "genre": "Crime/Action",
+   "yearReleased": 2017,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0026",
+   "name": "Back to the Future",
+   "director": "Robert Zemeckis",
+   "genre": "Adventure/Comedy",
+   "yearReleased": 1985,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0027",
+   "name": "Back to the Future Part II",
+   "director": "Robert Zemeckis",
+   "genre": "Science Fiction/Comedy",
+   "yearReleased": 1989,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0028",
+   "name": "Back to the Future Part III",
+   "director": "Robert Zemeckis",
+   "genre": "Comedy/Adventure",
+   "yearReleased": 1990,
+   "yearWatched": null,
+   "rating": 7
+  },
+  {
+   "id": "f0029",
+   "name": "Backrooms",
+   "director": "Kane Parsons",
+   "genre": "Mystery/Science Fiction",
+   "yearReleased": 2026,
+   "yearWatched": 2026,
+   "rating": 8
+  },
+  {
+   "id": "f0030",
+   "name": "Barbarian",
+   "director": "Zach Cregger",
+   "genre": "Horror/Mystery",
+   "yearReleased": 2022,
+   "yearWatched": null,
+   "rating": 5
+  },
+  {
+   "id": "f0031",
+   "name": "Barbie",
+   "director": "Greta Gerwig",
+   "genre": "Comedy/Fantasy",
+   "yearReleased": 2023,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0032",
+   "name": "Batman Begins",
+   "director": "Christopher Nolan",
+   "genre": "Crime/Action",
+   "yearReleased": 2005,
+   "yearWatched": null,
+   "rating": 4
+  },
+  {
+   "id": "f0033",
+   "name": "Batman v Superman: Dawn of Justice",
+   "director": "Zack Snyder",
+   "genre": "Action/Fantasy",
+   "yearReleased": 2016,
+   "yearWatched": null,
+   "rating": 4
+  },
+  {
+   "id": "f0034",
+   "name": "Beginners",
+   "director": "Mike Mills",
+   "genre": "Comedy/Romance",
+   "yearReleased": 2010,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0035",
+   "name": "Being John Malkovich",
+   "director": "Spike Jonze",
+   "genre": "Comedy/Drama",
+   "yearReleased": 1999,
+   "yearWatched": null,
+   "rating": 7
+  },
+  {
+   "id": "f0036",
+   "name": "Big Hero 6",
+   "director": "Don Hall & Chris Williams",
+   "genre": "Science Fiction/Comedy",
+   "yearReleased": 2014,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0037",
+   "name": "Birdman or (The Unexpected Virtue of Ignorance)",
+   "director": "Alejandro G. Iñárritu",
+   "genre": "Drama/Comedy",
+   "yearReleased": 2014,
+   "yearWatched": null,
+   "rating": 9
+  },
+  {
+   "id": "f0038",
+   "name": "Black Swan",
+   "director": "Darren Aronofsky",
+   "genre": "Drama/Thriller",
+   "yearReleased": 2010,
+   "yearWatched": null,
+   "rating": null
+  },
+  {
+   "id": "f0039",
+   "name": "Black Widow",
+   "director": "Cate Shortland",
+   "genre": "Action/Adventure",
+   "yearReleased": 2021,
+   "yearWatched": null,
+   "rating": 4
+  },
+  {
+   "id": "f0040",
+   "name": "Blade Runner 2049",
+   "director": "Denis Villeneuve",
+   "genre": "Science Fiction/Drama",
+   "yearReleased": 2017,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0041",
+   "name": "Bodies Bodies Bodies",
+   "director": "Halina Reijn",
+   "genre": "Comedy/Horror",
+   "yearReleased": 2022,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0042",
+   "name": "Bohemian Rhapsody",
+   "director": "Bryan Singer",
+   "genre": "Music/Drama",
+   "yearReleased": 2018,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0043",
+   "name": "Boyhood",
+   "director": "Richard Linklater",
+   "genre": "Drama",
+   "yearReleased": 2014,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0044",
+   "name": "Bring Her Back",
+   "director": "Michael Philippou & Danny Philippou",
+   "genre": "Horror",
+   "yearReleased": 2025,
+   "yearWatched": null,
+   "rating": 4
+  },
+  {
+   "id": "f0045",
+   "name": "Bugonia",
+   "director": "Yorgos Lanthimos",
+   "genre": "Thriller/Science Fiction",
+   "yearReleased": 2025,
+   "yearWatched": null,
+   "rating": 7
+  },
+  {
+   "id": "f0046",
+   "name": "Bullet Train",
+   "director": "David Leitch",
+   "genre": "Comedy/Thriller",
+   "yearReleased": 2022,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0047",
+   "name": "C'mon C'mon",
+   "director": "Mike Mills",
+   "genre": "Drama",
+   "yearReleased": 2021,
+   "yearWatched": null,
+   "rating": 9
+  },
+  {
+   "id": "f0048",
+   "name": "Captain America: Civil War",
+   "director": "Joe Russo & Anthony Russo",
+   "genre": "Adventure/Action",
+   "yearReleased": 2016,
+   "yearWatched": null,
+   "rating": 5
+  },
+  {
+   "id": "f0049",
+   "name": "Captain America: The First Avenger",
+   "director": "Joe Johnston",
+   "genre": "Action/Adventure",
+   "yearReleased": 2011,
+   "yearWatched": null,
+   "rating": 4
+  },
+  {
+   "id": "f0050",
+   "name": "Captain America: The Winter Soldier",
+   "director": "Joe Russo & Anthony Russo",
+   "genre": "Adventure/Science Fiction",
+   "yearReleased": 2014,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0051",
+   "name": "Captain Marvel",
+   "director": "Ryan Fleck & Anna Boden",
+   "genre": "Science Fiction/Action",
+   "yearReleased": 2019,
+   "yearWatched": null,
+   "rating": 4
+  },
+  {
+   "id": "f0052",
+   "name": "Cars",
+   "director": "John Lasseter",
+   "genre": "Adventure/Comedy",
+   "yearReleased": 2006,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0053",
+   "name": "Catch Me If You Can",
+   "director": "Steven Spielberg",
+   "genre": "Drama/Crime",
+   "yearReleased": 2002,
+   "yearWatched": null,
+   "rating": 4
+  },
+  {
+   "id": "f0054",
+   "name": "Cha Cha Real Smooth",
+   "director": "Cooper Raiff",
+   "genre": "Romance/Drama",
+   "yearReleased": 2022,
+   "yearWatched": null,
+   "rating": 7
+  },
+  {
+   "id": "f0055",
+   "name": "Challengers",
+   "director": "Luca Guadagnino",
+   "genre": "Romance/Drama",
+   "yearReleased": 2024,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0056",
+   "name": "Chungking Express",
+   "director": "Wong Kar-Wai",
+   "genre": "Comedy/Drama",
+   "yearReleased": 1994,
+   "yearWatched": null,
+   "rating": 9
+  },
+  {
+   "id": "f0057",
+   "name": "City of God",
+   "director": "Fernando Meirelles",
+   "genre": "Drama/Crime",
+   "yearReleased": 2002,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0058",
+   "name": "Cocaine Bear",
+   "director": "Elizabeth Banks",
+   "genre": "Crime/Comedy",
+   "yearReleased": 2023,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0059",
+   "name": "Coco",
+   "director": "Lee Unkrich",
+   "genre": "Adventure/Animation",
+   "yearReleased": 2017,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0060",
+   "name": "Coherence",
+   "director": "James Ward Byrkit",
+   "genre": "Science Fiction/Thriller",
+   "yearReleased": 2013,
+   "yearWatched": null,
+   "rating": 9
+  },
+  {
+   "id": "f0061",
+   "name": "Cold War",
+   "director": "Paweł Pawlikowski",
+   "genre": "Romance/Music",
+   "yearReleased": 2018,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0062",
+   "name": "Companion",
+   "director": "Drew Hancock",
+   "genre": "Thriller/Science Fiction",
+   "yearReleased": 2025,
+   "yearWatched": null,
+   "rating": 4
+  },
+  {
+   "id": "f0063",
+   "name": "Conclave",
+   "director": "Edward Berger",
+   "genre": "Drama/Thriller",
+   "yearReleased": 2024,
+   "yearWatched": null,
+   "rating": 5
+  },
+  {
+   "id": "f0064",
+   "name": "Crazy, Stupid, Love.",
+   "director": "Glenn Ficarra & John Requa",
+   "genre": "Comedy/Romance",
+   "yearReleased": 2011,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0065",
+   "name": "Cure",
+   "director": "Kiyoshi Kurosawa",
+   "genre": "Crime/Mystery",
+   "yearReleased": 1997,
+   "yearWatched": null,
+   "rating": 7
+  },
+  {
+   "id": "f0066",
+   "name": "Dallas Buyers Club",
+   "director": "Jean-Marc Vallée",
+   "genre": "History/Drama",
+   "yearReleased": 2013,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0067",
+   "name": "Deadpool",
+   "director": "Tim Miller",
+   "genre": "Action/Adventure",
+   "yearReleased": 2016,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0068",
+   "name": "Deadpool & Wolverine",
+   "director": "Shawn Levy",
+   "genre": "Science Fiction/Action",
+   "yearReleased": 2024,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0069",
+   "name": "Deadpool 2",
+   "director": "David Leitch",
+   "genre": "Action/Comedy",
+   "yearReleased": 2018,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0070",
+   "name": "Death Becomes Her",
+   "director": "Robert Zemeckis",
+   "genre": "Comedy/Fantasy",
+   "yearReleased": 1992,
+   "yearWatched": null,
+   "rating": 7
+  },
+  {
+   "id": "f0071",
+   "name": "Django Unchained",
+   "director": "Quentin Tarantino",
+   "genre": "Drama/Western",
+   "yearReleased": 2012,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0072",
+   "name": "Doctor Strange",
+   "director": "Scott Derrickson",
+   "genre": "Fantasy/Action",
+   "yearReleased": 2016,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0073",
+   "name": "Doctor Strange in the Multiverse of Madness",
+   "director": "Sam Raimi",
+   "genre": "Fantasy/Action",
+   "yearReleased": 2022,
+   "yearWatched": null,
+   "rating": 3
+  },
+  {
+   "id": "f0074",
+   "name": "Dogtooth",
+   "director": "Yorgos Lanthimos",
+   "genre": "Drama",
+   "yearReleased": 2009,
+   "yearWatched": null,
+   "rating": 9
+  },
+  {
+   "id": "f0075",
+   "name": "Donnie Darko",
+   "director": "Richard Kelly",
+   "genre": "Drama/Fantasy",
+   "yearReleased": 2001,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0076",
+   "name": "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",
+   "director": "Stanley Kubrick",
+   "genre": "Comedy/War",
+   "yearReleased": 1964,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0077",
+   "name": "Dream Scenario",
+   "director": "Kristoffer Borgli",
+   "genre": "Comedy/Fantasy",
+   "yearReleased": 2023,
+   "yearWatched": null,
+   "rating": 7
+  },
+  {
+   "id": "f0078",
+   "name": "Drive My Car",
+   "director": "Ryusuke Hamaguchi",
+   "genre": "Drama",
+   "yearReleased": 2021,
+   "yearWatched": null,
+   "rating": 10
+  },
+  {
+   "id": "f0079",
+   "name": "Dune",
+   "director": "Denis Villeneuve",
+   "genre": "War/Science Fiction",
+   "yearReleased": 2021,
+   "yearWatched": null,
+   "rating": 4
+  },
+  {
+   "id": "f0080",
+   "name": "Dune: Part Two",
+   "director": "Denis Villeneuve",
+   "genre": "Adventure/Science Fiction",
+   "yearReleased": 2024,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0081",
+   "name": "Dunkirk",
+   "director": "Christopher Nolan",
+   "genre": "Action/Drama",
+   "yearReleased": 2017,
+   "yearWatched": null,
+   "rating": 7
+  },
+  {
+   "id": "f0082",
+   "name": "El Camino: A Breaking Bad Movie",
+   "director": "Vince Gilligan",
+   "genre": "Crime/Drama",
+   "yearReleased": 2019,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0083",
+   "name": "Enola Holmes",
+   "director": "Harry Bradbeer",
+   "genre": "Mystery/Crime",
+   "yearReleased": 2020,
+   "yearWatched": null,
+   "rating": 4
+  },
+  {
+   "id": "f0084",
+   "name": "Eternal Sunshine of the Spotless Mind",
+   "director": "Michel Gondry",
+   "genre": "Science Fiction/Romance",
+   "yearReleased": 2004,
+   "yearWatched": null,
+   "rating": 9
+  },
+  {
+   "id": "f0085",
+   "name": "Everything Everywhere All at Once",
+   "director": "Daniel Scheinert & Daniel Kwan",
+   "genre": "Science Fiction/Adventure",
+   "yearReleased": 2022,
+   "yearWatched": null,
+   "rating": 10
+  },
+  {
+   "id": "f0086",
+   "name": "Exhuma",
+   "director": "Jang Jae-hyun",
+   "genre": "Thriller/Horror",
+   "yearReleased": 2024,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0087",
+   "name": "Exit 8",
+   "director": "Genki Kawamura",
+   "genre": "Mystery/Horror",
+   "yearReleased": 2025,
+   "yearWatched": 2026,
+   "rating": 7
+  },
+  {
+   "id": "f0088",
+   "name": "Fallen Angels",
+   "director": "Wong Kar-Wai",
+   "genre": "Crime/Romance",
+   "yearReleased": 1995,
+   "yearWatched": null,
+   "rating": 7
+  },
+  {
+   "id": "f0089",
+   "name": "Fantastic Mr. Fox",
+   "director": "Wes Anderson",
+   "genre": "Comedy/Animation",
+   "yearReleased": 2009,
+   "yearWatched": null,
+   "rating": 10
+  },
+  {
+   "id": "f0090",
+   "name": "Fargo",
+   "director": "Joel Coen",
+   "genre": "Crime/Comedy",
+   "yearReleased": 1996,
+   "yearWatched": null,
+   "rating": 9
+  },
+  {
+   "id": "f0091",
+   "name": "Ferris Bueller's Day Off",
+   "director": "John Hughes",
+   "genre": "Comedy",
+   "yearReleased": 1986,
+   "yearWatched": 2026,
+   "rating": 9
+  },
+  {
+   "id": "f0092",
+   "name": "Fight Club",
+   "director": "David Fincher",
+   "genre": "Drama/Thriller",
+   "yearReleased": 1999,
+   "yearWatched": null,
+   "rating": 7
+  },
+  {
+   "id": "f0093",
+   "name": "Finding Nemo",
+   "director": "Andrew Stanton",
+   "genre": "Adventure/Family",
+   "yearReleased": 2003,
+   "yearWatched": null,
+   "rating": null
+  },
+  {
+   "id": "f0094",
+   "name": "Fireworks, Should We See It from the Side or the Bottom?",
+   "director": "Shunji Iwai",
+   "genre": "Drama/Romance",
+   "yearReleased": 1993,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0095",
+   "name": "Flow",
+   "director": "Gints Zilbalodis",
+   "genre": "Family/Animation",
+   "yearReleased": 2024,
+   "yearWatched": null,
+   "rating": 5
+  },
+  {
+   "id": "f0096",
+   "name": "Ford v Ferrari",
+   "director": "James Mangold",
+   "genre": "Drama/Action",
+   "yearReleased": 2019,
+   "yearWatched": null,
+   "rating": 7
+  },
+  {
+   "id": "f0097",
+   "name": "Forrest Gump",
+   "director": "Robert Zemeckis",
+   "genre": "Drama/Romance",
+   "yearReleased": 1994,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0098",
+   "name": "Frances Ha",
+   "director": "Noah Baumbach",
+   "genre": "Comedy/Drama",
+   "yearReleased": 2012,
+   "yearWatched": null,
+   "rating": 9
+  },
+  {
+   "id": "f0099",
+   "name": "Free Guy",
+   "director": "Shawn Levy",
+   "genre": "Comedy/Adventure",
+   "yearReleased": 2021,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0100",
+   "name": "Get Out",
+   "director": "Jordan Peele",
+   "genre": "Horror/Mystery",
+   "yearReleased": 2017,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0101",
+   "name": "Glass Onion",
+   "director": "Rian Johnson",
+   "genre": "Crime/Mystery",
+   "yearReleased": 2022,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0102",
+   "name": "Good Will Hunting",
+   "director": "Gus Van Sant",
+   "genre": "Drama",
+   "yearReleased": 1997,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0103",
+   "name": "Gravity",
+   "director": "Alfonso Cuarón",
+   "genre": "Thriller/Science Fiction",
+   "yearReleased": 2013,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0104",
+   "name": "Guardians of the Galaxy",
+   "director": "James Gunn",
+   "genre": "Adventure/Action",
+   "yearReleased": 2014,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0105",
+   "name": "Guardians of the Galaxy Vol. 2",
+   "director": "James Gunn",
+   "genre": "Action/Science Fiction",
+   "yearReleased": 2017,
+   "yearWatched": null,
+   "rating": 5
+  },
+  {
+   "id": "f0106",
+   "name": "Guardians of the Galaxy Vol. 3",
+   "director": "James Gunn",
+   "genre": "Action/Science Fiction",
+   "yearReleased": 2023,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0107",
+   "name": "Guillermo del Toro's Pinocchio",
+   "director": "Mark Gustafson & Guillermo del Toro",
+   "genre": "Drama/Adventure",
+   "yearReleased": 2022,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0108",
+   "name": "Hacksaw Ridge",
+   "director": "Mel Gibson",
+   "genre": "War/Drama",
+   "yearReleased": 2016,
+   "yearWatched": null,
+   "rating": 7
+  },
+  {
+   "id": "f0109",
+   "name": "Hamnet",
+   "director": "Chloé Zhao",
+   "genre": "Drama/Romance",
+   "yearReleased": 2025,
+   "yearWatched": 2026,
+   "rating": 8
+  },
+  {
+   "id": "f0110",
+   "name": "Harry Potter and the Chamber of Secrets",
+   "director": "Chris Columbus",
+   "genre": "Adventure/Fantasy",
+   "yearReleased": 2002,
+   "yearWatched": null,
+   "rating": 4
+  },
+  {
+   "id": "f0111",
+   "name": "Harry Potter and the Deathly Hallows: Part 1",
+   "director": "David Yates",
+   "genre": "Adventure/Fantasy",
+   "yearReleased": 2010,
+   "yearWatched": null,
+   "rating": 4
+  },
+  {
+   "id": "f0112",
+   "name": "Harry Potter and the Deathly Hallows: Part 2",
+   "director": "David Yates",
+   "genre": "Fantasy/Adventure",
+   "yearReleased": 2011,
+   "yearWatched": null,
+   "rating": 4
+  },
+  {
+   "id": "f0113",
+   "name": "Harry Potter and the Goblet of Fire",
+   "director": "Mike Newell",
+   "genre": "Adventure/Fantasy",
+   "yearReleased": 2005,
+   "yearWatched": null,
+   "rating": 5
+  },
+  {
+   "id": "f0114",
+   "name": "Harry Potter and the Order of the Phoenix",
+   "director": "David Yates",
+   "genre": "Adventure/Fantasy",
+   "yearReleased": 2007,
+   "yearWatched": null,
+   "rating": 4
+  },
+  {
+   "id": "f0115",
+   "name": "Harry Potter and the Philosopher's Stone",
+   "director": "Chris Columbus",
+   "genre": "Adventure/Fantasy",
+   "yearReleased": 2001,
+   "yearWatched": null,
+   "rating": 4
+  },
+  {
+   "id": "f0116",
+   "name": "Harry Potter and the Prisoner of Azkaban",
+   "director": "Alfonso Cuarón",
+   "genre": "Adventure/Fantasy",
+   "yearReleased": 2004,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0117",
+   "name": "Her",
+   "director": "Spike Jonze",
+   "genre": "Science Fiction/Romance",
+   "yearReleased": 2013,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0118",
+   "name": "Hereditary",
+   "director": "Ari Aster",
+   "genre": "Thriller/Horror",
+   "yearReleased": 2018,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0119",
+   "name": "Heretic",
+   "director": "Scott Beck & Bryan Woods",
+   "genre": "Thriller/Horror",
+   "yearReleased": 2024,
+   "yearWatched": null,
+   "rating": 5
+  },
+  {
+   "id": "f0120",
+   "name": "High School Musical",
+   "director": "Kenny Ortega",
+   "genre": "Comedy/Family",
+   "yearReleased": 2006,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0121",
+   "name": "Hit Man",
+   "director": "Richard Linklater",
+   "genre": "Comedy/Crime",
+   "yearReleased": 2023,
+   "yearWatched": null,
+   "rating": 7
+  },
+  {
+   "id": "f0122",
+   "name": "Hokum",
+   "director": "Damian McCarthy",
+   "genre": "Horror",
+   "yearReleased": 2026,
+   "yearWatched": 2026,
+   "rating": 3
+  },
+  {
+   "id": "f0123",
+   "name": "Hot Fuzz",
+   "director": "Edgar Wright",
+   "genre": "Action/Crime",
+   "yearReleased": 2007,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0124",
+   "name": "Howl's Moving Castle",
+   "director": "Hayao Miyazaki",
+   "genre": "Animation/Fantasy",
+   "yearReleased": 2004,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0125",
+   "name": "I Am Legend",
+   "director": "Francis Lawrence",
+   "genre": "Drama/Thriller",
+   "yearReleased": 2007,
+   "yearWatched": null,
+   "rating": 4
+  },
+  {
+   "id": "f0126",
+   "name": "I Saw the TV Glow",
+   "director": "Jane Schoenbrun",
+   "genre": "Drama/Horror",
+   "yearReleased": 2024,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0127",
+   "name": "I'm Thinking of Ending Things",
+   "director": "Charlie Kaufman",
+   "genre": "Fantasy/Thriller",
+   "yearReleased": 2020,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0128",
+   "name": "Incendies",
+   "director": "Denis Villeneuve",
+   "genre": "Mystery/Drama",
+   "yearReleased": 2010,
+   "yearWatched": null,
+   "rating": 7
+  },
+  {
+   "id": "f0129",
+   "name": "Inception",
+   "director": "Christopher Nolan",
+   "genre": "Action/Adventure",
+   "yearReleased": 2010,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0130",
+   "name": "Infernal Affairs III",
+   "director": "Andrew Lau Wai-Keung & Alan Mak Siu-Fai",
+   "genre": "Crime/Drama",
+   "yearReleased": 2003,
+   "yearWatched": null,
+   "rating": 9
+  },
+  {
+   "id": "f0131",
+   "name": "Insidious",
+   "director": "James Wan",
+   "genre": "Horror/Thriller",
+   "yearReleased": 2010,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0132",
+   "name": "Interstellar",
+   "director": "Christopher Nolan",
+   "genre": "Science Fiction/Drama",
+   "yearReleased": 2014,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0133",
+   "name": "Iron Man",
+   "director": "Jon Favreau",
+   "genre": "Adventure/Science Fiction",
+   "yearReleased": 2008,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0134",
+   "name": "Iron Man 2",
+   "director": "Jon Favreau",
+   "genre": "Adventure/Science Fiction",
+   "yearReleased": 2010,
+   "yearWatched": null,
+   "rating": 4
+  },
+  {
+   "id": "f0135",
+   "name": "Iron Man 3",
+   "director": "Shane Black",
+   "genre": "Action/Adventure",
+   "yearReleased": 2013,
+   "yearWatched": null,
+   "rating": 4
+  },
+  {
+   "id": "f0136",
+   "name": "Isle of Dogs",
+   "director": "Wes Anderson",
+   "genre": "Comedy/Animation",
+   "yearReleased": 2018,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0137",
+   "name": "It's What's Inside",
+   "director": "Greg Jardin",
+   "genre": "Science Fiction/Comedy",
+   "yearReleased": 2024,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0138",
+   "name": "Jennifer's Body",
+   "director": "Karyn Kusama",
+   "genre": "Horror/Comedy",
+   "yearReleased": 2009,
+   "yearWatched": null,
+   "rating": 4
+  },
+  {
+   "id": "f0139",
+   "name": "Jojo Rabbit",
+   "director": "Taika Waititi",
+   "genre": "War/Comedy",
+   "yearReleased": 2019,
+   "yearWatched": null,
+   "rating": 9
+  },
+  {
+   "id": "f0140",
+   "name": "Joker",
+   "director": "Todd Phillips",
+   "genre": "Drama/Thriller",
+   "yearReleased": 2019,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0141",
+   "name": "Juno",
+   "director": "Jason Reitman",
+   "genre": "Comedy/Romance",
+   "yearReleased": 2007,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0142",
+   "name": "Kick-Ass",
+   "director": "Matthew Vaughn",
+   "genre": "Crime/Action",
+   "yearReleased": 2010,
+   "yearWatched": null,
+   "rating": 7
+  },
+  {
+   "id": "f0143",
+   "name": "Kiki's Delivery Service",
+   "director": "Hayao Miyazaki",
+   "genre": "Fantasy/Animation",
+   "yearReleased": 1989,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0144",
+   "name": "Killers of the Flower Moon",
+   "director": "Martin Scorsese",
+   "genre": "Crime/History",
+   "yearReleased": 2023,
+   "yearWatched": null,
+   "rating": 5
+  },
+  {
+   "id": "f0145",
+   "name": "Kinds of Kindness",
+   "director": "Yorgos Lanthimos",
+   "genre": "Comedy/Horror",
+   "yearReleased": 2024,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0146",
+   "name": "Kingsman: The Secret Service",
+   "director": "Matthew Vaughn",
+   "genre": "Action/Comedy",
+   "yearReleased": 2014,
+   "yearWatched": null,
+   "rating": 7
+  },
+  {
+   "id": "f0147",
+   "name": "Knives Out",
+   "director": "Rian Johnson",
+   "genre": "Mystery/Comedy",
+   "yearReleased": 2019,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0148",
+   "name": "Kung Fu Panda 4",
+   "director": "Mike Mitchell",
+   "genre": "Adventure/Comedy",
+   "yearReleased": 2024,
+   "yearWatched": null,
+   "rating": 4
+  },
+  {
+   "id": "f0149",
+   "name": "La Chimera",
+   "director": "Alice Rohrwacher",
+   "genre": "Drama/Comedy",
+   "yearReleased": 2023,
+   "yearWatched": null,
+   "rating": 9
+  },
+  {
+   "id": "f0150",
+   "name": "La Haine",
+   "director": "Mathieu Kassovitz",
+   "genre": "Drama",
+   "yearReleased": 1995,
+   "yearWatched": null,
+   "rating": 10
+  },
+  {
+   "id": "f0151",
+   "name": "La Jetée",
+   "director": "Chris Marker",
+   "genre": "Romance/Science Fiction",
+   "yearReleased": 1962,
+   "yearWatched": null,
+   "rating": null
+  },
+  {
+   "id": "f0152",
+   "name": "La La Land",
+   "director": "Damien Chazelle",
+   "genre": "Drama/Comedy",
+   "yearReleased": 2016,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0153",
+   "name": "Lady Bird",
+   "director": "Greta Gerwig",
+   "genre": "Comedy/Drama",
+   "yearReleased": 2017,
+   "yearWatched": null,
+   "rating": 9
+  },
+  {
+   "id": "f0154",
+   "name": "Landscape in the Mist",
+   "director": "Theo Angelopoulos",
+   "genre": "Drama",
+   "yearReleased": 1988,
+   "yearWatched": 2026,
+   "rating": null
+  },
+  {
+   "id": "f0155",
+   "name": "Last Night in Soho",
+   "director": "Edgar Wright",
+   "genre": "Horror/Mystery",
+   "yearReleased": 2021,
+   "yearWatched": null,
+   "rating": 7
+  },
+  {
+   "id": "f0156",
+   "name": "Late Night with the Devil",
+   "director": "Cameron Cairnes & Colin Cairnes",
+   "genre": "Horror",
+   "yearReleased": 2023,
+   "yearWatched": null,
+   "rating": 7
+  },
+  {
+   "id": "f0157",
+   "name": "Lawrence of Arabia",
+   "director": "David Lean",
+   "genre": "Adventure/War",
+   "yearReleased": 1962,
+   "yearWatched": 2026,
+   "rating": 9
+  },
+  {
+   "id": "f0158",
+   "name": "Le Samouraï",
+   "director": "Jean-Pierre Melville",
+   "genre": "Drama/Thriller",
+   "yearReleased": 1967,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0159",
+   "name": "Little Women",
+   "director": "Greta Gerwig",
+   "genre": "Drama/Romance",
+   "yearReleased": 2019,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0160",
+   "name": "Logan",
+   "director": "James Mangold",
+   "genre": "Drama/Science Fiction",
+   "yearReleased": 2017,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0161",
+   "name": "Longlegs",
+   "director": "Osgood Perkins",
+   "genre": "Crime/Horror",
+   "yearReleased": 2024,
+   "yearWatched": null,
+   "rating": 4
+  },
+  {
+   "id": "f0162",
+   "name": "Lost in Translation",
+   "director": "Sofia Coppola",
+   "genre": "Comedy/Romance",
+   "yearReleased": 2003,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0163",
+   "name": "Loving Vincent",
+   "director": "Hugh Welchman & DK Welchman",
+   "genre": "Drama/Animation",
+   "yearReleased": 2017,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0164",
+   "name": "Lucy",
+   "director": "Luc Besson",
+   "genre": "Action/Science Fiction",
+   "yearReleased": 2014,
+   "yearWatched": null,
+   "rating": 4
+  },
+  {
+   "id": "f0165",
+   "name": "Léon: The Professional",
+   "director": "Luc Besson",
+   "genre": "Crime/Action",
+   "yearReleased": 1994,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0166",
+   "name": "Maggie Moore(s)",
+   "director": "John Slattery",
+   "genre": "Comedy/Mystery",
+   "yearReleased": 2023,
+   "yearWatched": null,
+   "rating": 4
+  },
+  {
+   "id": "f0167",
+   "name": "Magnolia",
+   "director": "Paul Thomas Anderson",
+   "genre": "Drama",
+   "yearReleased": 1999,
+   "yearWatched": null,
+   "rating": 7
+  },
+  {
+   "id": "f0168",
+   "name": "Mamma Mia!",
+   "director": "Phyllida Lloyd",
+   "genre": "Comedy/Romance",
+   "yearReleased": 2008,
+   "yearWatched": null,
+   "rating": 7
+  },
+  {
+   "id": "f0169",
+   "name": "Mamma Mia! Here We Go Again",
+   "director": "Ol Parker",
+   "genre": "Comedy/Romance",
+   "yearReleased": 2018,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0170",
+   "name": "Marcel the Shell with Shoes On",
+   "director": "Dean Fleischer Camp",
+   "genre": "Animation/Drama",
+   "yearReleased": 2021,
+   "yearWatched": null,
+   "rating": 9
+  },
+  {
+   "id": "f0171",
+   "name": "Marona's Fantastic Tale",
+   "director": "Anca Damian",
+   "genre": "Family/Drama",
+   "yearReleased": 2019,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0172",
+   "name": "Marriage Story",
+   "director": "Noah Baumbach",
+   "genre": "Drama",
+   "yearReleased": 2019,
+   "yearWatched": null,
+   "rating": 7
+  },
+  {
+   "id": "f0173",
+   "name": "Marty Supreme",
+   "director": "Josh Safdie",
+   "genre": "Thriller/Drama",
+   "yearReleased": 2025,
+   "yearWatched": 2026,
+   "rating": 9
+  },
+  {
+   "id": "f0174",
+   "name": "Meet Me in the Bathroom",
+   "director": "Will Lovelace & Dylan Southern",
+   "genre": "Music/Documentary",
+   "yearReleased": 2022,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0175",
+   "name": "Memento",
+   "director": "Christopher Nolan",
+   "genre": "Thriller/Mystery",
+   "yearReleased": 2000,
+   "yearWatched": null,
+   "rating": 9
+  },
+  {
+   "id": "f0176",
+   "name": "Midnight in Paris",
+   "director": "Woody Allen",
+   "genre": "Comedy/Fantasy",
+   "yearReleased": 2011,
+   "yearWatched": null,
+   "rating": 9
+  },
+  {
+   "id": "f0177",
+   "name": "Missing",
+   "director": "Nicholas D. Johnson & Will Merrick",
+   "genre": "Thriller/Mystery",
+   "yearReleased": 2023,
+   "yearWatched": null,
+   "rating": 7
+  },
+  {
+   "id": "f0178",
+   "name": "Monsters, Inc.",
+   "director": "Pete Docter",
+   "genre": "Comedy/Animation",
+   "yearReleased": 2001,
+   "yearWatched": null,
+   "rating": null
+  },
+  {
+   "id": "f0179",
+   "name": "Moon",
+   "director": "Duncan Jones",
+   "genre": "Science Fiction/Drama",
+   "yearReleased": 2009,
+   "yearWatched": null,
+   "rating": 7
+  },
+  {
+   "id": "f0180",
+   "name": "Moonlight",
+   "director": "Barry Jenkins",
+   "genre": "Drama",
+   "yearReleased": 2016,
+   "yearWatched": null,
+   "rating": 5
+  },
+  {
+   "id": "f0181",
+   "name": "Moonrise Kingdom",
+   "director": "Wes Anderson",
+   "genre": "Romance/Drama",
+   "yearReleased": 2012,
+   "yearWatched": null,
+   "rating": 9
+  },
+  {
+   "id": "f0182",
+   "name": "Moulin Rouge!",
+   "director": "Baz Luhrmann",
+   "genre": "Romance/Music",
+   "yearReleased": 2001,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0183",
+   "name": "Mulholland Drive",
+   "director": "David Lynch",
+   "genre": "Drama/Mystery",
+   "yearReleased": 2001,
+   "yearWatched": null,
+   "rating": 9
+  },
+  {
+   "id": "f0184",
+   "name": "My Neighbor Totoro",
+   "director": "Hayao Miyazaki",
+   "genre": "Fantasy/Animation",
+   "yearReleased": 1988,
+   "yearWatched": null,
+   "rating": 9
+  },
+  {
+   "id": "f0185",
+   "name": "Nightcrawler",
+   "director": "Dan Gilroy",
+   "genre": "Crime/Drama",
+   "yearReleased": 2014,
+   "yearWatched": null,
+   "rating": 7
+  },
+  {
+   "id": "f0186",
+   "name": "Nirvanna the Band the Show the Movie",
+   "director": "Matt Johnson",
+   "genre": "Music/Comedy",
+   "yearReleased": 2025,
+   "yearWatched": 2026,
+   "rating": 6
+  },
+  {
+   "id": "f0187",
+   "name": "No Country for Old Men",
+   "director": "Joel Coen & Ethan Coen",
+   "genre": "Crime/Thriller",
+   "yearReleased": 2007,
+   "yearWatched": 2026,
+   "rating": 9
+  },
+  {
+   "id": "f0188",
+   "name": "No Hard Feelings",
+   "director": "Gene Stupnitsky",
+   "genre": "Comedy/Romance",
+   "yearReleased": 2023,
+   "yearWatched": null,
+   "rating": 4
+  },
+  {
+   "id": "f0189",
+   "name": "No Time to Die",
+   "director": "Cary Joji Fukunaga",
+   "genre": "Action/Adventure",
+   "yearReleased": 2021,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0190",
+   "name": "Nope",
+   "director": "Jordan Peele",
+   "genre": "Science Fiction/Horror",
+   "yearReleased": 2022,
+   "yearWatched": null,
+   "rating": 5
+  },
+  {
+   "id": "f0191",
+   "name": "North by Northwest",
+   "director": "Alfred Hitchcock",
+   "genre": "Mystery/Adventure",
+   "yearReleased": 1959,
+   "yearWatched": 2026,
+   "rating": 8
+  },
+  {
+   "id": "f0192",
+   "name": "Now You See Me",
+   "director": "Louis Leterrier",
+   "genre": "Thriller/Crime",
+   "yearReleased": 2013,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0193",
+   "name": "Now You See Me 2",
+   "director": "Jon M. Chu",
+   "genre": "Thriller/Crime",
+   "yearReleased": 2016,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0194",
+   "name": "Okja",
+   "director": "Bong Joon Ho",
+   "genre": "Drama/Science Fiction",
+   "yearReleased": 2017,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0195",
+   "name": "Oldboy",
+   "director": "Park Chan-wook",
+   "genre": "Thriller/Mystery",
+   "yearReleased": 2003,
+   "yearWatched": 2026,
+   "rating": 7
+  },
+  {
+   "id": "f0196",
+   "name": "Once Upon a Time... in Hollywood",
+   "director": "Quentin Tarantino",
+   "genre": "Thriller/Drama",
+   "yearReleased": 2019,
+   "yearWatched": null,
+   "rating": 9
+  },
+  {
+   "id": "f0197",
+   "name": "One Battle After Another",
+   "director": "Paul Thomas Anderson",
+   "genre": "Thriller/Comedy",
+   "yearReleased": 2025,
+   "yearWatched": null,
+   "rating": 9
+  },
+  {
+   "id": "f0198",
+   "name": "Oppenheimer",
+   "director": "Christopher Nolan",
+   "genre": "Drama/History",
+   "yearReleased": 2023,
+   "yearWatched": null,
+   "rating": 9
+  },
+  {
+   "id": "f0199",
+   "name": "Paddington 2",
+   "director": "Paul King",
+   "genre": "Comedy/Family",
+   "yearReleased": 2017,
+   "yearWatched": null,
+   "rating": 9
+  },
+  {
+   "id": "f0200",
+   "name": "Paddington in Peru",
+   "director": "Dougal Wilson",
+   "genre": "Comedy/Family",
+   "yearReleased": 2024,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0201",
+   "name": "Paprika",
+   "director": "Satoshi Kon",
+   "genre": "Animation/Thriller",
+   "yearReleased": 2006,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0202",
+   "name": "Parasite",
+   "director": "Bong Joon Ho",
+   "genre": "Thriller/Comedy",
+   "yearReleased": 2019,
+   "yearWatched": null,
+   "rating": 9
+  },
+  {
+   "id": "f0203",
+   "name": "Paris, Texas",
+   "director": "Wim Wenders",
+   "genre": "Drama",
+   "yearReleased": 1984,
+   "yearWatched": null,
+   "rating": 10
+  },
+  {
+   "id": "f0204",
+   "name": "Past Lives",
+   "director": "Celine Song",
+   "genre": "Drama/Romance",
+   "yearReleased": 2023,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0205",
+   "name": "Perfect Blue",
+   "director": "Satoshi Kon",
+   "genre": "Thriller/Animation",
+   "yearReleased": 1997,
+   "yearWatched": 2026,
+   "rating": 9
+  },
+  {
+   "id": "f0206",
+   "name": "Perfect Days",
+   "director": "Wim Wenders",
+   "genre": "Drama",
+   "yearReleased": 2023,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0207",
+   "name": "Phantom Thread",
+   "director": "Paul Thomas Anderson",
+   "genre": "Drama/Romance",
+   "yearReleased": 2017,
+   "yearWatched": null,
+   "rating": 5
+  },
+  {
+   "id": "f0208",
+   "name": "Pirates of the Caribbean: The Curse of the Black Pearl",
+   "director": "Gore Verbinski",
+   "genre": "Fantasy/Adventure",
+   "yearReleased": 2003,
+   "yearWatched": null,
+   "rating": null
+  },
+  {
+   "id": "f0209",
+   "name": "Pitch Perfect",
+   "director": "Jason Moore",
+   "genre": "Music/Comedy",
+   "yearReleased": 2012,
+   "yearWatched": null,
+   "rating": 5
+  },
+  {
+   "id": "f0210",
+   "name": "Ponyo",
+   "director": "Hayao Miyazaki",
+   "genre": "Animation/Family",
+   "yearReleased": 2008,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0211",
+   "name": "Princess Mononoke",
+   "director": "Hayao Miyazaki",
+   "genre": "Fantasy/Adventure",
+   "yearReleased": 1997,
+   "yearWatched": null,
+   "rating": 9
+  },
+  {
+   "id": "f0212",
+   "name": "Prisoners",
+   "director": "Denis Villeneuve",
+   "genre": "Thriller/Crime",
+   "yearReleased": 2013,
+   "yearWatched": null,
+   "rating": 7
+  },
+  {
+   "id": "f0213",
+   "name": "Problemista",
+   "director": "Julio Torres",
+   "genre": "Comedy",
+   "yearReleased": 2023,
+   "yearWatched": 2026,
+   "rating": 7
+  },
+  {
+   "id": "f0214",
+   "name": "Project Hail Mary",
+   "director": "Phil Lord & Christopher Miller",
+   "genre": "Comedy/Science Fiction",
+   "yearReleased": 2026,
+   "yearWatched": 2026,
+   "rating": 8
+  },
+  {
+   "id": "f0215",
+   "name": "Pulp Fiction",
+   "director": "Quentin Tarantino",
+   "genre": "Comedy/Thriller",
+   "yearReleased": 1994,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0216",
+   "name": "Quiz Lady",
+   "director": "Jessica Yu",
+   "genre": "Comedy",
+   "yearReleased": 2023,
+   "yearWatched": null,
+   "rating": 7
+  },
+  {
+   "id": "f0217",
+   "name": "Ratatouille",
+   "director": "Brad Bird",
+   "genre": "Family/Fantasy",
+   "yearReleased": 2007,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0218",
+   "name": "Ready or Not",
+   "director": "Matt Bettinelli-Olpin & Tyler Gillett",
+   "genre": "Horror/Comedy",
+   "yearReleased": 2019,
+   "yearWatched": null,
+   "rating": 4
+  },
+  {
+   "id": "f0219",
+   "name": "Ready Player One",
+   "director": "Steven Spielberg",
+   "genre": "Science Fiction/Adventure",
+   "yearReleased": 2018,
+   "yearWatched": null,
+   "rating": 7
+  },
+  {
+   "id": "f0220",
+   "name": "Real Steel",
+   "director": "Shawn Levy",
+   "genre": "Drama/Action",
+   "yearReleased": 2011,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0221",
+   "name": "Requiem for a Dream",
+   "director": "Darren Aronofsky",
+   "genre": "Drama/Crime",
+   "yearReleased": 2000,
+   "yearWatched": null,
+   "rating": 7
+  },
+  {
+   "id": "f0222",
+   "name": "Scott Pilgrim vs. the World",
+   "director": "Edgar Wright",
+   "genre": "Romance/Action",
+   "yearReleased": 2010,
+   "yearWatched": null,
+   "rating": 10
+  },
+  {
+   "id": "f0223",
+   "name": "Secret",
+   "director": "Jay Chou",
+   "genre": "Thriller/Drama",
+   "yearReleased": 2007,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0224",
+   "name": "See How They Run",
+   "director": "Tom George",
+   "genre": "Comedy/Crime",
+   "yearReleased": 2022,
+   "yearWatched": null,
+   "rating": 4
+  },
+  {
+   "id": "f0225",
+   "name": "Sentimental Value",
+   "director": "Joachim Trier",
+   "genre": "Drama",
+   "yearReleased": 2025,
+   "yearWatched": 2026,
+   "rating": 8
+  },
+  {
+   "id": "f0226",
+   "name": "Seven Samurai",
+   "director": "Akira Kurosawa",
+   "genre": "Action/Drama",
+   "yearReleased": 1954,
+   "yearWatched": null,
+   "rating": 7
+  },
+  {
+   "id": "f0227",
+   "name": "Shang-Chi and the Legend of the Ten Rings",
+   "director": "Destin Daniel Cretton",
+   "genre": "Adventure/Fantasy",
+   "yearReleased": 2021,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0228",
+   "name": "Shaun of the Dead",
+   "director": "Edgar Wright",
+   "genre": "Horror/Comedy",
+   "yearReleased": 2004,
+   "yearWatched": null,
+   "rating": 7
+  },
+  {
+   "id": "f0229",
+   "name": "Shazam!",
+   "director": "David F. Sandberg",
+   "genre": "Action/Comedy",
+   "yearReleased": 2019,
+   "yearWatched": null,
+   "rating": 4
+  },
+  {
+   "id": "f0230",
+   "name": "Shutter Island",
+   "director": "Martin Scorsese",
+   "genre": "Mystery/Drama",
+   "yearReleased": 2010,
+   "yearWatched": null,
+   "rating": 7
+  },
+  {
+   "id": "f0231",
+   "name": "Silver Linings Playbook",
+   "director": "David O. Russell",
+   "genre": "Romance/Drama",
+   "yearReleased": 2012,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0232",
+   "name": "Sinners",
+   "director": "Ryan Coogler",
+   "genre": "Thriller/Action",
+   "yearReleased": 2025,
+   "yearWatched": 2026,
+   "rating": 6
+  },
+  {
+   "id": "f0233",
+   "name": "Smile",
+   "director": "Parker Finn",
+   "genre": "Horror/Mystery",
+   "yearReleased": 2022,
+   "yearWatched": null,
+   "rating": 5
+  },
+  {
+   "id": "f0234",
+   "name": "Smile 2",
+   "director": "Parker Finn",
+   "genre": "Mystery/Horror",
+   "yearReleased": 2024,
+   "yearWatched": null,
+   "rating": 5
+  },
+  {
+   "id": "f0235",
+   "name": "Society of the Snow",
+   "director": "J. A. Bayona",
+   "genre": "History/Drama",
+   "yearReleased": 2023,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0236",
+   "name": "Solaris",
+   "director": "Andrei Tarkovsky",
+   "genre": "Mystery/Science Fiction",
+   "yearReleased": 1972,
+   "yearWatched": 2026,
+   "rating": 9
+  },
+  {
+   "id": "f0237",
+   "name": "Sorry to Bother You",
+   "director": "Boots Riley",
+   "genre": "Fantasy/Science Fiction",
+   "yearReleased": 2018,
+   "yearWatched": null,
+   "rating": 5
+  },
+  {
+   "id": "f0238",
+   "name": "Spider-Man: Across the Spider-Verse",
+   "director": "Justin K. Thompson & Kemp Powers & Joaquim Dos Santos",
+   "genre": "Animation/Science Fiction",
+   "yearReleased": 2023,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0239",
+   "name": "Spider-Man: Far From Home",
+   "director": "Jon Watts",
+   "genre": "Science Fiction/Adventure",
+   "yearReleased": 2019,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0240",
+   "name": "Spider-Man: Homecoming",
+   "director": "Jon Watts",
+   "genre": "Action/Adventure",
+   "yearReleased": 2017,
+   "yearWatched": null,
+   "rating": 7
+  },
+  {
+   "id": "f0241",
+   "name": "Spider-Man: Into the Spider-Verse",
+   "director": "Bob Persichetti & Peter Ramsey & Rodney Rothman",
+   "genre": "Adventure/Animation",
+   "yearReleased": 2018,
+   "yearWatched": null,
+   "rating": 9
+  },
+  {
+   "id": "f0242",
+   "name": "Spider-Man: No Way Home",
+   "director": "Jon Watts",
+   "genre": "Adventure/Action",
+   "yearReleased": 2021,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0243",
+   "name": "Spirited Away",
+   "director": "Hayao Miyazaki",
+   "genre": "Family/Fantasy",
+   "yearReleased": 2001,
+   "yearWatched": null,
+   "rating": 10
+  },
+  {
+   "id": "f0244",
+   "name": "Split",
+   "director": "M. Night Shyamalan",
+   "genre": "Horror/Thriller",
+   "yearReleased": 2016,
+   "yearWatched": null,
+   "rating": 4
+  },
+  {
+   "id": "f0245",
+   "name": "Spotlight",
+   "director": "Tom McCarthy",
+   "genre": "History/Drama",
+   "yearReleased": 2015,
+   "yearWatched": null,
+   "rating": null
+  },
+  {
+   "id": "f0246",
+   "name": "Superbad",
+   "director": "Greg Mottola",
+   "genre": "Comedy",
+   "yearReleased": 2007,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0247",
+   "name": "Superman",
+   "director": "James Gunn",
+   "genre": "Science Fiction/Adventure",
+   "yearReleased": 2025,
+   "yearWatched": null,
+   "rating": 4
+  },
+  {
+   "id": "f0248",
+   "name": "Suzume",
+   "director": "Makoto Shinkai",
+   "genre": "Fantasy/Animation",
+   "yearReleased": 2022,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0249",
+   "name": "Talk to Me",
+   "director": "Michael Philippou & Danny Philippou",
+   "genre": "Horror",
+   "yearReleased": 2022,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0250",
+   "name": "Ted",
+   "director": "Seth MacFarlane",
+   "genre": "Comedy/Fantasy",
+   "yearReleased": 2012,
+   "yearWatched": null,
+   "rating": 4
+  },
+  {
+   "id": "f0251",
+   "name": "Tenet",
+   "director": "Christopher Nolan",
+   "genre": "Science Fiction/Action",
+   "yearReleased": 2020,
+   "yearWatched": null,
+   "rating": 7
+  },
+  {
+   "id": "f0252",
+   "name": "The Avengers",
+   "director": "Joss Whedon",
+   "genre": "Science Fiction/Adventure",
+   "yearReleased": 2012,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0253",
+   "name": "The Banshees of Inisherin",
+   "director": "Martin McDonagh",
+   "genre": "Comedy/Drama",
+   "yearReleased": 2022,
+   "yearWatched": null,
+   "rating": 9
+  },
+  {
+   "id": "f0254",
+   "name": "The Batman",
+   "director": "Matt Reeves",
+   "genre": "Crime/Mystery",
+   "yearReleased": 2022,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0255",
+   "name": "The Battle of Algiers",
+   "director": "Gillo Pontecorvo",
+   "genre": "History/Drama",
+   "yearReleased": 1966,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0256",
+   "name": "The Big Lebowski",
+   "director": "Joel Coen",
+   "genre": "Comedy/Crime",
+   "yearReleased": 1998,
+   "yearWatched": null,
+   "rating": 9
+  },
+  {
+   "id": "f0257",
+   "name": "The Big Short",
+   "director": "Adam McKay",
+   "genre": "Drama/Comedy",
+   "yearReleased": 2015,
+   "yearWatched": null,
+   "rating": 7
+  },
+  {
+   "id": "f0258",
+   "name": "The Blair Witch Project",
+   "director": "Daniel Myrick & Eduardo Sánchez",
+   "genre": "Mystery/Horror",
+   "yearReleased": 1999,
+   "yearWatched": null,
+   "rating": 7
+  },
+  {
+   "id": "f0259",
+   "name": "The Boogeyman",
+   "director": "Rob Savage",
+   "genre": "Horror",
+   "yearReleased": 2023,
+   "yearWatched": null,
+   "rating": 4
+  },
+  {
+   "id": "f0260",
+   "name": "The Boy and the Heron",
+   "director": "Hayao Miyazaki",
+   "genre": "Animation/Fantasy",
+   "yearReleased": 2023,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0261",
+   "name": "The Breakfast Club",
+   "director": "John Hughes",
+   "genre": "Drama/Comedy",
+   "yearReleased": 1985,
+   "yearWatched": null,
+   "rating": 7
+  },
+  {
+   "id": "f0262",
+   "name": "The Count of Monte Cristo",
+   "director": "Alexandre de La Patellière & Matthieu Delaporte",
+   "genre": "Drama/Action",
+   "yearReleased": 2024,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0263",
+   "name": "The Dark Knight",
+   "director": "Christopher Nolan",
+   "genre": "Thriller/Action",
+   "yearReleased": 2008,
+   "yearWatched": null,
+   "rating": 9
+  },
+  {
+   "id": "f0264",
+   "name": "The Dark Knight Rises",
+   "director": "Christopher Nolan",
+   "genre": "Thriller/Crime",
+   "yearReleased": 2012,
+   "yearWatched": null,
+   "rating": 4
+  },
+  {
+   "id": "f0265",
+   "name": "The Departed",
+   "director": "Martin Scorsese",
+   "genre": "Thriller/Crime",
+   "yearReleased": 2006,
+   "yearWatched": null,
+   "rating": 10
+  },
+  {
+   "id": "f0266",
+   "name": "The Devil Wears Prada",
+   "director": "David Frankel",
+   "genre": "Comedy/Drama",
+   "yearReleased": 2006,
+   "yearWatched": null,
+   "rating": 7
+  },
+  {
+   "id": "f0267",
+   "name": "The Devil Wears Prada 2",
+   "director": "David Frankel",
+   "genre": "Comedy/Drama",
+   "yearReleased": 2026,
+   "yearWatched": 2026,
+   "rating": 6
+  },
+  {
+   "id": "f0268",
+   "name": "The Disaster Artist",
+   "director": "James Franco",
+   "genre": "Drama/Comedy",
+   "yearReleased": 2017,
+   "yearWatched": null,
+   "rating": 7
+  },
+  {
+   "id": "f0269",
+   "name": "The Drama",
+   "director": "Kristoffer Borgli",
+   "genre": "Romance/Drama",
+   "yearReleased": 2026,
+   "yearWatched": 2026,
+   "rating": 7
+  },
+  {
+   "id": "f0270",
+   "name": "The Fall Guy",
+   "director": "David Leitch",
+   "genre": "Action/Romance",
+   "yearReleased": 2024,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0271",
+   "name": "The Fantastic 4: First Steps",
+   "director": "Matt Shakman",
+   "genre": "Action/Science Fiction",
+   "yearReleased": 2025,
+   "yearWatched": null,
+   "rating": 7
+  },
+  {
+   "id": "f0272",
+   "name": "The Favourite",
+   "director": "Yorgos Lanthimos",
+   "genre": "Drama/Comedy",
+   "yearReleased": 2018,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0273",
+   "name": "The French Dispatch of the Liberty, Kansas Evening Sun",
+   "director": "Wes Anderson",
+   "genre": "Drama/Comedy",
+   "yearReleased": 2021,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0274",
+   "name": "The Godfather",
+   "director": "Francis Ford Coppola",
+   "genre": "Crime/Drama",
+   "yearReleased": 1972,
+   "yearWatched": null,
+   "rating": 4
+  },
+  {
+   "id": "f0275",
+   "name": "The Godfather Part II",
+   "director": "Francis Ford Coppola",
+   "genre": "Drama/Crime",
+   "yearReleased": 1974,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0276",
+   "name": "The Grand Budapest Hotel",
+   "director": "Wes Anderson",
+   "genre": "Comedy/Drama",
+   "yearReleased": 2014,
+   "yearWatched": null,
+   "rating": 9
+  },
+  {
+   "id": "f0277",
+   "name": "The Hangover",
+   "director": "Todd Phillips",
+   "genre": "Comedy",
+   "yearReleased": 2009,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0278",
+   "name": "The Holdovers",
+   "director": "Alexander Payne",
+   "genre": "Drama/Comedy",
+   "yearReleased": 2023,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0279",
+   "name": "The Incredibles",
+   "director": "Brad Bird",
+   "genre": "Animation/Family",
+   "yearReleased": 2004,
+   "yearWatched": null,
+   "rating": null
+  },
+  {
+   "id": "f0280",
+   "name": "The Invite",
+   "director": "Olivia Wilde",
+   "genre": "Drama/Comedy",
+   "yearReleased": 2026,
+   "yearWatched": 2026,
+   "rating": 9
+  },
+  {
+   "id": "f0281",
+   "name": "The Lego Movie",
+   "director": "Phil Lord & Christopher Miller",
+   "genre": "Family/Fantasy",
+   "yearReleased": 2014,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0282",
+   "name": "The Lobster",
+   "director": "Yorgos Lanthimos",
+   "genre": "Romance/Drama",
+   "yearReleased": 2015,
+   "yearWatched": null,
+   "rating": 7
+  },
+  {
+   "id": "f0283",
+   "name": "The Martian",
+   "director": "Ridley Scott",
+   "genre": "Drama/Science Fiction",
+   "yearReleased": 2015,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0284",
+   "name": "The Maze Runner",
+   "director": "Wes Ball",
+   "genre": "Science Fiction/Thriller",
+   "yearReleased": 2014,
+   "yearWatched": null,
+   "rating": 4
+  },
+  {
+   "id": "f0285",
+   "name": "The Menu",
+   "director": "Mark Mylod",
+   "genre": "Comedy/Horror",
+   "yearReleased": 2022,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0286",
+   "name": "The Odyssey",
+   "director": "Christopher Nolan",
+   "genre": "Adventure/Action",
+   "yearReleased": 2026,
+   "yearWatched": 2026,
+   "rating": 8
+  },
+  {
+   "id": "f0287",
+   "name": "The Perks of Being a Wallflower",
+   "director": "Stephen Chbosky",
+   "genre": "Drama",
+   "yearReleased": 2012,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0288",
+   "name": "The Phoenician Scheme",
+   "director": "Wes Anderson",
+   "genre": "Adventure/Comedy",
+   "yearReleased": 2025,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0289",
+   "name": "The Prestige",
+   "director": "Christopher Nolan",
+   "genre": "Science Fiction/Drama",
+   "yearReleased": 2006,
+   "yearWatched": null,
+   "rating": 10
+  },
+  {
+   "id": "f0290",
+   "name": "The Room",
+   "director": "Tommy Wiseau",
+   "genre": "Drama/Romance",
+   "yearReleased": 2003,
+   "yearWatched": null,
+   "rating": 2
+  },
+  {
+   "id": "f0291",
+   "name": "The Room Next Door",
+   "director": "Pedro Almodóvar",
+   "genre": "Drama/Comedy",
+   "yearReleased": 2024,
+   "yearWatched": null,
+   "rating": 5
+  },
+  {
+   "id": "f0292",
+   "name": "The Royal Tenenbaums",
+   "director": "Wes Anderson",
+   "genre": "Drama/Comedy",
+   "yearReleased": 2001,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0293",
+   "name": "The Science of Sleep",
+   "director": "Michel Gondry",
+   "genre": "Comedy/Fantasy",
+   "yearReleased": 2006,
+   "yearWatched": null,
+   "rating": 5
+  },
+  {
+   "id": "f0294",
+   "name": "The Secret Life of Walter Mitty",
+   "director": "Ben Stiller",
+   "genre": "Comedy/Fantasy",
+   "yearReleased": 2013,
+   "yearWatched": null,
+   "rating": 9
+  },
+  {
+   "id": "f0295",
+   "name": "The Shape of Water",
+   "director": "Guillermo del Toro",
+   "genre": "Fantasy/Drama",
+   "yearReleased": 2017,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0296",
+   "name": "The Shawshank Redemption",
+   "director": "Frank Darabont",
+   "genre": "Crime/Drama",
+   "yearReleased": 1994,
+   "yearWatched": null,
+   "rating": null
+  },
+  {
+   "id": "f0297",
+   "name": "The Sheep Detectives",
+   "director": "Kyle Balda",
+   "genre": "Mystery/Family",
+   "yearReleased": 2026,
+   "yearWatched": 2026,
+   "rating": 8
+  },
+  {
+   "id": "f0298",
+   "name": "The Shining",
+   "director": "Stanley Kubrick",
+   "genre": "Horror/Thriller",
+   "yearReleased": 1980,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0299",
+   "name": "The Sixth Sense",
+   "director": "M. Night Shyamalan",
+   "genre": "Thriller/Mystery",
+   "yearReleased": 1999,
+   "yearWatched": null,
+   "rating": 7
+  },
+  {
+   "id": "f0300",
+   "name": "The Social Network",
+   "director": "David Fincher",
+   "genre": "Drama",
+   "yearReleased": 2010,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0301",
+   "name": "The Substance",
+   "director": "Coralie Fargeat",
+   "genre": "Horror/Thriller",
+   "yearReleased": 2024,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0302",
+   "name": "The Suicide Squad",
+   "director": "James Gunn",
+   "genre": "Action/Comedy",
+   "yearReleased": 2021,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0303",
+   "name": "The Super Mario Bros. Movie",
+   "director": "Aaron Horvath & Michael Jelenic",
+   "genre": "Adventure/Animation",
+   "yearReleased": 2023,
+   "yearWatched": null,
+   "rating": 7
+  },
+  {
+   "id": "f0304",
+   "name": "The Thing",
+   "director": "John Carpenter",
+   "genre": "Mystery/Science Fiction",
+   "yearReleased": 1982,
+   "yearWatched": 2026,
+   "rating": 8
+  },
+  {
+   "id": "f0305",
+   "name": "The Truman Show",
+   "director": "Peter Weir",
+   "genre": "Comedy/Drama",
+   "yearReleased": 1998,
+   "yearWatched": null,
+   "rating": 9
+  },
+  {
+   "id": "f0306",
+   "name": "The Unbearable Weight of Massive Talent",
+   "director": "Tom Gormican",
+   "genre": "Crime/Action",
+   "yearReleased": 2022,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0307",
+   "name": "The Usual Suspects",
+   "director": "Bryan Singer",
+   "genre": "Thriller/Drama",
+   "yearReleased": 1995,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0308",
+   "name": "The Wild Robot",
+   "director": "Chris Sanders",
+   "genre": "Adventure/Animation",
+   "yearReleased": 2024,
+   "yearWatched": null,
+   "rating": 7
+  },
+  {
+   "id": "f0309",
+   "name": "The Worst Person in the World",
+   "director": "Joachim Trier",
+   "genre": "Drama/Romance",
+   "yearReleased": 2021,
+   "yearWatched": null,
+   "rating": 9
+  },
+  {
+   "id": "f0310",
+   "name": "The Zone of Interest",
+   "director": "Jonathan Glazer",
+   "genre": "Drama/War",
+   "yearReleased": 2023,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0311",
+   "name": "Thor: Love and Thunder",
+   "director": "Taika Waititi",
+   "genre": "Action/Fantasy",
+   "yearReleased": 2022,
+   "yearWatched": null,
+   "rating": 3
+  },
+  {
+   "id": "f0312",
+   "name": "Thor: Ragnarok",
+   "director": "Taika Waititi",
+   "genre": "Comedy/Science Fiction",
+   "yearReleased": 2017,
+   "yearWatched": null,
+   "rating": 9
+  },
+  {
+   "id": "f0313",
+   "name": "Three Billboards Outside Ebbing, Missouri",
+   "director": "Martin McDonagh",
+   "genre": "Crime/Drama",
+   "yearReleased": 2017,
+   "yearWatched": null,
+   "rating": 10
+  },
+  {
+   "id": "f0314",
+   "name": "Thunderbolts*",
+   "director": "Jake Schreier",
+   "genre": "Science Fiction/Adventure",
+   "yearReleased": 2025,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0315",
+   "name": "tick, tick... BOOM!",
+   "director": "Lin-Manuel Miranda",
+   "genre": "Drama/Music",
+   "yearReleased": 2021,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0316",
+   "name": "Toy Story",
+   "director": "John Lasseter",
+   "genre": "Adventure/Comedy",
+   "yearReleased": 1995,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0317",
+   "name": "Toy Story 4",
+   "director": "Josh Cooley",
+   "genre": "Adventure/Animation",
+   "yearReleased": 2019,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0318",
+   "name": "Transformers",
+   "director": "Michael Bay",
+   "genre": "Action/Science Fiction",
+   "yearReleased": 2007,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0319",
+   "name": "Tropic Thunder",
+   "director": "Ben Stiller",
+   "genre": "War/Comedy",
+   "yearReleased": 2008,
+   "yearWatched": null,
+   "rating": 9
+  },
+  {
+   "id": "f0320",
+   "name": "Uncut Gems",
+   "director": "Josh Safdie & Benny Safdie",
+   "genre": "Crime/Thriller",
+   "yearReleased": 2019,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0321",
+   "name": "Us",
+   "director": "Jordan Peele",
+   "genre": "Horror/Mystery",
+   "yearReleased": 2019,
+   "yearWatched": null,
+   "rating": 7
+  },
+  {
+   "id": "f0322",
+   "name": "Vengeance",
+   "director": "B.J. Novak",
+   "genre": "Mystery/Comedy",
+   "yearReleased": 2022,
+   "yearWatched": null,
+   "rating": 6
+  },
+  {
+   "id": "f0323",
+   "name": "Vertigo",
+   "director": "Alfred Hitchcock",
+   "genre": "Thriller/Romance",
+   "yearReleased": 1958,
+   "yearWatched": null,
+   "rating": 8
+  },
+  {
+   "id": "f0324",
+   "name": "Wake Up Dead Man",
+   "director": "Rian Johnson",
+   "genre": "Comedy/Thriller",
+   "yearReleased": 2025,
+   "yearWatched": null,
+   "rating": 7
+  },
+  {
+   "id": "f0325",
+   "name": "Watcher",
+   "director": "Chloe Okuno",
+   "genre": "Thriller/Mystery",
+   "yearReleased": 2022,
+   "yearWatched": null,
+   "rating": 3
+  },
+  {
+   "id": "f0326",
+   "name": "Weapons",
+   "director": "Zach Cregger",
+   "genre": "Horror/Mystery",
+   "yearReleased": 2025,
+   "yearWatched": 2026,
+   "rating": 4
+  },
+  {
+   "id": "f0327",
+   "name": "Whiplash",
+   "director": "Damien Chazelle",
+   "genre": "Drama/Music",
+   "yearReleased": 2014,
+   "yearWatched": null,
+   "rating": 9
+  },
+  {
+   "id": "f0328",
+   "name": "World War Z",
+   "director": "Marc Forster",
+   "genre": "Action/Science Fiction",
+   "yearReleased": 2013,
+   "yearWatched": null,
+   "rating": 4
+  },
+  {
+   "id": "f0329",
+   "name": "Yi Yi",
+   "director": "Edward Yang",
+   "genre": "Drama",
+   "yearReleased": 2000,
+   "yearWatched": 2026,
+   "rating": 10
+  },
+  {
+   "id": "f0330",
+   "name": "Your Name.",
+   "director": "Makoto Shinkai",
+   "genre": "Romance/Animation",
+   "yearReleased": 2016,
+   "yearWatched": null,
+   "rating": 10
+  },
+  {
+   "id": "f0331",
+   "name": "Zombieland",
+   "director": "Ruben Fleischer",
+   "genre": "Comedy/Horror",
+   "yearReleased": 2009,
+   "yearWatched": null,
+   "rating": 5
+  }
+ ]
 }
