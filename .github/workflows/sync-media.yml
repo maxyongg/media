@@ -1,0 +1,46 @@
+name: Sync media from Letterboxd & Goodreads
+
+on:
+  schedule:
+    # Daily at 13:00 UTC. Edit this to change frequency.
+    - cron: '0 13 * * *'
+  workflow_dispatch: {}   # lets you trigger it manually — from GitHub's
+                          # Actions tab, or from the "Fetch now" button in
+                          # the app itself (see index.html changes)
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          pip install requests beautifulsoup4 playwright
+          # only Goodreads book pages need a real browser (they're
+          # client-rendered); Letterboxd is plain HTML and doesn't need this
+          playwright install --with-deps chromium
+
+      - name: Run sync
+        id: sync
+        env:
+          LETTERBOXD_USERNAME: ${{ vars.LETTERBOXD_USERNAME }}
+          GOODREADS_USER_ID: ${{ vars.GOODREADS_USER_ID }}
+          GOODREADS_RSS_KEY: ${{ secrets.GOODREADS_RSS_KEY }}
+        run: python scripts/sync_media.py
+
+      - name: Commit changes
+        if: steps.sync.outputs.changed == 'true'
+        run: |
+          git config user.name "ledger-sync[bot]"
+          git config user.email "actions@users.noreply.github.com"
+          git add films.json books.json
+          git commit -m "ledger: sync new entries from Letterboxd/Goodreads"
+          git push
