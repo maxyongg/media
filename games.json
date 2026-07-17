@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "ratingScale": 10,
- "updatedAt": "2026-07-17T17:44:01.684Z",
+ "updatedAt": "2026-07-17T17:44:09.813Z",
  "items": [
   {
    "id": "g0001",
@@ -604,7 +604,7 @@
   {
    "id": "g0047",
    "name": "God of War",
-   "developer": "Playstation Studios",
+   "developer": "Sony Interactive",
    "studioStatus": "AAA",
    "genre": "Action Adventure",
    "console": "PS5",
