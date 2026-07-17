@@ -115,6 +115,10 @@ li.row{
   flex:0 0 auto;height:40px;
   display:flex;align-items:center;justify-content:center;
 }
+.cover{
+  flex:0 0 auto;width:38px;height:54px;border-radius:6px;
+  object-fit:cover;background:var(--ink-3);
+}
 .stars{position:relative;display:inline-block;width:76px;height:15px}
 .stars-row{position:absolute;top:0;left:0;width:76px;font-size:15px;line-height:15px;
   letter-spacing:3px;white-space:nowrap}
@@ -284,6 +288,10 @@ label.f>span{font-family:'Inter';font-size:10px;color:var(--mute);
 <div class="sheet" id="editSheet" role="dialog" aria-modal="true">
   <div class="grab"></div>
   <h2 id="editTitle">Add item</h2>
+  <div style="display:flex;align-items:center;gap:10px;margin:0 0 12px">
+    <img id="coverPreview" style="width:38px;height:54px;border-radius:6px;object-fit:cover;background:var(--ink-3);display:none">
+    <button class="btn ghost" type="button" id="fetchCoverBtn" style="flex:0 0 auto;padding:10px 14px">Fetch cover</button>
+  </div>
   <div id="fields"></div>
   <label class="f"><span id="rlabel">Rating</span><div class="ratepick" id="ratepick"></div></label>
   <div class="acts">
@@ -306,6 +314,12 @@ label.f>span{font-family:'Inter';font-size:10px;color:var(--mute);
     <button class="btn ghost" id="testConnBtn">Test connection</button>
   </div>
   <p class="note" id="connHint" style="display:none"></p>
+  <p class="note">Cover images pull from TMDB (films/TV) and RAWG (games) — both free, keys stay in this browser and are sent only to their own APIs. Books use Open Library, which needs no key.</p>
+  <label class="f"><span>TMDB API key — optional, for film/TV covers</span><input class="in" id="tmdbIn" placeholder="optional" autocomplete="off"></label>
+  <label class="f"><span>RAWG API key — optional, for game covers</span><input class="in" id="rawgIn" placeholder="optional" autocomplete="off"></label>
+  <div class="acts" style="margin-top:2px">
+    <button class="btn ghost" id="fetchCoversBtn">Fetch missing covers</button>
+  </div>
   <div class="acts">
     <button class="btn ghost" id="closeSet">Close</button>
     <button class="btn primary" id="saveSet">Save settings</button>
@@ -317,7 +331,7 @@ label.f>span{font-family:'Inter';font-size:10px;color:var(--mute);
 </div>
 
 <div class="toast" id="toast"></div>
-<div class="version">v2026.07.17c</div>
+<div class="version">v2026.07.17d</div>
 
 <script>
 /* ================= config ================= */
@@ -326,6 +340,7 @@ const COLLECTIONS = {
     label:'Games', file:'games.json', scale:10, idp:'g', recentFields:['datePlayed'],
     fields:[
       {k:'name',        l:'Title',        t:'text'},
+      {k:'coverUrl',    l:'Cover image URL', t:'text'},
       {k:'developer',   l:'Publisher / dev', t:'text'},
       {k:'studioStatus',l:'Studio',       t:'select', opts:['AAA','AA','Indie']},
       {k:'genre',       l:'Genre',        t:'text', list:true},
@@ -341,6 +356,7 @@ const COLLECTIONS = {
     label:'TV', file:'tv.json', scale:5, idp:'t', recentFields:['dateWatched','lastSeasonYear','firstSeasonYear'],
     fields:[
       {k:'name',           l:'Title',    t:'text'},
+      {k:'coverUrl',       l:'Cover image URL', t:'text'},
       {k:'genre',          l:'Genre',    t:'text', list:true},
       {k:'network',        l:'Network',  t:'text', list:true},
       {k:'seasons',        l:'Seasons',  t:'text', half:true},
@@ -356,6 +372,7 @@ const COLLECTIONS = {
     label:'Films', file:'films.json', scale:10, idp:'f', recentFields:['dateWatched'],
     fields:[
       {k:'name',        l:'Title',    t:'text'},
+      {k:'coverUrl',    l:'Cover image URL', t:'text'},
       {k:'director',    l:'Director', t:'text', list:true},
       {k:'yearReleased',l:'Year',     t:'number', half:true},
       {k:'dateWatched', l:'Watched',  t:'date',   half:true},
@@ -367,6 +384,7 @@ const COLLECTIONS = {
     label:'Books', file:'books.json', scale:5, idp:'b', recentFields:['dateRead'],
     fields:[
       {k:'name',         l:'Title',  t:'text'},
+      {k:'coverUrl',     l:'Cover image URL', t:'text'},
       {k:'author',       l:'Author', t:'text', list:true},
       {k:'yearPublished',l:'Year',   t:'number', half:true},
       {k:'dateRead',     l:'Read',   t:'date',   half:true},
@@ -386,7 +404,7 @@ const SORTS = [
 const S = {
   tab:'home', q:'', sort:0, ratingFilter:new Set(),
   data:{}, shas:{}, dirty:new Set(), authError:null,
-  cfg:{repo:'', branch:'main', token:'', expires:''},
+  cfg:{repo:'', branch:'main', token:'', expires:'', tmdbKey:'', rawgKey:''},
   editing:null, statsCat:'overview', statsFilter:null
 };
 const $ = s => document.querySelector(s);
@@ -472,6 +490,92 @@ async function syncOnLoad(){
   } else {
     setStatus(S.dirty.size?'dirty':'ok', S.dirty.size ? S.dirty.size+' unsaved' : 'synced');
   }
+}
+
+/* ================= cover images ================= */
+/* All lookups run in this browser, straight to each source's own API —
+   TMDB key and RAWG key never touch me, same as the GitHub token.
+   We only ever store a URL, never download/embed the image itself. */
+function cleanSearchTitle(name){
+  return String(name||'').replace(/\s*\([^)]*\)\s*$/,'').replace(/:.*/,'').trim();
+}
+async function fetchCoverFor(k, item){
+  const title = cleanSearchTitle(item.name);
+  if(!title) return null;
+  try{
+    if(k==='films'){
+      if(!S.cfg.tmdbKey) return null;
+      const yr = item.yearReleased ? `&year=${item.yearReleased}` : '';
+      const r = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${encodeURIComponent(S.cfg.tmdbKey)}&query=${encodeURIComponent(title)}${yr}`);
+      if(!r.ok) return null;
+      const j = await r.json();
+      const hit = j.results && j.results[0];
+      return (hit && hit.poster_path) ? `https://image.tmdb.org/t/p/w342${hit.poster_path}` : null;
+    }
+    if(k==='tv'){
+      if(!S.cfg.tmdbKey) return null;
+      const yr = item.firstSeasonYear ? `&first_air_date_year=${item.firstSeasonYear}` : '';
+      const r = await fetch(`https://api.themoviedb.org/3/search/tv?api_key=${encodeURIComponent(S.cfg.tmdbKey)}&query=${encodeURIComponent(title)}${yr}`);
+      if(!r.ok) return null;
+      const j = await r.json();
+      const hit = j.results && j.results[0];
+      return (hit && hit.poster_path) ? `https://image.tmdb.org/t/p/w342${hit.poster_path}` : null;
+    }
+    if(k==='games'){
+      if(!S.cfg.rawgKey) return null;
+      const r = await fetch(`https://api.rawg.io/api/games?key=${encodeURIComponent(S.cfg.rawgKey)}&search=${encodeURIComponent(title)}&page_size=1`);
+      if(!r.ok) return null;
+      const j = await r.json();
+      const hit = j.results && j.results[0];
+      return (hit && hit.background_image) ? hit.background_image : null;
+    }
+    if(k==='books'){
+      const authorQ = item.author ? `&author=${encodeURIComponent(String(item.author).split(/[,&]/)[0].trim())}` : '';
+      const r = await fetch(`https://openlibrary.org/search.json?title=${encodeURIComponent(title)}${authorQ}&limit=1&fields=cover_i`);
+      if(!r.ok) return null;
+      const j = await r.json();
+      const hit = j.docs && j.docs[0];
+      return (hit && hit.cover_i) ? `https://covers.openlibrary.org/b/id/${hit.cover_i}-M.jpg` : null;
+    }
+  }catch(e){ return null; }
+  return null;
+}
+function coverImgHTML(i){
+  return i.coverUrl
+    ? `<img class="cover" src="${esc(i.coverUrl)}" alt="" loading="lazy">`
+    : `<div class="cover"></div>`;
+}
+async function fetchMissingCovers(){
+  const missingKeys = [];
+  if(!S.cfg.tmdbKey) missingKeys.push('TMDB (films/TV)');
+  if(!S.cfg.rawgKey) missingKeys.push('RAWG (games)');
+  const log = $('#pushlog'); log.classList.add('on');
+  log.textContent = 'Fetching covers…\n';
+  $('#fetchCoversBtn').textContent = 'Fetching…';
+  let checked=0, filled=0;
+  for(const k of Object.keys(COLLECTIONS)){
+    const items = (S.data[k]&&S.data[k].items)||[];
+    let touched = false;
+    for(const item of items){
+      if(item.coverUrl) continue;
+      const url = await fetchCoverFor(k, item);
+      checked++;
+      if(url){ item.coverUrl = url; filled++; touched = true; }
+      if(checked % 15 === 0){ log.textContent += `${checked} checked, ${filled} found…\n`; log.scrollTop = log.scrollHeight; }
+      await new Promise(res=>setTimeout(res, 200));
+    }
+    if(touched) markDirty(k);
+  }
+  cacheData(); render();
+  log.textContent += `Done — ${filled} covers found.\n`;
+  if(missingKeys.length) log.textContent += `Skipped (no key set): ${missingKeys.join(', ')}\n`;
+  $('#fetchCoversBtn').textContent = 'Fetch missing covers';
+  toast(filled ? `${filled} covers found` : 'No new covers found');
+}
+function updateCoverPreview(url){
+  const img = $('#coverPreview');
+  if(url){ img.src = url; img.style.display='block'; }
+  else { img.style.display='none'; img.removeAttribute('src'); }
 }
 
 function ghHeaders(){
@@ -788,11 +892,12 @@ function renderHomeTab(){
     const c = COLLECTIONS[k];
     const rows = h.recents[k].map(i=>`
       <div class="home-recent-row" data-home-open="${k}:${i.id}">
-        <div class="rate">${starsHTML(i.rating,c.scale,rateClassFor(i.rating,c.scale))}</div>
+        ${coverImgHTML(i)}
         <div class="meta">
           <div class="title">${esc(i.name||'Untitled')}</div>
           <div class="sub">${esc(c.sub(i)||'')}</div>
         </div>
+        <div class="rate">${starsHTML(i.rating,c.scale,rateClassFor(i.rating,c.scale))}</div>
       </div>`).join('');
     return `<div class="stats-section">
       <div class="stats-h">${verb}</div>
@@ -1054,11 +1159,12 @@ function render(){
     const partial = (p!=null && p!=='' && p!==100 && p!=='100');
     const sub = [c.sub(i), partial?`<span class="partial">${p}% ${c.pctLabel}</span>`:''].filter(Boolean).join(' · ');
     return `<li class="row" data-id="${i.id}">
-      <div class="rate">${starsHTML(i.rating,c.scale,rateClass(i.rating))}</div>
+      ${coverImgHTML(i)}
       <div class="meta">
         <div class="title">${esc(i.name||'Untitled')}</div>
         <div class="sub">${sub||'&nbsp;'}</div>
       </div>
+      <div class="rate">${starsHTML(i.rating,c.scale,rateClass(i.rating))}</div>
     </li>`;
   }).join('');
 }
@@ -1098,6 +1204,7 @@ function openEdit(item){
   });
   if(pend) html += `<div class="two">${pend}</div>`;
   $('#fields').innerHTML = html;
+  updateCoverPreview(S.editing.coverUrl||'');
 
   $('#ratepick').innerHTML = Array.from({length:c.scale},(_,x)=>{
     const r=x+1;
@@ -1150,6 +1257,8 @@ function openSet(){
   $('#branchIn').value = S.cfg.branch||'main';
   $('#tokIn').value = S.cfg.token||'';
   $('#expIn').value = S.cfg.expires||'';
+  $('#tmdbIn').value = S.cfg.tmdbKey||'';
+  $('#rawgIn').value = S.cfg.rawgKey||'';
   $('#connHint').style.display='none';
   openSheet('#setSheet');
 }
@@ -1210,7 +1319,28 @@ $('#saveSet').addEventListener('click', ()=>{
   S.cfg.branch = $('#branchIn').value.trim()||'main';
   S.cfg.token = $('#tokIn').value.trim();
   S.cfg.expires = $('#expIn').value || '';
+  S.cfg.tmdbKey = $('#tmdbIn').value.trim();
+  S.cfg.rawgKey = $('#rawgIn').value.trim();
   saveCfg(); S.authError=null; toast('Settings saved'); closeSheets(); verifyToken();
+});
+$('#fetchCoversBtn').addEventListener('click', fetchMissingCovers);
+$('#fetchCoverBtn').addEventListener('click', async ()=>{
+  const draft = readEdit();
+  if(!draft.name){ toast('Enter a title first'); return; }
+  $('#fetchCoverBtn').textContent = 'Fetching…';
+  const url = await fetchCoverFor(S.tab, draft);
+  $('#fetchCoverBtn').textContent = 'Fetch cover';
+  if(url){
+    const input = $('#fields').querySelector('[data-k="coverUrl"]');
+    if(input) input.value = url;
+    updateCoverPreview(url);
+    toast('Cover found');
+  } else {
+    toast('No cover found — paste a URL manually');
+  }
+});
+$('#fields').addEventListener('input', e=>{
+  if(e.target.dataset.k==='coverUrl') updateCoverPreview(e.target.value.trim());
 });
 $('#reloadFab').addEventListener('click', pull);
 $('#fetchFab').addEventListener('click', triggerSync);
