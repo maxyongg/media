@@ -256,6 +256,9 @@ label.f>span{font-family:'Space Mono';font-size:10px;color:var(--mute);
   </div>
   <div class="acts" style="margin-top:10px">
     <button class="btn ghost" id="pullBtn">Reload from GitHub</button>
+    <button class="btn primary" id="pushSetBtn">Sync to GitHub</button>
+  </div>
+  <div class="acts" style="margin-top:10px">
     <button class="btn danger" id="forgetBtn">Forget token</button>
   </div>
   <div class="pushlog" id="pushlog"></div>
@@ -296,7 +299,7 @@ const COLLECTIONS = {
     pct: i => i.watchedPct, pctLabel:'watched'
   },
   films: {
-    label:'Films', file:'films.json', scale:5, idp:'f',
+    label:'Films', file:'films.json', scale:10, idp:'f',
     fields:[
       {k:'name',    l:'Title',    t:'text'},
       {k:'director',l:'Director', t:'text', list:true},
@@ -745,6 +748,7 @@ $('#saveSet').addEventListener('click', ()=>{
   saveCfg(); S.authError=null; toast('Settings saved'); closeSheets(); verifyToken();
 });
 $('#pullBtn').addEventListener('click', pull);
+$('#pushSetBtn').addEventListener('click', push);
 $('#forgetBtn').addEventListener('click', ()=>{
   S.cfg.token=''; $('#tokIn').value=''; saveCfg(); S.authError=null;
   toast('Token removed from this browser'); checkToken();
