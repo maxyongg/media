@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "ratingScale": 5,
- "updatedAt": "2026-07-17T14:30:53Z",
+ "updatedAt": "2026-07-17T15:42:04.742Z",
  "items": [
   {
    "id": "t0001",
@@ -13,7 +13,8 @@
    "firstSeasonYear": 2014,
    "lastSeasonYear": 2024,
    "rating": 5,
-   "dateWatched": "2024-05-19"
+   "dateWatched": "2024-05-19",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/a3VW6khsyUVKrG0GBCWFG3NzWPX.jpg"
   },
   {
    "id": "t0002",
@@ -25,7 +26,8 @@
    "firstSeasonYear": 2021,
    "lastSeasonYear": 2024,
    "rating": 5,
-   "dateWatched": "2024-11-29"
+   "dateWatched": "2024-11-29",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/abf8tHznhSvl9BAElD2cQeRr7do.jpg"
   },
   {
    "id": "t0003",
@@ -37,7 +39,8 @@
    "firstSeasonYear": 2017,
    "lastSeasonYear": 2023,
    "rating": 5,
-   "dateWatched": "2023-07-12"
+   "dateWatched": "2023-07-12",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/zS7fQiOZiKCVH2vlYSiIsFWW8hh.jpg"
   },
   {
    "id": "t0004",
@@ -49,7 +52,8 @@
    "firstSeasonYear": 2022,
    "lastSeasonYear": 2023,
    "rating": 5,
-   "dateWatched": "2024-12-06"
+   "dateWatched": "2024-12-06",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/aZupC6eJhTe82e5I0JRaOBjFHOd.jpg"
   },
   {
    "id": "t0005",
@@ -61,7 +65,8 @@
    "firstSeasonYear": 2016,
    "lastSeasonYear": 2022,
    "rating": 5,
-   "dateWatched": "2023-04-06"
+   "dateWatched": "2023-04-06",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/8HZyGMnPLVVb00rmrh6A2SbK9NX.jpg"
   },
   {
    "id": "t0006",
@@ -73,7 +78,8 @@
    "firstSeasonYear": 2014,
    "lastSeasonYear": 2020,
    "rating": 5,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/6JFWzlChcGgLiIUo2COgNlWGFKy.jpg"
   },
   {
    "id": "t0007",
@@ -85,7 +91,8 @@
    "firstSeasonYear": 2015,
    "lastSeasonYear": 2019,
    "rating": 5,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/kv1nRqgebSsREnd7vdC2pSGjpLo.jpg"
   },
   {
    "id": "t0008",
@@ -97,7 +104,8 @@
    "firstSeasonYear": 2003,
    "lastSeasonYear": 2019,
    "rating": 5,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/p4r4RD7RsNcJVoz0H6z3dBoTBtW.jpg"
   },
   {
    "id": "t0009",
@@ -109,7 +117,8 @@
    "firstSeasonYear": 2016,
    "lastSeasonYear": 2019,
    "rating": 5,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/27vEYsRKa3eAniwmoccOoluEXQ1.jpg"
   },
   {
    "id": "t0010",
@@ -121,7 +130,8 @@
    "firstSeasonYear": 2015,
    "lastSeasonYear": 2018,
    "rating": 5,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/QWbPaDxiB6LW2LjASknzYBvjMj.jpg"
   },
   {
    "id": "t0011",
@@ -133,7 +143,8 @@
    "firstSeasonYear": 2009,
    "lastSeasonYear": 2015,
    "rating": 5,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/3KUjDt8XY7w2Ku70UE0SECmv1zP.jpg"
   },
   {
    "id": "t0012",
@@ -145,7 +156,8 @@
    "firstSeasonYear": 2006,
    "lastSeasonYear": 2013,
    "rating": 5,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/eYYQWACx7ttUzRwTNYuo6zveqpE.jpg"
   },
   {
    "id": "t0013",
@@ -157,7 +169,8 @@
    "firstSeasonYear": 2005,
    "lastSeasonYear": 2008,
    "rating": 5,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/9RQhVb3r3mCMqYVhLoCu4EvuipP.jpg"
   },
   {
    "id": "t0014",
@@ -169,7 +182,8 @@
    "firstSeasonYear": 2022,
    "lastSeasonYear": null,
    "rating": 5,
-   "dateWatched": "2025-08-07"
+   "dateWatched": "2025-08-07",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/eKfVzzEazSIjJMrw9ADa2x8ksLz.jpg"
   },
   {
    "id": "t0015",
@@ -193,7 +207,8 @@
    "firstSeasonYear": 2022,
    "lastSeasonYear": null,
    "rating": 5,
-   "dateWatched": "2025-03-21"
+   "dateWatched": "2025-03-21",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/pPHpeI2X1qEd1CS1SeyrdhZ4qnT.jpg"
   },
   {
    "id": "t0017",
@@ -205,7 +220,8 @@
    "firstSeasonYear": 2005,
    "lastSeasonYear": null,
    "rating": 5,
-   "dateWatched": "2023-12-26"
+   "dateWatched": "2023-12-26",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/m6G92osOtSeXwjSfL21jZCUOvxe.jpg"
   },
   {
    "id": "t0018",
@@ -217,7 +233,8 @@
    "firstSeasonYear": 2025,
    "lastSeasonYear": null,
    "rating": 5,
-   "dateWatched": "2025-08-19"
+   "dateWatched": "2025-08-19",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/2c6ofLTa5CRfeQjVA1bWiYBdxQN.jpg"
   },
   {
    "id": "t0019",
@@ -253,7 +270,8 @@
    "firstSeasonYear": 2025,
    "lastSeasonYear": null,
    "rating": 5,
-   "dateWatched": "2026-01-18"
+   "dateWatched": "2026-01-18",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/z7Nga7Q9IGFWs5OEduY2gGFxnX3.jpg"
   },
   {
    "id": "t0022",
@@ -265,7 +283,8 @@
    "firstSeasonYear": 2020,
    "lastSeasonYear": null,
    "rating": 5,
-   "dateWatched": "2026-04-12"
+   "dateWatched": "2026-04-12",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/fHpKWq9ayzSk8nSwqRuaAUemRKh.jpg"
   },
   {
    "id": "t0023",
@@ -277,7 +296,8 @@
    "firstSeasonYear": 2015,
    "lastSeasonYear": 2023,
    "rating": 5,
-   "dateWatched": "2026-05-31"
+   "dateWatched": "2026-05-31",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/zjg4jpK1Wp2kiRvtt5ND0kznako.jpg"
   },
   {
    "id": "t0024",
@@ -289,7 +309,8 @@
    "firstSeasonYear": 2019,
    "lastSeasonYear": 2025,
    "rating": 4,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/xg7U76h1DNtwa0eBOIbFdiM80DR.jpg"
   },
   {
    "id": "t0025",
@@ -301,7 +322,8 @@
    "firstSeasonYear": 2024,
    "lastSeasonYear": 2024,
    "rating": 4,
-   "dateWatched": "2025-05-12"
+   "dateWatched": "2025-05-12",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/9t3DYdGxK3i4WRzKvIZwJd4kBnr.jpg"
   },
   {
    "id": "t0026",
@@ -313,7 +335,8 @@
    "firstSeasonYear": 2023,
    "lastSeasonYear": 2023,
    "rating": 4,
-   "dateWatched": "2024-08-19"
+   "dateWatched": "2024-08-19",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/25ih0Xq2zWbxhhKxwhvswKYQyEr.jpg"
   },
   {
    "id": "t0027",
@@ -337,7 +360,8 @@
    "firstSeasonYear": 2018,
    "lastSeasonYear": 2023,
    "rating": 4,
-   "dateWatched": "2023-09-28"
+   "dateWatched": "2023-09-28",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/z0XiwdrCQ9yVIr4O0pxzaAYRxdW.jpg"
   },
   {
    "id": "t0029",
@@ -349,7 +373,8 @@
    "firstSeasonYear": 2021,
    "lastSeasonYear": 2023,
    "rating": 4,
-   "dateWatched": "2023-11-10"
+   "dateWatched": "2023-11-10",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/rX1wQMTKFqF0gvZyS0DDQqgnQPB.jpg"
   },
   {
    "id": "t0030",
@@ -361,7 +386,8 @@
    "firstSeasonYear": 2023,
    "lastSeasonYear": 2023,
    "rating": 4,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/ipiqT5uHeJudWy9ICSvuCby7NeI.jpg"
   },
   {
    "id": "t0031",
@@ -373,7 +399,8 @@
    "firstSeasonYear": 2020,
    "lastSeasonYear": 2023,
    "rating": 4,
-   "dateWatched": "2024-12-25"
+   "dateWatched": "2024-12-25",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/iorStu3DHuscNfQiIyQomvMyO0h.jpg"
   },
   {
    "id": "t0032",
@@ -385,7 +412,8 @@
    "firstSeasonYear": 2019,
    "lastSeasonYear": 2022,
    "rating": 4,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/1ju4vQ1EwlIkQxEgWiYmxOs3iBG.jpg"
   },
   {
    "id": "t0033",
@@ -397,7 +425,8 @@
    "firstSeasonYear": 2019,
    "lastSeasonYear": 2021,
    "rating": 4,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/ypmtwojDd751Peszi62DVLytqqC.jpg"
   },
   {
    "id": "t0034",
@@ -409,7 +438,8 @@
    "firstSeasonYear": 2018,
    "lastSeasonYear": 2021,
    "rating": 4,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/vnK8b6bNl1koSthTGbzgMPnh7Ky.jpg"
   },
   {
    "id": "t0035",
@@ -421,7 +451,8 @@
    "firstSeasonYear": 2015,
    "lastSeasonYear": 2021,
    "rating": 4,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/AcJM86PhgHAfbrF4dMKBaqO3cHV.jpg"
   },
   {
    "id": "t0036",
@@ -433,7 +464,8 @@
    "firstSeasonYear": 2017,
    "lastSeasonYear": 2020,
    "rating": 4,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/apbrbWs8M9lyOpJYU5WXrpFbk1Z.jpg"
   },
   {
    "id": "t0037",
@@ -445,7 +477,8 @@
    "firstSeasonYear": 2020,
    "lastSeasonYear": 2020,
    "rating": 4,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/zU0htwkhNvBQdVSIKB9s6hgVeFK.jpg"
   },
   {
    "id": "t0038",
@@ -457,7 +490,8 @@
    "firstSeasonYear": 2015,
    "lastSeasonYear": 2020,
    "rating": 4,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/iRfSzrPS5VYWQv7KVSEg2BZZL6C.jpg"
   },
   {
    "id": "t0039",
@@ -469,7 +503,8 @@
    "firstSeasonYear": 2016,
    "lastSeasonYear": 2020,
    "rating": 4,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/qIhsuhoIYR5yTnDta0IL4senbeN.jpg"
   },
   {
    "id": "t0040",
@@ -481,7 +516,8 @@
    "firstSeasonYear": 2015,
    "lastSeasonYear": 2020,
    "rating": 4,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/3whFzxzeKuTIgPzm2c0pm5xAhEL.jpg"
   },
   {
    "id": "t0041",
@@ -493,7 +529,8 @@
    "firstSeasonYear": 2011,
    "lastSeasonYear": 2019,
    "rating": 4,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/1XS1oqL89opfnbLl8WnZY1O1uJx.jpg"
   },
   {
    "id": "t0042",
@@ -505,7 +542,8 @@
    "firstSeasonYear": 2017,
    "lastSeasonYear": 2019,
    "rating": 4,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/xhJtYVTsdXQCIlB5hAXkMCPUG9y.jpg"
   },
   {
    "id": "t0043",
@@ -517,7 +555,8 @@
    "firstSeasonYear": 2010,
    "lastSeasonYear": 2017,
    "rating": 4,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/7WTsnHkbA0FaG6R9twfFde0I9hl.jpg"
   },
   {
    "id": "t0044",
@@ -529,7 +568,8 @@
    "firstSeasonYear": 1990,
    "lastSeasonYear": 2017,
    "rating": 4,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/lA9CNSdo50iQPZ8A2fyVpMvJZAf.jpg"
   },
   {
    "id": "t0045",
@@ -541,7 +581,8 @@
    "firstSeasonYear": 2014,
    "lastSeasonYear": 2017,
    "rating": 4,
-   "dateWatched": "2024-10-20"
+   "dateWatched": "2024-10-20",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/NKJdryIFHr245Umq6gXsf7oULW.jpg"
   },
   {
    "id": "t0046",
@@ -553,7 +594,8 @@
    "firstSeasonYear": 2016,
    "lastSeasonYear": 2016,
    "rating": 4,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/3sYPoWBtwAmd07YoJWr76ij6Iyg.jpg"
   },
   {
    "id": "t0047",
@@ -565,7 +607,8 @@
    "firstSeasonYear": 2003,
    "lastSeasonYear": 2015,
    "rating": 4,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/6rdoQ0cTjsEQLIwEjhBV8U98oUm.jpg"
   },
   {
    "id": "t0048",
@@ -577,7 +620,8 @@
    "firstSeasonYear": 2009,
    "lastSeasonYear": 2015,
    "rating": 4,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/5IOj62y2Eb2ngyYmEn1IJ7bFhzH.jpg"
   },
   {
    "id": "t0049",
@@ -589,7 +633,8 @@
    "firstSeasonYear": 2012,
    "lastSeasonYear": 2014,
    "rating": 4,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/dZgYvSfuh1YHDrJuILlVQ5oA2hF.jpg"
   },
   {
    "id": "t0050",
@@ -601,7 +646,8 @@
    "firstSeasonYear": 2006,
    "lastSeasonYear": 2013,
    "rating": 4,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/qtxL0ZLAZN1nd0kOpcu8V32bsU4.jpg"
   },
   {
    "id": "t0051",
@@ -613,7 +659,8 @@
    "firstSeasonYear": 2009,
    "lastSeasonYear": 2013,
    "rating": 4,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/pkGPHO7WxViedkOm6Xy1aWSS36l.jpg"
   },
   {
    "id": "t0052",
@@ -625,7 +672,8 @@
    "firstSeasonYear": 2004,
    "lastSeasonYear": 2010,
    "rating": 4,
-   "dateWatched": "2025-06-15"
+   "dateWatched": "2025-06-15",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/og6S0aTZU6YUJAbqxeKjCa3kY1E.jpg"
   },
   {
    "id": "t0053",
@@ -637,7 +685,8 @@
    "firstSeasonYear": 2001,
    "lastSeasonYear": 2010,
    "rating": 4,
-   "dateWatched": "2026-07-06"
+   "dateWatched": "2026-07-06",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/w7ri7byEYLdciSZOwWHj6TUAX7j.jpg"
   },
   {
    "id": "t0054",
@@ -649,7 +698,8 @@
    "firstSeasonYear": 2021,
    "lastSeasonYear": null,
    "rating": 4,
-   "dateWatched": "2023-11-03"
+   "dateWatched": "2023-11-03",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/h6Z2oogE4mJk2uffdtIlLhb0EHx.jpg"
   },
   {
    "id": "t0055",
@@ -661,7 +711,8 @@
    "firstSeasonYear": 2024,
    "lastSeasonYear": null,
    "rating": 4,
-   "dateWatched": "2025-09-22"
+   "dateWatched": "2025-09-22",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/6qfZAOEUFIrbUH3JvePclx1nXzz.jpg"
   },
   {
    "id": "t0056",
@@ -673,7 +724,8 @@
    "firstSeasonYear": 2022,
    "lastSeasonYear": null,
    "rating": 4,
-   "dateWatched": "2024-12-13"
+   "dateWatched": "2024-12-13",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/mFU6ZPAs6g8Y9Eld28GULJYt3rC.jpg"
   },
   {
    "id": "t0057",
@@ -685,7 +737,8 @@
    "firstSeasonYear": 2021,
    "lastSeasonYear": null,
    "rating": 4,
-   "dateWatched": "2025-06-01"
+   "dateWatched": "2025-06-01",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/gLKOYIMyKlUHW0SVdskhgf9C0yy.jpg"
   },
   {
    "id": "t0058",
@@ -697,7 +750,8 @@
    "firstSeasonYear": 2022,
    "lastSeasonYear": null,
    "rating": 4,
-   "dateWatched": "2025-08-24"
+   "dateWatched": "2025-08-24",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/Af4tZ3eKjKWXG4vfiQ8R1NJomAP.jpg"
   },
   {
    "id": "t0059",
@@ -709,7 +763,8 @@
    "firstSeasonYear": 2025,
    "lastSeasonYear": null,
    "rating": 4,
-   "dateWatched": "2026-04-27"
+   "dateWatched": "2026-04-27",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/kvFSpESyBZMjaeOJDx7RS3P1jey.jpg"
   },
   {
    "id": "t0060",
@@ -721,7 +776,8 @@
    "firstSeasonYear": 2025,
    "lastSeasonYear": 2025,
    "rating": 4,
-   "dateWatched": "2025-10-29"
+   "dateWatched": "2025-10-29",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/20i4nShZZg1g1VFHSB8xpaYM4r7.jpg"
   },
   {
    "id": "t0061",
@@ -733,7 +789,8 @@
    "firstSeasonYear": 2023,
    "lastSeasonYear": null,
    "rating": 4,
-   "dateWatched": "2025-11-27"
+   "dateWatched": "2025-11-27",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/e3ojpANrFnmJCyeBNTinYwyBCIN.jpg"
   },
   {
    "id": "t0062",
@@ -745,7 +802,8 @@
    "firstSeasonYear": 2025,
    "lastSeasonYear": null,
    "rating": 4,
-   "dateWatched": "2025-12-07"
+   "dateWatched": "2025-12-07",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/2VktdoGvR0Pv6qj9P7vDsTIfw1l.jpg"
   },
   {
    "id": "t0063",
@@ -757,7 +815,8 @@
    "firstSeasonYear": 2026,
    "lastSeasonYear": null,
    "rating": 4,
-   "dateWatched": "2026-03-08"
+   "dateWatched": "2026-03-08",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/k8yARbD9iYn2nRX2HvsopfKDN2r.jpg"
   },
   {
    "id": "t0064",
@@ -769,7 +828,8 @@
    "firstSeasonYear": 2018,
    "lastSeasonYear": 2018,
    "rating": 4,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/nWPZb800NCGiDPNGsKCfY0w44Z2.jpg"
   },
   {
    "id": "t0065",
@@ -781,7 +841,8 @@
    "firstSeasonYear": 2025,
    "lastSeasonYear": null,
    "rating": 4,
-   "dateWatched": "2026-06-07"
+   "dateWatched": "2026-06-07",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/xDUoAsU8lQHOOoRkFiBuarmACDN.jpg"
   },
   {
    "id": "t0066",
@@ -793,7 +854,8 @@
    "firstSeasonYear": 2023,
    "lastSeasonYear": 2023,
    "rating": 4,
-   "dateWatched": "2026-06-22"
+   "dateWatched": "2026-06-22",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/tCPIf5f6jUIr8KDMWsfaXwXW0kl.jpg"
   },
   {
    "id": "t0067",
@@ -805,7 +867,8 @@
    "firstSeasonYear": 2020,
    "lastSeasonYear": 2025,
    "rating": 3,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/7QxQlpqEjx3vRpEtuh6Y0R6eY9O.jpg"
   },
   {
    "id": "t0068",
@@ -829,7 +892,8 @@
    "firstSeasonYear": 2006,
    "lastSeasonYear": 2008,
    "rating": 3,
-   "dateWatched": "2026-01-29"
+   "dateWatched": "2026-01-29",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/x316WCogkeIwNY4JR8zTCHbI2nQ.jpg"
   },
   {
    "id": "t0070",
@@ -841,7 +905,8 @@
    "firstSeasonYear": 2016,
    "lastSeasonYear": 2025,
    "rating": 3,
-   "dateWatched": "2026-01-06"
+   "dateWatched": "2026-01-06",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/uOOtwVbSr4QDjAGIifLDwpb2Pdl.jpg"
   },
   {
    "id": "t0071",
@@ -853,7 +918,8 @@
    "firstSeasonYear": 2020,
    "lastSeasonYear": 2025,
    "rating": 3,
-   "dateWatched": "2023-11-26"
+   "dateWatched": "2023-11-26",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/6TPGDrU9MyWbn2TpggJphVAVXiq.jpg"
   },
   {
    "id": "t0072",
@@ -865,7 +931,8 @@
    "firstSeasonYear": 2025,
    "lastSeasonYear": 2025,
    "rating": 3,
-   "dateWatched": "2025-05-26"
+   "dateWatched": "2025-05-26",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/9g5QRUSPBK4ABLzhO9D8ooir6tS.jpg"
   },
   {
    "id": "t0073",
@@ -877,7 +944,8 @@
    "firstSeasonYear": 2024,
    "lastSeasonYear": 2024,
    "rating": 3,
-   "dateWatched": "2025-01-17"
+   "dateWatched": "2025-01-17",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/vOWcqC4oDQws1doDWLO7d3dh5qc.jpg"
   },
   {
    "id": "t0074",
@@ -889,7 +957,8 @@
    "firstSeasonYear": 2019,
    "lastSeasonYear": 2024,
    "rating": 3,
-   "dateWatched": "2025-03-15"
+   "dateWatched": "2025-03-15",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/xUfRZu2mi8jH6SzQEJGP6tjBuYj.jpg"
   },
   {
    "id": "t0075",
@@ -901,7 +970,8 @@
    "firstSeasonYear": 2019,
    "lastSeasonYear": 2024,
    "rating": 3,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/wa3ZQE9kLnqwN3vQ0NNjg1NPsCa.jpg"
   },
   {
    "id": "t0076",
@@ -913,7 +983,8 @@
    "firstSeasonYear": 2024,
    "lastSeasonYear": 2024,
    "rating": 3,
-   "dateWatched": "2024-06-20"
+   "dateWatched": "2024-06-20",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/kvJvGxsDLi3MmHzc9nregyJtOWY.jpg"
   },
   {
    "id": "t0077",
@@ -925,7 +996,8 @@
    "firstSeasonYear": 2023,
    "lastSeasonYear": 2024,
    "rating": 3,
-   "dateWatched": "2024-06-24"
+   "dateWatched": "2024-06-24",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/uyDIWMAwfLqiIz0QQm0MPDE0085.jpg"
   },
   {
    "id": "t0078",
@@ -937,7 +1009,8 @@
    "firstSeasonYear": 2022,
    "lastSeasonYear": 2024,
    "rating": 3,
-   "dateWatched": "2025-02-15"
+   "dateWatched": "2025-02-15",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/wUTXdmL6oNjhiStGveOaPeuFOYQ.jpg"
   },
   {
    "id": "t0079",
@@ -949,7 +1022,8 @@
    "firstSeasonYear": 2020,
    "lastSeasonYear": 2023,
    "rating": 3,
-   "dateWatched": "2023-05-31"
+   "dateWatched": "2023-05-31",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/5fhZdwP1DVJ0FyVH6vrFdHwpXIn.jpg"
   },
   {
    "id": "t0080",
@@ -961,7 +1035,8 @@
    "firstSeasonYear": 2019,
    "lastSeasonYear": 2023,
    "rating": 3,
-   "dateWatched": "2023-10-16"
+   "dateWatched": "2023-10-16",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/bc3bmTdnoKcRuO9xdQKgAbB7Y9Z.jpg"
   },
   {
    "id": "t0081",
@@ -973,7 +1048,8 @@
    "firstSeasonYear": 2018,
    "lastSeasonYear": 2023,
    "rating": 3,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/j1XpwD11f0BAEI7pX6UdMhUVX2F.jpg"
   },
   {
    "id": "t0082",
@@ -985,7 +1061,8 @@
    "firstSeasonYear": 2022,
    "lastSeasonYear": 2023,
    "rating": 3,
-   "dateWatched": "2023-10-11"
+   "dateWatched": "2023-10-11",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/9iAxAxeX5RjB39ckhxPMDCJPpG9.jpg"
   },
   {
    "id": "t0083",
@@ -997,7 +1074,8 @@
    "firstSeasonYear": 2013,
    "lastSeasonYear": 2022,
    "rating": 3,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/vUUqzWa2LnHIVqkaKVlVGkVcZIW.jpg"
   },
   {
    "id": "t0084",
@@ -1009,7 +1087,8 @@
    "firstSeasonYear": 2018,
    "lastSeasonYear": 2022,
    "rating": 3,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/btIm8LOtm2qgHIA2IHmQJvD1Mju.jpg"
   },
   {
    "id": "t0085",
@@ -1021,7 +1100,8 @@
    "firstSeasonYear": 2016,
    "lastSeasonYear": 2022,
    "rating": 3,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/ALlSU9du9iRiKIIoY1sREGNqQ5.jpg"
   },
   {
    "id": "t0086",
@@ -1033,7 +1113,8 @@
    "firstSeasonYear": 2018,
    "lastSeasonYear": 2022,
    "rating": 3,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/4wKhTVw8aGq5AZMa0Q1spERdi7n.jpg"
   },
   {
    "id": "t0087",
@@ -1045,7 +1126,8 @@
    "firstSeasonYear": 2013,
    "lastSeasonYear": 2021,
    "rating": 3,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/mpjlDzVjp7oyHUe2LaF9ltKe6f1.jpg"
   },
   {
    "id": "t0088",
@@ -1057,7 +1139,8 @@
    "firstSeasonYear": 2015,
    "lastSeasonYear": 2021,
    "rating": 3,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/2tpY5qIYwH85njvjI5BnH4VNA6p.jpg"
   },
   {
    "id": "t0089",
@@ -1069,7 +1152,8 @@
    "firstSeasonYear": 2021,
    "lastSeasonYear": 2021,
    "rating": 3,
-   "dateWatched": "2023-08-27"
+   "dateWatched": "2023-08-27",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/mvp8wW6wm6LulWRtjjeBQcVXMBt.jpg"
   },
   {
    "id": "t0090",
@@ -1081,7 +1165,8 @@
    "firstSeasonYear": 2016,
    "lastSeasonYear": 2021,
    "rating": 3,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/82Vue6MPuYZzlpggR65cvWdBdy.jpg"
   },
   {
    "id": "t0091",
@@ -1093,7 +1178,8 @@
    "firstSeasonYear": 2009,
    "lastSeasonYear": 2020,
    "rating": 3,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/k5Qg5rgPoKdh3yTJJrLtyoyYGwC.jpg"
   },
   {
    "id": "t0092",
@@ -1105,7 +1191,8 @@
    "firstSeasonYear": 2011,
    "lastSeasonYear": 2020,
    "rating": 3,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/j4My4iWKhB8q1SgB8hfismiAp3V.jpg"
   },
   {
    "id": "t0093",
@@ -1117,7 +1204,8 @@
    "firstSeasonYear": 2020,
    "lastSeasonYear": 2020,
    "rating": 3,
-   "dateWatched": "2025-06-13"
+   "dateWatched": "2025-06-13",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/uv63iNWOh69bSJYJQZjiX6n8B3m.jpg"
   },
   {
    "id": "t0094",
@@ -1129,7 +1217,8 @@
    "firstSeasonYear": 2017,
    "lastSeasonYear": 2019,
    "rating": 3,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/fbKE87mojpIETWepSbD5Qt741fp.jpg"
   },
   {
    "id": "t0095",
@@ -1141,7 +1230,8 @@
    "firstSeasonYear": 2017,
    "lastSeasonYear": 2019,
    "rating": 3,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/tM6xqRKXoloH9UchaJEyyRE9O1w.jpg"
   },
   {
    "id": "t0096",
@@ -1165,7 +1255,8 @@
    "firstSeasonYear": 2016,
    "lastSeasonYear": 2019,
    "rating": 3,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/rueY4slMeKtTGitm0raFUJvgaa5.jpg"
   },
   {
    "id": "t0098",
@@ -1177,7 +1268,8 @@
    "firstSeasonYear": 2017,
    "lastSeasonYear": 2019,
    "rating": 3,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/aqQlgRgUwVTfbdxe33vfDEMiCa2.jpg"
   },
   {
    "id": "t0099",
@@ -1189,7 +1281,8 @@
    "firstSeasonYear": 2013,
    "lastSeasonYear": 2018,
    "rating": 3,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/w1UBlxEXhbKe8sp0fxFZh7MqTce.jpg"
   },
   {
    "id": "t0100",
@@ -1201,7 +1294,8 @@
    "firstSeasonYear": 2017,
    "lastSeasonYear": 2017,
    "rating": 3,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/49XzINhH4LFsgz7cx6TOPcHUJUL.jpg"
   },
   {
    "id": "t0101",
@@ -1225,7 +1319,8 @@
    "firstSeasonYear": 2016,
    "lastSeasonYear": 2016,
    "rating": 3,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/kXgTnJXZ5KtJhEEuwiTRTRUejCt.jpg"
   },
   {
    "id": "t0103",
@@ -1237,7 +1332,8 @@
    "firstSeasonYear": 2007,
    "lastSeasonYear": 2014,
    "rating": 3,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/jPqOY8cq9KXQN4bD7zJGHCNvcb4.jpg"
   },
   {
    "id": "t0104",
@@ -1249,7 +1345,8 @@
    "firstSeasonYear": 2006,
    "lastSeasonYear": 2014,
    "rating": 3,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/fDI15gTVbtW5Sbv5QenqecRxWKJ.jpg"
   },
   {
    "id": "t0105",
@@ -1261,7 +1358,8 @@
    "firstSeasonYear": 2005,
    "lastSeasonYear": 2013,
    "rating": 3,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/b34jPzmB0wZy7EjUZoleXOl2RRI.jpg"
   },
   {
    "id": "t0106",
@@ -1273,7 +1371,8 @@
    "firstSeasonYear": 2008,
    "lastSeasonYear": 2013,
    "rating": 3,
-   "dateWatched": "2026-03-06"
+   "dateWatched": "2026-03-06",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/ztkUQFLlC19CCMYHW9o1zWhJRNq.jpg"
   },
   {
    "id": "t0107",
@@ -1285,7 +1384,8 @@
    "firstSeasonYear": 2005,
    "lastSeasonYear": 2013,
    "rating": 3,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/7DJKHzAi83BmQrWLrYYOqcoKfhR.jpg"
   },
   {
    "id": "t0108",
@@ -1297,7 +1397,8 @@
    "firstSeasonYear": 2007,
    "lastSeasonYear": 2012,
    "rating": 3,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/vEZvGVVMjk1TRs59nfypTI5lAXj.jpg"
   },
   {
    "id": "t0109",
@@ -1309,7 +1410,8 @@
    "firstSeasonYear": 2005,
    "lastSeasonYear": 2008,
    "rating": 3,
-   "dateWatched": "2023-07-09"
+   "dateWatched": "2023-07-09",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/eogRp6oAPK0SEvQmCrQ78LTlSdp.jpg"
   },
   {
    "id": "t0110",
@@ -1321,7 +1423,8 @@
    "firstSeasonYear": 2003,
    "lastSeasonYear": 2006,
    "rating": 3,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/7DCq6XbJx5WGKPvSMBxYK9uJQWQ.jpg"
   },
   {
    "id": "t0111",
@@ -1333,7 +1436,8 @@
    "firstSeasonYear": 1994,
    "lastSeasonYear": 2004,
    "rating": 3,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/2koX1xLkpTQM4IZebYvKysFW1Nh.jpg"
   },
   {
    "id": "t0112",
@@ -1345,7 +1449,8 @@
    "firstSeasonYear": 1989,
    "lastSeasonYear": 1996,
    "rating": 3,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/yfyToia25GnvjY7FPAGaCm3lKRc.jpg"
   },
   {
    "id": "t0113",
@@ -1357,7 +1462,8 @@
    "firstSeasonYear": 2024,
    "lastSeasonYear": null,
    "rating": 3,
-   "dateWatched": "2024-05-03"
+   "dateWatched": "2024-05-03",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/c15BtJxCXMrISLVmysdsnZUPQft.jpg"
   },
   {
    "id": "t0114",
@@ -1369,7 +1475,8 @@
    "firstSeasonYear": 2013,
    "lastSeasonYear": null,
    "rating": 3,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/owhkU6KRqdXoUQpjV8uyZGPtX58.jpg"
   },
   {
    "id": "t0115",
@@ -1381,7 +1488,8 @@
    "firstSeasonYear": 2011,
    "lastSeasonYear": null,
    "rating": 3,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/seN6rRfN0I6n8iDXjlSMk1QjNcq.jpg"
   },
   {
    "id": "t0116",
@@ -1393,7 +1501,8 @@
    "firstSeasonYear": 2021,
    "lastSeasonYear": null,
    "rating": 3,
-   "dateWatched": "2025-06-21"
+   "dateWatched": "2025-06-21",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/4tblBrslcKSifMVZ3TmtT2ukMor.jpg"
   },
   {
    "id": "t0117",
@@ -1405,7 +1514,8 @@
    "firstSeasonYear": 2024,
    "lastSeasonYear": null,
    "rating": 3,
-   "dateWatched": "2024-07-31"
+   "dateWatched": "2024-07-31",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/7O4iVfOMQmdCSxhOg1WnzG1AgYT.jpg"
   },
   {
    "id": "t0118",
@@ -1417,7 +1527,8 @@
    "firstSeasonYear": 2023,
    "lastSeasonYear": null,
    "rating": 3,
-   "dateWatched": "2025-08-01"
+   "dateWatched": "2025-08-01",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/dmo6TYuuJgaYinXBPjrgG9mB5od.jpg"
   },
   {
    "id": "t0119",
@@ -1429,7 +1540,8 @@
    "firstSeasonYear": 2024,
    "lastSeasonYear": null,
    "rating": 3,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/geCRueV3ElhRTr0xtJuEWJt6dJ1.jpg"
   },
   {
    "id": "t0120",
@@ -1441,7 +1553,8 @@
    "firstSeasonYear": 2021,
    "lastSeasonYear": null,
    "rating": 3,
-   "dateWatched": "2025-07-19"
+   "dateWatched": "2025-07-19",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/gbSaK9v1CbcYH1ISgbM7XObD2dW.jpg"
   },
   {
    "id": "t0121",
@@ -1453,7 +1566,8 @@
    "firstSeasonYear": 2022,
    "lastSeasonYear": null,
    "rating": 3,
-   "dateWatched": "2025-11-03"
+   "dateWatched": "2025-11-03",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/5RuZZIouptatjV96BdPmKmRsnGg.jpg"
   },
   {
    "id": "t0122",
@@ -1465,7 +1579,8 @@
    "firstSeasonYear": 2022,
    "lastSeasonYear": null,
    "rating": 3,
-   "dateWatched": "2024-08-14"
+   "dateWatched": "2024-08-14",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/7V0Ebks0GgpKvQ7QbLAIdX5dos4.jpg"
   },
   {
    "id": "t0123",
@@ -1477,7 +1592,8 @@
    "firstSeasonYear": 2019,
    "lastSeasonYear": null,
    "rating": 3,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/vL5BQvXH96cJzmNK5n7QliQxy90.jpg"
   },
   {
    "id": "t0124",
@@ -1489,7 +1605,8 @@
    "firstSeasonYear": 2021,
    "lastSeasonYear": null,
    "rating": 3,
-   "dateWatched": "2025-11-18"
+   "dateWatched": "2025-11-18",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/1yjFVQZuW8aofZ5Cgol8iImsVFp.jpg"
   },
   {
    "id": "t0125",
@@ -1501,7 +1618,8 @@
    "firstSeasonYear": 2023,
    "lastSeasonYear": null,
    "rating": 3,
-   "dateWatched": "2025-03-02"
+   "dateWatched": "2025-03-02",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/zEFKMNPBKq6JG7uuDkzTQ9WwErn.jpg"
   },
   {
    "id": "t0126",
@@ -1513,7 +1631,8 @@
    "firstSeasonYear": 2019,
    "lastSeasonYear": null,
    "rating": 3,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/9Dm1SEh8Wxt8LNNg02exHQ595zg.jpg"
   },
   {
    "id": "t0127",
@@ -1525,7 +1644,8 @@
    "firstSeasonYear": 2016,
    "lastSeasonYear": null,
    "rating": 3,
-   "dateWatched": "2025-04-07"
+   "dateWatched": "2025-04-07",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/oHqYrPAsIiTD5m4DuxumV4er8BU.jpg"
   },
   {
    "id": "t0128",
@@ -1537,7 +1657,8 @@
    "firstSeasonYear": 2022,
    "lastSeasonYear": null,
    "rating": 3,
-   "dateWatched": "2026-03-24"
+   "dateWatched": "2026-03-24",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/7NAvPYPAu7MeHwP8E9sn81PqsRh.jpg"
   },
   {
    "id": "t0129",
@@ -1549,7 +1670,8 @@
    "firstSeasonYear": 2024,
    "lastSeasonYear": null,
    "rating": 3,
-   "dateWatched": "2024-09-08"
+   "dateWatched": "2024-09-08",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/7x3rqEpps3msoQhBUJyiaXotGBL.jpg"
   },
   {
    "id": "t0130",
@@ -1561,7 +1683,8 @@
    "firstSeasonYear": 2025,
    "lastSeasonYear": null,
    "rating": 3,
-   "dateWatched": "2025-09-26"
+   "dateWatched": "2025-09-26",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/ySA5MvhoxTdezNUMe0ifPmhxH4w.jpg"
   },
   {
    "id": "t0131",
@@ -1573,7 +1696,8 @@
    "firstSeasonYear": 2025,
    "lastSeasonYear": null,
    "rating": 3,
-   "dateWatched": "2025-11-15"
+   "dateWatched": "2025-11-15",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/wRpCqsJFyKNuh5FMegNPrhzp2NF.jpg"
   },
   {
    "id": "t0132",
@@ -1585,7 +1709,8 @@
    "firstSeasonYear": 2025,
    "lastSeasonYear": null,
    "rating": 3,
-   "dateWatched": "2025-11-30"
+   "dateWatched": "2025-11-30",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/osa3I6CuabnCEpNgFOvFMLLS7yP.jpg"
   },
   {
    "id": "t0133",
@@ -1597,7 +1722,8 @@
    "firstSeasonYear": 2019,
    "lastSeasonYear": 2020,
    "rating": 3,
-   "dateWatched": "2025-12-12"
+   "dateWatched": "2025-12-12",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/AsICtiVtz4icMQQRwDvOzfaTzjK.jpg"
   },
   {
    "id": "t0134",
@@ -1609,7 +1735,8 @@
    "firstSeasonYear": 2023,
    "lastSeasonYear": null,
    "rating": 3,
-   "dateWatched": "2025-12-29"
+   "dateWatched": "2025-12-29",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/jNY6UVgvKz03yrSgCflkF5NF25K.jpg"
   },
   {
    "id": "t0135",
@@ -1633,7 +1760,8 @@
    "firstSeasonYear": 2026,
    "lastSeasonYear": null,
    "rating": 3,
-   "dateWatched": "2026-06-18"
+   "dateWatched": "2026-06-18",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/vKq8XEJKxQTHd2Bm5zZMFPUrke7.jpg"
   },
   {
    "id": "t0137",
@@ -1645,7 +1773,8 @@
    "firstSeasonYear": 2018,
    "lastSeasonYear": 2018,
    "rating": 3,
-   "dateWatched": "2026-06-19"
+   "dateWatched": "2026-06-19",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/1SGovj2qDdkJexvhFiXllj9EYfu.jpg"
   },
   {
    "id": "t0138",
@@ -1657,7 +1786,8 @@
    "firstSeasonYear": 2018,
    "lastSeasonYear": 2025,
    "rating": 2,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/oANi0vEE92nuijiZQgPZ88FSxqQ.jpg"
   },
   {
    "id": "t0139",
@@ -1681,7 +1811,8 @@
    "firstSeasonYear": 2019,
    "lastSeasonYear": 2025,
    "rating": 2,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/nO68XVx5of8hlBwEOGOkPC8Mveu.jpg"
   },
   {
    "id": "t0141",
@@ -1693,7 +1824,8 @@
    "firstSeasonYear": 2023,
    "lastSeasonYear": 2025,
    "rating": 2,
-   "dateWatched": "2025-02-19"
+   "dateWatched": "2025-02-19",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/gMYZZvnkVNTqSVnVCphWbPXwWwb.jpg"
   },
   {
    "id": "t0142",
@@ -1705,7 +1837,8 @@
    "firstSeasonYear": 2019,
    "lastSeasonYear": 2024,
    "rating": 2,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/qhcwrnnCnN8NE1N6XXKHFmveJR9.jpg"
   },
   {
    "id": "t0143",
@@ -1717,7 +1850,8 @@
    "firstSeasonYear": 2024,
    "lastSeasonYear": 2024,
    "rating": 2,
-   "dateWatched": "2024-07-15"
+   "dateWatched": "2024-07-15",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/c6MRUtPk0nEPQ9FBD9RdRKt2rIm.jpg"
   },
   {
    "id": "t0144",
@@ -1729,7 +1863,8 @@
    "firstSeasonYear": 2024,
    "lastSeasonYear": 2024,
    "rating": 2,
-   "dateWatched": "2024-09-16"
+   "dateWatched": "2024-09-16",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/dDBTUSl3tRsOeKC1jZugBSFHy9I.jpg"
   },
   {
    "id": "t0145",
@@ -1741,7 +1876,8 @@
    "firstSeasonYear": 2024,
    "lastSeasonYear": 2024,
    "rating": 2,
-   "dateWatched": "2024-08-06"
+   "dateWatched": "2024-08-06",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/tN9OcbkAOPwHSr1sgMornZtQZBx.jpg"
   },
   {
    "id": "t0146",
@@ -1753,7 +1889,8 @@
    "firstSeasonYear": 2016,
    "lastSeasonYear": 2023,
    "rating": 2,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/1M876KPjulVwppEpldhdc8V4o68.jpg"
   },
   {
    "id": "t0147",
@@ -1765,7 +1902,8 @@
    "firstSeasonYear": 2014,
    "lastSeasonYear": 2023,
    "rating": 2,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/yZevl2vHQgmosfwUdVNzviIfaWS.jpg"
   },
   {
    "id": "t0148",
@@ -1789,7 +1927,8 @@
    "firstSeasonYear": 2018,
    "lastSeasonYear": 2023,
    "rating": 2,
-   "dateWatched": "2022-02-10"
+   "dateWatched": "2022-02-10",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/8e6QiSexmYKaiHGPvbhaFMmQEhc.jpg"
   },
   {
    "id": "t0150",
@@ -1801,7 +1940,8 @@
    "firstSeasonYear": 2023,
    "lastSeasonYear": 2023,
    "rating": 2,
-   "dateWatched": "2023-07-19"
+   "dateWatched": "2023-07-19",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/7rI7T4AfSzOx0Rqw73AusyIpeXf.jpg"
   },
   {
    "id": "t0151",
@@ -1813,7 +1953,8 @@
    "firstSeasonYear": 2023,
    "lastSeasonYear": 2023,
    "rating": 2,
-   "dateWatched": "2023-12-09"
+   "dateWatched": "2023-12-09",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/2rl04pRCaGfz91lwfWdDQmOiGJp.jpg"
   },
   {
    "id": "t0152",
@@ -1825,7 +1966,8 @@
    "firstSeasonYear": 2023,
    "lastSeasonYear": 2023,
    "rating": 2,
-   "dateWatched": "2023-04-26"
+   "dateWatched": "2023-04-26",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/cA678fpae4Qz1IWoWh8lRQ5F1DM.jpg"
   },
   {
    "id": "t0153",
@@ -1849,7 +1991,8 @@
    "firstSeasonYear": 2022,
    "lastSeasonYear": 2022,
    "rating": 2,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/l1jeSEm6a88GFcLzlHQr60D0dOi.jpg"
   },
   {
    "id": "t0155",
@@ -1861,7 +2004,8 @@
    "firstSeasonYear": 2011,
    "lastSeasonYear": 2021,
    "rating": 2,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/ifo31fMWLmyOVpdak9K0kY4jldQ.jpg"
   },
   {
    "id": "t0156",
@@ -1873,7 +2017,8 @@
    "firstSeasonYear": 2019,
    "lastSeasonYear": 2021,
    "rating": 2,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/dDdcAfHBZ6Aalv53iR6o35CSLWA.jpg"
   },
   {
    "id": "t0157",
@@ -1885,7 +2030,8 @@
    "firstSeasonYear": 2012,
    "lastSeasonYear": 2020,
    "rating": 2,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/u8ZHFj1jC384JEkTt3vNg1DfWEb.jpg"
   },
   {
    "id": "t0158",
@@ -1897,7 +2043,8 @@
    "firstSeasonYear": 2018,
    "lastSeasonYear": 2020,
    "rating": 2,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/yxMpoHO0CXP5o9gB7IfsciilQS4.jpg"
   },
   {
    "id": "t0159",
@@ -1909,7 +2056,8 @@
    "firstSeasonYear": 2020,
    "lastSeasonYear": 2020,
    "rating": 2,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/cDNxOIm6K5D2W21QyJWZ95sJzQt.jpg"
   },
   {
    "id": "t0160",
@@ -1921,7 +2069,8 @@
    "firstSeasonYear": 2020,
    "lastSeasonYear": 2020,
    "rating": 2,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/vIXQ8UymmQ7zJEPrKJP3s3fSbhR.jpg"
   },
   {
    "id": "t0161",
@@ -1933,7 +2082,8 @@
    "firstSeasonYear": 2015,
    "lastSeasonYear": 2019,
    "rating": 2,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/oxnWofiE9fHOgUfs9NJa6nG6NTR.jpg"
   },
   {
    "id": "t0162",
@@ -1945,7 +2095,8 @@
    "firstSeasonYear": 2015,
    "lastSeasonYear": 2019,
    "rating": 2,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/eMFHl0HyLg7k04OVeE4xPvT6XhY.jpg"
   },
   {
    "id": "t0163",
@@ -1957,7 +2108,8 @@
    "firstSeasonYear": 2011,
    "lastSeasonYear": 2018,
    "rating": 2,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/8oCqMlKKomCArVtyOjRzMN6g40Z.jpg"
   },
   {
    "id": "t0164",
@@ -1969,7 +2121,8 @@
    "firstSeasonYear": 2016,
    "lastSeasonYear": 2018,
    "rating": 2,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/bZA0e5R1WxIcwz4n1VA21siTr9F.jpg"
   },
   {
    "id": "t0165",
@@ -1981,7 +2134,8 @@
    "firstSeasonYear": 2017,
    "lastSeasonYear": 2018,
    "rating": 2,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/4l6KD9HhtD6nCDEfg10Lp6C6zah.jpg"
   },
   {
    "id": "t0166",
@@ -1993,7 +2147,8 @@
    "firstSeasonYear": 2016,
    "lastSeasonYear": 2018,
    "rating": 2,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/yzM1hMB3PUJqbISX0f421b3xOjB.jpg"
   },
   {
    "id": "t0167",
@@ -2005,7 +2160,8 @@
    "firstSeasonYear": 2011,
    "lastSeasonYear": 2017,
    "rating": 2,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/yyaU6cayJQCr555VgYYETbDHu1E.jpg"
   },
   {
    "id": "t0168",
@@ -2017,7 +2173,8 @@
    "firstSeasonYear": 2009,
    "lastSeasonYear": 2014,
    "rating": 2,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/417XNiGvdzCsG9kDnnQJYaBsIrx.jpg"
   },
   {
    "id": "t0169",
@@ -2029,7 +2186,8 @@
    "firstSeasonYear": 2008,
    "lastSeasonYear": 2010,
    "rating": 2,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/qNmcaXDndOkY6v9QiJjnxQD09GJ.jpg"
   },
   {
    "id": "t0170",
@@ -2041,7 +2199,8 @@
    "firstSeasonYear": 2019,
    "lastSeasonYear": null,
    "rating": 2,
-   "dateWatched": "2024-08-01"
+   "dateWatched": "2024-08-01",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/in1R2dDc421JxsoRWaIIAqVI2KE.jpg"
   },
   {
    "id": "t0171",
@@ -2053,7 +2212,8 @@
    "firstSeasonYear": 2022,
    "lastSeasonYear": null,
    "rating": 2,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/eYzbGcYnOUlvj2fa76pTgIXogd7.jpg"
   },
   {
    "id": "t0172",
@@ -2065,7 +2225,8 @@
    "firstSeasonYear": 2019,
    "lastSeasonYear": null,
    "rating": 2,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/y9x2R87yt2U616736NJrP0d56dt.jpg"
   },
   {
    "id": "t0173",
@@ -2077,7 +2238,8 @@
    "firstSeasonYear": 2020,
    "lastSeasonYear": 2025,
    "rating": 2,
-   "dateWatched": "2025-09-29"
+   "dateWatched": "2025-09-29",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/Ac8ruycRXzgcsndTZFK6ouGA0FA.jpg"
   },
   {
    "id": "t0174",
@@ -2089,7 +2251,8 @@
    "firstSeasonYear": 2021,
    "lastSeasonYear": null,
    "rating": 2,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/xRnGrn7Z7SC0KIBodocoU1QgDZF.jpg"
   },
   {
    "id": "t0175",
@@ -2101,7 +2264,8 @@
    "firstSeasonYear": 2023,
    "lastSeasonYear": null,
    "rating": 2,
-   "dateWatched": "2026-02-02"
+   "dateWatched": "2026-02-02",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/40eFcTzZier3DWLqldsP5VHxeoD.jpg"
   },
   {
    "id": "t0176",
@@ -2113,7 +2277,8 @@
    "firstSeasonYear": 2025,
    "lastSeasonYear": null,
    "rating": 2,
-   "dateWatched": "2025-08-11"
+   "dateWatched": "2025-08-11",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/mIKfKo2uDk3itzAPYIcSeYr4KtF.jpg"
   },
   {
    "id": "t0177",
@@ -2125,7 +2290,8 @@
    "firstSeasonYear": 2024,
    "lastSeasonYear": null,
    "rating": 2,
-   "dateWatched": "2025-05-05"
+   "dateWatched": "2025-05-05",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/bJxGs0w5RAhaX4fIUQu511rvm0S.jpg"
   },
   {
    "id": "t0178",
@@ -2137,7 +2303,8 @@
    "firstSeasonYear": 2018,
    "lastSeasonYear": 2019,
    "rating": 2,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/lHZ4xqGQlmyiFTOVtwnNpTcZgkd.jpg"
   },
   {
    "id": "t0179",
@@ -2149,7 +2316,8 @@
    "firstSeasonYear": 2021,
    "lastSeasonYear": 2021,
    "rating": 2,
-   "dateWatched": "2025-09-20"
+   "dateWatched": "2025-09-20",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/78aK4Msbr22A5PGa6PZV0pAvdwf.jpg"
   },
   {
    "id": "t0180",
@@ -2161,7 +2329,8 @@
    "firstSeasonYear": 2026,
    "lastSeasonYear": null,
    "rating": 2,
-   "dateWatched": "2026-05-02"
+   "dateWatched": "2026-05-02",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/2CfTNVaR8kZQkWtWWE3Cntaiq33.jpg"
   },
   {
    "id": "t0181",
@@ -2173,7 +2342,8 @@
    "firstSeasonYear": 2024,
    "lastSeasonYear": 2024,
    "rating": 1,
-   "dateWatched": "2024-11-04"
+   "dateWatched": "2024-11-04",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/mGsxKwXUjojitRv2E9qMTbxbBRd.jpg"
   },
   {
    "id": "t0182",
@@ -2185,7 +2355,8 @@
    "firstSeasonYear": 2017,
    "lastSeasonYear": 2023,
    "rating": 1,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/d8mmn9thQ5dBk2qbv6BCqGUXWK3.jpg"
   },
   {
    "id": "t0183",
@@ -2197,7 +2368,8 @@
    "firstSeasonYear": 2023,
    "lastSeasonYear": 2023,
    "rating": 1,
-   "dateWatched": "2023-08-03"
+   "dateWatched": "2023-08-03",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/cF8RJk4wTce9esl9rxdFdUGV3Nb.jpg"
   },
   {
    "id": "t0184",
@@ -2209,7 +2381,8 @@
    "firstSeasonYear": 2023,
    "lastSeasonYear": 2023,
    "rating": 1,
-   "dateWatched": "2023-01-18"
+   "dateWatched": "2023-01-18",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/2nXJoSB5Y6R9ne7pjqL7Cs3zqY1.jpg"
   },
   {
    "id": "t0185",
@@ -2221,7 +2394,8 @@
    "firstSeasonYear": 2020,
    "lastSeasonYear": 2020,
    "rating": 1,
-   "dateWatched": "2023-04-12"
+   "dateWatched": "2023-04-12",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/fz7bdjxPColvEWCGr5Kiclzc86d.jpg"
   },
   {
    "id": "t0186",
@@ -2233,7 +2407,8 @@
    "firstSeasonYear": 2013,
    "lastSeasonYear": 2018,
    "rating": 1,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/hKWxWjFwnMvkWQawbhvC0Y7ygQ8.jpg"
   },
   {
    "id": "t0187",
@@ -2245,7 +2420,8 @@
    "firstSeasonYear": 2011,
    "lastSeasonYear": 2013,
    "rating": 1,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/lY44BjOnwCqtUO4VoKOz7IcG9RC.jpg"
   },
   {
    "id": "t0188",
@@ -2257,7 +2433,8 @@
    "firstSeasonYear": null,
    "lastSeasonYear": null,
    "rating": 1,
-   "dateWatched": null
+   "dateWatched": null,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/ykZ7hlShkdRQaL2aiieXdEMmrLb.jpg"
   }
  ]
 }
