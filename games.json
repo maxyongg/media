@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "ratingScale": 10,
- "updatedAt": "2026-07-17T17:30:01.708Z",
+ "updatedAt": "2026-07-17T17:30:09.134Z",
  "items": [
   {
    "id": "g0001",
@@ -44,7 +44,7 @@
   },
   {
    "id": "g0004",
-   "name": "The Legend of Zelda Ocarina of Time",
+   "name": "The Legend of Zelda: Ocarina of Time",
    "developer": null,
    "studioStatus": null,
    "genre": null,
