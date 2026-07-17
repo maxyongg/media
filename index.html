@@ -222,6 +222,7 @@ label.f>span{font-family:'Space Mono';font-size:10px;color:var(--mute);
 
 <div class="fabs">
   <button class="fab ghost" id="settingsBtn" aria-label="Settings">⚙</button>
+  <button class="fab ghost" id="reloadFab" aria-label="Reload from GitHub">⟳</button>
   <button class="fab push" id="pushBtn" aria-label="Save to GitHub" style="display:none">↑</button>
   <button class="fab" id="addBtn" aria-label="Add item">+</button>
 </div>
@@ -253,10 +254,6 @@ label.f>span{font-family:'Space Mono';font-size:10px;color:var(--mute);
   <div class="acts">
     <button class="btn ghost" id="closeSet">Close</button>
     <button class="btn primary" id="saveSet">Save settings</button>
-  </div>
-  <div class="acts" style="margin-top:10px">
-    <button class="btn ghost" id="pullBtn">Reload from GitHub</button>
-    <button class="btn primary" id="pushSetBtn">Sync to GitHub</button>
   </div>
   <div class="acts" style="margin-top:10px">
     <button class="btn danger" id="forgetBtn">Forget token</button>
@@ -318,17 +315,6 @@ const COLLECTIONS = {
       {k:'read',  l:'Read',   t:'text', half:true},
     ],
     sub: i => [i.author, i.year].filter(Boolean).join(' · '),
-    pct: () => null
-  },
-  albums: {
-    label:'Albums', file:'albums.json', scale:5, idp:'a',
-    fields:[
-      {k:'name',  l:'Title',  t:'text'},
-      {k:'artist',l:'Artist', t:'text', list:true},
-      {k:'year',  l:'Year',   t:'number', half:true},
-      {k:'label', l:'Label',  t:'text', half:true, list:true},
-    ],
-    sub: i => [i.artist, i.year].filter(Boolean).join(' · '),
     pct: () => null
   }
 };
@@ -747,8 +733,7 @@ $('#saveSet').addEventListener('click', ()=>{
   S.cfg.expires = $('#expIn').value || '';
   saveCfg(); S.authError=null; toast('Settings saved'); closeSheets(); verifyToken();
 });
-$('#pullBtn').addEventListener('click', pull);
-$('#pushSetBtn').addEventListener('click', push);
+$('#reloadFab').addEventListener('click', pull);
 $('#forgetBtn').addEventListener('click', ()=>{
   S.cfg.token=''; $('#tokIn').value=''; saveCfg(); S.authError=null;
   toast('Token removed from this browser'); checkToken();
