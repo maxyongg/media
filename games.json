@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "ratingScale": 10,
- "updatedAt": "2026-07-17T17:30:09.134Z",
+ "updatedAt": "2026-07-17T17:30:18.706Z",
  "items": [
   {
    "id": "g0001",
@@ -192,11 +192,11 @@
    "studioStatus": "AAA",
    "genre": "Open World",
    "console": "Switch",
-   "mainStoryPct": 100,
+   "mainStoryPct": "100",
    "yearReleased": 2023,
    "rating": 10,
    "datePlayed": "2023-05-20",
-   "coverUrl": "https://media.rawg.io/media/games/f87/f87de0e93f02007fd044e4bf04d453d8.jpg"
+   "coverUrl": "https://media.rawg.io/media/games/556/55684bfd048706f4266d331d70050b37.jpg"
   },
   {
    "id": "g0016",
