@@ -119,14 +119,11 @@ li.row{
   flex:0 0 auto;width:54px;height:78px;border-radius:7px;
   object-fit:cover;background:var(--ink-3);
 }
-.stars{position:relative;display:inline-block;width:76px;height:15px}
-.stars-row{position:absolute;top:0;left:0;width:76px;font-size:15px;line-height:15px;
-  letter-spacing:3px;white-space:nowrap}
-.stars-bg{color:var(--ink-3)}
-.stars-clip{position:absolute;top:0;left:0;height:100%;overflow:hidden}
-.stars-fg{color:var(--acid)}
-.stars-fg.mid{color:#c3b78a}
-.stars-fg.lo{color:var(--mute)}
+.stars{display:inline-block;width:88px;height:16px;line-height:0}
+.stars-bg path{fill:var(--ink-3)}
+.stars-fg path{fill:var(--acid)}
+.stars-fg.mid path{fill:#c3b78a}
+.stars-fg.lo path{fill:var(--mute)}
 .stars-empty{font-family:'Inter';font-size:13px;color:var(--mute)}
 .meta{flex:1;min-width:0}
 .title{font-weight:600;font-size:15px;letter-spacing:-.01em;
@@ -342,7 +339,7 @@ label.f>span{font-family:'Inter';font-size:10px;color:var(--mute);
 </div>
 
 <div class="toast" id="toast"></div>
-<div class="version">v2026.07.17g</div>
+<div class="version">v2026.07.17h</div>
 
 <script>
 /* ================= config ================= */
@@ -859,11 +856,23 @@ function rateClassFor(r, sc){
   return 'lo';
 }
 /* normalizes any X/sc rating to a proportional 5-star fill, so games/films
-   (out of 10) and tv/books (out of 5) read the same way at a glance */
+   (out of 10) and tv/books (out of 5) read the same way at a glance.
+   Built from SVG paths rather than layered ★ text runs — text-clip tricks
+   rely on two glyph runs measuring pixel-identical, which mobile browsers'
+   emoji/symbol fallback fonts don't guarantee, so stars broke on phones. */
+let starUid = 0;
+const STAR_PATH = "M8 .6l2.17 4.53 4.94.73-3.58 3.5.85 4.95L8 11.9l-4.38 2.4.85-4.95-3.58-3.5 4.94-.73z";
 function starsHTML(rating, sc, tier){
   if(!rating) return `<span class="stars-empty">–</span>`;
-  const pct = Math.max(4, Math.min(100, Math.round((rating/sc)*100)));
-  return `<span class="stars"><span class="stars-row stars-bg">★★★★★</span><span class="stars-clip" style="width:${pct}%"><span class="stars-row stars-fg ${tier}">★★★★★</span></span></span>`;
+  const pct = Math.max(4, Math.min(100, (rating/sc)*100));
+  const id = 'sc'+(starUid++);
+  const xs = [0,18,36,54,72];
+  const paths = xs.map(x=>`<path d="${STAR_PATH}" transform="translate(${x},2)"/>`).join('');
+  return `<span class="stars"><svg width="88" height="16" viewBox="0 0 88 16" aria-hidden="true">
+    <g class="stars-bg">${paths}</g>
+    <clipPath id="${id}" clipPathUnits="objectBoundingBox"><rect x="0" y="0" width="${(pct/100).toFixed(3)}" height="1"/></clipPath>
+    <g class="stars-fg ${tier}" clip-path="url(#${id})">${paths}</g>
+  </svg></span>`;
 }
 function computeHome(){
   const cats = [
