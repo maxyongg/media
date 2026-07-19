@@ -3312,6 +3312,15 @@
    "rating": 5,
    "dateWatched": null,
    "coverUrl": "https://image.tmdb.org/t/p/w342/dUkAmAyPVqubSBNRjRqCgHggZcK.jpg"
+  },
+  {
+   "id": "f0332",
+   "name": "Taxi Driver",
+   "director": "Martin Scorsese",
+   "genre": "Unknown",
+   "yearReleased": 1976,
+   "yearWatched": 2026,
+   "rating": 6
   }
  ]
 }
