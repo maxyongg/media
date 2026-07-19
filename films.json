@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "ratingScale": 10,
- "updatedAt": "2026-07-17T15:50:19.569Z",
+ "updatedAt": "2026-07-19T15:28:40.404Z",
  "items": [
   {
    "id": "f0001",
@@ -3320,7 +3320,9 @@
    "genre": "Unknown",
    "yearReleased": 1976,
    "yearWatched": 2026,
-   "rating": 6
+   "rating": 6,
+   "coverUrl": "https://image.tmdb.org/t/p/w342/ekstpH614fwDX8DUln1a2Opz0N8.jpg",
+   "dateWatched": "2026-07-19"
   }
  ]
 }
