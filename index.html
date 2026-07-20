@@ -407,7 +407,7 @@ label.f>span{font-family:var(--font-body);font-size:10px;color:var(--mute);
 </div>
 
 <div class="toast" id="toast"></div>
-<div class="version">v2026.07.18b</div>
+<div class="version">v2026.07.20a</div>
 
 <script>
 /* ================= config ================= */
@@ -1479,6 +1479,7 @@ function render(){
   renderTabs();
   const controls = document.querySelector('.controls');
   const spineLabel = document.querySelector('.spinelabel');
+  const headerEl = document.querySelector('header.top');
   $('#pushBtn').style.display = S.dirty.size ? 'flex' : 'none';
   if(S.tab==='stats' || S.tab==='home'){
     $('#spine').style.display='none';
@@ -1486,9 +1487,11 @@ function render(){
     if(controls) controls.style.display='none';
     $('#addBtn').style.display='none';
     $('#count').textContent='';
+    if(headerEl) headerEl.style.borderBottomColor = S.tab==='home' ? 'transparent' : '';
     if(S.tab==='stats') renderStatsTab(); else renderHomeTab();
     return;
   }
+  if(headerEl) headerEl.style.borderBottomColor = '';
   $('#spine').style.display='';
   if(spineLabel) spineLabel.style.display='';
   if(controls) controls.style.display='';
