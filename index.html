@@ -232,6 +232,7 @@ label.f>span{font-family:'Inter';font-size:10px;color:var(--mute);
 .btn.primary{background:var(--ink);color:var(--paper)}
 .btn.ghost{background:var(--ink-3);color:var(--ink);border:1px solid var(--line)}
 .btn.danger{background:none;color:var(--sig);border:1px solid var(--sig);flex:0 0 auto;padding:14px 16px}
+#inProgressBtn[aria-pressed="true"]{background:var(--acid);color:var(--ink);border-color:var(--acid)}
 .note{font-family:'Inter';font-size:11px;color:var(--mute);line-height:1.6;
   border-left:2px solid var(--line);padding-left:10px;margin:0 0 14px}
 .note b{color:var(--ink)}
@@ -300,6 +301,9 @@ label.f>span{font-family:'Inter';font-size:10px;color:var(--mute);
     <img id="coverPreview" style="width:54px;height:78px;border-radius:7px;object-fit:cover;background:var(--ink-3);display:none">
     <button class="btn ghost" type="button" id="fetchCoverBtn" style="flex:0 0 auto;padding:10px 14px">Fetch cover</button>
   </div>
+  <div id="inProgressWrap" style="display:none;margin-bottom:12px">
+    <button class="btn ghost" type="button" id="inProgressBtn" style="width:100%" aria-pressed="false">Currently reading</button>
+  </div>
   <div id="fields"></div>
   <label class="f"><span id="rlabel">Rating</span><div class="ratepick" id="ratepick"></div></label>
   <div class="acts">
@@ -339,7 +343,7 @@ label.f>span{font-family:'Inter';font-size:10px;color:var(--mute);
 </div>
 
 <div class="toast" id="toast"></div>
-<div class="version">v2026.07.17h</div>
+<div class="version">v2026.07.17i</div>
 
 <script>
 /* ================= config ================= */
@@ -906,8 +910,31 @@ function computeHome(){
   const latestYearCount = latestYear ? yc[latestYear] : 0;
   return {cats, recents, totalAll, topGenre, latestYear, latestYearCount};
 }
+function computeCurrently(){
+  const cats = [['books','Reading'],['tv','Watching'],['games','Playing']];
+  const out = [];
+  cats.forEach(([k,verb])=>{
+    const c = COLLECTIONS[k];
+    const items = (S.data[k]&&S.data[k].items)||[];
+    items.filter(i=>i.inProgress).forEach(i=>out.push({k,verb,c,item:i}));
+  });
+  return out;
+}
 function renderHomeTab(){
   const h = computeHome();
+  const current = computeCurrently();
+  const currentHtml = current.length ? `<div class="stats-section">
+    <div class="stats-h">Currently</div>
+    ${current.map(r=>`
+      <div class="home-recent-row" data-home-open="${r.k}:${r.item.id}">
+        ${coverImgHTML(r.item)}
+        <div class="meta">
+          <div class="title">${esc(r.item.name||'Untitled')}</div>
+          <div class="sub">${esc(r.c.sub(r.item)||'')}</div>
+        </div>
+        <span class="stats-chip">${r.verb}</span>
+      </div>`).join('')}
+  </div>` : '';
   const recentBlocks = h.cats.map(([k,label,verb])=>{
     const c = COLLECTIONS[k];
     const rows = h.recents[k].map(i=>`
@@ -933,6 +960,7 @@ function renderHomeTab(){
       ${h.latestYear?`<span class="stats-chip">${h.latestYearCount} logged in ${h.latestYear}</span>`:''}
       ${h.topGenre?`<span class="stats-chip">${esc(h.topGenre)} is your top genre</span>`:''}
     </div>
+    ${currentHtml}
     ${recentBlocks}`;
 }
 
@@ -1251,6 +1279,13 @@ function openEdit(item){
   $('#fields').innerHTML = html;
   updateCoverPreview(S.editing.coverUrl||'');
 
+  const ipVerb = {books:'Currently reading', tv:'Currently watching', games:'Currently playing'}[S.tab];
+  $('#inProgressWrap').style.display = ipVerb ? 'block' : 'none';
+  if(ipVerb){
+    $('#inProgressBtn').textContent = ipVerb;
+    $('#inProgressBtn').setAttribute('aria-pressed', S.editing.inProgress ? 'true' : 'false');
+  }
+
   $('#ratepick').innerHTML = Array.from({length:c.scale},(_,x)=>{
     const r=x+1;
     return `<button data-r="${r}" aria-pressed="${S.editing.rating===r}">${r}</button>`;
@@ -1388,6 +1423,10 @@ $('#fetchCoverBtn').addEventListener('click', async ()=>{
 });
 $('#fields').addEventListener('input', e=>{
   if(e.target.dataset.k==='coverUrl') updateCoverPreview(e.target.value.trim());
+});
+$('#inProgressBtn').addEventListener('click', ()=>{
+  S.editing.inProgress = !S.editing.inProgress;
+  $('#inProgressBtn').setAttribute('aria-pressed', S.editing.inProgress ? 'true' : 'false');
 });
 $('#reloadFab').addEventListener('click', pull);
 $('#fetchFab').addEventListener('click', triggerSync);
