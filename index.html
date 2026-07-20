@@ -366,7 +366,7 @@ label.f>span{font-family:'Inter';font-size:10px;color:var(--mute);
 </div>
 
 <div class="toast" id="toast"></div>
-<div class="version">v2026.07.17k</div>
+<div class="version">v2026.07.17l</div>
 
 <script>
 /* ================= config ================= */
@@ -908,9 +908,12 @@ function computeHome(){
     ['tv','TV','Recently watched'],
     ['books','Books','Recently read'],
   ];
-  const recents = {};
+  const now = new Date();
+  const curYear = String(now.getFullYear());
+  const curMonthKey = curYear+'-'+String(now.getMonth()+1).padStart(2,'0');
+  const monthName = now.toLocaleString('en-US',{month:'long'});
+  const recents = {}, monthCounts = {}, yearCatStats = {};
   let totalAll = 0;
-  const gc = {}, yc = {};
   cats.forEach(([k])=>{
     const c = COLLECTIONS[k];
     const items = (S.data[k]&&S.data[k].items)||[];
@@ -919,19 +922,23 @@ function computeHome(){
     const withDate = items.filter(i=>rf && i[rf]);
     withDate.sort((a,b)=>String(b[rf]).localeCompare(String(a[rf])));
     recents[k] = withDate.slice(0,3);
-    items.forEach(i=>{
-      genresOf(i).forEach(g=>{ gc[g]=(gc[g]||0)+1; });
+
+    monthCounts[k] = items.filter(i=>{
       const v = rf && i[rf];
-      const y = v && String(v).slice(0,4);
-      if(y && /^\d{4}$/.test(y)) yc[y]=(yc[y]||0)+1;
+      return v && String(v).startsWith(curMonthKey);
+    }).length;
+
+    const yearItems = items.filter(i=>{
+      const v = rf && i[rf];
+      return v && String(v).slice(0,4)===curYear;
     });
+    const gc = {};
+    yearItems.forEach(i=>genresOf(i).forEach(g=>{ gc[g]=(gc[g]||0)+1; }));
+    let bestG=null, bestN=0;
+    Object.entries(gc).forEach(([g,n])=>{ if(n>bestN){bestG=g;bestN=n;} });
+    yearCatStats[k] = {count:yearItems.length, topGenre:bestG};
   });
-  let topGenre=null, topN=0;
-  Object.entries(gc).forEach(([g,n])=>{ if(n>topN){topGenre=g;topN=n;} });
-  const years = Object.keys(yc).sort();
-  const latestYear = years.length ? years[years.length-1] : null;
-  const latestYearCount = latestYear ? yc[latestYear] : 0;
-  return {cats, recents, totalAll, topGenre, latestYear, latestYearCount};
+  return {cats, recents, totalAll, monthCounts, monthName, yearCatStats};
 }
 function computeCurrently(){
   const cats = [['books','Reading'],['tv','Watching'],['games','Playing']];
@@ -980,7 +987,10 @@ function renderHomeTab(){
       }).join('');
     }).join('')}
   </div>`;
-  const recentBlocks = h.cats.map(([k,label,verb])=>{
+  const monthCards = h.cats.map(([k,label])=>
+    `<div class="stat-card"><div class="stat-num">${h.monthCounts[k]}</div><div class="stat-label">${label}</div></div>`
+  ).join('');
+  const modules = h.cats.map(([k,label,verb])=>{
     const c = COLLECTIONS[k];
     const rows = h.recents[k].map(i=>`
       <div class="home-recent-row" data-home-open="${k}:${i.id}">
@@ -991,9 +1001,12 @@ function renderHomeTab(){
         </div>
         <div class="rate">${starsHTML(i.rating,c.scale,rateClassFor(i.rating,c.scale))}</div>
       </div>`).join('');
-    return `<div class="stats-section">
-      <div class="stats-h">${verb}</div>
+    const ys = h.yearCatStats[k];
+    const yearChips = `<span class="stats-chip">${ys.count} logged this year</span>${ys.topGenre?`<span class="stats-chip">${esc(ys.topGenre)} &middot; top genre</span>`:''}`;
+    return `<div class="stats-tile">
+      <div class="stats-h">${label}</div>
       ${rows || '<span class="stat-label">Nothing logged yet</span>'}
+      <div class="stats-chips" style="margin-top:12px">${yearChips}</div>
     </div>`;
   }).join('');
   $('#list').innerHTML = `
@@ -1001,12 +1014,12 @@ function renderHomeTab(){
       <div class="home-hero-num">${h.totalAll}</div>
       <div class="home-hero-label">films, games, shows &amp; books logged</div>
     </div>
-    <div class="stats-chips" style="margin-top:14px">
-      ${h.latestYear?`<span class="stats-chip">${h.latestYearCount} logged in ${h.latestYear}</span>`:''}
-      ${h.topGenre?`<span class="stats-chip">${esc(h.topGenre)} is your top genre</span>`:''}
+    <div class="stats-section">
+      <div class="stats-h">In ${h.monthName}, you logged</div>
+      <div class="stats-grid">${monthCards}</div>
     </div>
     ${currentHtml}
-    ${recentBlocks}`;
+    <div class="stats-tiles">${modules}</div>`;
 }
 
 /* ---- stats tab: computed live from whatever's currently loaded, no separate file ---- */
