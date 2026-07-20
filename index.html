@@ -183,6 +183,29 @@ li.row{
 .home-hero-label{font-family:'Inter';font-size:11px;color:var(--mute);text-transform:uppercase;letter-spacing:.06em;margin-top:6px}
 .home-recent-row{display:flex;align-items:center;gap:12px;padding:9px 4px;border-bottom:1px solid var(--line);cursor:pointer}
 .home-recent-row:last-child{border-bottom:none}
+.current-row{display:flex;align-items:center;gap:16px;padding:14px 4px;border-bottom:1px solid var(--line);cursor:pointer}
+.current-row:last-child{border-bottom:none}
+.current-cover{flex:0 0 auto;width:76px;height:110px;border-radius:10px;object-fit:cover;background:var(--ink-3)}
+.current-meta{flex:1;min-width:0}
+.current-title{font-weight:600;font-size:19px;letter-spacing:-.01em;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.current-sub{font-family:'Inter';font-size:14px;color:var(--mute);margin-top:4px;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.current-finish-btn{
+  flex:0 0 auto;font-family:'Inter';font-size:12px;font-weight:600;
+  background:var(--ink-3);color:var(--ink);border-radius:999px;padding:10px 14px;
+  white-space:nowrap;pointer-events:none;
+}
+.current-empty{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;
+  padding:26px 14px;margin-bottom:10px;border:1.5px dashed var(--line);border-radius:14px;
+  cursor:pointer;color:var(--mute);text-align:center;font-family:'Inter';font-size:13px;
+}
+.current-empty:last-child{margin-bottom:0}
+.current-empty .plus{
+  width:34px;height:34px;border-radius:50%;background:var(--ink-3);color:var(--ink);
+  display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;
+}
 
 /* ---------- fab ---------- */
 .fabs{
@@ -343,7 +366,7 @@ label.f>span{font-family:'Inter';font-size:10px;color:var(--mute);
 </div>
 
 <div class="toast" id="toast"></div>
-<div class="version">v2026.07.17i</div>
+<div class="version">v2026.07.17k</div>
 
 <script>
 /* ================= config ================= */
@@ -920,21 +943,43 @@ function computeCurrently(){
   });
   return out;
 }
+/* opens the same add form as the + FAB, pre-set to the right tab with the
+   "currently…" toggle already on — so cover fetch etc. all just work */
+function quickAddCurrent(k){
+  S.tab = k; render();
+  openEdit(null);
+  S.editing.inProgress = true;
+  $('#inProgressBtn').setAttribute('aria-pressed','true');
+}
 function renderHomeTab(){
   const h = computeHome();
   const current = computeCurrently();
-  const currentHtml = current.length ? `<div class="stats-section">
+  const catDefs = [['books','reading'],['tv','watching'],['games','playing']];
+  const currentHtml = `<div class="stats-section">
     <div class="stats-h">Currently</div>
-    ${current.map(r=>`
-      <div class="home-recent-row" data-home-open="${r.k}:${r.item.id}">
-        ${coverImgHTML(r.item)}
-        <div class="meta">
-          <div class="title">${esc(r.item.name||'Untitled')}</div>
-          <div class="sub">${esc(r.c.sub(r.item)||'')}</div>
-        </div>
-        <span class="stats-chip">${r.verb}</span>
-      </div>`).join('')}
-  </div>` : '';
+    ${catDefs.map(([k,verb])=>{
+      const items = current.filter(r=>r.k===k);
+      if(!items.length){
+        return `<div class="current-empty" data-quick-add="${k}" role="button" tabindex="0">
+          <span class="plus">+</span>
+          <span>What are you currently ${verb}?</span>
+        </div>`;
+      }
+      return items.map(r=>{
+        const coverEl = r.item.coverUrl
+          ? `<img class="current-cover" src="${esc(r.item.coverUrl)}" alt="" loading="lazy">`
+          : `<div class="current-cover"></div>`;
+        return `<div class="current-row" data-home-open="${k}:${r.item.id}">
+          ${coverEl}
+          <div class="current-meta">
+            <div class="current-title">${esc(r.item.name||'Untitled')}</div>
+            <div class="current-sub">${esc(r.c.sub(r.item)||'')}</div>
+          </div>
+          <button type="button" class="current-finish-btn" tabindex="-1">Log as finished</button>
+        </div>`;
+      }).join('');
+    }).join('')}
+  </div>`;
   const recentBlocks = h.cats.map(([k,label,verb])=>{
     const c = COLLECTIONS[k];
     const rows = h.recents[k].map(i=>`
@@ -1358,6 +1403,8 @@ $('#spine').addEventListener('click', e=>{
 $('#q').addEventListener('input', e=>{ S.q = e.target.value; render(); });
 $('#sortbtn').addEventListener('click', ()=>{ S.sort = (S.sort+1)%SORTS.length; render(); });
 $('#list').addEventListener('click', e=>{
+  const qa = e.target.closest('[data-quick-add]');
+  if(qa){ quickAddCurrent(qa.dataset.quickAdd); return; }
   const ho = e.target.closest('[data-home-open]');
   if(ho){
     const [k,id] = ho.dataset.homeOpen.split(':');
