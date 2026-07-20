@@ -250,6 +250,18 @@ li.row{
 .theme-swatch span{width:16px;height:16px;border-radius:50%;flex:0 0 auto}
 .theme-name{font-weight:600;font-size:13px}
 .theme-fonts{font-family:var(--font-body);font-size:11px}
+.suggest-list{display:flex;flex-direction:column;gap:6px;margin:-4px 0 12px}
+.suggest-row{
+  display:flex;align-items:center;gap:10px;width:100%;padding:8px;
+  border-radius:10px;background:var(--ink-3);text-align:left;
+}
+.suggest-row img,.suggest-thumb-empty{
+  width:32px;height:46px;border-radius:5px;object-fit:cover;
+  background:var(--ink-2);flex:0 0 auto;
+}
+.suggest-meta{display:flex;flex-direction:column;min-width:0}
+.suggest-title{font-size:13px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.suggest-year{font-family:var(--font-body);font-size:11px;color:var(--mute)}
 label.f{display:block;margin-bottom:12px}
 label.f>span{font-family:var(--font-body);font-size:10px;color:var(--mute);
   text-transform:uppercase;letter-spacing:.08em;display:block;margin-bottom:5px}
@@ -395,7 +407,7 @@ label.f>span{font-family:var(--font-body);font-size:10px;color:var(--mute);
 </div>
 
 <div class="toast" id="toast"></div>
-<div class="version">v2026.07.18a</div>
+<div class="version">v2026.07.18b</div>
 
 <script>
 /* ================= config ================= */
@@ -649,6 +661,142 @@ function coverImgHTML(i){
   return i.coverUrl
     ? `<img class="cover" src="${esc(i.coverUrl)}" alt="" loading="lazy">`
     : `<div class="cover"></div>`;
+}
+
+/* ---- title autocomplete: type a title, pick a match, autofill the rest ---- */
+let suggestTimer = null, suggestSeq = 0, lastSuggestResults = [];
+async function searchSuggestions(k, q){
+  try{
+    if(k==='films'){
+      if(!S.cfg.tmdbKey) return [];
+      const r = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${encodeURIComponent(S.cfg.tmdbKey)}&query=${encodeURIComponent(q)}`);
+      if(!r.ok) return [];
+      const j = await r.json();
+      return (j.results||[]).slice(0,6).map(m=>({
+        id:m.id, title:m.title, year:(m.release_date||'').slice(0,4),
+        thumb:m.poster_path?`https://image.tmdb.org/t/p/w92${m.poster_path}`:null, raw:m
+      }));
+    }
+    if(k==='tv'){
+      if(!S.cfg.tmdbKey) return [];
+      const r = await fetch(`https://api.themoviedb.org/3/search/tv?api_key=${encodeURIComponent(S.cfg.tmdbKey)}&query=${encodeURIComponent(q)}`);
+      if(!r.ok) return [];
+      const j = await r.json();
+      return (j.results||[]).slice(0,6).map(t=>({
+        id:t.id, title:t.name, year:(t.first_air_date||'').slice(0,4),
+        thumb:t.poster_path?`https://image.tmdb.org/t/p/w92${t.poster_path}`:null, raw:t
+      }));
+    }
+    if(k==='games'){
+      if(!S.cfg.rawgKey) return [];
+      const r = await fetch(`https://api.rawg.io/api/games?key=${encodeURIComponent(S.cfg.rawgKey)}&search=${encodeURIComponent(q)}&page_size=6`);
+      if(!r.ok) return [];
+      const j = await r.json();
+      return (j.results||[]).map(g=>({
+        id:g.id, title:g.name, year:(g.released||'').slice(0,4),
+        thumb:g.background_image||null, raw:g
+      }));
+    }
+    if(k==='books'){
+      const r = await fetch(`https://openlibrary.org/search.json?title=${encodeURIComponent(q)}&limit=6&fields=key,title,author_name,first_publish_year,cover_i`);
+      if(!r.ok) return [];
+      const j = await r.json();
+      return (j.docs||[]).map(b=>({
+        id:b.key, title:b.title, year:b.first_publish_year||'',
+        thumb:b.cover_i?`https://covers.openlibrary.org/b/id/${b.cover_i}-S.jpg`:null, raw:b
+      }));
+    }
+  }catch(e){ return []; }
+  return [];
+}
+function onTitleInput(e){
+  if(e.target.dataset.k!=='name') return;
+  clearTimeout(suggestTimer);
+  const q = e.target.value.trim();
+  const box = $('#titleSuggest');
+  if(!box) return;
+  if(q.length<2){ box.innerHTML=''; return; }
+  suggestTimer = setTimeout(()=>runSuggest(S.tab, q), 400);
+}
+async function runSuggest(k, q){
+  const seq = ++suggestSeq;
+  const results = await searchSuggestions(k, q);
+  const box = $('#titleSuggest');
+  if(seq!==suggestSeq || !box) return; // a newer keystroke superseded this search
+  lastSuggestResults = results;
+  if(!results.length){ box.innerHTML=''; return; }
+  box.innerHTML = results.map(r=>`
+    <button type="button" class="suggest-row" data-sid="${esc(String(r.id))}">
+      ${r.thumb?`<img src="${esc(r.thumb)}" alt="">`:'<span class="suggest-thumb-empty"></span>'}
+      <span class="suggest-meta"><span class="suggest-title">${esc(r.title)}</span><span class="suggest-year">${esc(r.year||'')}</span></span>
+    </button>`).join('');
+}
+async function fillFromSuggestion(k, picked){
+  const box = $('#titleSuggest'); if(box) box.innerHTML='';
+  const setField = (key,val)=>{
+    const el = $('#fields').querySelector(`[data-k="${key}"]`);
+    if(el && val!=null && val!=='') el.value = val;
+  };
+  setField('name', picked.title);
+  toast('Filling in details…');
+  try{
+    if(k==='films'){
+      setField('yearReleased', picked.year);
+      if(S.cfg.tmdbKey){
+        const cr = await fetch(`https://api.themoviedb.org/3/movie/${picked.id}/credits?api_key=${encodeURIComponent(S.cfg.tmdbKey)}`);
+        if(cr.ok){
+          const cj = await cr.json();
+          const dir = (cj.crew||[]).find(c=>c.job==='Director');
+          if(dir) setField('director', dir.name);
+        }
+      }
+      if(picked.raw.poster_path){
+        const url = `https://image.tmdb.org/t/p/w342${picked.raw.poster_path}`;
+        setField('coverUrl', url); updateCoverPreview(url);
+      }
+    } else if(k==='tv'){
+      if(S.cfg.tmdbKey){
+        const dr = await fetch(`https://api.themoviedb.org/3/tv/${picked.id}?api_key=${encodeURIComponent(S.cfg.tmdbKey)}`);
+        if(dr.ok){
+          const dj = await dr.json();
+          setField('genre', (dj.genres||[]).map(g=>g.name).join('/'));
+          setField('network', (dj.networks||[]).map(n=>n.name).slice(0,2).join('/'));
+          setField('seasons', dj.number_of_seasons||'');
+          setField('firstSeasonYear', (dj.first_air_date||'').slice(0,4));
+          if(dj.status && dj.status!=='Returning Series') setField('lastSeasonYear', (dj.last_air_date||'').slice(0,4));
+        }
+      }
+      if(picked.raw.poster_path){
+        const url = `https://image.tmdb.org/t/p/w342${picked.raw.poster_path}`;
+        setField('coverUrl', url); updateCoverPreview(url);
+      }
+    } else if(k==='games'){
+      setField('yearReleased', picked.year);
+      setField('genre', (picked.raw.genres||[]).map(g=>g.name).join('/'));
+      setField('console', (picked.raw.platforms||[]).map(p=>p.platform&&p.platform.name).filter(Boolean).slice(0,3).join('/'));
+      if(S.cfg.rawgKey){
+        const dr = await fetch(`https://api.rawg.io/api/games/${picked.id}?key=${encodeURIComponent(S.cfg.rawgKey)}`);
+        if(dr.ok){
+          const dj = await dr.json();
+          const devs = (dj.developers||[]).map(d=>d.name).join('/');
+          if(devs) setField('developer', devs);
+        }
+      }
+      if(picked.raw.background_image){
+        setField('coverUrl', picked.raw.background_image); updateCoverPreview(picked.raw.background_image);
+      }
+    } else if(k==='books'){
+      setField('yearPublished', picked.year);
+      setField('author', (picked.raw.author_name||[]).join('/'));
+      if(picked.raw.cover_i){
+        const url = `https://covers.openlibrary.org/b/id/${picked.raw.cover_i}-M.jpg`;
+        setField('coverUrl', url); updateCoverPreview(url);
+      }
+    }
+    toast('Filled in — check the details, then save');
+  }catch(e){
+    toast('Filled what I could — some details failed to load');
+  }
 }
 async function fetchMissingCovers(){
   const missingKeys = [];
@@ -1405,6 +1553,9 @@ function openEdit(item){
   });
   if(pend) html += `<div class="two">${pend}</div>`;
   $('#fields').innerHTML = html;
+  if($('#fields').children[0]){
+    $('#fields').children[0].insertAdjacentHTML('afterend', '<div class="suggest-list" id="titleSuggest"></div>');
+  }
   updateCoverPreview(S.editing.coverUrl||'');
 
   const ipVerb = {books:'Currently reading', tv:'Currently watching', games:'Currently playing'}[S.tab];
@@ -1561,6 +1712,13 @@ $('#fetchCoverBtn').addEventListener('click', async ()=>{
 });
 $('#fields').addEventListener('input', e=>{
   if(e.target.dataset.k==='coverUrl') updateCoverPreview(e.target.value.trim());
+  onTitleInput(e);
+});
+$('#fields').addEventListener('click', e=>{
+  const row = e.target.closest('[data-sid]'); if(!row) return;
+  e.preventDefault();
+  const picked = lastSuggestResults.find(r=>String(r.id)===row.dataset.sid);
+  if(picked) fillFromSuggestion(S.tab, picked);
 });
 $('#inProgressBtn').addEventListener('click', ()=>{
   S.editing.inProgress = !S.editing.inProgress;
