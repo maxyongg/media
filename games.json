@@ -1,8 +1,22 @@
 {
  "schemaVersion": 1,
  "ratingScale": 10,
- "updatedAt": "2026-07-20T08:15:58.568Z",
+ "updatedAt": "2026-07-20T08:28:21.173Z",
  "items": [
+  {
+   "id": "g0245",
+   "rating": null,
+   "inProgress": true,
+   "name": "Nine Sols",
+   "coverUrl": "https://media.rawg.io/media/games/cee/cee02d983e2e1e457caa562420f532fb.jpg",
+   "developer": "Red Candle Games",
+   "studioStatus": "Indie",
+   "genre": "Metroidvania",
+   "console": "PS5",
+   "mainStoryPct": null,
+   "datePlayed": null,
+   "yearReleased": null
+  },
   {
    "id": "g0001",
    "name": "Mina the Hollower",
