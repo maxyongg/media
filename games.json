@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "ratingScale": 10,
- "updatedAt": "2026-07-20T13:20:55.202Z",
+ "updatedAt": "2026-07-20T13:21:08.221Z",
  "items": [
   {
    "id": "g0245",
@@ -1597,7 +1597,7 @@
    "genre": "JRPG",
    "console": "PS5",
    "mainStoryPct": "100",
-   "yearReleased": 2017,
+   "yearReleased": 2020,
    "rating": 7,
    "datePlayed": "2026-04-23",
    "coverUrl": "https://media.rawg.io/media/games/f50/f5023ef71feabf852b538b1d45e6466c.jpg"
