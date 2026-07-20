@@ -1,8 +1,18 @@
 {
  "schemaVersion": 1,
  "ratingScale": 5,
- "updatedAt": "2026-07-17T15:51:21.811Z",
+ "updatedAt": "2026-07-20T08:26:59.934Z",
  "items": [
+  {
+   "id": "b0084",
+   "rating": null,
+   "inProgress": true,
+   "name": "Children of Memory",
+   "coverUrl": "https://covers.openlibrary.org/b/id/14633285-M.jpg",
+   "author": "Adrian Tchaikovsky",
+   "yearPublished": 2022,
+   "dateRead": null
+  },
   {
    "id": "b0001",
    "name": "Pale Fire",
