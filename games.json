@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "ratingScale": 10,
- "updatedAt": "2026-07-20T08:15:47.753Z",
+ "updatedAt": "2026-07-20T08:15:58.568Z",
  "items": [
   {
    "id": "g0001",
@@ -1821,7 +1821,7 @@
    "rating": 6,
    "datePlayed": "2026-06-24",
    "coverUrl": "https://media.rawg.io/media/games/86f/86f2dc1b9671f25a13ff92e069b51786.jpg",
-   "inProgress": true
+   "inProgress": false
   },
   {
    "id": "g0141",
