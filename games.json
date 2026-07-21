@@ -1,21 +1,21 @@
 {
  "schemaVersion": 1,
  "ratingScale": 10,
- "updatedAt": "2026-07-20T13:21:08.221Z",
+ "updatedAt": "2026-07-21T06:54:27.374Z",
  "items": [
   {
    "id": "g0245",
-   "rating": null,
-   "inProgress": true,
+   "rating": 9,
+   "inProgress": false,
    "name": "Nine Sols",
    "coverUrl": "https://media.rawg.io/media/games/cee/cee02d983e2e1e457caa562420f532fb.jpg",
    "developer": "Red Candle Games",
    "studioStatus": "Indie",
    "genre": "Metroidvania",
    "console": "PS5",
-   "mainStoryPct": null,
-   "datePlayed": null,
-   "yearReleased": null
+   "mainStoryPct": "100",
+   "datePlayed": "2026-07-21",
+   "yearReleased": 2019
   },
   {
    "id": "g0001",
