@@ -89,12 +89,14 @@ nav.nav{display:flex;align-items:center;gap:18px;flex:0 0 auto}
   font-family:var(--font-body);font-size:13px;font-weight:600;letter-spacing:.02em;
 }
 .addbtn:active{opacity:.85}
+.htools{display:flex;align-items:center;gap:10px}
 @media(max-width:680px){
-  header.top{gap:10px 12px;padding:14px 0 10px}
-  .brand{font-size:22px}
-  nav.nav{gap:14px}
+  header.top{gap:12px;padding:14px 0 10px;align-items:center}
+  .brand{font-size:22px;order:1}
+  .htools{order:2;margin-left:auto;gap:8px}
+  nav.nav{order:3;flex:1 1 100%;gap:22px}
+  .hsearch{order:4;flex:1 1 100%}
   .hspace{display:none}
-  .hsearch{order:6;flex:1 1 100%}
   .sync .txt{display:none}
   .iconbtn{width:34px;height:34px;border-radius:9px}
   .addbtn{height:34px;padding:0 13px}
@@ -168,9 +170,10 @@ nav.nav{display:flex;align-items:center;gap:18px;flex:0 0 auto}
 .tsel select:focus{outline:2px solid var(--sig);outline-offset:1px}
 .table-meta{font-family:var(--font-body);font-size:11px;color:var(--mute);letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
 @media(max-width:640px){
-  .table-tools{width:100%;margin-left:0;order:3;gap:8px}
-  .tsel{flex:1;justify-content:space-between;font-size:9px}
-  .tsel select{flex:0 1 auto;font-size:12px;padding:6px 24px 6px 9px}
+  .table-tools{width:100%;margin-left:0;order:3;gap:12px}
+  .tsel{flex:1;min-width:0;gap:8px;font-size:9px}
+  .tsel>span{flex:0 0 34px}
+  .tsel select{flex:1;min-width:0;font-size:12px;padding:7px 24px 7px 10px}
   .table-meta{order:2;margin-left:auto}
 }
 /* fixed layout => the table always exactly fills the width (never overflows /
@@ -394,12 +397,14 @@ label.f>span{font-family:var(--font-body);font-size:10px;color:var(--mute);
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
       <input id="q" placeholder="Search" autocomplete="off">
     </div>
-    <button class="sync" id="syncStatus" aria-label="Sync status"><span class="dot"></span><span class="txt">Local</span></button>
-    <button class="iconbtn hidden" id="saveBtn" aria-label="Save to GitHub" title="Save to GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg></button>
-    <button class="iconbtn" id="reloadBtn" aria-label="Reload from GitHub" title="Reload from GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v6h-6"/></svg></button>
-    <button class="iconbtn" id="settingsBtn" aria-label="Settings" title="Settings"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></button>
-    <button class="iconbtn" id="themeBtn" aria-label="Appearance" title="Appearance"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
-    <button class="addbtn" id="addBtn">+ Add</button>
+    <div class="htools">
+      <button class="sync" id="syncStatus" aria-label="Sync status"><span class="dot"></span><span class="txt">Local</span></button>
+      <button class="iconbtn hidden" id="saveBtn" aria-label="Save to GitHub" title="Save to GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg></button>
+      <button class="iconbtn" id="reloadBtn" aria-label="Reload from GitHub" title="Reload from GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v6h-6"/></svg></button>
+      <button class="iconbtn" id="settingsBtn" aria-label="Settings" title="Settings"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></button>
+      <button class="iconbtn" id="themeBtn" aria-label="Appearance" title="Appearance"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+      <button class="addbtn" id="addBtn">+ Add</button>
+    </div>
   </header>
 
   <div class="banner" id="banner" hidden>
@@ -481,7 +486,7 @@ label.f>span{font-family:var(--font-body);font-size:10px;color:var(--mute);
 </div>
 
 <div class="toast" id="toast"></div>
-<div class="version">v2026.07.23h</div>
+<div class="version">v2026.07.23i</div>
 
 <script>
 /* ================= config ================= */
