@@ -27,7 +27,8 @@
   --safe-b:env(safe-area-inset-bottom,0px);
 }
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-html,body{margin:0;padding:0;overflow-x:hidden;max-width:100%}
+html,body{margin:0;padding:0}
+body{overflow-x:clip}
 body{
   background:var(--paper);color:var(--ink);
   font-family:var(--font-body),system-ui,sans-serif;
@@ -48,7 +49,7 @@ header.top{
   display:flex;align-items:center;gap:20px;flex-wrap:wrap;
 }
 .brand{font-family:var(--font-head);font-weight:700;font-size:26px;letter-spacing:.03em;line-height:1;flex:0 0 auto}
-.brand em{font-style:normal;color:var(--sig);font-size:.72em;vertical-align:.08em;margin:0 .06em}
+.brand .star{font-style:normal;color:var(--sig);font-size:.6em;vertical-align:.28em;margin:0 .04em;font-family:var(--font-body)}
 nav.nav{display:flex;align-items:center;gap:18px;flex:0 0 auto}
 .navlink{
   font-family:var(--font-body);font-size:12px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;
@@ -64,7 +65,7 @@ nav.nav{display:flex;align-items:center;gap:18px;flex:0 0 auto}
   flex:0 1 240px;display:flex;align-items:center;gap:8px;min-width:0;
   border-bottom:1px solid var(--line);padding:5px 2px;color:var(--mute);
 }
-.hsearch svg{flex:0 0 auto}
+.hsearch svg{flex:0 0 auto;width:15px;height:15px;opacity:.65}
 .hsearch input{flex:1;border:none;background:none;color:var(--ink);font-size:14px;min-width:0;padding:0}
 .hsearch input:focus{outline:none}
 .hsearch input::placeholder{color:var(--mute)}
@@ -81,6 +82,7 @@ nav.nav{display:flex;align-items:center;gap:18px;flex:0 0 auto}
 }
 .iconbtn:active{background:var(--ink-3)}
 .iconbtn.hidden{display:none}
+.iconbtn svg{width:17px;height:17px}
 .addbtn{
   flex:0 0 auto;display:flex;align-items:center;gap:6px;
   background:var(--ink);color:var(--paper);border-radius:10px;padding:0 16px;height:38px;
@@ -159,7 +161,7 @@ nav.nav{display:flex;align-items:center;gap:18px;flex:0 0 auto}
 .pill{font-family:var(--font-body);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);border:1px solid var(--line);border-radius:8px;padding:7px 14px;background:none;white-space:nowrap}
 .pill[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
 .table-meta{margin-left:auto;font-family:var(--font-body);font-size:11px;color:var(--mute);letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
-.mtable{width:100%;border-collapse:collapse;margin-top:10px;table-layout:auto}
+.mtable{width:auto;max-width:100%;border-collapse:collapse;margin-top:10px;table-layout:auto}
 .mtable thead th{font-family:var(--font-body);font-size:10px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--mute);text-align:left;padding:10px 12px;border-bottom:1px solid var(--ink);white-space:nowrap}
 .mtable th.sortable{cursor:pointer;user-select:none}
 .mtable th .arr{color:var(--ink);margin-left:2px}
@@ -168,10 +170,6 @@ nav.nav{display:flex;align-items:center;gap:18px;flex:0 0 auto}
 .mtable tbody tr:hover{background:var(--ink-2)}
 .mtable td{padding:10px 12px;vertical-align:middle;white-space:nowrap}
 .cell-idx{font-family:var(--font-body);font-size:12px;color:var(--mute);width:38px}
-/* Creator column absorbs the slack so the table spans the full width and the
-   right-hand columns line up with the hero above — while Title still hugs
-   its content, keeping Title and Creator close together. */
-.mtable th.col-creator, .mtable td.col-creator{width:100%}
 .titlecell{display:flex;align-items:center;gap:14px;min-width:0}
 .titlecell .t{display:flex;flex-direction:column;min-width:0;overflow:hidden}
 .cell-title{font-family:var(--font-head);font-weight:700;font-size:17px;letter-spacing:-.01em;color:var(--ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:300px}
@@ -186,14 +184,12 @@ nav.nav{display:flex;align-items:center;gap:18px;flex:0 0 auto}
 .rstatus.done{color:var(--acid)}
 .rstatus.active{color:var(--sig)}
 @media(max-width:1024px){
-  .col-creator,.col-type,.col-year,.col-date,.col-status{display:none}
+  .col-creator,.col-type,.col-year,.col-date{display:none}
+  .mtable{width:100%}
   .mtable th.col-title, .mtable td.col-title{width:100%}
   .cell-title{font-size:16px;max-width:58vw}
   .row-sub{display:block;font-family:var(--font-body);font-size:11px;color:var(--mute);margin-top:3px;
     overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:58vw}
-  .row-sub .st{font-weight:600;letter-spacing:.02em}
-  .row-sub .st.done{color:var(--acid)}
-  .row-sub .st.active{color:var(--sig)}
   .swatch{width:44px;height:44px}
   .stars{width:80px}
   .mtable td{padding:11px 8px}
@@ -366,22 +362,22 @@ label.f>span{font-family:var(--font-body);font-size:10px;color:var(--mute);
 <body>
 <div class="wrap">
   <header class="top">
-    <div class="brand">L<em>✳</em>I<em>✳</em>ST</div>
+    <div class="brand">L<i class="star">&#42;</i>I<i class="star">&#42;</i>ST</div>
     <nav class="nav" id="nav">
       <button class="navlink" data-view="home" aria-current="true">Home</button>
       <button class="navlink" data-view="stats">Stats</button>
-      <a class="navlink" href="https://maxyongg.github.io/collection/" target="_blank" rel="noopener">Collection<span class="ext">↗</span></a>
+      <a class="navlink" href="https://maxyongg.github.io/collection/" target="_blank" rel="noopener">Collection<span class="ext">&#8599;</span></a>
     </nav>
     <div class="hspace"></div>
     <div class="hsearch">
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
       <input id="q" placeholder="Search" autocomplete="off">
     </div>
     <button class="sync" id="syncStatus" aria-label="Sync status"><span class="dot"></span><span class="txt">Local</span></button>
-    <button class="iconbtn hidden" id="saveBtn" aria-label="Save to GitHub" title="Save to GitHub">↑</button>
-    <button class="iconbtn" id="reloadBtn" aria-label="Reload from GitHub" title="Reload from GitHub">⟳</button>
-    <button class="iconbtn" id="settingsBtn" aria-label="Settings" title="Settings">⚙</button>
-    <button class="iconbtn" id="themeBtn" aria-label="Appearance" title="Appearance">☀</button>
+    <button class="iconbtn hidden" id="saveBtn" aria-label="Save to GitHub" title="Save to GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg></button>
+    <button class="iconbtn" id="reloadBtn" aria-label="Reload from GitHub" title="Reload from GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v6h-6"/></svg></button>
+    <button class="iconbtn" id="settingsBtn" aria-label="Settings" title="Settings"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></button>
+    <button class="iconbtn" id="themeBtn" aria-label="Appearance" title="Appearance"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
     <button class="addbtn" id="addBtn">+ Add</button>
   </header>
 
@@ -464,7 +460,7 @@ label.f>span{font-family:var(--font-body);font-size:10px;color:var(--mute);
 </div>
 
 <div class="toast" id="toast"></div>
-<div class="version">v2026.07.23d</div>
+<div class="version">v2026.07.23e</div>
 
 <script>
 /* ================= config ================= */
@@ -1332,22 +1328,20 @@ function renderTable(){
     `<button class="pill" data-type="${k}" aria-pressed="${S.typeFilter===k}">${l}</button>`).join('');
   const arr = key => S.sortKey===key ? `<span class="arr">${S.sortDir<0?'↓':'↑'}</span>` : '';
   const body = rows.length ? rows.map((r,ix)=>{
-    const st = statusOf(r.k, r.item);
     const yr = r.item[yearField(r.k)] || '';
     const cr = r.item[creatorField(r.k)] || '';
     const dstr = fmtDate(dateAddedOf(r));
     const subParts = [TYPE_LABELS[r.k], yr, (dstr!=='—'?dstr:'')].filter(Boolean).join(' · ');
     return `<tr data-open="${r.k}:${r.item.id}">
       <td class="cell-idx col-idx num">${String(ix+1).padStart(2,'0')}</td>
-      <td class="col-title"><div class="titlecell"><div class="swatch" style="${bgStyle(r.item)}"></div><div class="t"><span class="cell-title">${esc(r.item.name||'Untitled')}</span><span class="row-sub">${subParts} &middot; <span class="st ${st.cls}">${st.label}</span></span></div></div></td>
+      <td class="col-title"><div class="titlecell"><div class="swatch" style="${bgStyle(r.item)}"></div><div class="t"><span class="cell-title">${esc(r.item.name||'Untitled')}</span><span class="row-sub">${subParts}</span></div></div></td>
       <td class="col-creator cell-creator">${esc(String(cr))}</td>
       <td class="col-type"><span class="typebadge">${TYPE_LABELS[r.k]}</span></td>
       <td class="col-year cell-year num">${esc(String(yr))}</td>
       <td class="col-date cell-date">${dstr}</td>
       <td class="col-rating"><div class="ratecell">${starsHTML(r.item.rating, r.c.scale, rateClassFor(r.item.rating, r.c.scale))}</div></td>
-      <td class="col-status"><span class="rstatus ${st.cls}">${st.label}</span></td>
     </tr>`;
-  }).join('') : `<tr><td colspan="8"><div class="empty"><b>Nothing here</b>Try a different filter or search.</div></td></tr>`;
+  }).join('') : `<tr><td colspan="7"><div class="empty"><b>Nothing here</b>Try a different filter or search.</div></td></tr>`;
   return `<div class="tablewrap">
     <div class="table-top">
       <div class="type-pills">${pills}</div>
@@ -1362,7 +1356,6 @@ function renderTable(){
         <th class="col-year num sortable" data-sort="year">Year${arr('year')}</th>
         <th class="col-date sortable" data-sort="date">Date added${arr('date')}</th>
         <th class="col-rating sortable" data-sort="rating">Rating${arr('rating')}</th>
-        <th class="col-status">Status</th>
       </tr></thead>
       <tbody>${body}</tbody>
     </table>
@@ -1671,13 +1664,13 @@ function saveEdit(){
     arr.unshift(o);
   }
   markDirty(S.tab); closeSheets(); render();
-  toast(o.id ? 'Saved locally — tap ↑ to commit' : 'Added');
+  toast(o.id ? 'Saved' : 'Added');
 }
 function delEdit(){
   if(!S.editing.id) return;
   if(!confirm('Delete "'+S.editing.name+'"? This removes it from the list.')) return;
   S.data[S.tab].items = S.data[S.tab].items.filter(x=>x.id!==S.editing.id);
-  markDirty(S.tab); closeSheets(); render(); toast('Deleted — tap ↑ to commit');
+  markDirty(S.tab); closeSheets(); render(); toast('Deleted');
 }
 
 /* ================= sheets ================= */
