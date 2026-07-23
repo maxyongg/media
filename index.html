@@ -127,9 +127,9 @@ nav.nav{display:flex;align-items:center;gap:18px;flex:0 0 auto}
 .ccard .nm{position:absolute;left:12px;right:12px;bottom:12px;color:#fff;font-family:var(--font-head);font-weight:700;font-size:15px;line-height:1.2;overflow:hidden;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical}
 .ccard .fin{position:absolute;top:8px;right:8px;width:26px;height:26px;border-radius:50%;background:rgba(255,255,255,.92);color:#111;display:flex;align-items:center;justify-content:center;font-size:13px;opacity:0;transition:opacity .12s}
 .ccard:hover .fin{opacity:1}
-.ccard.add{grid-column:1/-1;aspect-ratio:auto;display:flex;flex-direction:row;align-items:center;justify-content:center;gap:12px;border:1.5px dashed var(--line);background:none;color:var(--mute);text-align:left;padding:20px}
+.ccard.add{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;border:1.5px dashed var(--line);background:none;color:var(--mute);text-align:center;padding:12px}
 .ccard.add .plus{width:32px;height:32px;border-radius:50%;background:var(--ink-2);display:flex;align-items:center;justify-content:center;font-size:18px;color:var(--ink);flex:0 0 auto}
-.ccard.add span{font-family:var(--font-body);font-size:12px;line-height:1.35}
+.ccard.add span{font-family:var(--font-body);font-size:11px;line-height:1.3}
 .recent-scroll{display:flex;gap:12px;overflow-x:auto;scrollbar-width:none;padding-bottom:4px}
 .recent-scroll::-webkit-scrollbar{display:none}
 .rtile{position:relative;flex:0 0 auto;width:134px;aspect-ratio:3/4;border-radius:12px;overflow:hidden;cursor:pointer;background:var(--ink-3);border:1px solid var(--line)}
@@ -160,22 +160,25 @@ nav.nav{display:flex;align-items:center;gap:18px;flex:0 0 auto}
 .mtable th.num,.mtable td.num{text-align:right}
 .mtable tbody tr{border-bottom:1px solid var(--line);cursor:pointer}
 .mtable tbody tr:hover{background:var(--ink-2)}
-.mtable td{padding:11px 12px;vertical-align:middle}
+.mtable td{padding:10px 12px;vertical-align:middle;white-space:nowrap}
 .cell-idx{font-family:var(--font-body);font-size:12px;color:var(--mute);width:38px}
 .titlecell{display:flex;align-items:center;gap:14px;min-width:0}
-.titlecell .t{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.titlecell .t{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0;max-width:360px}
 .cell-title{font-family:var(--font-head);font-weight:700;font-size:17px;letter-spacing:-.01em;color:var(--ink)}
 .swatch{width:44px;height:44px;border-radius:8px;flex:0 0 auto;background-size:cover;background-position:center;background-color:var(--ink-3)}
-.cell-creator{font-family:var(--font-body);font-size:13px;color:var(--mute)}
+.cell-creator{font-family:var(--font-body);font-size:13px;color:var(--mute);max-width:220px;overflow:hidden;text-overflow:ellipsis}
 .typebadge{font-family:var(--font-body);font-size:10px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);border:1px solid var(--line);border-radius:5px;padding:3px 8px;white-space:nowrap}
 .cell-year{font-family:var(--font-body);font-size:13px;color:var(--mute)}
+.cell-date{font-family:var(--font-body);font-size:12px;color:var(--mute)}
 .ratecell{display:flex;align-items:center;gap:10px;white-space:nowrap}
 .rstatus{font-family:var(--font-body);font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;white-space:nowrap}
 .rstatus.done{color:var(--acid)}
 .rstatus.active{color:var(--sig)}
-@media(max-width:760px){
-  .col-creator,.col-type,.col-year{display:none}
+.col-spacer{width:100%;padding:0!important;border:none}
+@media(max-width:860px){
+  .col-creator,.col-type,.col-year,.col-date{display:none}
   .cell-title{font-size:15px}
+  .titlecell .t{max-width:52vw}
   .swatch{width:38px;height:38px}
   .tablewrap{margin-top:32px}
 }
@@ -443,7 +446,7 @@ label.f>span{font-family:var(--font-body);font-size:10px;color:var(--mute);
 </div>
 
 <div class="toast" id="toast"></div>
-<div class="version">v2026.07.23a</div>
+<div class="version">v2026.07.23b</div>
 
 <script>
 /* ================= config ================= */
@@ -556,7 +559,7 @@ function renderThemeGrid(){
 /* ================= state ================= */
 const S = {
   view:'home', tab:'films', typeFilter:'all', q:'',
-  sortKey:'rating', sortDir:-1,
+  sortKey:'date', sortDir:-1,
   data:{}, shas:{}, dirty:new Set(), authError:null,
   cfg:{repo:'', branch:'main', token:'', expires:'', tmdbKey:'', rawgKey:'', theme:'museum'},
   editing:null, statsCat:'overview', statsFilter:null
@@ -1109,21 +1112,41 @@ function statusOf(k, it){
   }
   return {cls:'done', label:'Completed'};
 }
+/* the "date added" value = the category's primary recent date field */
+function dateAddedOf(r){ const f=(r.c.recentFields||[])[0]; return f ? (r.item[f]||'') : ''; }
+const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+function fmtDate(v){
+  if(!v) return '—';
+  const s = String(v);
+  const m = s.match(/^(\d{4})-(\d{2})(?:-(\d{2}))?/);
+  if(m){ const mo = MONTHS[+m[2]-1]||''; return m[3] ? `${+m[3]} ${mo} ${m[1]}` : `${mo} ${m[1]}`; }
+  if(/^\d{4}$/.test(s)) return s;
+  return esc(s);
+}
 function tableRows(){
   const q = S.q.trim().toLowerCase();
   let rows = allRows();
   if(S.typeFilter!=='all') rows = rows.filter(r=>r.k===S.typeFilter);
   if(q) rows = rows.filter(r=>Object.values(r.item).some(v=>v!=null && String(v).toLowerCase().includes(q)));
   const dir = S.sortDir;
+  const nameCmp = (a,b)=>String(a.item.name||'').localeCompare(String(b.item.name||''));
   rows.sort((a,b)=>{
-    if(S.sortKey==='name') return String(a.item.name||'').localeCompare(String(b.item.name||''))*dir;
+    if(S.sortKey==='name') return nameCmp(a,b)*dir;
     if(S.sortKey==='year'){
       const ay = +(a.item[yearField(a.k)]||0), by = +(b.item[yearField(b.k)]||0);
-      return (ay-by)*dir || String(a.item.name||'').localeCompare(String(b.item.name||''));
+      return (ay-by)*dir || nameCmp(a,b);
+    }
+    if(S.sortKey==='date'){
+      // undated items always sink to the bottom, whichever direction
+      const ad = String(dateAddedOf(a)), bd = String(dateAddedOf(b));
+      if(!ad && !bd) return nameCmp(a,b);
+      if(!ad) return 1;
+      if(!bd) return -1;
+      return ad.localeCompare(bd)*dir || nameCmp(a,b);
     }
     // rating: normalize each to a 0–1 fraction so /10 and /5 scales compare fairly
     const an = (a.item.rating||0)/a.c.scale, bn = (b.item.rating||0)/b.c.scale;
-    return (an-bn)*dir || String(a.item.name||'').localeCompare(String(b.item.name||''));
+    return (an-bn)*dir || nameCmp(a,b);
   });
   return rows;
 }
@@ -1239,23 +1262,24 @@ function quickAddCurrent(k){
 }
 function renderHome(){
   const cur = computeCurrently();
-  let curCards;
-  if(cur.length){
-    curCards = cur.slice(0,6).map(r=>{
-      const verb = {books:'Reading',tv:'Watching',films:'Watching',games:'Playing'}[r.k];
-      return `<div class="ccard" data-open="${r.k}:${r.item.id}">
+  const byCat = {books:[], tv:[], games:[]};
+  cur.forEach(r=>{ if(byCat[r.k]) byCat[r.k].push(r); });
+  const slots = [['books','Reading','a book'],['tv','Watching','a show'],['games','Playing','a game']];
+  const curCards = slots.map(([k,verb,noun])=>{
+    const arr = byCat[k];
+    if(arr.length){
+      return arr.map(r=>`<div class="ccard" data-open="${r.k}:${r.item.id}">
         <div class="bg" style="${bgStyle(r.item)}"></div><div class="shade"></div>
         <div class="lab">${verb}</div>
         <button type="button" class="fin" data-finish="${r.k}:${r.item.id}" title="Log as finished">✓</button>
         <div class="nm">${esc(r.item.name||'Untitled')}</div>
-      </div>`;
-    }).join('');
-  } else {
-    curCards = `<div class="ccard add" data-quick-add="books" role="button" tabindex="0">
+      </div>`).join('');
+    }
+    return `<div class="ccard add" data-quick-add="${k}" role="button" tabindex="0">
       <span class="plus">+</span>
-      <span>Add what you're reading, watching or playing right now</span>
+      <span>Add ${noun}</span>
     </div>`;
-  }
+  }).join('');
 
   const recent = recentlyLogged(14);
   const recentTiles = recent.length ? recent.map(r=>{
@@ -1299,10 +1323,12 @@ function renderTable(){
       <td class="col-creator cell-creator">${esc(String(cr))}</td>
       <td class="col-type"><span class="typebadge">${TYPE_LABELS[r.k]}</span></td>
       <td class="col-year cell-year num">${esc(String(yr))}</td>
+      <td class="col-date cell-date">${fmtDate(dateAddedOf(r))}</td>
       <td><div class="ratecell">${starsHTML(r.item.rating, r.c.scale, rateClassFor(r.item.rating, r.c.scale))}</div></td>
       <td><span class="rstatus ${st.cls}">${st.label}</span></td>
+      <td class="col-spacer"></td>
     </tr>`;
-  }).join('') : `<tr><td colspan="7"><div class="empty"><b>Nothing here</b>Try a different filter or search.</div></td></tr>`;
+  }).join('') : `<tr><td colspan="9"><div class="empty"><b>Nothing here</b>Try a different filter or search.</div></td></tr>`;
   return `<div class="tablewrap">
     <div class="table-top">
       <div class="type-pills">${pills}</div>
@@ -1315,8 +1341,10 @@ function renderTable(){
         <th class="col-creator">Creator</th>
         <th class="col-type">Type</th>
         <th class="col-year num sortable" data-sort="year">Year${arr('year')}</th>
+        <th class="col-date sortable" data-sort="date">Date added${arr('date')}</th>
         <th class="sortable" data-sort="rating">Rating${arr('rating')}</th>
         <th>Status</th>
+        <th class="col-spacer"></th>
       </tr></thead>
       <tbody>${body}</tbody>
     </table>
