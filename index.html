@@ -161,42 +161,49 @@ nav.nav{display:flex;align-items:center;gap:18px;flex:0 0 auto}
 .pill{font-family:var(--font-body);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);border:1px solid var(--line);border-radius:8px;padding:7px 14px;background:none;white-space:nowrap}
 .pill[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
 .table-meta{margin-left:auto;font-family:var(--font-body);font-size:11px;color:var(--mute);letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
-.mtable{width:auto;max-width:100%;border-collapse:collapse;margin-top:10px;table-layout:auto}
-.mtable thead th{font-family:var(--font-body);font-size:10px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--mute);text-align:left;padding:10px 12px;border-bottom:1px solid var(--ink);white-space:nowrap}
+/* fixed layout => the table always exactly fills the width (never overflows /
+   scrolls) and every column width is controlled, so Creator sits snug to Type. */
+.mtable{width:100%;border-collapse:collapse;margin-top:10px;table-layout:fixed}
+.mtable thead th{font-family:var(--font-body);font-size:10px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--mute);text-align:left;padding:10px 10px;border-bottom:1px solid var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .mtable th.sortable{cursor:pointer;user-select:none}
 .mtable th .arr{color:var(--ink);margin-left:2px}
 .mtable th.num,.mtable td.num{text-align:right}
 .mtable tbody tr{border-bottom:1px solid var(--line);cursor:pointer}
 .mtable tbody tr:hover{background:var(--ink-2)}
-.mtable td{padding:10px 12px;vertical-align:middle;white-space:nowrap}
-.cell-idx{font-family:var(--font-body);font-size:12px;color:var(--mute);width:38px}
-.titlecell{display:flex;align-items:center;gap:14px;min-width:0}
+.mtable td{padding:10px 10px;vertical-align:middle;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* column widths (title column has none, so it absorbs the remaining space) */
+.col-idx{width:34px}
+.col-creator{width:158px}
+.col-type{width:76px}
+.col-year{width:56px}
+.col-date{width:104px}
+.col-rating{width:104px}
+.cell-idx{font-family:var(--font-body);font-size:12px;color:var(--mute)}
+.titlecell{display:flex;align-items:center;gap:13px;min-width:0}
 .titlecell .t{display:flex;flex-direction:column;min-width:0;overflow:hidden}
-.cell-title{font-family:var(--font-head);font-weight:700;font-size:17px;letter-spacing:-.01em;color:var(--ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:300px}
-.row-sub{display:none}
+.cell-title{font-family:var(--font-head);font-weight:700;font-size:17px;letter-spacing:-.01em;color:var(--ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.row-sub,.row-rate{display:none}
 .swatch{width:44px;height:44px;border-radius:8px;flex:0 0 auto;background-size:cover;background-position:center;background-color:var(--ink-3)}
-.cell-creator{font-family:var(--font-body);font-size:13px;color:var(--mute);overflow:hidden;text-overflow:ellipsis}
+.cell-creator{font-family:var(--font-body);font-size:13px;color:var(--mute)}
 .typebadge{font-family:var(--font-body);font-size:10px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);border:1px solid var(--line);border-radius:5px;padding:3px 8px;white-space:nowrap}
 .cell-year{font-family:var(--font-body);font-size:13px;color:var(--mute)}
 .cell-date{font-family:var(--font-body);font-size:12px;color:var(--mute)}
-.ratecell{display:flex;align-items:center;gap:10px;white-space:nowrap}
-.rstatus{font-family:var(--font-body);font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;white-space:nowrap}
-.rstatus.done{color:var(--acid)}
-.rstatus.active{color:var(--sig)}
+.ratecell{display:flex;align-items:center;white-space:nowrap}
 @media(max-width:1024px){
-  .col-creator,.col-type,.col-year,.col-date{display:none}
-  .mtable{width:100%}
-  .mtable th.col-title, .mtable td.col-title{width:100%}
-  .cell-title{font-size:16px;max-width:58vw}
-  .row-sub{display:block;font-family:var(--font-body);font-size:11px;color:var(--mute);margin-top:3px;
-    overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:58vw}
-  .swatch{width:44px;height:44px}
-  .stars{width:80px}
-  .mtable td{padding:11px 8px}
-  .mtable thead th{padding:8px}
-  .tablewrap{margin-top:30px;overflow-x:visible}
+  /* mobile: only the title column shows; rating drops onto its own line under
+     the title so nothing competes for width and the row never squeezes */
+  .col-creator,.col-type,.col-year,.col-date,.col-rating{display:none}
+  .cell-title{font-size:16px;white-space:normal;line-height:1.25}
+  .row-rate{display:block;margin-top:6px}
+  .row-rate .stars{width:92px}
+  .row-sub{display:block;font-family:var(--font-body);font-size:11.5px;color:var(--mute);margin-top:4px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .titlecell{gap:14px;align-items:flex-start}
+  .swatch{width:52px;height:52px}
+  .mtable td{padding:13px 4px}
+  .mtable thead{display:none}
+  .tablewrap{margin-top:30px}
 }
-@media(max-width:440px){ .col-idx{display:none} .cell-title{max-width:60vw} .row-sub{max-width:60vw} }
+@media(max-width:440px){ .col-idx{display:none} }
 .empty{text-align:center;color:var(--mute);font-family:var(--font-body);font-size:13px;padding:50px 20px}
 .empty b{display:block;color:var(--ink);font-family:var(--font-body);font-weight:600;font-size:16px;margin-bottom:6px}
 
@@ -460,7 +467,7 @@ label.f>span{font-family:var(--font-body);font-size:10px;color:var(--mute);
 </div>
 
 <div class="toast" id="toast"></div>
-<div class="version">v2026.07.23e</div>
+<div class="version">v2026.07.23f</div>
 
 <script>
 /* ================= config ================= */
@@ -1332,14 +1339,15 @@ function renderTable(){
     const cr = r.item[creatorField(r.k)] || '';
     const dstr = fmtDate(dateAddedOf(r));
     const subParts = [TYPE_LABELS[r.k], yr, (dstr!=='—'?dstr:'')].filter(Boolean).join(' · ');
+    const stars = starsHTML(r.item.rating, r.c.scale, rateClassFor(r.item.rating, r.c.scale));
     return `<tr data-open="${r.k}:${r.item.id}">
       <td class="cell-idx col-idx num">${String(ix+1).padStart(2,'0')}</td>
-      <td class="col-title"><div class="titlecell"><div class="swatch" style="${bgStyle(r.item)}"></div><div class="t"><span class="cell-title">${esc(r.item.name||'Untitled')}</span><span class="row-sub">${subParts}</span></div></div></td>
+      <td class="col-title"><div class="titlecell"><div class="swatch" style="${bgStyle(r.item)}"></div><div class="t"><span class="cell-title">${esc(r.item.name||'Untitled')}</span><span class="row-rate">${stars}</span><span class="row-sub">${subParts}</span></div></div></td>
       <td class="col-creator cell-creator">${esc(String(cr))}</td>
       <td class="col-type"><span class="typebadge">${TYPE_LABELS[r.k]}</span></td>
       <td class="col-year cell-year num">${esc(String(yr))}</td>
       <td class="col-date cell-date">${dstr}</td>
-      <td class="col-rating"><div class="ratecell">${starsHTML(r.item.rating, r.c.scale, rateClassFor(r.item.rating, r.c.scale))}</div></td>
+      <td class="col-rating"><div class="ratecell">${stars}</div></td>
     </tr>`;
   }).join('') : `<tr><td colspan="7"><div class="empty"><b>Nothing here</b>Try a different filter or search.</div></td></tr>`;
   return `<div class="tablewrap">
