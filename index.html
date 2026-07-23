@@ -38,76 +38,65 @@ button,input,select,textarea{font-family:inherit;font-size:16px;color:inherit}
 button{cursor:pointer;border:none;background:none}
 
 /* ---------- shell ---------- */
-.wrap{max-width:760px;margin:0 auto;padding:0 20px calc(96px + var(--safe-b))}
+.wrap{max-width:1120px;margin:0 auto;padding:0 28px calc(72px + var(--safe-b))}
+@media(max-width:640px){ .wrap{padding:0 16px calc(72px + var(--safe-b))} }
 
+/* ---------- header ---------- */
 header.top{
   position:sticky;top:0;z-index:40;background:var(--paper);
-  padding:14px 0 10px;border-bottom:1px solid var(--line);
+  padding:20px 0 16px;margin-bottom:4px;
+  display:flex;align-items:center;gap:20px;flex-wrap:wrap;
 }
-.brandrow{display:flex;align-items:baseline;gap:10px}
-.brand{font-family:var(--font-head);font-weight:700;font-size:22px;letter-spacing:-.02em}
-.brand em{font-style:normal;color:var(--sig)}
-.count{font-family:var(--font-body);font-size:11px;color:var(--mute);margin-left:auto}
-.status{font-family:var(--font-body);font-size:11px;color:var(--mute)}
-.status.dirty{color:var(--sig)}
-.status.ok{color:var(--acid)}
-
-/* tabs */
-nav.tabs{display:flex;gap:6px;margin-top:12px;overflow-x:auto;scrollbar-width:none}
-nav.tabs::-webkit-scrollbar{display:none}
-.tab{
-  flex:0 0 auto;padding:8px 13px;border-radius:999px;
-  font-family:var(--font-body);font-size:12px;letter-spacing:.04em;text-transform:uppercase;
-  color:var(--mute);border:1px solid var(--line);white-space:nowrap;
+.brand{font-family:var(--font-head);font-weight:700;font-size:26px;letter-spacing:.03em;line-height:1;flex:0 0 auto}
+.brand em{font-style:normal;color:var(--sig);font-size:.72em;vertical-align:.08em;margin:0 .06em}
+nav.nav{display:flex;align-items:center;gap:18px;flex:0 0 auto}
+.navlink{
+  font-family:var(--font-body);font-size:12px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--mute);background:none;padding:2px 0;position:relative;white-space:nowrap;text-decoration:none;
 }
-.tab[aria-selected="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink);font-weight:700}
-
-/* app switch */
-.applinks{display:flex;gap:8px;margin-top:12px;overflow-x:auto;scrollbar-width:none}
-.applinks::-webkit-scrollbar{display:none}
-.applink{
-  flex:0 0 auto;display:inline-flex;align-items:center;gap:5px;
-  font-family:var(--font-body);font-size:11px;color:var(--mute);
-  background:var(--ink-2);border:1px solid var(--line);border-radius:999px;
-  padding:7px 12px;text-decoration:none;white-space:nowrap;
+.navlink[aria-current="true"]{color:var(--ink)}
+.navlink[aria-current="true"]::after{
+  content:"";position:absolute;left:0;right:0;bottom:-5px;height:2px;background:var(--sig);
 }
-.applink:active{background:var(--ink-3)}
-.applink .arrow{font-size:10px}
-
-/* controls */
-.controls{display:flex;gap:8px;margin-top:10px}
-.search{
-  flex:1;background:var(--ink-2);border:1px solid var(--line);border-radius:var(--r);
-  padding:10px 12px;color:var(--ink);min-width:0;
+.navlink .ext{font-size:.9em;margin-left:3px;opacity:.8}
+.hspace{flex:1 1 auto}
+.hsearch{
+  flex:0 1 240px;display:flex;align-items:center;gap:8px;min-width:0;
+  border-bottom:1px solid var(--line);padding:5px 2px;color:var(--mute);
 }
-.search::placeholder{color:var(--mute)}
-.sortbtn{
-  background:var(--ink-2);border:1px solid var(--line);border-radius:var(--r);
-  padding:0 12px;font-family:var(--font-body);font-size:12px;color:var(--mute);white-space:nowrap;
+.hsearch svg{flex:0 0 auto}
+.hsearch input{flex:1;border:none;background:none;color:var(--ink);font-size:14px;min-width:0;padding:0}
+.hsearch input:focus{outline:none}
+.hsearch input::placeholder{color:var(--mute)}
+.sync{
+  display:flex;align-items:center;gap:7px;font-family:var(--font-body);font-size:12px;color:var(--mute);
+  flex:0 0 auto;white-space:nowrap;background:none;
 }
-
-/* ---------- signature: rating spine ---------- */
-.spine{display:flex;gap:3px;margin:14px 0 4px;height:38px;align-items:flex-end}
-.sbar{
-  flex:1;background:var(--ink-3);border-radius:3px 3px 0 0;position:relative;
-  display:flex;align-items:flex-start;justify-content:center;
-  transition:background .15s;
+.sync .dot{width:7px;height:7px;border-radius:50%;background:var(--mute);flex:0 0 auto}
+.sync.ok{color:var(--mute)} .sync.ok .dot{background:var(--acid)}
+.sync.dirty{color:var(--sig)} .sync.dirty .dot{background:var(--sig)}
+.iconbtn{
+  flex:0 0 auto;width:38px;height:38px;border-radius:10px;border:1px solid var(--line);
+  background:var(--ink-2);color:var(--ink);display:flex;align-items:center;justify-content:center;font-size:15px;
 }
-.sbar span{
-  font-family:var(--font-body);font-size:9px;color:var(--on-accent);font-weight:700;
-  margin-top:2px;opacity:0;
+.iconbtn:active{background:var(--ink-3)}
+.iconbtn.hidden{display:none}
+.addbtn{
+  flex:0 0 auto;display:flex;align-items:center;gap:6px;
+  background:var(--ink);color:var(--paper);border-radius:10px;padding:0 16px;height:38px;
+  font-family:var(--font-body);font-size:13px;font-weight:600;letter-spacing:.02em;
 }
-.sbar[data-on="1"]{background:var(--acid)}
-.sbar[data-on="1"] span{opacity:1}
-.sbar[aria-pressed="true"]{outline:2px solid var(--sig);outline-offset:1px}
-.spinelabel{
-  font-family:var(--font-body);font-size:10px;color:var(--mute);
-  display:flex;justify-content:space-between;letter-spacing:.05em;
+.addbtn:active{opacity:.85}
+@media(max-width:680px){
+  header.top{gap:12px;padding:14px 0 10px}
+  .brand{font-size:22px}
+  .hspace{display:none}
+  .hsearch{order:6;flex:1 1 100%}
 }
 
 /* ---------- banner ---------- */
 .banner{
-  display:flex;align-items:center;gap:10px;margin-top:14px;
+  display:flex;align-items:center;gap:10px;margin-top:6px;
   background:var(--ink-2);border:1px solid var(--sig);border-left-width:3px;
   border-radius:var(--r);padding:11px 12px;
 }
@@ -122,34 +111,77 @@ nav.tabs::-webkit-scrollbar{display:none}
   min-height:44px;
 }
 
-/* ---------- list ---------- */
-ul.list{list-style:none;margin:14px 0 0;padding:0}
-li.row{
-  display:flex;align-items:center;gap:12px;
-  padding:11px 4px;border-bottom:1px solid var(--line);
-}
-.rate{
-  flex:0 0 auto;height:40px;
-  display:flex;align-items:center;justify-content:center;
-}
-.cover{
-  flex:0 0 auto;width:54px;height:78px;border-radius:7px;
-  object-fit:cover;background:var(--ink-3);
-}
+/* ---------- hero ---------- */
+.hero{display:grid;grid-template-columns:minmax(0,360px) minmax(0,1fr);gap:36px;margin-top:14px}
+@media(max-width:860px){ .hero{grid-template-columns:1fr;gap:28px} }
+.hero-h{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.hero-h .lbl{font-family:var(--font-body);font-size:11px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:var(--ink);flex:0 0 auto}
+.hero-h .sub{font-family:var(--font-body);font-size:11px;color:var(--mute);letter-spacing:.02em;flex:0 0 auto}
+.hero-h .rule{flex:1;height:1px;background:var(--line)}
+.hero-h .viewall{font-family:var(--font-body);font-size:10px;color:var(--mute);letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;background:none;flex:0 0 auto}
+.current-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.ccard{position:relative;aspect-ratio:3/4;border-radius:12px;overflow:hidden;cursor:pointer;background:var(--ink-3);border:1px solid var(--line);display:block}
+.ccard .bg{position:absolute;inset:0;background-size:cover;background-position:center}
+.ccard .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.5))}
+.ccard .lab{position:absolute;top:11px;left:12px;font-family:var(--font-body);font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.9)}
+.ccard .nm{position:absolute;left:12px;right:12px;bottom:12px;color:#fff;font-family:var(--font-head);font-weight:700;font-size:15px;line-height:1.2;overflow:hidden;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical}
+.ccard .fin{position:absolute;top:8px;right:8px;width:26px;height:26px;border-radius:50%;background:rgba(255,255,255,.92);color:#111;display:flex;align-items:center;justify-content:center;font-size:13px;opacity:0;transition:opacity .12s}
+.ccard:hover .fin{opacity:1}
+.ccard.add{grid-column:1/-1;aspect-ratio:auto;display:flex;flex-direction:row;align-items:center;justify-content:center;gap:12px;border:1.5px dashed var(--line);background:none;color:var(--mute);text-align:left;padding:20px}
+.ccard.add .plus{width:32px;height:32px;border-radius:50%;background:var(--ink-2);display:flex;align-items:center;justify-content:center;font-size:18px;color:var(--ink);flex:0 0 auto}
+.ccard.add span{font-family:var(--font-body);font-size:12px;line-height:1.35}
+.recent-scroll{display:flex;gap:12px;overflow-x:auto;scrollbar-width:none;padding-bottom:4px}
+.recent-scroll::-webkit-scrollbar{display:none}
+.rtile{position:relative;flex:0 0 auto;width:134px;aspect-ratio:3/4;border-radius:12px;overflow:hidden;cursor:pointer;background:var(--ink-3);border:1px solid var(--line)}
+.rtile .bg{position:absolute;inset:0;background-size:cover;background-position:center}
+.rtile .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.32),rgba(0,0,0,.02) 42%,rgba(0,0,0,.62))}
+.rtile .type{position:absolute;top:9px;left:10px;font-family:var(--font-body);font-size:8.5px;font-weight:700;letter-spacing:.09em;color:rgba(255,255,255,.92)}
+.rtile .rt{position:absolute;top:8px;right:10px;font-family:var(--font-head);font-weight:700;font-size:12px;color:#fff}
+.rtile .nm{position:absolute;left:10px;right:10px;bottom:10px;color:#fff;font-family:var(--font-head);font-weight:700;font-size:13px;line-height:1.2;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+
+/* ---------- table ---------- */
+.cover{flex:0 0 auto;width:54px;height:78px;border-radius:7px;object-fit:cover;background:var(--ink-3)}
 .stars{display:inline-block;width:88px;height:16px;line-height:0}
 .stars-bg path{fill:var(--ink-3)}
 .stars-fg path{fill:var(--acid)}
 .stars-fg.mid path{fill:var(--mid)}
 .stars-fg.lo path{fill:var(--mute)}
 .stars-empty{font-family:var(--font-body);font-size:13px;color:var(--mute)}
-.meta{flex:1;min-width:0}
-.title{font-weight:600;font-size:15px;letter-spacing:-.01em;
-  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.sub{font-family:var(--font-body);font-size:11px;color:var(--mute);
-  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-top:2px}
-.partial{color:var(--sig)}
+.tablewrap{margin-top:44px}
+.table-top{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:4px}
+.type-pills{display:flex;gap:8px;flex-wrap:wrap}
+.pill{font-family:var(--font-body);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);border:1px solid var(--line);border-radius:8px;padding:7px 14px;background:none;white-space:nowrap}
+.pill[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.table-meta{margin-left:auto;font-family:var(--font-body);font-size:11px;color:var(--mute);letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+.mtable{width:100%;border-collapse:collapse;margin-top:10px;table-layout:auto}
+.mtable thead th{font-family:var(--font-body);font-size:10px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--mute);text-align:left;padding:10px 12px;border-bottom:1px solid var(--ink);white-space:nowrap}
+.mtable th.sortable{cursor:pointer;user-select:none}
+.mtable th .arr{color:var(--ink);margin-left:2px}
+.mtable th.num,.mtable td.num{text-align:right}
+.mtable tbody tr{border-bottom:1px solid var(--line);cursor:pointer}
+.mtable tbody tr:hover{background:var(--ink-2)}
+.mtable td{padding:11px 12px;vertical-align:middle}
+.cell-idx{font-family:var(--font-body);font-size:12px;color:var(--mute);width:38px}
+.titlecell{display:flex;align-items:center;gap:14px;min-width:0}
+.titlecell .t{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.cell-title{font-family:var(--font-head);font-weight:700;font-size:17px;letter-spacing:-.01em;color:var(--ink)}
+.swatch{width:44px;height:44px;border-radius:8px;flex:0 0 auto;background-size:cover;background-position:center;background-color:var(--ink-3)}
+.cell-creator{font-family:var(--font-body);font-size:13px;color:var(--mute)}
+.typebadge{font-family:var(--font-body);font-size:10px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);border:1px solid var(--line);border-radius:5px;padding:3px 8px;white-space:nowrap}
+.cell-year{font-family:var(--font-body);font-size:13px;color:var(--mute)}
+.ratecell{display:flex;align-items:center;gap:10px;white-space:nowrap}
+.rstatus{font-family:var(--font-body);font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;white-space:nowrap}
+.rstatus.done{color:var(--acid)}
+.rstatus.active{color:var(--sig)}
+@media(max-width:760px){
+  .col-creator,.col-type,.col-year{display:none}
+  .cell-title{font-size:15px}
+  .swatch{width:38px;height:38px}
+  .tablewrap{margin-top:32px}
+}
+@media(max-width:440px){ .col-idx{display:none} }
 .empty{text-align:center;color:var(--mute);font-family:var(--font-body);font-size:13px;padding:50px 20px}
-.empty b{display:block;color:var(--ink);font-family:var(--font-body);font-weight:500;font-size:16px;margin-bottom:6px}
+.empty b{display:block;color:var(--ink);font-family:var(--font-body);font-weight:600;font-size:16px;margin-bottom:6px}
 
 /* ---------- stats ---------- */
 .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-top:14px}
@@ -224,19 +256,10 @@ li.row{
   display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;
 }
 
-/* ---------- fab ---------- */
-.fabs{
-  position:fixed;right:14px;bottom:calc(14px + var(--safe-b));z-index:45;
-  display:flex;flex-direction:column;gap:10px;
-}
-.fab{
-  width:54px;height:54px;border-radius:50%;background:var(--sig);color:#fff;
-  font-size:26px;font-weight:700;display:flex;align-items:center;justify-content:center;
-  box-shadow:0 6px 24px rgba(0,0,0,.5);
-}
-.fab.ghost{background:var(--ink-3);color:var(--ink);width:44px;height:44px;font-size:17px;
-  border:1px solid var(--line);align-self:flex-end}
-.fab.push{background:var(--acid);color:var(--on-accent)}
+/* ---------- add-type picker (edit sheet) ---------- */
+.typepick{display:flex;gap:6px;margin:0 0 14px}
+.typepick button{flex:1;padding:9px 0;border-radius:8px;border:1px solid var(--line);background:var(--paper);color:var(--mute);font-family:var(--font-body);font-size:12px;font-weight:600}
+.typepick button[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
 
 /* ---------- sheet ---------- */
 .scrim{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:50;display:none}
@@ -322,39 +345,31 @@ label.f>span{font-family:var(--font-body);font-size:10px;color:var(--mute);
 <body>
 <div class="wrap">
   <header class="top">
-    <div class="brandrow">
-      <div class="brand">L<em>I</em>ST</div>
-      <div class="status" id="status">local</div>
-      <div class="count" id="count"></div>
-    </div>
-    <nav class="applinks" aria-label="Switch app">
-      <a class="applink" href="https://maxyongg.github.io/">&#8962; Home</a>
-      <a class="applink" href="https://maxyongg.github.io/collection/">Collection <span class="arrow">&#8599;</span></a>
+    <div class="brand">L<em>✳</em>I<em>✳</em>ST</div>
+    <nav class="nav" id="nav">
+      <button class="navlink" data-view="home" aria-current="true">Home</button>
+      <button class="navlink" data-view="stats">Stats</button>
+      <a class="navlink" href="https://maxyongg.github.io/collection/" target="_blank" rel="noopener">Collection<span class="ext">↗</span></a>
     </nav>
-    <nav class="tabs" id="tabs" role="tablist"></nav>
-    <div class="controls">
-      <input class="search" id="q" placeholder="Search titles, genres, studios…" autocomplete="off">
-      <button class="sortbtn" id="sortbtn">RATING ↓</button>
+    <div class="hspace"></div>
+    <div class="hsearch">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+      <input id="q" placeholder="Search" autocomplete="off">
     </div>
+    <button class="sync" id="syncStatus" aria-label="Sync status"><span class="dot"></span><span class="txt">Local</span></button>
+    <button class="iconbtn hidden" id="saveBtn" aria-label="Save to GitHub" title="Save to GitHub">↑</button>
+    <button class="iconbtn" id="reloadBtn" aria-label="Reload from GitHub" title="Reload from GitHub">⟳</button>
+    <button class="iconbtn" id="settingsBtn" aria-label="Settings" title="Settings">⚙</button>
+    <button class="iconbtn" id="themeBtn" aria-label="Appearance" title="Appearance">☀</button>
+    <button class="addbtn" id="addBtn">+ Add</button>
   </header>
-
-  <div class="spine" id="spine"></div>
-  <div class="spinelabel"><span id="spineLo"></span><span id="spineHi">filter by rating</span></div>
 
   <div class="banner" id="banner" hidden>
     <div class="btxt"><b id="bTitle"></b><span id="bBody"></span></div>
     <button class="bfix" id="bFix">Fix</button>
   </div>
 
-  <ul class="list" id="list"></ul>
-</div>
-
-<div class="fabs">
-  <button class="fab ghost" id="settingsBtn" aria-label="Settings">⚙</button>
-  <button class="fab ghost" id="fetchFab" aria-label="Fetch from Letterboxd/Goodreads">⚡</button>
-  <button class="fab ghost" id="reloadFab" aria-label="Reload from GitHub">⟳</button>
-  <button class="fab push" id="pushBtn" aria-label="Save to GitHub" style="display:none">↑</button>
-  <button class="fab" id="addBtn" aria-label="Add item">+</button>
+  <div id="list"></div>
 </div>
 
 <div class="scrim" id="scrim"></div>
@@ -363,6 +378,7 @@ label.f>span{font-family:var(--font-body);font-size:10px;color:var(--mute);
 <div class="sheet" id="editSheet" role="dialog" aria-modal="true">
   <div class="grab"></div>
   <h2 id="editTitle">Add item</h2>
+  <div class="typepick" id="typePick" style="display:none"></div>
   <div style="display:flex;align-items:center;gap:10px;margin:0 0 12px">
     <img id="coverPreview" style="width:54px;height:78px;border-radius:7px;object-fit:cover;background:var(--ink-3);display:none">
     <button class="btn ghost" type="button" id="fetchCoverBtn" style="flex:0 0 auto;padding:10px 14px">Fetch cover</button>
@@ -401,6 +417,10 @@ label.f>span{font-family:var(--font-body);font-size:10px;color:var(--mute);
   <div class="acts" style="margin-top:2px">
     <button class="btn ghost" id="fetchCoversBtn">Fetch missing covers</button>
   </div>
+  <p class="note">Pull the latest from your linked Letterboxd &amp; Goodreads via the repo's GitHub Action (needs a token with Actions: write).</p>
+  <div class="acts" style="margin-top:2px">
+    <button class="btn ghost" id="triggerSyncBtn">Fetch from Letterboxd / Goodreads</button>
+  </div>
   <div class="acts">
     <button class="btn ghost" id="closeSet">Close</button>
     <button class="btn primary" id="saveSet">Save settings</button>
@@ -423,7 +443,7 @@ label.f>span{font-family:var(--font-body);font-size:10px;color:var(--mute);
 </div>
 
 <div class="toast" id="toast"></div>
-<div class="version">v2026.07.18b</div>
+<div class="version">v2026.07.23a</div>
 
 <script>
 /* ================= config ================= */
@@ -535,11 +555,15 @@ function renderThemeGrid(){
 
 /* ================= state ================= */
 const S = {
-  tab:'home', q:'', sort:3, ratingFilter:new Set(),
+  view:'home', tab:'films', typeFilter:'all', q:'',
+  sortKey:'rating', sortDir:-1,
   data:{}, shas:{}, dirty:new Set(), authError:null,
   cfg:{repo:'', branch:'main', token:'', expires:'', tmdbKey:'', rawgKey:'', theme:'museum'},
   editing:null, statsCat:'overview', statsFilter:null
 };
+const TYPE_LABELS = {games:'Game', tv:'TV', films:'Film', books:'Book'};
+function creatorField(k){ return {films:'director',games:'developer',tv:'network',books:'author'}[k]; }
+function yearField(k){ return {films:'yearReleased',games:'yearReleased',tv:'firstSeasonYear',books:'yearPublished'}[k]; }
 const $ = s => document.querySelector(s);
 const LS = 'ledger.v1';
 
@@ -987,13 +1011,16 @@ async function push(){
   }
 }
 function setStatus(cls,txt){
-  const s=$('#status'); s.className='status '+cls; s.textContent=txt;
+  const el=$('#syncStatus'); if(!el) return;
+  el.className = 'sync '+(cls==='ok'?'ok':cls==='dirty'?'dirty':'');
+  const t = el.querySelector('.txt'); if(t) t.textContent = txt;
+  const sb=$('#saveBtn'); if(sb) sb.classList.toggle('hidden', !S.dirty.size);
 }
 function markDirty(k){
   S.data[k].updatedAt = new Date().toISOString();
   S.dirty.add(k); cacheData();
   setStatus('dirty', S.dirty.size+' unsaved');
-  $('#pushBtn').style.display='flex';
+  const sb=$('#saveBtn'); if(sb) sb.classList.remove('hidden');
   if(S.cfg.token && S.cfg.repo) syncOne(k);
 }
 
@@ -1067,46 +1094,64 @@ async function verifyToken(){
 function scale(){ return COLLECTIONS[S.tab].scale; }
 function items(){ return (S.data[S.tab]&&S.data[S.tab].items)||[]; }
 
-function filtered(){
-  const c = COLLECTIONS[S.tab];
-  const q = S.q.trim().toLowerCase();
-  let out = items().filter(i=>{
-    if(S.ratingFilter.size && !S.ratingFilter.has(i.rating)) return false;
-    if(!q) return true;
-    return Object.values(i).some(v => v!=null && String(v).toLowerCase().includes(q));
+/* ---- unified cross-category rows for the home table ---- */
+function allRows(){
+  const rows = [];
+  ['films','games','tv','books'].forEach(k=>{
+    const c = COLLECTIONS[k];
+    ((S.data[k]&&S.data[k].items)||[]).forEach(it=>rows.push({k, c, item:it}));
   });
-  const s = SORTS[S.sort];
-  out.sort((a,b)=>{
-    if(s.k==='name') return String(a.name||'').localeCompare(String(b.name||''))*s.d;
-    if(s.k==='recent'){
-      // recentFields is an ordered list of candidate fields; the first
-      // non-empty one wins (e.g. TV falls back to firstSeasonYear when a
-      // show is still airing and has no lastSeasonYear yet).
-      const pick = item => {
-        for(const f of (c.recentFields||[])){
-          if(item[f]!=null && item[f]!=='') return item[f];
-        }
-        return '';
-      };
-      // string comparison works for both ISO dates ("2026-02-21") and
-      // plain years ("2026") since both are left-padded/fixed-width
-      const av=String(pick(a)), bv=String(pick(b));
-      return bv.localeCompare(av) || String(a.name||'').localeCompare(String(b.name||''));
-    }
-    const rd = ((a.rating||0)-(b.rating||0))*s.d;
-    return rd || String(a.name||'').localeCompare(String(b.name||''));
-  });
-  return out;
+  return rows;
 }
-
-function renderTabs(){
-  const homeTab = `<button class="tab" role="tab" data-k="home" aria-selected="${S.tab==='home'}">Home</button>`;
-  const dataTabs = Object.entries(COLLECTIONS).map(([k,c])=>{
-    const n = (S.data[k]&&S.data[k].items.length)||0;
-    return `<button class="tab" role="tab" data-k="${k}" aria-selected="${k===S.tab}">${c.label}${n?' '+n:''}</button>`;
-  }).join('');
-  const statsTab = `<button class="tab" role="tab" data-k="stats" aria-selected="${S.tab==='stats'}">Stats</button>`;
-  $('#tabs').innerHTML = homeTab + dataTabs + statsTab;
+function statusOf(k, it){
+  if(it.inProgress){
+    return {cls:'active', label:{books:'Reading',tv:'Watching',films:'Watching',games:'Playing'}[k]};
+  }
+  return {cls:'done', label:'Completed'};
+}
+function tableRows(){
+  const q = S.q.trim().toLowerCase();
+  let rows = allRows();
+  if(S.typeFilter!=='all') rows = rows.filter(r=>r.k===S.typeFilter);
+  if(q) rows = rows.filter(r=>Object.values(r.item).some(v=>v!=null && String(v).toLowerCase().includes(q)));
+  const dir = S.sortDir;
+  rows.sort((a,b)=>{
+    if(S.sortKey==='name') return String(a.item.name||'').localeCompare(String(b.item.name||''))*dir;
+    if(S.sortKey==='year'){
+      const ay = +(a.item[yearField(a.k)]||0), by = +(b.item[yearField(b.k)]||0);
+      return (ay-by)*dir || String(a.item.name||'').localeCompare(String(b.item.name||''));
+    }
+    // rating: normalize each to a 0–1 fraction so /10 and /5 scales compare fairly
+    const an = (a.item.rating||0)/a.c.scale, bn = (b.item.rating||0)/b.c.scale;
+    return (an-bn)*dir || String(a.item.name||'').localeCompare(String(b.item.name||''));
+  });
+  return rows;
+}
+/* most-recently-dated items across every category, for "Recently added" */
+function recentlyLogged(n){
+  const rows = allRows().map(r=>{
+    const rf = (r.c.recentFields||[])[0];
+    const d = rf ? r.item[rf] : null;
+    return {...r, _d: d ? String(d) : ''};
+  }).filter(r=>r._d);
+  rows.sort((a,b)=>b._d.localeCompare(a._d));
+  return rows.slice(0, n);
+}
+/* deterministic gradient from a title, used when no cover image exists */
+function hashStr(s){ let h=0; s=String(s); for(let i=0;i<s.length;i++){ h=(h*31 + s.charCodeAt(i))|0; } return Math.abs(h); }
+function gradFor(str){
+  const h = hashStr(str||'x');
+  const hue = h % 360, hue2 = (hue + 26) % 360;
+  return `linear-gradient(158deg, hsl(${hue} 33% 44%), hsl(${hue2} 42% 24%))`;
+}
+function bgStyle(item){
+  return item.coverUrl
+    ? `background-image:url('${esc(item.coverUrl)}')`
+    : `background-image:${gradFor(item.name || item.id || '')}`;
+}
+function setNavActive(){
+  document.querySelectorAll('.navlink[data-view]').forEach(el=>
+    el.setAttribute('aria-current', el.dataset.view===S.view ? 'true' : 'false'));
 }
 
 /* ---- home / landing ---- */
@@ -1184,76 +1229,98 @@ function computeCurrently(){
   });
   return out;
 }
-/* opens the same add form as the + FAB, pre-set to the right tab with the
+/* opens the add form pre-set to the right category with the
    "currently…" toggle already on — so cover fetch etc. all just work */
 function quickAddCurrent(k){
-  S.tab = k; render();
+  S.tab = k;
   openEdit(null);
   S.editing.inProgress = true;
   $('#inProgressBtn').setAttribute('aria-pressed','true');
 }
-function renderHomeTab(){
-  const h = computeHome();
-  const current = computeCurrently();
-  const catDefs = [['books','reading'],['tv','watching'],['games','playing']];
-  const currentHtml = `<div class="stats-section">
-    <div class="stats-h">Currently</div>
-    ${catDefs.map(([k,verb])=>{
-      const items = current.filter(r=>r.k===k);
-      if(!items.length){
-        return `<div class="current-empty" data-quick-add="${k}" role="button" tabindex="0">
-          <span class="plus">+</span>
-          <span>What are you currently ${verb}?</span>
-        </div>`;
-      }
-      return items.map(r=>{
-        const coverEl = r.item.coverUrl
-          ? `<img class="current-cover" src="${esc(r.item.coverUrl)}" alt="" loading="lazy">`
-          : `<div class="current-cover"></div>`;
-        return `<div class="current-row" data-home-open="${k}:${r.item.id}">
-          ${coverEl}
-          <div class="current-meta">
-            <div class="current-title">${esc(r.item.name||'Untitled')}</div>
-            <div class="current-sub">${esc(r.c.sub(r.item)||'')}</div>
-          </div>
-          <button type="button" class="current-finish-btn" tabindex="-1">Log as finished</button>
-        </div>`;
-      }).join('');
-    }).join('')}
-  </div>`;
-  const monthCards = h.cats.map(([k,label])=>
-    `<div class="stat-card"><div class="stat-num">${h.monthCounts[k]}</div><div class="stat-label">${label}</div></div>`
-  ).join('');
-  const modules = h.cats.map(([k,label,verb])=>{
-    const c = COLLECTIONS[k];
-    const rows = h.recents[k].map(i=>`
-      <div class="home-recent-row" data-home-open="${k}:${i.id}">
-        ${coverImgHTML(i)}
-        <div class="meta">
-          <div class="title">${esc(i.name||'Untitled')}</div>
-          <div class="sub">${esc(c.sub(i)||'')}</div>
-        </div>
-        <div class="rate">${starsHTML(i.rating,c.scale,rateClassFor(i.rating,c.scale))}</div>
-      </div>`).join('');
-    const ys = h.yearCatStats[k];
-    const yearChips = `<span class="stats-chip">${ys.count} logged this year</span>${ys.topGenre?`<span class="stats-chip">${esc(ys.topGenre)} &middot; top genre</span>`:''}`;
-    return `<div class="stats-tile">
-      <div class="stats-h">${label}</div>
-      ${rows || '<span class="stat-label">Nothing logged yet</span>'}
-      <div class="stats-chips" style="margin-top:12px">${yearChips}</div>
+function renderHome(){
+  const cur = computeCurrently();
+  let curCards;
+  if(cur.length){
+    curCards = cur.slice(0,6).map(r=>{
+      const verb = {books:'Reading',tv:'Watching',films:'Watching',games:'Playing'}[r.k];
+      return `<div class="ccard" data-open="${r.k}:${r.item.id}">
+        <div class="bg" style="${bgStyle(r.item)}"></div><div class="shade"></div>
+        <div class="lab">${verb}</div>
+        <button type="button" class="fin" data-finish="${r.k}:${r.item.id}" title="Log as finished">✓</button>
+        <div class="nm">${esc(r.item.name||'Untitled')}</div>
+      </div>`;
+    }).join('');
+  } else {
+    curCards = `<div class="ccard add" data-quick-add="books" role="button" tabindex="0">
+      <span class="plus">+</span>
+      <span>Add what you're reading, watching or playing right now</span>
     </div>`;
-  }).join('');
+  }
+
+  const recent = recentlyLogged(14);
+  const recentTiles = recent.length ? recent.map(r=>{
+    const rt = r.item.rating ? (r.item.rating/r.c.scale*10).toFixed(1) : '';
+    return `<div class="rtile" data-open="${r.k}:${r.item.id}">
+      <div class="bg" style="${bgStyle(r.item)}"></div><div class="shade"></div>
+      <div class="type">${TYPE_LABELS[r.k].toUpperCase()}</div>
+      ${rt?`<div class="rt">${rt}</div>`:''}
+      <div class="nm">${esc(r.item.name||'Untitled')}</div>
+    </div>`;
+  }).join('') : `<div class="empty" style="padding:26px 10px">Nothing with a date logged yet.</div>`;
+
   $('#list').innerHTML = `
-    <div class="home-hero">
-      <div class="home-hero-num">${h.totalAll}</div>
-      <div class="home-hero-label">films, games, shows &amp; books logged</div>
+    <div class="hero">
+      <div class="hero-cur">
+        <div class="hero-h"><span class="lbl">Currently</span><span class="sub">${cur.length} in progress</span></div>
+        <div class="current-cards">${curCards}</div>
+      </div>
+      <div class="hero-recent">
+        <div class="hero-h"><span class="lbl">Recently added</span><span class="rule"></span><span class="viewall" data-sort-latest="1">Latest</span></div>
+        <div class="recent-scroll">${recentTiles}</div>
+      </div>
     </div>
-    <div class="stats-section">
-      <div class="stats-h">In ${h.monthName}, you logged</div>
-      <div class="stats-grid">${monthCards}</div>
+    ${renderTable()}`;
+}
+function renderTable(){
+  const rows = tableRows();
+  const total = rows.length;
+  const rated = rows.filter(r=>r.item.rating);
+  const avg5 = rated.length ? rated.reduce((s,r)=>s+(r.item.rating/r.c.scale*5),0)/rated.length : 0;
+  const pills = [['all','All'],['films','Film'],['tv','TV'],['games','Game'],['books','Book']].map(([k,l])=>
+    `<button class="pill" data-type="${k}" aria-pressed="${S.typeFilter===k}">${l}</button>`).join('');
+  const arr = key => S.sortKey===key ? `<span class="arr">${S.sortDir<0?'↓':'↑'}</span>` : '';
+  const body = rows.length ? rows.map((r,ix)=>{
+    const st = statusOf(r.k, r.item);
+    const yr = r.item[yearField(r.k)] || '';
+    const cr = r.item[creatorField(r.k)] || '';
+    return `<tr data-open="${r.k}:${r.item.id}">
+      <td class="cell-idx col-idx num">${String(ix+1).padStart(2,'0')}</td>
+      <td><div class="titlecell"><div class="swatch" style="${bgStyle(r.item)}"></div><div class="t"><span class="cell-title">${esc(r.item.name||'Untitled')}</span></div></div></td>
+      <td class="col-creator cell-creator">${esc(String(cr))}</td>
+      <td class="col-type"><span class="typebadge">${TYPE_LABELS[r.k]}</span></td>
+      <td class="col-year cell-year num">${esc(String(yr))}</td>
+      <td><div class="ratecell">${starsHTML(r.item.rating, r.c.scale, rateClassFor(r.item.rating, r.c.scale))}</div></td>
+      <td><span class="rstatus ${st.cls}">${st.label}</span></td>
+    </tr>`;
+  }).join('') : `<tr><td colspan="7"><div class="empty"><b>Nothing here</b>Try a different filter or search.</div></td></tr>`;
+  return `<div class="tablewrap">
+    <div class="table-top">
+      <div class="type-pills">${pills}</div>
+      <div class="table-meta">${total} works${avg5?` &middot; avg ★${avg5.toFixed(1)}`:''}</div>
     </div>
-    ${currentHtml}
-    <div class="stats-tiles">${modules}</div>`;
+    <table class="mtable">
+      <thead><tr>
+        <th class="col-idx num">#</th>
+        <th class="sortable" data-sort="name">Title${arr('name')}</th>
+        <th class="col-creator">Creator</th>
+        <th class="col-type">Type</th>
+        <th class="col-year num sortable" data-sort="year">Year${arr('year')}</th>
+        <th class="sortable" data-sort="rating">Rating${arr('rating')}</th>
+        <th>Status</th>
+      </tr></thead>
+      <tbody>${body}</tbody>
+    </table>
+  </div>`;
 }
 
 /* ---- stats tab: computed live from whatever's currently loaded, no separate file ---- */
@@ -1466,72 +1533,10 @@ function renderStatsTab(){
   $('#list').innerHTML = `<div class="stats-subnav">${subnav}</div>${body}`;
 }
 
-function renderSpine(){
-  const sc = scale(), counts = {};
-  for(let r=1;r<=sc;r++) counts[r]=0;
-  items().forEach(i=>{ if(counts[i.rating]!=null) counts[i.rating]++; });
-  const max = Math.max(1,...Object.values(counts));
-  $('#spine').innerHTML = Array.from({length:sc},(_,x)=>{
-    const r=x+1, n=counts[r], h=16+Math.round((n/max)*22);
-    const on = S.ratingFilter.size===0 || S.ratingFilter.has(r);
-    return `<button class="sbar" data-r="${r}" data-on="${on?1:0}"
-      aria-pressed="${S.ratingFilter.has(r)}" aria-label="Rating ${r}, ${n} items"
-      style="height:${h}px"><span>${r}</span></button>`;
-  }).join('');
-  $('#spineLo').textContent = S.ratingFilter.size
-    ? 'showing '+[...S.ratingFilter].sort().join(', ')
-    : `1 → ${sc}`;
-}
-
-function rateClass(r){
-  const sc=scale();
-  if(!r) return 'lo';
-  if(r/sc >= 0.85) return 'hi';
-  if(r/sc >= 0.55) return 'mid';
-  return 'lo';
-}
-
 function render(){
-  renderTabs();
-  const controls = document.querySelector('.controls');
-  const spineLabel = document.querySelector('.spinelabel');
-  $('#pushBtn').style.display = S.dirty.size ? 'flex' : 'none';
-  if(S.tab==='stats' || S.tab==='home'){
-    $('#spine').style.display='none';
-    if(spineLabel) spineLabel.style.display='none';
-    if(controls) controls.style.display='none';
-    $('#addBtn').style.display='none';
-    $('#count').textContent='';
-    if(S.tab==='stats') renderStatsTab(); else renderHomeTab();
-    return;
-  }
-  $('#spine').style.display='';
-  if(spineLabel) spineLabel.style.display='';
-  if(controls) controls.style.display='';
-  $('#addBtn').style.display='flex';
-  renderSpine();
-  const c = COLLECTIONS[S.tab], rows = filtered();
-  $('#count').textContent = rows.length+'/'+items().length;
-  $('#sortbtn').textContent = SORTS[S.sort].l;
-
-  if(!rows.length){
-    $('#list').innerHTML = `<div class="empty"><b>${items().length ? 'No matches' : 'Nothing here yet'}</b>${
-      items().length ? 'Try a different search or clear the rating filter.' : 'Tap + to add your first '+c.label.toLowerCase().replace(/s$/,'')+'.'}</div>`;
-    return;
-  }
-  $('#list').innerHTML = rows.map(i=>{
-    const p = c.pct(i);
-    const partial = (p!=null && p!=='' && p!==100 && p!=='100');
-    const sub = [c.sub(i), partial?`<span class="partial">${p}% ${c.pctLabel}</span>`:''].filter(Boolean).join(' · ');
-    return `<li class="row" data-id="${i.id}">
-      ${coverImgHTML(i)}
-      <div class="meta">
-        <div class="title">${esc(i.name||'Untitled')}</div>
-        <div class="sub">${sub||'&nbsp;'}</div>
-      </div>
-      <div class="rate">${starsHTML(i.rating,c.scale,rateClass(i.rating))}</div>
-    </li>`;
-  }).join('');
+  setNavActive();
+  if(S.view==='stats') renderStatsTab();
+  else renderHome();
 }
 function esc(s){ return String(s).replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m])); }
 
@@ -1549,6 +1554,14 @@ function openEdit(item){
   $('#editTitle').textContent = item ? 'Edit' : 'Add '+c.label.toLowerCase().replace(/s$/,'');
   $('#delEdit').style.display = item ? 'block' : 'none';
   $('#rlabel').textContent = `Rating / ${c.scale}`;
+
+  const tp = $('#typePick');
+  if(item){ tp.style.display='none'; }
+  else {
+    tp.style.display='flex';
+    tp.innerHTML = ['films','games','tv','books'].map(k=>
+      `<button type="button" data-addtype="${k}" aria-pressed="${S.tab===k}">${TYPE_LABELS[k]}</button>`).join('');
+  }
 
   let html='', pend='';
   c.fields.forEach(f=>{
@@ -1639,32 +1652,44 @@ function openSet(){
 }
 
 /* ================= events ================= */
-$('#tabs').addEventListener('click', e=>{
-  const b = e.target.closest('.tab'); if(!b) return;
-  S.tab = b.dataset.k; S.ratingFilter.clear(); render();
+function openItem(k, id){
+  const item = (S.data[k]&&S.data[k].items||[]).find(x=>x.id===id);
+  if(!item) return;
+  S.tab = k; openEdit(item);
+}
+function logFinished(k, id){
+  const it = (S.data[k]&&S.data[k].items||[]).find(x=>x.id===id);
+  if(!it) return;
+  it.inProgress = false; markDirty(k); render(); toast('Logged as finished');
+}
+$('#nav').addEventListener('click', e=>{
+  const b = e.target.closest('.navlink[data-view]'); if(!b) return;
+  S.view = b.dataset.view; S.statsFilter = null; render();
   window.scrollTo({top:0});
 });
-$('#spine').addEventListener('click', e=>{
-  const b = e.target.closest('.sbar'); if(!b) return;
-  const r = +b.dataset.r;
-  S.ratingFilter.has(r) ? S.ratingFilter.delete(r) : S.ratingFilter.add(r);
+$('#q').addEventListener('input', e=>{
+  S.q = e.target.value;
+  if(S.view!=='home'){ S.view='home'; }
   render();
 });
-$('#q').addEventListener('input', e=>{ S.q = e.target.value; render(); });
-$('#sortbtn').addEventListener('click', ()=>{ S.sort = (S.sort+1)%SORTS.length; render(); });
 $('#list').addEventListener('click', e=>{
+  const fin = e.target.closest('[data-finish]');
+  if(fin){ e.stopPropagation(); const [k,id]=fin.dataset.finish.split(':'); logFinished(k,id); return; }
   const qa = e.target.closest('[data-quick-add]');
   if(qa){ quickAddCurrent(qa.dataset.quickAdd); return; }
-  const ho = e.target.closest('[data-home-open]');
-  if(ho){
-    const [k,id] = ho.dataset.homeOpen.split(':');
-    S.tab = k; render();
-    const item = (S.data[k]&&S.data[k].items||[]).find(x=>x.id===id);
-    if(item) openEdit(item);
-    return;
+  const tp = e.target.closest('[data-type]');
+  if(tp){ S.typeFilter = tp.dataset.type; render(); return; }
+  const so = e.target.closest('[data-sort]');
+  if(so){
+    const key = so.dataset.sort;
+    if(S.sortKey===key) S.sortDir = -S.sortDir;
+    else { S.sortKey = key; S.sortDir = (key==='name') ? 1 : -1; }
+    render(); return;
   }
-  const st = e.target.closest('[data-statcat]');
-  if(st){ S.statsCat = st.dataset.statcat; S.statsFilter = null; renderStatsTab(); return; }
+  const op = e.target.closest('[data-open]');
+  if(op){ const [k,id] = op.dataset.open.split(':'); openItem(k,id); return; }
+  const stc = e.target.closest('[data-statcat]');
+  if(stc){ S.statsCat = stc.dataset.statcat; S.statsFilter = null; renderStatsTab(); return; }
   const clearF = e.target.closest('[data-clear-filter]');
   if(clearF){ S.statsFilter = null; renderStatsTab(); return; }
   const gf = e.target.closest('[data-genre-filter]');
@@ -1673,11 +1698,19 @@ $('#list').addEventListener('click', e=>{
   if(cf){ S.statsFilter = {type:'creator', value: cf.dataset.creatorFilter}; renderStatsTab(); return; }
   const yf = e.target.closest('[data-year-filter]');
   if(yf){ S.statsFilter = {type:'year', value: yf.dataset.yearFilter}; renderStatsTab(); return; }
-  const li = e.target.closest('.row'); if(!li) return;
-  openEdit(items().find(i=>i.id===li.dataset.id));
 });
-$('#addBtn').addEventListener('click', ()=>openEdit(null));
-$('#pushBtn').addEventListener('click', push);
+$('#addBtn').addEventListener('click', ()=>{
+  S.tab = (S.typeFilter!=='all') ? S.typeFilter : 'films';
+  openEdit(null);
+});
+$('#saveBtn').addEventListener('click', push);
+$('#reloadBtn').addEventListener('click', pull);
+$('#themeBtn').addEventListener('click', ()=>{ renderThemeGrid(); openSheet('#themeSheet'); });
+$('#syncStatus').addEventListener('click', ()=>{ S.dirty.size ? push() : pull(); });
+$('#typePick').addEventListener('click', e=>{
+  const b = e.target.closest('[data-addtype]'); if(!b) return;
+  S.tab = b.dataset.addtype; openEdit(null);
+});
 $('#settingsBtn').addEventListener('click', openSet);
 $('#scrim').addEventListener('click', closeSheets);
 $('#cancelEdit').addEventListener('click', closeSheets);
@@ -1740,8 +1773,7 @@ $('#inProgressBtn').addEventListener('click', ()=>{
   S.editing.inProgress = !S.editing.inProgress;
   $('#inProgressBtn').setAttribute('aria-pressed', S.editing.inProgress ? 'true' : 'false');
 });
-$('#reloadFab').addEventListener('click', pull);
-$('#fetchFab').addEventListener('click', triggerSync);
+$('#triggerSyncBtn').addEventListener('click', triggerSync);
 $('#forgetBtn').addEventListener('click', ()=>{
   S.cfg.token=''; $('#tokIn').value=''; saveCfg(); S.authError=null;
   toast('Token removed from this browser'); checkToken();
@@ -1753,6 +1785,7 @@ window.addEventListener('beforeunload', e=>{
 /* ================= go ================= */
 loadCfg();
 applyTheme(S.cfg.theme || 'museum');
+setStatus(S.dirty.size?'dirty':'', S.dirty.size ? S.dirty.size+' unsaved' : (S.cfg.token&&S.cfg.repo?'Synced':'Local'));
 loadAll().then(()=>{
   if(S.dirty.size) setStatus('dirty', S.dirty.size+' unsaved');
   verifyToken();
