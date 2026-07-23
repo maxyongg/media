@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "ratingScale": 10,
- "updatedAt": "2026-07-23T08:06:47.561Z",
+ "updatedAt": "2026-07-23T10:10:49.688Z",
  "items": [
   {
    "id": "g0125",
@@ -29,7 +29,9 @@
    "console": "PS5",
    "mainStoryPct": "100",
    "datePlayed": "2026-07-21",
-   "yearReleased": 2024
+   "yearReleased": 2024,
+   "ry": 57,
+   "rx": 58
   },
   {
    "id": "g0001",
