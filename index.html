@@ -486,7 +486,7 @@ label.f>span{font-family:var(--font-body);font-size:10px;color:var(--mute);
 </div>
 
 <div class="toast" id="toast"></div>
-<div class="version">v2026.07.23i</div>
+<div class="version">v2026.07.23j</div>
 
 <script>
 /* ================= config ================= */
@@ -1364,15 +1364,17 @@ function renderTable(){
     const cr = r.item[creatorField(r.k)] || '';
     const dstr = fmtDate(dateAddedOf(r));
     const subParts = [TYPE_LABELS[r.k], yr, (dstr!=='—'?dstr:'')].filter(Boolean).join(' · ');
-    const stars = starsHTML(r.item.rating, r.c.scale, rateClassFor(r.item.rating, r.c.scale));
+    // call starsHTML separately for each placement so each SVG gets its own
+    // unique clipPath id — reusing one string duplicates the id and breaks the fill
+    const tier = rateClassFor(r.item.rating, r.c.scale);
     return `<tr data-open="${r.k}:${r.item.id}">
       <td class="cell-idx col-idx num">${String(ix+1).padStart(2,'0')}</td>
-      <td class="col-title"><div class="titlecell"><div class="swatch" style="${bgStyle(r.item)}"></div><div class="t"><span class="cell-title">${esc(r.item.name||'Untitled')}</span><span class="row-rate">${stars}</span><span class="row-sub">${subParts}</span></div></div></td>
+      <td class="col-title"><div class="titlecell"><div class="swatch" style="${bgStyle(r.item)}"></div><div class="t"><span class="cell-title">${esc(r.item.name||'Untitled')}</span><span class="row-rate">${starsHTML(r.item.rating, r.c.scale, tier)}</span><span class="row-sub">${subParts}</span></div></div></td>
       <td class="col-creator cell-creator">${esc(String(cr))}</td>
       <td class="col-type"><span class="typebadge">${TYPE_LABELS[r.k]}</span></td>
       <td class="col-year cell-year num">${esc(String(yr))}</td>
       <td class="col-date cell-date">${dstr}</td>
-      <td class="col-rating"><div class="ratecell">${stars}</div></td>
+      <td class="col-rating"><div class="ratecell">${starsHTML(r.item.rating, r.c.scale, tier)}</div></td>
     </tr>`;
   }).join('') : `<tr><td colspan="7"><div class="empty"><b>Nothing here</b>Try a different filter or search.</div></td></tr>`;
   return `<div class="tablewrap">
