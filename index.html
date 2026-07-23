@@ -27,7 +27,7 @@
   --safe-b:env(safe-area-inset-bottom,0px);
 }
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-html,body{margin:0;padding:0}
+html,body{margin:0;padding:0;overflow-x:hidden;max-width:100%}
 body{
   background:var(--paper);color:var(--ink);
   font-family:var(--font-body),system-ui,sans-serif;
@@ -116,7 +116,8 @@ nav.nav{display:flex;align-items:center;gap:18px;flex:0 0 auto}
 }
 
 /* ---------- hero ---------- */
-.hero{display:grid;grid-template-columns:minmax(0,360px) minmax(0,1fr);gap:36px;margin-top:14px}
+.hero{display:grid;grid-template-columns:minmax(0,360px) minmax(0,1fr);gap:36px;margin-top:14px;max-width:100%}
+.hero-cur,.hero-recent{min-width:0}
 @media(max-width:860px){ .hero{grid-template-columns:1fr;gap:28px} }
 .hero-h{display:flex;align-items:center;gap:12px;margin-bottom:14px}
 .hero-h .lbl{font-family:var(--font-body);font-size:11px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:var(--ink);flex:0 0 auto}
@@ -152,7 +153,7 @@ nav.nav{display:flex;align-items:center;gap:18px;flex:0 0 auto}
 .stars-fg.mid path{fill:var(--mid)}
 .stars-fg.lo path{fill:var(--mute)}
 .stars-empty{font-family:var(--font-body);font-size:13px;color:var(--mute)}
-.tablewrap{margin-top:44px}
+.tablewrap{margin-top:44px;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
 .table-top{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:4px}
 .type-pills{display:flex;gap:8px;flex-wrap:wrap}
 .pill{font-family:var(--font-body);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);border:1px solid var(--line);border-radius:8px;padding:7px 14px;background:none;white-space:nowrap}
@@ -173,7 +174,7 @@ nav.nav{display:flex;align-items:center;gap:18px;flex:0 0 auto}
 .mtable th.col-creator, .mtable td.col-creator{width:100%}
 .titlecell{display:flex;align-items:center;gap:14px;min-width:0}
 .titlecell .t{display:flex;flex-direction:column;min-width:0;overflow:hidden}
-.cell-title{font-family:var(--font-head);font-weight:700;font-size:17px;letter-spacing:-.01em;color:var(--ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:360px}
+.cell-title{font-family:var(--font-head);font-weight:700;font-size:17px;letter-spacing:-.01em;color:var(--ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:300px}
 .row-sub{display:none}
 .swatch{width:44px;height:44px;border-radius:8px;flex:0 0 auto;background-size:cover;background-position:center;background-color:var(--ink-3)}
 .cell-creator{font-family:var(--font-body);font-size:13px;color:var(--mute);overflow:hidden;text-overflow:ellipsis}
@@ -184,22 +185,22 @@ nav.nav{display:flex;align-items:center;gap:18px;flex:0 0 auto}
 .rstatus{font-family:var(--font-body);font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;white-space:nowrap}
 .rstatus.done{color:var(--acid)}
 .rstatus.active{color:var(--sig)}
-@media(max-width:860px){
+@media(max-width:1024px){
   .col-creator,.col-type,.col-year,.col-date,.col-status{display:none}
   .mtable th.col-title, .mtable td.col-title{width:100%}
-  .cell-title{font-size:16px;max-width:60vw}
+  .cell-title{font-size:16px;max-width:58vw}
   .row-sub{display:block;font-family:var(--font-body);font-size:11px;color:var(--mute);margin-top:3px;
-    overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:60vw}
+    overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:58vw}
   .row-sub .st{font-weight:600;letter-spacing:.02em}
   .row-sub .st.done{color:var(--acid)}
   .row-sub .st.active{color:var(--sig)}
   .swatch{width:44px;height:44px}
-  .stars{width:78px}
+  .stars{width:80px}
   .mtable td{padding:11px 8px}
   .mtable thead th{padding:8px}
-  .tablewrap{margin-top:30px}
+  .tablewrap{margin-top:30px;overflow-x:visible}
 }
-@media(max-width:440px){ .col-idx{display:none} .cell-title{max-width:56vw} .row-sub{max-width:56vw} }
+@media(max-width:440px){ .col-idx{display:none} .cell-title{max-width:60vw} .row-sub{max-width:60vw} }
 .empty{text-align:center;color:var(--mute);font-family:var(--font-body);font-size:13px;padding:50px 20px}
 .empty b{display:block;color:var(--ink);font-family:var(--font-body);font-weight:600;font-size:16px;margin-bottom:6px}
 
@@ -463,7 +464,7 @@ label.f>span{font-family:var(--font-body);font-size:10px;color:var(--mute);
 </div>
 
 <div class="toast" id="toast"></div>
-<div class="version">v2026.07.23c</div>
+<div class="version">v2026.07.23d</div>
 
 <script>
 /* ================= config ================= */
