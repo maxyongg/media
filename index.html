@@ -155,7 +155,7 @@ nav.nav{display:flex;align-items:center;gap:18px;flex:0 0 auto}
 .stars-fg.mid path{fill:var(--mid)}
 .stars-fg.lo path{fill:var(--mute)}
 .stars-empty{font-family:var(--font-body);font-size:13px;color:var(--mute)}
-.tablewrap{margin-top:44px;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.tablewrap{margin-top:44px;max-width:100%}
 .table-top{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:4px}
 .type-pills{display:flex;gap:8px;flex-wrap:wrap}
 .pill{font-family:var(--font-body);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);border:1px solid var(--line);border-radius:8px;padding:7px 14px;background:none;white-space:nowrap}
@@ -168,9 +168,9 @@ nav.nav{display:flex;align-items:center;gap:18px;flex:0 0 auto}
 .tsel select:focus{outline:2px solid var(--sig);outline-offset:1px}
 .table-meta{font-family:var(--font-body);font-size:11px;color:var(--mute);letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
 @media(max-width:640px){
-  .table-tools{width:100%;margin-left:0;order:3}
-  .tsel{flex:1;justify-content:space-between}
-  .tsel select{flex:0 1 auto}
+  .table-tools{width:100%;margin-left:0;order:3;gap:8px}
+  .tsel{flex:1;justify-content:space-between;font-size:9px}
+  .tsel select{flex:0 1 auto;font-size:12px;padding:6px 24px 6px 9px}
   .table-meta{order:2;margin-left:auto}
 }
 /* fixed layout => the table always exactly fills the width (never overflows /
@@ -205,15 +205,17 @@ nav.nav{display:flex;align-items:center;gap:18px;flex:0 0 auto}
   /* mobile: only the title column shows; rating drops onto its own line under
      the title so nothing competes for width and the row never squeezes */
   .col-creator,.col-type,.col-year,.col-date,.col-rating{display:none}
-  .cell-title{font-size:16px;white-space:normal;line-height:1.25}
+  .cell-title{font-size:15px;white-space:normal;line-height:1.25}
   .row-rate{display:block;margin-top:6px}
-  .row-rate .stars{width:92px}
-  .row-sub{display:block;font-family:var(--font-body);font-size:11.5px;color:var(--mute);margin-top:4px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-  .titlecell{gap:14px;align-items:flex-start}
-  .swatch{width:52px;height:52px}
-  .mtable td{padding:13px 4px}
+  .row-rate .stars{width:84px}
+  .row-sub{display:block;font-family:var(--font-body);font-size:10.5px;color:var(--mute);margin-top:4px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .titlecell{gap:13px;align-items:flex-start}
+  .swatch{width:50px;height:50px}
+  .mtable td{padding:12px 4px}
   .mtable thead{display:none}
   .tablewrap{margin-top:30px}
+  .type-pills .pill{font-size:10px;padding:6px 12px}
+  .table-meta{font-size:10px}
 }
 @media(max-width:440px){ .col-idx{display:none} }
 .empty{text-align:center;color:var(--mute);font-family:var(--font-body);font-size:13px;padding:50px 20px}
@@ -479,7 +481,7 @@ label.f>span{font-family:var(--font-body);font-size:10px;color:var(--mute);
 </div>
 
 <div class="toast" id="toast"></div>
-<div class="version">v2026.07.23g</div>
+<div class="version">v2026.07.23h</div>
 
 <script>
 /* ================= config ================= */
