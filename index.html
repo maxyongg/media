@@ -160,7 +160,19 @@ nav.nav{display:flex;align-items:center;gap:18px;flex:0 0 auto}
 .type-pills{display:flex;gap:8px;flex-wrap:wrap}
 .pill{font-family:var(--font-body);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);border:1px solid var(--line);border-radius:8px;padding:7px 14px;background:none;white-space:nowrap}
 .pill[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
-.table-meta{margin-left:auto;font-family:var(--font-body);font-size:11px;color:var(--mute);letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+.table-tools{display:flex;gap:10px;margin-left:auto;flex-wrap:wrap;align-items:center}
+.tsel{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-body);font-size:10px;font-weight:600;color:var(--mute);text-transform:uppercase;letter-spacing:.07em}
+.tsel select{font-family:var(--font-body);font-size:12px;font-weight:500;color:var(--ink);background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:7px 26px 7px 10px;text-transform:none;letter-spacing:0;cursor:pointer;
+  -webkit-appearance:none;appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%238b8a7e' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 9px center}
+.tsel select:focus{outline:2px solid var(--sig);outline-offset:1px}
+.table-meta{font-family:var(--font-body);font-size:11px;color:var(--mute);letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+@media(max-width:640px){
+  .table-tools{width:100%;margin-left:0;order:3}
+  .tsel{flex:1;justify-content:space-between}
+  .tsel select{flex:0 1 auto}
+  .table-meta{order:2;margin-left:auto}
+}
 /* fixed layout => the table always exactly fills the width (never overflows /
    scrolls) and every column width is controlled, so Creator sits snug to Type. */
 .mtable{width:100%;border-collapse:collapse;margin-top:10px;table-layout:fixed}
@@ -467,7 +479,7 @@ label.f>span{font-family:var(--font-body);font-size:10px;color:var(--mute);
 </div>
 
 <div class="toast" id="toast"></div>
-<div class="version">v2026.07.23f</div>
+<div class="version">v2026.07.23g</div>
 
 <script>
 /* ================= config ================= */
@@ -579,7 +591,7 @@ function renderThemeGrid(){
 
 /* ================= state ================= */
 const S = {
-  view:'home', tab:'films', typeFilter:'all', q:'',
+  view:'home', tab:'films', typeFilter:'all', q:'', starFilter:0,
   sortKey:'date', sortDir:-1,
   data:{}, shas:{}, dirty:new Set(), authError:null,
   cfg:{repo:'', branch:'main', token:'', expires:'', tmdbKey:'', rawgKey:'', theme:'museum'},
@@ -1148,6 +1160,7 @@ function tableRows(){
   const q = S.q.trim().toLowerCase();
   let rows = allRows();
   if(S.typeFilter!=='all') rows = rows.filter(r=>r.k===S.typeFilter);
+  if(S.starFilter>0) rows = rows.filter(r=>r.item.rating && (r.item.rating/r.c.scale*5) >= S.starFilter - 1e-9);
   if(q) rows = rows.filter(r=>Object.values(r.item).some(v=>v!=null && String(v).toLowerCase().includes(q)));
   const dir = S.sortDir;
   const nameCmp = (a,b)=>String(a.item.name||'').localeCompare(String(b.item.name||''));
@@ -1334,6 +1347,11 @@ function renderTable(){
   const pills = [['all','All'],['films','Film'],['tv','TV'],['games','Game'],['books','Book']].map(([k,l])=>
     `<button class="pill" data-type="${k}" aria-pressed="${S.typeFilter===k}">${l}</button>`).join('');
   const arr = key => S.sortKey===key ? `<span class="arr">${S.sortDir<0?'↓':'↑'}</span>` : '';
+  const sortVal = `${S.sortKey}:${S.sortDir}`;
+  const sortOpts = [['date:-1','Newest first'],['date:1','Oldest first'],['rating:-1','Highest rated'],['rating:1','Lowest rated'],['name:1','Title A–Z'],['name:-1','Title Z–A']];
+  const sortSel = `<label class="tsel"><span>Sort</span><select id="sortSel">${sortOpts.map(([v,l])=>`<option value="${v}"${v===sortVal?' selected':''}>${l}</option>`).join('')}</select></label>`;
+  const starOpts = [['0','All ratings'],['5','5★ only'],['4','4★ &amp; up'],['3','3★ &amp; up'],['2','2★ &amp; up'],['1','1★ &amp; up']];
+  const starSel = `<label class="tsel"><span>Stars</span><select id="starSel">${starOpts.map(([v,l])=>`<option value="${v}"${+v===S.starFilter?' selected':''}>${l}</option>`).join('')}</select></label>`;
   const body = rows.length ? rows.map((r,ix)=>{
     const yr = r.item[yearField(r.k)] || '';
     const cr = r.item[creatorField(r.k)] || '';
@@ -1353,6 +1371,7 @@ function renderTable(){
   return `<div class="tablewrap">
     <div class="table-top">
       <div class="type-pills">${pills}</div>
+      <div class="table-tools">${starSel}${sortSel}</div>
       <div class="table-meta">${total} works${avg5?` &middot; avg ★${avg5.toFixed(1)}`:''}</div>
     </div>
     <table class="mtable">
@@ -1745,6 +1764,10 @@ $('#list').addEventListener('click', e=>{
   if(cf){ S.statsFilter = {type:'creator', value: cf.dataset.creatorFilter}; renderStatsTab(); return; }
   const yf = e.target.closest('[data-year-filter]');
   if(yf){ S.statsFilter = {type:'year', value: yf.dataset.yearFilter}; renderStatsTab(); return; }
+});
+$('#list').addEventListener('change', e=>{
+  if(e.target.id==='sortSel'){ const [k,d]=e.target.value.split(':'); S.sortKey=k; S.sortDir=+d; render(); }
+  else if(e.target.id==='starSel'){ S.starFilter=+e.target.value; render(); }
 });
 $('#addBtn').addEventListener('click', ()=>{
   S.tab = (S.typeFilter!=='all') ? S.typeFilter : 'films';
