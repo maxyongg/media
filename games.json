@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "ratingScale": 10,
- "updatedAt": "2026-07-23T10:10:49.688Z",
+ "updatedAt": "2026-07-23T10:09:00.131Z",
  "items": [
   {
    "id": "g0125",
@@ -30,8 +30,8 @@
    "mainStoryPct": "100",
    "datePlayed": "2026-07-21",
    "yearReleased": 2024,
-   "ry": 57,
-   "rx": 58
+   "ry": 79,
+   "rx": 44
   },
   {
    "id": "g0001",

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#F4F1EC">
-<title>List</title>
+<title>xonk</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600;700&family=Lora:wght@500;600;700&family=Karla:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500..700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -49,7 +49,13 @@ header.top{
   display:flex;align-items:center;gap:20px;flex-wrap:wrap;
 }
 .brand{font-family:var(--font-head);font-weight:700;font-size:26px;letter-spacing:.03em;line-height:1;flex:0 0 auto}
-.brand .star{font-style:normal;color:var(--sig);font-size:.6em;vertical-align:.28em;margin:0 .04em;font-family:var(--font-body)}
+.brand .logo-o{width:.64em;height:.64em;display:inline-block;vertical-align:-.02em;margin:0 .04em}
+.demo-bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:var(--ink-2);border:1px solid var(--line);
+  border-radius:10px;padding:10px 12px;margin:10px 0;font-family:var(--font-body);font-size:12px;color:var(--mute)}
+.demo-bar b{color:var(--ink)}
+.demo-bar span{flex:1;min-width:120px}
+.demo-bar button{font-family:var(--font-body);font-size:11px;font-weight:700;border:1px solid var(--line);
+  border-radius:999px;padding:6px 11px;color:var(--ink);background:var(--paper)}
 nav.nav{display:flex;align-items:center;gap:18px;flex:0 0 auto}
 .navlink{
   font-family:var(--font-body);font-size:12px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;
@@ -59,7 +65,6 @@ nav.nav{display:flex;align-items:center;gap:18px;flex:0 0 auto}
 .navlink[aria-current="true"]::after{
   content:"";position:absolute;left:0;right:0;bottom:-5px;height:2px;background:var(--sig);
 }
-.navlink .ext{font-size:.9em;margin-left:3px;opacity:.8}
 .hspace{flex:1 1 auto}
 .hsearch{
   flex:0 1 240px;display:flex;align-items:center;gap:8px;min-width:0;
@@ -102,23 +107,6 @@ nav.nav{display:flex;align-items:center;gap:18px;flex:0 0 auto}
   .addbtn{height:34px;padding:0 13px}
 }
 
-/* ---------- banner ---------- */
-.banner{
-  display:flex;align-items:center;gap:10px;margin-top:6px;
-  background:var(--ink-2);border:1px solid var(--sig);border-left-width:3px;
-  border-radius:var(--r);padding:11px 12px;
-}
-.banner[hidden]{display:none}
-.banner.warn{border-color:var(--warn)}
-.btxt{flex:1;min-width:0;font-size:13px;line-height:1.45}
-.btxt b{display:block;font-size:13px;margin-bottom:1px}
-.btxt span{color:var(--mute);font-family:var(--font-body);font-size:11px}
-.bfix{
-  flex:0 0 auto;background:var(--ink);color:var(--paper);
-  border-radius:999px;padding:12px 15px;font-weight:600;font-size:13px;
-  min-height:44px;
-}
-
 /* ---------- hero ---------- */
 .hero{display:grid;grid-template-columns:minmax(0,360px) minmax(0,1fr);gap:36px;margin-top:14px;max-width:100%}
 .hero-cur,.hero-recent{min-width:0}
@@ -145,18 +133,21 @@ nav.nav{display:flex;align-items:center;gap:18px;flex:0 0 auto}
 .rtile .bg{position:absolute;inset:0;background-size:cover;background-position:center}
 .rtile .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.32),rgba(0,0,0,.02) 42%,rgba(0,0,0,.62))}
 .rtile .type{position:absolute;top:9px;left:10px;font-family:var(--font-body);font-size:8.5px;font-weight:700;letter-spacing:.09em;color:rgba(255,255,255,.92)}
-.rtile .rt{position:absolute;top:8px;right:10px;font-family:var(--font-head);font-weight:700;font-size:12px;color:#fff}
+.rtile .rt{position:absolute;top:8px;right:10px}
+.rtile .rt .qswatch{width:16px;height:16px}
 .rtile .nm{position:absolute;left:10px;right:10px;bottom:10px;color:#fff;font-family:var(--font-head);font-weight:700;font-size:13px;line-height:1.2;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
 
 /* ---------- table ---------- */
 .cover{flex:0 0 auto;width:54px;height:78px;border-radius:7px;object-fit:cover;background:var(--ink-3)}
-.stars{display:inline-block;width:88px;height:16px;line-height:0}
-.stars svg{width:100%;height:16px;display:block}
-.stars-bg path{fill:var(--ink-3)}
-.stars-fg path{fill:var(--acid)}
-.stars-fg.mid path{fill:var(--mid)}
-.stars-fg.lo path{fill:var(--mute)}
-.stars-empty{font-family:var(--font-body);font-size:13px;color:var(--mute)}
+/* rating swatch: one colour = one unique point on the quadrant */
+.qswatch{display:inline-block;width:18px;height:18px;border-radius:50%;flex:0 0 auto;border:1px solid rgba(0,0,0,.15)}
+.qswatch.legacy{background:none!important;border-width:3px;border-style:solid}
+.qswatch.ondark{box-shadow:0 0 0 1.5px rgba(255,255,255,.9)}
+.rate-empty{font-family:var(--font-body);font-size:13px;color:var(--mute)}
+/* stats scatter: every rated item as one dot on the shared quadrant */
+.qscatter{width:100%;max-width:260px;display:block;margin:0 auto;background:var(--paper);border:1px solid var(--line);border-radius:10px}
+.qscatter .qs-axis{stroke:var(--line);stroke-width:1}
+.qscatter .qs-dot{opacity:.85}
 .tablewrap{margin-top:44px;max-width:100%}
 .table-top{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:4px}
 .type-pills{display:flex;gap:8px;flex-wrap:wrap}
@@ -192,7 +183,7 @@ nav.nav{display:flex;align-items:center;gap:18px;flex:0 0 auto}
 .col-type{width:76px}
 .col-year{width:56px}
 .col-date{width:104px}
-.col-rating{width:104px}
+.col-rating{width:64px}
 .cell-idx{font-family:var(--font-body);font-size:12px;color:var(--mute)}
 .titlecell{display:flex;align-items:center;gap:13px;min-width:0}
 .titlecell .t{display:flex;flex-direction:column;min-width:0;overflow:hidden}
@@ -210,7 +201,7 @@ nav.nav{display:flex;align-items:center;gap:18px;flex:0 0 auto}
   .col-creator,.col-type,.col-year,.col-date,.col-rating{display:none}
   .cell-title{font-size:15px;white-space:normal;line-height:1.25}
   .row-rate{display:block;margin-top:6px}
-  .row-rate .stars{width:84px}
+  .row-rate .qswatch{width:20px;height:20px}
   .row-sub{display:block;font-family:var(--font-body);font-size:10.5px;color:var(--mute);margin-top:4px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   .titlecell{gap:13px;align-items:flex-start}
   .swatch{width:50px;height:50px}
@@ -297,6 +288,204 @@ nav.nav{display:flex;align-items:center;gap:18px;flex:0 0 auto}
   display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;
 }
 
+/* ---------- profile ("You") ----------
+   Built on the theme variables, so it reads correctly in every theme; the
+   handoff palette is exactly the `midnight` theme, which is where it matches
+   the design hex-for-hex. */
+.pf{margin-top:14px}
+.pf-id{display:flex;align-items:flex-start;gap:22px;flex-wrap:wrap}
+.pf-av{
+  width:104px;height:104px;border-radius:22px;flex:0 0 auto;
+  border:1px solid rgba(255,255,255,.12);
+  box-shadow:inset 0 2px 18px rgba(255,255,255,.28),inset 0 -12px 22px rgba(0,0,0,.22);
+  display:flex;align-items:flex-end;justify-content:flex-start;
+}
+.pf-av span{font-family:var(--font-head);font-weight:700;font-size:40px;line-height:1;
+  color:rgba(20,21,18,.82);padding:0 0 12px 16px}
+.pf-idmain{flex:1;min-width:0;padding-top:4px}
+.pf-nm{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.pf-nm h1{margin:0;font-family:var(--font-head);font-weight:700;font-size:40px;line-height:1;letter-spacing:-.02em}
+.pf-handle{font-family:var(--font-body);font-size:15px;font-weight:500;color:var(--mute)}
+.pf-tag{margin:10px 0 0;font-family:var(--font-head);font-weight:500;font-size:16px;line-height:1.45;
+  color:var(--ink);opacity:.82;max-width:560px;text-wrap:pretty}
+.pf-meta{display:flex;align-items:center;gap:18px;margin-top:14px;flex-wrap:wrap;
+  font-family:var(--font-body);font-size:12px;font-weight:500;color:var(--mute);letter-spacing:.02em}
+.pf-meta .sep{width:3px;height:3px;border-radius:50%;background:var(--mute);opacity:.6;flex:0 0 auto}
+.pf-meta b{color:var(--ink);font-weight:600}
+.pf-acts{display:flex;gap:10px;flex:0 0 auto;padding-top:4px}
+.pf-btn{font-family:var(--font-body);font-size:13px;font-weight:600;color:var(--ink);
+  background:none;border:1px solid var(--line);border-radius:10px;padding:10px 16px;white-space:nowrap}
+.pf-btn:hover{border-color:var(--mute)}
+.pf-btn.fill{background:var(--ink-2)}
+.pf-btn.fill:hover{background:var(--ink-3);border-color:var(--line)}
+
+.pf-stats{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:26px}
+.pf-tile{background:var(--ink-2);border:1px solid var(--line);border-radius:12px;padding:16px 18px;min-width:0}
+.pf-tile .n{font-family:var(--font-head);font-weight:700;font-size:30px;line-height:1;letter-spacing:-.02em;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pf-tile .l{font-family:var(--font-body);font-size:10px;font-weight:500;color:var(--mute);
+  text-transform:uppercase;letter-spacing:.07em;margin-top:8px;line-height:1.35}
+.pf-tile.sm{padding:15px 16px}
+.pf-tile.sm .n{font-size:26px}
+
+.pf-hero{display:grid;grid-template-columns:minmax(0,1.62fr) minmax(0,1fr);gap:16px;margin-top:16px}
+.pf-panel{background:var(--ink-2);border:1px solid var(--line);border-radius:14px;padding:18px;min-width:0}
+.pf-plabel{font-family:var(--font-body);font-size:10px;font-weight:500;color:var(--mute);
+  text-transform:uppercase;letter-spacing:.08em}
+.pf-phead{display:flex;align-items:center;gap:12px;margin-bottom:14px;flex-wrap:wrap}
+.pf-pills{display:flex;gap:7px;margin-left:auto;flex-wrap:wrap}
+.pf-pill{font-family:var(--font-body);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--mute);border:1px solid var(--line);border-radius:8px;padding:7px 13px;background:none;
+  white-space:nowrap;transition:.12s}
+.pf-pill[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+
+/* the rating map: every rated work as one dot on the shared quadrant */
+.pf-plot{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:12px;
+  height:392px;overflow:hidden}
+.pf-plot .ax-h{position:absolute;left:6%;right:6%;top:50%;height:1px;background:var(--line)}
+.pf-plot .ax-v{position:absolute;top:6%;bottom:6%;left:50%;width:1px;background:var(--line)}
+.pf-axlab{position:absolute;font-family:var(--font-body);font-size:9px;font-weight:600;line-height:1;
+  letter-spacing:.13em;text-transform:uppercase;color:var(--mute);opacity:.8;pointer-events:none}
+.pf-axlab.t{top:9px;left:50%;transform:translateX(-50%)}
+.pf-axlab.b{bottom:9px;left:50%;transform:translateX(-50%)}
+.pf-axlab.l{left:11px;top:50%;transform:translateY(-50%) rotate(180deg);writing-mode:vertical-rl}
+.pf-axlab.r{right:11px;top:50%;transform:translateY(-50%);writing-mode:vertical-rl}
+.pf-dot{
+  position:absolute;width:9px;height:9px;border-radius:50%;transform:translate(-50%,-50%);
+  border:1px solid rgba(0,0,0,.28);opacity:.95;z-index:2;cursor:pointer;
+  transition:width .13s ease,height .13s ease;
+}
+.pf-dot.legacy{width:11px;height:11px;opacity:.9;background:none!important;border-width:3px;border-style:solid}
+.pf-dot:hover{width:16px;height:16px;z-index:7;
+  box-shadow:0 0 0 4px rgba(240,233,220,.12),0 4px 12px rgba(0,0,0,.55)}
+.pf-dot:not(.legacy):hover{border:2px solid var(--ink)}
+/* filtering dims the rest rather than hiding it — the constellation stays whole */
+.pf-plot[data-f="films"] .pf-dot:not([data-k="films"]),
+.pf-plot[data-f="games"] .pf-dot:not([data-k="games"]),
+.pf-plot[data-f="tv"]    .pf-dot:not([data-k="tv"]),
+.pf-plot[data-f="books"] .pf-dot:not([data-k="books"]){opacity:.09;z-index:1;pointer-events:none}
+.pf-tip{
+  position:absolute;transform:translate(-50%,calc(-100% - 12px));z-index:20;pointer-events:none;display:none;
+  background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:8px 11px;
+  min-width:132px;max-width:240px;white-space:normal;box-shadow:0 12px 28px rgba(0,0,0,.6);
+}
+.pf-tip.on{display:block}
+.pf-tip.below{transform:translate(-50%,12px)}
+.pf-tip .pf-tipt{display:flex;align-items:center;gap:7px}
+.pf-tip i{width:9px;height:9px;border-radius:50%;flex:0 0 auto;display:block;box-sizing:border-box}
+.pf-tip b{font-family:var(--font-head);font-weight:700;font-size:14px;line-height:1.15;color:var(--ink)}
+.pf-tip .pf-tipm{display:block;font-family:var(--font-body);font-size:9px;font-weight:600;
+  letter-spacing:.08em;color:var(--mute);margin-top:5px}
+.pf-plot .empty{padding:0;position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+
+.pf-taste{display:flex;flex-direction:column}
+.pf-field{position:relative;margin-top:14px;aspect-ratio:1;border-radius:12px;overflow:hidden;border:1px solid var(--line)}
+.pf-field .ax-h{position:absolute;left:0;right:0;top:50%;height:1px;background:rgba(20,21,18,.35)}
+.pf-field .ax-v{position:absolute;top:0;bottom:0;left:50%;width:1px;background:rgba(20,21,18,.35)}
+.pf-mark{position:absolute;width:20px;height:20px;border-radius:50%;border:3px solid #fff;
+  transform:translate(-50%,-50%);box-shadow:0 2px 10px rgba(0,0,0,.6);z-index:3}
+.pf-tastecap{margin-top:16px;font-family:var(--font-head);font-weight:700;font-size:21px;
+  line-height:1.15;letter-spacing:-.01em}
+.pf-tastecap i{font-style:normal;color:var(--mute)}
+.pf-tastesub{font-family:var(--font-body);font-size:12px;font-weight:500;color:var(--mute);margin-top:7px}
+.pf-div{height:1px;background:var(--line);margin:16px 0}
+.pf-trows{display:flex;flex-direction:column;gap:11px}
+.pf-trow{display:flex;align-items:center;gap:10px}
+.pf-trow .d{width:12px;height:12px;border-radius:50%;flex:0 0 auto;box-shadow:0 0 0 1px rgba(0,0,0,.25)}
+.pf-trow .d.legacy{background:none!important;border:3px solid;box-sizing:border-box}
+.pf-trow .l{flex:1;min-width:0;font-family:var(--font-body);font-size:13px;font-weight:500}
+.pf-trow .v{font-family:var(--font-body);font-size:11px;font-weight:600;color:var(--mute);white-space:nowrap}
+
+.pf-cur{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.pf-cc{position:relative;aspect-ratio:16/7;border-radius:12px;overflow:hidden;border:1px solid var(--line);cursor:pointer}
+.pf-cc .bg{position:absolute;inset:0;background-size:cover;background-position:center}
+.pf-cc .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.12),rgba(0,0,0,.62))}
+.pf-cc .lab{position:absolute;top:12px;left:14px;font-family:var(--font-body);font-size:9px;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.92)}
+.pf-cc .nm{position:absolute;left:14px;right:14px;bottom:26px;color:#fff;font-family:var(--font-head);
+  font-weight:700;font-size:17px;line-height:1.15;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pf-cc.nobar .nm{bottom:13px}
+.pf-cc .bar{position:absolute;left:14px;right:14px;bottom:13px;height:4px;border-radius:2px;
+  background:rgba(255,255,255,.24);overflow:hidden}
+.pf-cc .bar i{display:block;height:100%;border-radius:2px;background:var(--acid)}
+
+.pf-bot{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:24px;margin-top:30px}
+.pf-bot>div{min-width:0}
+.pf-fav{display:flex;gap:12px;overflow-x:auto;scrollbar-width:none;padding-bottom:4px}
+.pf-fav::-webkit-scrollbar{display:none}
+.pf-fc{position:relative;flex:0 0 auto;width:148px;aspect-ratio:3/4;border-radius:12px;overflow:hidden;
+  border:1px solid var(--line);background:var(--ink-3);cursor:pointer}
+.pf-fc .bg{position:absolute;inset:0;background-size:cover;background-position:center}
+.pf-fc .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.34),rgba(0,0,0,.04) 42%,rgba(0,0,0,.66))}
+.pf-fc .type{position:absolute;top:10px;left:11px;font-family:var(--font-body);font-size:8.5px;font-weight:700;
+  letter-spacing:.09em;color:rgba(255,255,255,.92)}
+.pf-fc .rt{position:absolute;top:9px;right:10px;line-height:0}
+.pf-fc .rt .qswatch{width:16px;height:16px}
+.pf-fc .nm{position:absolute;left:11px;right:11px;bottom:11px;color:#fff;font-family:var(--font-head);
+  font-weight:700;font-size:14px;line-height:1.18;overflow:hidden;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical}
+.pf-miles{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.pf-act{display:flex;align-items:center;gap:13px;padding:12px 2px;border-bottom:1px solid var(--line);cursor:pointer}
+.pf-act .d{width:15px;height:15px;border-radius:50%;flex:0 0 auto;box-shadow:0 0 0 3px var(--paper),0 0 0 4px rgba(0,0,0,.25)}
+.pf-act .d.legacy{background:none!important;border:3px solid;box-sizing:border-box}
+.pf-act .t{flex:1;min-width:0}
+.pf-act .nm{font-family:var(--font-head);font-weight:600;font-size:15px;line-height:1.15;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pf-act .sub{font-family:var(--font-body);font-size:11px;font-weight:500;color:var(--mute);
+  margin-top:4px;letter-spacing:.03em}
+.pf-act .r{text-align:right;flex:0 0 auto}
+.pf-act .r .rate{font-family:var(--font-body);font-size:11px;font-weight:600;color:var(--mute)}
+.pf-act .r .tm{font-family:var(--font-body);font-size:10px;color:var(--mute);opacity:.8;margin-top:5px}
+
+/* people directory */
+.people-head{display:flex;align-items:baseline;gap:12px;margin:14px 0 18px}
+.people-head h1{margin:0;font-family:var(--font-head);font-weight:700;font-size:32px;letter-spacing:-.02em}
+.people-head span{font-family:var(--font-body);font-size:12px;color:var(--mute)}
+.people-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
+.person{display:flex;align-items:center;gap:14px;text-align:left;width:100%;padding:14px;
+  border:1px solid var(--line);border-radius:14px;background:var(--ink-2);cursor:pointer;
+  transition:border-color .12s,background .12s}
+.person:hover{border-color:var(--mute)}
+.person-av{width:52px;height:52px;border-radius:14px;flex:0 0 auto;display:flex;align-items:center;justify-content:center;
+  font-family:var(--font-head);font-weight:700;font-size:22px;color:rgba(20,21,18,.82);
+  border:1px solid rgba(255,255,255,.12);box-shadow:inset 0 1px 10px rgba(255,255,255,.25),inset 0 -8px 14px rgba(0,0,0,.18)}
+.person-main{display:flex;flex-direction:column;min-width:0;gap:3px}
+.person-nm{font-family:var(--font-head);font-weight:700;font-size:16px;letter-spacing:-.01em;
+  display:flex;align-items:center;gap:7px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.person-you{font-style:normal;font-family:var(--font-body);font-size:9px;font-weight:700;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--sig);border:1px solid var(--sig);border-radius:5px;padding:2px 5px;flex:0 0 auto}
+.person-sub{font-family:var(--font-body);font-size:12px;color:var(--mute);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.person-tag{font-family:var(--font-body);font-size:11px;color:var(--mute);opacity:.85;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+/* a profile you don't own is read-only: nothing in it is clickable */
+.pf.readonly .pf-cc,.pf.readonly .pf-fc,.pf.readonly .pf-act,.pf.readonly .pf-dot{cursor:default}
+
+@media(max-width:1024px){
+  .pf-hero{grid-template-columns:1fr}
+  .pf-plot{height:340px}
+  .pf-field{max-width:340px}
+  .pf-bot{grid-template-columns:1fr;gap:32px}
+  .pf-stats{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:768px){
+  .pf-nm h1{font-size:31px}
+  .pf-av{width:78px;height:78px;border-radius:18px}
+  .pf-av span{font-size:30px;padding:0 0 9px 13px}
+  .pf-id{gap:16px}
+  .pf-acts{flex:1 1 100%;padding-top:0}
+  .pf-btn{flex:1;padding:13px 16px}
+  .pf-stats{grid-template-columns:repeat(2,1fr);margin-top:20px}
+  .pf-miles{grid-template-columns:repeat(2,1fr)}
+  .pf-tile .n{font-size:26px}
+  .pf-plot{height:300px}
+  /* bigger touch targets: dots and pills */
+  .pf-dot{width:11px;height:11px}
+  .pf-dot.legacy{width:13px;height:13px}
+  .pf-dot:hover{width:18px;height:18px}
+  .pf-pill{padding:11px 14px}
+  .pf-cur{display:flex;overflow-x:auto;scrollbar-width:none}
+  .pf-cur::-webkit-scrollbar{display:none}
+  .pf-cur .pf-cc{flex:0 0 78%}
+}
+
 /* ---------- add-type picker (edit sheet) ---------- */
 .typepick{display:flex;gap:6px;margin:0 0 14px}
 .typepick button{flex:1;padding:9px 0;border-radius:8px;border:1px solid var(--line);background:var(--paper);color:var(--mute);font-family:var(--font-body);font-size:12px;font-weight:600}
@@ -338,8 +527,15 @@ nav.nav{display:flex;align-items:center;gap:18px;flex:0 0 auto}
 .suggest-meta{display:flex;flex-direction:column;min-width:0}
 .suggest-title{font-size:13px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .suggest-year{font-family:var(--font-body);font-size:11px;color:var(--mute)}
-label.f{display:block;margin-bottom:12px}
-label.f>span{font-family:var(--font-body);font-size:10px;color:var(--mute);
+.add-preview{display:flex;gap:14px;align-items:flex-start;margin:2px 0 12px}
+.add-preview-cover{width:74px;height:106px;border-radius:8px;object-fit:cover;background:var(--ink-3);flex:0 0 auto}
+.add-preview-meta{min-width:0}
+.add-preview-title{font-family:var(--font-head);font-weight:700;font-size:19px;line-height:1.2}
+.add-preview-sub{font-family:var(--font-body);font-size:13px;color:var(--mute);margin-top:4px}
+.add-desc{font-family:var(--font-body);font-size:12.5px;line-height:1.55;color:var(--mute);
+  margin:0 0 14px;border-left:2px solid var(--line);padding-left:10px}
+label.f,div.f{display:block;margin-bottom:12px}
+label.f>span,div.f>span{font-family:var(--font-body);font-size:10px;color:var(--mute);
   text-transform:uppercase;letter-spacing:.08em;display:block;margin-bottom:5px}
 .in{
   width:100%;background:var(--paper);border:1px solid var(--line);
@@ -347,27 +543,57 @@ label.f>span{font-family:var(--font-body);font-size:10px;color:var(--mute);
 }
 .in:focus,.search:focus{outline:2px solid var(--sig);outline-offset:1px}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.ratepick{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
-.ratepick button{
-  padding:13px 0;border-radius:var(--r);background:var(--paper);
-  border:1px solid var(--line);font-family:var(--font-head);font-weight:700;font-size:15px;color:var(--mute);
+.ratepick{display:block}
+/* ---------- quadrant rating picker ---------- */
+.quad{
+  position:relative;width:100%;max-width:320px;aspect-ratio:1;margin:0 auto;
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--r);
+  touch-action:none;cursor:crosshair;user-select:none;-webkit-user-select:none;
 }
-.ratepick button[aria-pressed="true"]{background:var(--acid);color:var(--on-accent);border-color:var(--acid)}
+.quad-canvas{position:absolute;inset:0;width:100%;height:100%;border-radius:inherit;pointer-events:none}
+.quad .ax{position:absolute;background:rgba(0,0,0,.18);pointer-events:none}
+.quad .ax.h{left:0;right:0;top:50%;height:1px}
+.quad .ax.v{top:0;bottom:0;left:50%;width:1px}
+.quad-lab{
+  position:absolute;font-family:var(--font-body);font-size:9px;font-weight:700;
+  letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.95);
+  text-shadow:0 1px 2px rgba(0,0,0,.35);pointer-events:none;
+}
+.quad-lab.top{top:6px;left:50%;transform:translateX(-50%)}
+.quad-lab.bottom{bottom:6px;left:50%;transform:translateX(-50%)}
+.quad-lab.left{left:6px;top:50%;transform:translateY(-50%) rotate(180deg);writing-mode:vertical-rl}
+.quad-lab.right{right:6px;top:50%;transform:translateY(-50%);writing-mode:vertical-rl}
+.quad-dot{
+  position:absolute;width:16px;height:16px;border-radius:50%;background:none;
+  border:2.5px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.4);
+  transform:translate(-50%,-50%);pointer-events:none;
+}
+.quad-dot.legacy{border-style:dashed}
+.quad-chip{flex:0 0 auto;width:22px;height:22px;border-radius:50%;border:1px solid rgba(0,0,0,.15)}
+.quad-chip.legacy{background:none!important;border-width:3px}
+.quad-foot{display:flex;align-items:center;gap:10px;margin:8px auto 0;max-width:320px}
+.quad-read{flex:1;font-family:var(--font-body);font-size:12px;color:var(--mute);line-height:1.4}
+.quad-clear{
+  flex:0 0 auto;font-family:var(--font-body);font-size:12px;font-weight:600;color:var(--sig);
+  border:1px solid var(--sig);border-radius:999px;padding:6px 12px;background:none;
+}
 .acts{display:flex;gap:10px;margin-top:18px}
 .btn{flex:1;padding:14px;border-radius:var(--r);font-weight:600;font-size:15px}
 .btn.primary{background:var(--ink);color:var(--paper)}
 .btn.ghost{background:var(--ink-3);color:var(--ink);border:1px solid var(--line)}
 .btn.danger{background:none;color:var(--sig);border:1px solid var(--sig);flex:0 0 auto;padding:14px 16px}
-#inProgressBtn[aria-pressed="true"]{background:var(--acid);color:var(--on-accent);border-color:var(--acid)}
+.statuslbl{font-family:var(--font-body);font-size:10px;color:var(--mute);text-transform:uppercase;letter-spacing:.08em;display:block;margin-bottom:5px}
+.statuspick{display:flex;gap:6px}
+.statuspick button{flex:1;padding:11px 6px;border-radius:8px;border:1px solid var(--line);background:var(--paper);color:var(--mute);font-family:var(--font-body);font-size:12px;font-weight:600;line-height:1.15}
+.statuspick button[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.statuspick button[data-status="inProgress"][aria-pressed="true"]{background:var(--acid);color:var(--on-accent);border-color:var(--acid)}
+.statuspick button[data-status="dnf"][aria-pressed="true"]{background:var(--sig);color:#fff;border-color:var(--sig)}
+#devUnratedBtn[aria-pressed="true"]{background:var(--acid);color:var(--on-accent);border-color:var(--acid)}
 .note{font-family:var(--font-body);font-size:11px;color:var(--mute);line-height:1.6;
   border-left:2px solid var(--line);padding-left:10px;margin:0 0 14px}
 .note b{color:var(--ink)}
 .note.warn{color:var(--sig);border-color:var(--sig)}
 .note.ok{color:var(--acid);border-color:var(--acid)}
-.pushlog{font-family:var(--font-body);font-size:11px;color:var(--mute);
-  background:var(--paper);border-radius:var(--r);padding:10px;margin-top:12px;
-  white-space:pre-wrap;max-height:130px;overflow:auto;display:none}
-.pushlog.on{display:block}
 .toast{
   position:fixed;left:50%;transform:translateX(-50%) translateY(20px);
   bottom:calc(84px + var(--safe-b));z-index:60;
@@ -378,19 +604,34 @@ label.f>span{font-family:var(--font-body);font-size:10px;color:var(--mute);
 .version{
   position:fixed;right:8px;bottom:calc(4px + var(--safe-b));z-index:44;
   font-family:var(--font-body);font-size:9px;color:var(--line);
-  pointer-events:none;user-select:none;
+  pointer-events:auto;cursor:pointer;user-select:none;padding:4px;
 }
+/* token-health banner + settings push log */
+.banner{display:flex;align-items:center;gap:12px;margin:6px 0 2px;padding:12px 14px;border-radius:12px;
+  background:var(--ink-2);border:1px solid var(--sig)}
+.banner.warn{border-color:var(--warn)}
+.banner[hidden]{display:none}
+.banner-txt{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+.banner-txt b{font-family:var(--font-body);font-size:13px;font-weight:600;color:var(--ink)}
+.banner-txt span{font-family:var(--font-body);font-size:12px;color:var(--mute)}
+#bFix{flex:0 0 auto;font-family:var(--font-body);font-size:12px;font-weight:600;color:var(--paper);
+  background:var(--sig);border-radius:999px;padding:8px 14px}
+.banner.warn #bFix{background:var(--warn)}
+.pushlog{display:none;white-space:pre-wrap;font-family:var(--font-body);font-size:11px;color:var(--mute);
+  background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:6px 0 2px;
+  max-height:150px;overflow:auto}
+.pushlog.on{display:block}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 </head>
 <body>
 <div class="wrap">
   <header class="top">
-    <div class="brand">L<i class="star">&#42;</i>I<i class="star">&#42;</i>ST</div>
+    <div class="brand">x<svg class="logo-o" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 10L10 1A9 9 0 0 1 19 10Z" fill="#4fae57"/><path d="M10 10L19 10A9 9 0 0 1 10 19Z" fill="#dc8b3e"/><path d="M10 10L10 19A9 9 0 0 1 1 10Z" fill="#d0487e"/><path d="M10 10L1 10A9 9 0 0 1 10 1Z" fill="#4b82d6"/></svg>nk</div>
     <nav class="nav" id="nav">
       <button class="navlink" data-view="home" aria-current="true">Home</button>
       <button class="navlink" data-view="stats">Stats</button>
-      <a class="navlink" href="https://maxyongg.github.io/collection/" target="_blank" rel="noopener">Collection<span class="ext">&#8599;</span></a>
+      <button class="navlink" data-view="profile">You</button>
     </nav>
     <div class="hspace"></div>
     <div class="hsearch">
@@ -408,10 +649,9 @@ label.f>span{font-family:var(--font-body);font-size:10px;color:var(--mute);
   </header>
 
   <div class="banner" id="banner" hidden>
-    <div class="btxt"><b id="bTitle"></b><span id="bBody"></span></div>
-    <button class="bfix" id="bFix">Fix</button>
+    <div class="banner-txt"><b id="bTitle"></b><span id="bBody"></span></div>
+    <button id="bFix">Fix</button>
   </div>
-
   <div id="list"></div>
 </div>
 
@@ -422,15 +662,18 @@ label.f>span{font-family:var(--font-body);font-size:10px;color:var(--mute);
   <div class="grab"></div>
   <h2 id="editTitle">Add item</h2>
   <div class="typepick" id="typePick" style="display:none"></div>
-  <div style="display:flex;align-items:center;gap:10px;margin:0 0 12px">
+  <div id="coverRow" style="display:flex;align-items:center;gap:10px;margin:0 0 12px">
     <img id="coverPreview" style="width:54px;height:78px;border-radius:7px;object-fit:cover;background:var(--ink-3);display:none">
     <button class="btn ghost" type="button" id="fetchCoverBtn" style="flex:0 0 auto;padding:10px 14px">Fetch cover</button>
   </div>
-  <div id="inProgressWrap" style="display:none;margin-bottom:12px">
-    <button class="btn ghost" type="button" id="inProgressBtn" style="width:100%" aria-pressed="false">Currently reading</button>
+  <div id="statusWrap" style="display:none;margin-bottom:12px">
+    <span class="statuslbl">Status</span>
+    <div class="statuspick" id="statusPick"></div>
   </div>
   <div id="fields"></div>
-  <label class="f"><span id="rlabel">Rating</span><div class="ratepick" id="ratepick"></div></label>
+  <!-- div, not label: a label forwards any click inside it to its first button,
+       which made every graph tap immediately trigger the Clear button -->
+  <div class="f" id="ratingWrap"><span id="rlabel">Rating</span><div class="ratepick" id="ratepick"></div></div>
   <div class="acts">
     <button class="btn ghost" id="cancelEdit">Cancel</button>
     <button class="btn primary" id="saveEdit">Save</button>
@@ -442,36 +685,35 @@ label.f>span{font-family:var(--font-body);font-size:10px;color:var(--mute);
 <div class="sheet" id="setSheet" role="dialog" aria-modal="true">
   <div class="grab"></div>
   <h2>Settings</h2>
-  <div class="acts" style="margin-top:0">
-    <button class="btn ghost" id="openThemeBtn">Appearance — themes &amp; fonts</button>
-  </div>
-  <p class="note">Your token stays in this browser's storage and is sent only to <b>api.github.com</b>. It is never shown to anyone else. Clearing your browser data removes it — you'd paste it again.</p>
+  <p class="note">Your collection is stored as JSON. Add a GitHub repo + token to save changes back to it and sync across devices; without one, edits live in this browser only. The token stays in this browser and is sent only to <b>api.github.com</b>.</p>
   <label class="f"><span>GitHub repo</span><input class="in" id="repoIn" placeholder="maxyongg/media" autocomplete="off"></label>
-  <label class="f"><span>Branch</span><input class="in" id="branchIn" placeholder="main" autocomplete="off"></label>
-  <label class="f"><span>Personal access token</span><input class="in" id="tokIn" type="password" placeholder="github_pat_…" autocomplete="off"></label>
-  <label class="f"><span>Token expiry date — optional, for reminders</span><input class="in" id="expIn" type="date"></label>
+  <div class="two">
+    <label class="f"><span>Branch</span><input class="in" id="branchIn" placeholder="main" autocomplete="off"></label>
+    <label class="f"><span>Token expiry — optional</span><input class="in" id="expIn" type="date"></label>
+  </div>
+  <label class="f"><span>Personal access token — Contents: read &amp; write</span><input class="in" id="tokIn" type="password" placeholder="github_pat_…" autocomplete="off"></label>
+  <p class="note" id="connHint" style="display:none"></p>
   <div class="acts" style="margin-top:2px">
     <button class="btn ghost" id="testConnBtn">Test connection</button>
+    <button class="btn danger" id="forgetBtn">Forget token</button>
   </div>
-  <p class="note" id="connHint" style="display:none"></p>
-  <p class="note">Cover images pull from TMDB (films/TV) and RAWG (games) — both free, keys stay in this browser and are sent only to their own APIs. Books use Open Library, which needs no key.</p>
-  <label class="f"><span>TMDB API key — optional, for film/TV covers</span><input class="in" id="tmdbIn" placeholder="optional" autocomplete="off"></label>
-  <label class="f"><span>RAWG API key — optional, for game covers</span><input class="in" id="rawgIn" placeholder="optional" autocomplete="off"></label>
-  <div class="acts" style="margin-top:2px">
+  <p class="note">Cover art &amp; title search use TMDB (films/TV) and RAWG (games) — both free; keys stay in this browser and go only to their own APIs. Books use Open Library, no key.</p>
+  <div class="two">
+    <label class="f"><span>TMDB API key</span><input class="in" id="tmdbIn" placeholder="optional" autocomplete="off"></label>
+    <label class="f"><span>RAWG API key</span><input class="in" id="rawgIn" placeholder="optional" autocomplete="off"></label>
+  </div>
+  <div class="acts" style="margin-top:0">
     <button class="btn ghost" id="fetchCoversBtn">Fetch missing covers</button>
+    <button class="btn ghost" id="exportBtn">Export JSON</button>
   </div>
-  <p class="note">Pull the latest from your linked Letterboxd &amp; Goodreads via the repo's GitHub Action (needs a token with Actions: write).</p>
   <div class="acts" style="margin-top:2px">
-    <button class="btn ghost" id="triggerSyncBtn">Fetch from Letterboxd / Goodreads</button>
+    <button class="btn ghost" id="openThemeBtn">Appearance — themes &amp; fonts</button>
   </div>
+  <pre class="pushlog" id="pushlog"></pre>
   <div class="acts">
     <button class="btn ghost" id="closeSet">Close</button>
     <button class="btn primary" id="saveSet">Save settings</button>
   </div>
-  <div class="acts" style="margin-top:10px">
-    <button class="btn danger" id="forgetBtn">Forget token</button>
-  </div>
-  <div class="pushlog" id="pushlog"></div>
 </div>
 
 <!-- theme sheet -->
@@ -485,8 +727,36 @@ label.f>span{font-family:var(--font-body);font-size:10px;color:var(--mute);
   </div>
 </div>
 
+<!-- edit-profile sheet -->
+<div class="sheet" id="profileSheet" role="dialog" aria-modal="true">
+  <div class="grab"></div>
+  <h2>Edit profile</h2>
+  <p class="note">Just for your own page. Stored on this device. Leave blank to fall back to the default.</p>
+  <label class="f"><span>Display name</span><input class="in" id="pfNameIn" maxlength="40" autocomplete="off"></label>
+  <label class="f"><span>Handle — the @name</span><input class="in" id="pfHandleIn" maxlength="20" autocomplete="off"></label>
+  <label class="f"><span>Tagline</span><textarea class="in" id="pfTagIn" rows="3" maxlength="180"></textarea></label>
+  <p class="note warn" id="pfErr" style="display:none"></p>
+  <div class="acts">
+    <button class="btn ghost" id="pfCancel">Cancel</button>
+    <button class="btn primary" id="pfSave">Save</button>
+  </div>
+</div>
+
+<!-- dev menu: opened by tapping the version stamp -->
+<div class="sheet" id="devSheet" role="dialog" aria-modal="true">
+  <div class="grab"></div>
+  <h2>Dev menu</h2>
+  <p class="note">Hidden tools — you found the version stamp.</p>
+  <div class="acts" style="margin-top:2px">
+    <button class="btn ghost" id="devUnratedBtn" aria-pressed="false">Show only unrated items</button>
+  </div>
+  <div class="acts">
+    <button class="btn ghost" id="devClose">Close</button>
+  </div>
+</div>
+
 <div class="toast" id="toast"></div>
-<div class="version">v2026.07.23j</div>
+<div class="version" id="verStamp">media v2026.07.24a</div>
 
 <script>
 /* ================= config ================= */
@@ -496,32 +766,27 @@ const COLLECTIONS = {
     fields:[
       {k:'name',        l:'Title',        t:'text'},
       {k:'coverUrl',    l:'Cover image URL', t:'text'},
-      {k:'developer',   l:'Publisher / dev', t:'text'},
-      {k:'studioStatus',l:'Studio',       t:'select', opts:['AAA','AA','Indie']},
+      {k:'developer',   l:'Studio',       t:'text'},
       {k:'genre',       l:'Genre',        t:'text', list:true},
       {k:'console',     l:'Console',      t:'text', list:true},
-      {k:'mainStoryPct',l:'Main story %', t:'text', half:true},
       {k:'datePlayed',  l:'Date played',  t:'date', half:true},
       {k:'yearReleased',l:'Year released',t:'number', half:true},
     ],
     sub: i => [i.developer, i.console, i.yearReleased].filter(Boolean).join(' · '),
-    pct: i => i.mainStoryPct, pctLabel:'story'
+    pct: () => null
   },
   tv: {
-    label:'TV', file:'tv.json', scale:5, idp:'t', recentFields:['dateWatched','lastSeasonYear','firstSeasonYear'],
+    label:'TV', file:'tv.json', scale:5, idp:'t', recentFields:['dateWatched'],
     fields:[
-      {k:'name',           l:'Title',    t:'text'},
-      {k:'coverUrl',       l:'Cover image URL', t:'text'},
-      {k:'genre',          l:'Genre',    t:'text', list:true},
-      {k:'network',        l:'Network',  t:'text', list:true},
-      {k:'seasons',        l:'Seasons',  t:'text', half:true},
-      {k:'watchedPct',     l:'Watched %',t:'text', half:true},
-      {k:'firstSeasonYear',l:'First season', t:'number', half:true},
-      {k:'lastSeasonYear', l:'Last season',  t:'number', half:true},
-      {k:'dateWatched',    l:'Watched',      t:'date',   half:true},
+      {k:'name',        l:'Title',    t:'text'},
+      {k:'coverUrl',    l:'Cover image URL', t:'text'},
+      {k:'genre',       l:'Genre',    t:'text', list:true},
+      {k:'network',     l:'Network',  t:'text', list:true},
+      {k:'released',    l:'Released', t:'date', half:true},
+      {k:'dateWatched', l:'Watched',  t:'date', half:true},
     ],
-    sub: i => [i.network, i.genre, i.seasons?i.seasons+' seasons':null].filter(Boolean).join(' · '),
-    pct: i => i.watchedPct, pctLabel:'watched'
+    sub: i => [i.network, i.genre].filter(Boolean).join(' · '),
+    pct: () => null
   },
   films: {
     label:'Films', file:'films.json', scale:10, idp:'f', recentFields:['dateWatched'],
@@ -549,8 +814,6 @@ const COLLECTIONS = {
   }
 };
 const SORTS = [
-  {k:'rating', d:-1, l:'RATING ↓'},
-  {k:'rating', d: 1, l:'RATING ↑'},
   {k:'name',   d: 1, l:'A–Z'},
   {k:'recent', d:-1, l:'NEWEST'}
 ];
@@ -598,15 +861,23 @@ function renderThemeGrid(){
 
 /* ================= state ================= */
 const S = {
-  view:'home', tab:'films', typeFilter:'all', q:'', starFilter:0,
+  view:'home', tab:'films', typeFilter:'all', q:'',
   sortKey:'date', sortDir:-1,
   data:{}, shas:{}, dirty:new Set(), authError:null,
-  cfg:{repo:'', branch:'main', token:'', expires:'', tmdbKey:'', rawgKey:'', theme:'museum'},
-  editing:null, statsCat:'overview', statsFilter:null
+  cfg:{repo:'', branch:'main', token:'', expires:'', tmdbKey:'', rawgKey:'', theme:'museum', name:'', handle:'', tagline:''},
+  editing:null, statsCat:'overview', statsFilter:null,
+  pfFilter:'all', unratedOnly:false
 };
 const TYPE_LABELS = {games:'Game', tv:'TV', films:'Film', books:'Book'};
 function creatorField(k){ return {films:'director',games:'developer',tv:'network',books:'author'}[k]; }
 function yearField(k){ return {films:'yearReleased',games:'yearReleased',tv:'firstSeasonYear',books:'yearPublished'}[k]; }
+/* numeric release year for table/sort/stats. TV stores a full "released" date
+   (first-episode air date), so derive its year; other kinds hold a year field. */
+function itemYear(k, item){
+  if(k==='tv') return item.released ? (+String(item.released).slice(0,4)||null) : (item.releasedYear||null);
+  const v = item[yearField(k)];
+  return (v!=null && v!=='') ? (+v||null) : null;
+}
 const $ = s => document.querySelector(s);
 const LS = 'ledger.v1';
 
@@ -623,6 +894,7 @@ function loadCfg(){
   }
 }
 function saveCfg(){ localStorage.setItem(LS+'.cfg', JSON.stringify(S.cfg)); }
+/* working copy of the data lives in localStorage; dirty = files not yet pushed */
 function cacheData(){ localStorage.setItem(LS+'.data', JSON.stringify({d:S.data, dirty:[...S.dirty]})); }
 function loadCache(){
   try{
@@ -657,6 +929,35 @@ async function loadAll(){
   if(S.cfg.token && S.cfg.repo) await syncOnLoad();
 }
 
+/* ================= github sync (data lives as JSON in the repo) ================= */
+function ghHeaders(){
+  return {'Authorization':'Bearer '+S.cfg.token,'Accept':'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'};
+}
+function b64(str){ return btoa(String.fromCharCode(...new TextEncoder().encode(str))); }
+function unb64(str){ const bin = atob(str.replace(/\s/g,'')); return new TextDecoder().decode(Uint8Array.from(bin, c=>c.charCodeAt(0))); }
+async function ghGet(file){
+  const u = `https://api.github.com/repos/${S.cfg.repo}/contents/${file}?ref=${encodeURIComponent(S.cfg.branch||'main')}`;
+  const r = await fetch(u, {headers: ghHeaders()});
+  if(r.status===404) return null;
+  if(!r.ok){ const e = new Error(`${file}: ${r.status} ${(await r.json().catch(()=>({}))).message||''}`); e.status = r.status; throw e; }
+  const j = await r.json();
+  return {sha:j.sha, json:JSON.parse(unb64(j.content))};
+}
+async function ghPut(file, obj, sha){
+  const u = `https://api.github.com/repos/${S.cfg.repo}/contents/${file}`;
+  const body = {message:`media: update ${file}`, content: b64(JSON.stringify(obj,null,1)), branch: S.cfg.branch||'main'};
+  if(sha) body.sha = sha;
+  const r = await fetch(u, {method:'PUT', headers:{...ghHeaders(),'Content-Type':'application/json'}, body: JSON.stringify(body)});
+  const j = await r.json().catch(()=>({}));
+  if(!r.ok){ const e = new Error(`${file}: ${r.status} ${j.message||''}`); e.status = r.status; throw e; }
+  return j.content.sha;
+}
+function classifyError(e){
+  if(e && e.status===401) return 'expired';
+  if(e && e.status===403) return 'denied';
+  if(e && e.status===404) return 'norepo';
+  return null;
+}
 /* compare local vs remote updatedAt per file; pull/push/no-op accordingly */
 async function syncOnLoad(){
   setStatus('','syncing…');
@@ -664,32 +965,137 @@ async function syncOnLoad(){
   for(const k of Object.keys(COLLECTIONS)){
     try{
       const g = await ghGet(COLLECTIONS[k].file);
-      if(!g){
-        // not in the repo yet — push local as the first commit
-        S.shas[k] = await ghPut(COLLECTIONS[k].file, S.data[k], null);
-        S.dirty.delete(k);
-        continue;
-      }
+      if(!g){ S.shas[k] = await ghPut(COLLECTIONS[k].file, S.data[k], null); S.dirty.delete(k); continue; }
       S.shas[k] = g.sha;
       const remoteT = g.json.updatedAt ? new Date(g.json.updatedAt).getTime() : 0;
       const localT  = S.data[k].updatedAt ? new Date(S.data[k].updatedAt).getTime() : 0;
-      if(remoteT > localT){
-        S.data[k] = g.json; S.dirty.delete(k);
-      } else if(localT > remoteT){
-        S.shas[k] = await ghPut(COLLECTIONS[k].file, S.data[k], g.sha);
-        S.dirty.delete(k);
-      }
-    }catch(e){
-      anyError = true;
-      S.authError = classifyError(e);
-    }
+      if(remoteT > localT){ S.data[k] = g.json; S.dirty.delete(k); }
+      else if(localT > remoteT){ S.shas[k] = await ghPut(COLLECTIONS[k].file, S.data[k], g.sha); S.dirty.delete(k); }
+    }catch(e){ anyError = true; S.authError = classifyError(e); }
   }
   cacheData(); render(); checkToken();
-  if(anyError){
-    setStatus(S.dirty.size?'dirty':'dirty', S.authError ? 'sync error' : (S.dirty.size+' unsaved'));
-  } else {
-    setStatus(S.dirty.size?'dirty':'ok', S.dirty.size ? S.dirty.size+' unsaved' : 'synced');
+  setStatus(S.dirty.size?'dirty':'ok', S.dirty.size ? S.dirty.size+' unsaved' : 'synced');
+}
+async function pull(){
+  if(!S.cfg.token || !S.cfg.repo) return toast('Add repo + token first');
+  const log=$('#pushlog'); log.classList.add('on'); log.textContent='Reading…\n';
+  try{
+    for(const k of Object.keys(COLLECTIONS)){
+      const g = await ghGet(COLLECTIONS[k].file);
+      if(g){ S.data[k]=g.json; S.shas[k]=g.sha; log.textContent+=`${COLLECTIONS[k].file} ✓ ${g.json.items.length} items\n`; }
+      else log.textContent+=`${COLLECTIONS[k].file} — not in repo yet\n`;
+    }
+    S.dirty.clear(); S.authError=null; cacheData(); render();
+    setStatus('ok','synced'); toast('Reloaded from GitHub'); checkToken();
+  }catch(e){ log.textContent+='ERROR '+e.message+'\n'; setStatus('dirty','error'); S.authError = classifyError(e); checkToken(); }
+}
+async function push(){
+  if(!S.cfg.token || !S.cfg.repo){ openSet(); return toast('Add repo + token first'); }
+  if(!S.dirty.size) return toast('Nothing to save');
+  const log=$('#pushlog'); log.classList.add('on'); log.textContent='Saving…\n';
+  setStatus('','saving…');
+  try{
+    for(const k of [...S.dirty]){
+      let sha = S.shas[k];
+      if(!sha){ const g = await ghGet(COLLECTIONS[k].file); sha = g && g.sha; }
+      S.shas[k] = await ghPut(COLLECTIONS[k].file, S.data[k], sha);
+      S.dirty.delete(k);
+      log.textContent += `${COLLECTIONS[k].file} committed\n`;
+    }
+    cacheData(); S.authError=null; setStatus('ok','saved'); toast('Saved to GitHub'); render(); checkToken();
+  }catch(e){
+    log.textContent += 'ERROR '+e.message+'\n';
+    setStatus('dirty', S.dirty.size+' unsaved'); S.authError = classifyError(e); checkToken();
+    toast(S.authError ? 'Token problem — see banner' : 'Save failed — see settings');
   }
+}
+function setStatus(cls,txt){
+  const el=$('#syncStatus'); if(!el) return;
+  el.className = 'sync '+(cls==='ok'?'ok':cls==='dirty'?'dirty':'');
+  const t = el.querySelector('.txt'); if(t) t.textContent = txt;
+  const sb=$('#saveBtn'); if(sb) sb.classList.toggle('hidden', !S.dirty.size);
+}
+/* mark a category changed, cache, and auto-push it if a token is configured */
+function markDirty(k){
+  if(S.data[k]) S.data[k].updatedAt = new Date().toISOString();
+  S.dirty.add(k); cacheData();
+  setStatus('dirty', S.dirty.size+' unsaved');
+  const sb=$('#saveBtn'); if(sb) sb.classList.remove('hidden');
+  if(S.cfg.token && S.cfg.repo) syncOne(k);
+}
+async function syncOne(k){
+  try{
+    let sha = S.shas[k];
+    if(!sha){ const g = await ghGet(COLLECTIONS[k].file); sha = g && g.sha; }
+    S.shas[k] = await ghPut(COLLECTIONS[k].file, S.data[k], sha);
+    S.dirty.delete(k); cacheData(); S.authError=null;
+    setStatus(S.dirty.size?'dirty':'ok', S.dirty.size ? S.dirty.size+' unsaved' : 'saved');
+    render(); checkToken();
+  }catch(e){ S.authError = classifyError(e); checkToken(); setStatus('dirty', S.dirty.size+' unsaved'); }
+}
+/* ---- token health banner ---- */
+function bannerFor(kind, extra){
+  const B = $('#banner');
+  if(!kind){ B.hidden = true; return; }
+  const M = {
+    notoken: ['Not connected to GitHub', 'Edits save in this browser only. Add a token to sync.', 'sig', 'Set up'],
+    expired: ['Token expired or revoked', 'GitHub rejected it (401). Generate a new one to save again.', 'sig', 'Replace'],
+    denied:  ['Token lacks write access', 'Needs Contents: Read and write on this repo (403).', 'sig', 'Fix'],
+    norepo:  ['Repo not found', 'Check the repo name and that the token can see it (404).', 'sig', 'Fix'],
+    soon:    ['Token expires soon', extra||'', 'warn', 'Renew'],
+    gone:    ['Token has expired', 'Generate a new one to start saving again.', 'sig', 'Replace']
+  }[kind];
+  if(!M){ B.hidden = true; return; }
+  $('#bTitle').textContent = M[0]; $('#bBody').textContent = M[1];
+  B.className = 'banner' + (M[2]==='warn' ? ' warn' : ''); $('#bFix').textContent = M[3]; B.hidden = false;
+}
+function checkToken(){
+  if(S.authError){ bannerFor(S.authError); return; }
+  if(!S.cfg.token){ bannerFor('notoken'); return; }
+  if(S.cfg.expires){
+    const days = Math.ceil((new Date(S.cfg.expires+'T23:59:59') - Date.now())/86400000);
+    if(days < 0){ bannerFor('gone'); return; }
+    if(days <= 14){ bannerFor('soon', days===0 ? 'Expires today.' : `Expires in ${days} day${days===1?'':'s'}.`); return; }
+  }
+  bannerFor(null);
+}
+async function testConnection(){
+  const repo = $('#repoIn').value.trim().replace(/^https?:\/\/github\.com\//,'').replace(/\/$/,'');
+  const branch = $('#branchIn').value.trim()||'main';
+  const token = $('#tokIn').value.trim();
+  const hint = $('#connHint');
+  hint.style.display='block'; hint.className='note'; hint.textContent='Checking…';
+  if(!repo || !token){ hint.className='note warn'; hint.textContent='Enter a repo and token first.'; return; }
+  const H = {'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'};
+  try{
+    const r = await fetch(`https://api.github.com/repos/${repo}`, {headers:H});
+    if(r.status===401){ hint.className='note warn'; hint.textContent='Token is invalid or expired (401).'; return; }
+    if(r.status===404){ hint.className='note warn'; hint.textContent='Repo not found, or token can\'t see it (404).'; return; }
+    if(!r.ok){ hint.className='note warn'; hint.textContent=`GitHub said ${r.status}.`; return; }
+    const j = await r.json();
+    if(j.permissions && j.permissions.push===false){ hint.className='note warn'; hint.textContent='Connected, but token lacks write access.'; return; }
+    const b = await fetch(`https://api.github.com/repos/${repo}/branches/${encodeURIComponent(branch)}`, {headers:H});
+    if(!b.ok){ hint.className='note warn'; hint.textContent=`Connected, but branch "${branch}" wasn't found.`; return; }
+    hint.className='note ok'; hint.textContent='✓ Connected — repo found, write access confirmed.';
+  }catch(e){ hint.className='note warn'; hint.textContent='Couldn\'t reach GitHub: '+e.message; }
+}
+async function verifyToken(){
+  if(!S.cfg.token || !S.cfg.repo){ checkToken(); return; }
+  try{
+    const r = await fetch(`https://api.github.com/repos/${S.cfg.repo}`, {headers: ghHeaders()});
+    if(r.status===401){ S.authError='expired'; checkToken(); return; }
+    if(r.status===404){ S.authError='norepo'; checkToken(); return; }
+    if(r.ok){ const j = await r.json(); if(j.permissions && j.permissions.push===false){ S.authError='denied'; checkToken(); return; } S.authError=null; }
+    checkToken();
+  }catch(e){ checkToken(); }
+}
+/* download the whole collection as a JSON bundle (backup) */
+function exportJson(){
+  const bundle = {}; Object.keys(COLLECTIONS).forEach(k=>{ bundle[COLLECTIONS[k].file] = S.data[k]; });
+  const blob = new Blob([JSON.stringify(bundle,null,1)], {type:'application/json'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob); a.download = 'media-collection.json'; a.click();
+  setTimeout(()=>URL.revokeObjectURL(a.href), 1000);
 }
 
 /* ================= cover images ================= */
@@ -708,33 +1114,30 @@ async function fetchCoverFor(k, item){
       const yr = item.yearReleased ? `&year=${item.yearReleased}` : '';
       const r = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${encodeURIComponent(S.cfg.tmdbKey)}&query=${encodeURIComponent(title)}${yr}`);
       if(!r.ok) return null;
-      const j = await r.json();
-      const hit = j.results && j.results[0];
+      const j = await r.json(); const hit = j.results && j.results[0];
       return (hit && hit.poster_path) ? `https://image.tmdb.org/t/p/w342${hit.poster_path}` : null;
     }
     if(k==='tv'){
       if(!S.cfg.tmdbKey) return null;
-      const yr = item.firstSeasonYear ? `&first_air_date_year=${item.firstSeasonYear}` : '';
+      const y = itemYear('tv', item);
+      const yr = y ? `&first_air_date_year=${y}` : '';
       const r = await fetch(`https://api.themoviedb.org/3/search/tv?api_key=${encodeURIComponent(S.cfg.tmdbKey)}&query=${encodeURIComponent(title)}${yr}`);
       if(!r.ok) return null;
-      const j = await r.json();
-      const hit = j.results && j.results[0];
+      const j = await r.json(); const hit = j.results && j.results[0];
       return (hit && hit.poster_path) ? `https://image.tmdb.org/t/p/w342${hit.poster_path}` : null;
     }
     if(k==='games'){
       if(!S.cfg.rawgKey) return null;
       const r = await fetch(`https://api.rawg.io/api/games?key=${encodeURIComponent(S.cfg.rawgKey)}&search=${encodeURIComponent(title)}&page_size=1`);
       if(!r.ok) return null;
-      const j = await r.json();
-      const hit = j.results && j.results[0];
+      const j = await r.json(); const hit = j.results && j.results[0];
       return (hit && hit.background_image) ? hit.background_image : null;
     }
     if(k==='books'){
       const authorQ = item.author ? `&author=${encodeURIComponent(String(item.author).split(/[,&]/)[0].trim())}` : '';
       const r = await fetch(`https://openlibrary.org/search.json?title=${encodeURIComponent(title)}${authorQ}&limit=1&fields=cover_i`);
       if(!r.ok) return null;
-      const j = await r.json();
-      const hit = j.docs && j.docs[0];
+      const j = await r.json(); const hit = j.docs && j.docs[0];
       return (hit && hit.cover_i) ? `https://covers.openlibrary.org/b/id/${hit.cover_i}-M.jpg` : null;
     }
   }catch(e){ return null; }
@@ -746,8 +1149,28 @@ function coverImgHTML(i){
     : `<div class="cover"></div>`;
 }
 
-/* ---- title autocomplete: type a title, pick a match, autofill the rest ---- */
+/* ---- title autocomplete + detail lookups, all client-side (keys in this browser) ---- */
 let suggestTimer = null, suggestSeq = 0, lastSuggestResults = [];
+async function mediaDetail(kind, id){
+  try{
+    if(kind==='films'){
+      if(!S.cfg.tmdbKey) return {};
+      const r = await fetch(`https://api.themoviedb.org/3/movie/${id}/credits?api_key=${encodeURIComponent(S.cfg.tmdbKey)}`);
+      return r.ok ? await r.json() : {};
+    }
+    if(kind==='tv'){
+      if(!S.cfg.tmdbKey) return {};
+      const r = await fetch(`https://api.themoviedb.org/3/tv/${id}?api_key=${encodeURIComponent(S.cfg.tmdbKey)}`);
+      return r.ok ? await r.json() : {};
+    }
+    if(kind==='games'){
+      if(!S.cfg.rawgKey) return {};
+      const r = await fetch(`https://api.rawg.io/api/games/${id}?key=${encodeURIComponent(S.cfg.rawgKey)}`);
+      return r.ok ? await r.json() : {};
+    }
+  }catch(e){}
+  return {};
+}
 async function searchSuggestions(k, q){
   try{
     if(k==='films'){
@@ -755,45 +1178,33 @@ async function searchSuggestions(k, q){
       const r = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${encodeURIComponent(S.cfg.tmdbKey)}&query=${encodeURIComponent(q)}`);
       if(!r.ok) return [];
       const j = await r.json();
-      return (j.results||[]).slice(0,6).map(m=>({
-        id:m.id, title:m.title, year:(m.release_date||'').slice(0,4),
-        thumb:m.poster_path?`https://image.tmdb.org/t/p/w92${m.poster_path}`:null, raw:m
-      }));
+      return (j.results||[]).slice(0,6).map(m=>({id:m.id, title:m.title, year:(m.release_date||'').slice(0,4), thumb:m.poster_path?`https://image.tmdb.org/t/p/w92${m.poster_path}`:null, raw:m}));
     }
     if(k==='tv'){
       if(!S.cfg.tmdbKey) return [];
       const r = await fetch(`https://api.themoviedb.org/3/search/tv?api_key=${encodeURIComponent(S.cfg.tmdbKey)}&query=${encodeURIComponent(q)}`);
       if(!r.ok) return [];
       const j = await r.json();
-      return (j.results||[]).slice(0,6).map(t=>({
-        id:t.id, title:t.name, year:(t.first_air_date||'').slice(0,4),
-        thumb:t.poster_path?`https://image.tmdb.org/t/p/w92${t.poster_path}`:null, raw:t
-      }));
+      return (j.results||[]).slice(0,6).map(t=>({id:t.id, title:t.name, year:(t.first_air_date||'').slice(0,4), thumb:t.poster_path?`https://image.tmdb.org/t/p/w92${t.poster_path}`:null, raw:t}));
     }
     if(k==='games'){
       if(!S.cfg.rawgKey) return [];
       const r = await fetch(`https://api.rawg.io/api/games?key=${encodeURIComponent(S.cfg.rawgKey)}&search=${encodeURIComponent(q)}&page_size=6`);
       if(!r.ok) return [];
       const j = await r.json();
-      return (j.results||[]).map(g=>({
-        id:g.id, title:g.name, year:(g.released||'').slice(0,4),
-        thumb:g.background_image||null, raw:g
-      }));
+      return (j.results||[]).map(g=>({id:g.id, title:g.name, year:(g.released||'').slice(0,4), thumb:g.background_image||null, raw:g}));
     }
     if(k==='books'){
       const r = await fetch(`https://openlibrary.org/search.json?title=${encodeURIComponent(q)}&limit=6&fields=key,title,author_name,first_publish_year,cover_i`);
       if(!r.ok) return [];
       const j = await r.json();
-      return (j.docs||[]).map(b=>({
-        id:b.key, title:b.title, year:b.first_publish_year||'',
-        thumb:b.cover_i?`https://covers.openlibrary.org/b/id/${b.cover_i}-S.jpg`:null, raw:b
-      }));
+      return (j.docs||[]).map(b=>({id:b.key, title:b.title, year:b.first_publish_year||'', thumb:b.cover_i?`https://covers.openlibrary.org/b/id/${b.cover_i}-S.jpg`:null, raw:b}));
     }
   }catch(e){ return []; }
   return [];
 }
 function onTitleInput(e){
-  if(e.target.dataset.k!=='name') return;
+  if(e.target.id!=='addSearch' && e.target.dataset.k!=='name') return;
   clearTimeout(suggestTimer);
   const q = e.target.value.trim();
   const box = $('#titleSuggest');
@@ -825,30 +1236,18 @@ async function fillFromSuggestion(k, picked){
   try{
     if(k==='films'){
       setField('yearReleased', picked.year);
-      if(S.cfg.tmdbKey){
-        const cr = await fetch(`https://api.themoviedb.org/3/movie/${picked.id}/credits?api_key=${encodeURIComponent(S.cfg.tmdbKey)}`);
-        if(cr.ok){
-          const cj = await cr.json();
-          const dir = (cj.crew||[]).find(c=>c.job==='Director');
-          if(dir) setField('director', dir.name);
-        }
-      }
+      const cj = await mediaDetail('films', picked.id);
+      const dir = (cj.crew||[]).find(c=>c.job==='Director');
+      if(dir) setField('director', dir.name);
       if(picked.raw.poster_path){
         const url = `https://image.tmdb.org/t/p/w342${picked.raw.poster_path}`;
         setField('coverUrl', url); updateCoverPreview(url);
       }
     } else if(k==='tv'){
-      if(S.cfg.tmdbKey){
-        const dr = await fetch(`https://api.themoviedb.org/3/tv/${picked.id}?api_key=${encodeURIComponent(S.cfg.tmdbKey)}`);
-        if(dr.ok){
-          const dj = await dr.json();
-          setField('genre', (dj.genres||[]).map(g=>g.name).join('/'));
-          setField('network', (dj.networks||[]).map(n=>n.name).slice(0,2).join('/'));
-          setField('seasons', dj.number_of_seasons||'');
-          setField('firstSeasonYear', (dj.first_air_date||'').slice(0,4));
-          if(dj.status && dj.status!=='Returning Series') setField('lastSeasonYear', (dj.last_air_date||'').slice(0,4));
-        }
-      }
+      const dj = await mediaDetail('tv', picked.id);
+      setField('genre', (dj.genres||[]).map(g=>g.name).join('/'));
+      setField('network', (dj.networks||[]).map(n=>n.name).slice(0,2).join('/'));
+      setField('released', dj.first_air_date || (picked.raw && picked.raw.first_air_date) || '');
       if(picked.raw.poster_path){
         const url = `https://image.tmdb.org/t/p/w342${picked.raw.poster_path}`;
         setField('coverUrl', url); updateCoverPreview(url);
@@ -857,14 +1256,9 @@ async function fillFromSuggestion(k, picked){
       setField('yearReleased', picked.year);
       setField('genre', (picked.raw.genres||[]).map(g=>g.name).join('/'));
       setField('console', (picked.raw.platforms||[]).map(p=>p.platform&&p.platform.name).filter(Boolean).slice(0,3).join('/'));
-      if(S.cfg.rawgKey){
-        const dr = await fetch(`https://api.rawg.io/api/games/${picked.id}?key=${encodeURIComponent(S.cfg.rawgKey)}`);
-        if(dr.ok){
-          const dj = await dr.json();
-          const devs = (dj.developers||[]).map(d=>d.name).join('/');
-          if(devs) setField('developer', devs);
-        }
-      }
+      const dj = await mediaDetail('games', picked.id);
+      const devs = (dj.developers||[]).map(d=>d.name).join('/');
+      if(devs) setField('developer', devs);
       if(picked.raw.background_image){
         setField('coverUrl', picked.raw.background_image); updateCoverPreview(picked.raw.background_image);
       }
@@ -881,18 +1275,18 @@ async function fillFromSuggestion(k, picked){
     toast('Filled what I could — some details failed to load');
   }
 }
+function updateCoverPreview(url){
+  const img = $('#coverPreview');
+  if(url){ img.src = url; img.style.display='block'; }
+  else { img.style.display='none'; img.removeAttribute('src'); }
+}
 async function fetchMissingCovers(){
-  const missingKeys = [];
-  if(!S.cfg.tmdbKey) missingKeys.push('TMDB (films/TV)');
-  if(!S.cfg.rawgKey) missingKeys.push('RAWG (games)');
-  const log = $('#pushlog'); log.classList.add('on');
-  log.textContent = 'Fetching covers…\n';
-  $('#fetchCoversBtn').textContent = 'Fetching…';
+  const log = $('#pushlog'); log.classList.add('on'); log.textContent = 'Fetching covers…\n';
+  const btn = $('#fetchCoversBtn'); btn.textContent='Fetching…'; btn.disabled=true;
   let checked=0, filled=0;
   for(const k of Object.keys(COLLECTIONS)){
-    const items = (S.data[k]&&S.data[k].items)||[];
     let touched = false;
-    for(const item of items){
+    for(const item of (S.data[k]&&S.data[k].items)||[]){
       if(item.coverUrl) continue;
       const url = await fetchCoverFor(k, item);
       checked++;
@@ -904,233 +1298,9 @@ async function fetchMissingCovers(){
   }
   cacheData(); render();
   log.textContent += `Done — ${filled} covers found.\n`;
-  if(missingKeys.length) log.textContent += `Skipped (no key set): ${missingKeys.join(', ')}\n`;
-  $('#fetchCoversBtn').textContent = 'Fetch missing covers';
-  toast(filled ? `${filled} covers found` : 'No new covers found');
-}
-function updateCoverPreview(url){
-  const img = $('#coverPreview');
-  if(url){ img.src = url; img.style.display='block'; }
-  else { img.style.display='none'; img.removeAttribute('src'); }
-}
-
-function ghHeaders(){
-  return {
-    'Authorization':'Bearer '+S.cfg.token,
-    'Accept':'application/vnd.github+json',
-    'X-GitHub-Api-Version':'2022-11-28'
-  };
-}
-function b64(str){
-  return btoa(String.fromCharCode(...new TextEncoder().encode(str)));
-}
-function unb64(str){
-  const bin = atob(str.replace(/\s/g,''));
-  return new TextDecoder().decode(Uint8Array.from(bin, c=>c.charCodeAt(0)));
-}
-async function ghGet(file){
-  const u = `https://api.github.com/repos/${S.cfg.repo}/contents/${file}?ref=${encodeURIComponent(S.cfg.branch||'main')}`;
-  const r = await fetch(u, {headers: ghHeaders()});
-  if(r.status===404) return null;
-  if(!r.ok){ const e = new Error(`${file}: ${r.status} ${(await r.json().catch(()=>({}))).message||''}`); e.status = r.status; throw e; }
-  const j = await r.json();
-  return {sha:j.sha, json:JSON.parse(unb64(j.content))};
-}
-async function ghPut(file, obj, sha){
-  const u = `https://api.github.com/repos/${S.cfg.repo}/contents/${file}`;
-  const body = {
-    message:`ledger: update ${file}`,
-    content: b64(JSON.stringify(obj,null,1)),
-    branch: S.cfg.branch||'main'
-  };
-  if(sha) body.sha = sha;
-  const r = await fetch(u, {method:'PUT', headers:{...ghHeaders(),'Content-Type':'application/json'}, body: JSON.stringify(body)});
-  const j = await r.json().catch(()=>({}));
-  if(!r.ok){ const e = new Error(`${file}: ${r.status} ${j.message||''}`); e.status = r.status; throw e; }
-  return j.content.sha;
-}
-
-/* ---- token health ---- */
-function bannerFor(kind, extra){
-  const B = $('#banner');
-  if(!kind){ B.hidden = true; return; }
-  const M = {
-    notoken: ['Not connected to GitHub', 'Edits save on this phone only. Add a token to sync.', 'sig', 'Set up'],
-    expired: ['Token expired or revoked', 'GitHub rejected it (401). Generate a new one to save again.', 'sig', 'Replace'],
-    denied:  ['Token lacks write access', 'Needs Contents: Read and write on this repo (403).', 'sig', 'Fix'],
-    norepo:  ['Repo not found', 'Check the repo name and that the token can see it (404).', 'sig', 'Fix'],
-    soon:    ['Token expires soon', extra||'', 'warn', 'Renew'],
-    gone:    ['Token has expired', 'Generate a new one to start saving again.', 'sig', 'Replace']
-  }[kind];
-  if(!M) { B.hidden = true; return; }
-  $('#bTitle').textContent = M[0];
-  $('#bBody').textContent  = M[1];
-  B.className = 'banner' + (M[2]==='warn' ? ' warn' : '');
-  $('#bFix').textContent = M[3];
-  B.hidden = false;
-}
-function checkToken(){
-  if(S.authError){ bannerFor(S.authError); return; }
-  if(!S.cfg.token){ bannerFor('notoken'); return; }
-  if(S.cfg.expires){
-    const days = Math.ceil((new Date(S.cfg.expires+'T23:59:59') - Date.now())/86400000);
-    if(days < 0){ bannerFor('gone'); return; }
-    if(days <= 14){
-      bannerFor('soon', days===0 ? 'Expires today. Generate a new one to keep syncing.'
-        : `Expires in ${days} day${days===1?'':'s'}. Generate a new one to keep syncing.`);
-      return;
-    }
-  }
-  bannerFor(null);
-}
-function classifyError(e){
-  if(e && e.status===401) return 'expired';
-  if(e && e.status===403) return 'denied';
-  if(e && e.status===404) return 'norepo';
-  return null;
-}
-
-async function pull(){
-  if(!S.cfg.token || !S.cfg.repo) return toast('Add repo + token first');
-  const log=$('#pushlog'); log.classList.add('on'); log.textContent='Reading…\n';
-  try{
-    for(const k of Object.keys(COLLECTIONS)){
-      const g = await ghGet(COLLECTIONS[k].file);
-      if(g){ S.data[k]=g.json; S.shas[k]=g.sha; log.textContent+=`${COLLECTIONS[k].file} ✓ ${g.json.items.length} items\n`; }
-      else log.textContent+=`${COLLECTIONS[k].file} — not in repo yet\n`;
-    }
-    S.dirty.clear(); S.authError=null; cacheData(); render();
-    setStatus('ok','synced'); toast('Reloaded from GitHub'); checkToken();
-  }catch(e){
-    log.textContent+='ERROR '+e.message+'\n'; setStatus('dirty','error');
-    S.authError = classifyError(e); checkToken();
-  }
-}
-
-async function triggerSync(){
-  if(!S.cfg.token || !S.cfg.repo){ openSet(); return toast('Add repo + token first'); }
-  toast('Triggering fetch…');
-  try{
-    const u = `https://api.github.com/repos/${S.cfg.repo}/actions/workflows/sync-media.yml/dispatches`;
-    const r = await fetch(u, {
-      method:'POST',
-      headers:{...ghHeaders(),'Content-Type':'application/json'},
-      body: JSON.stringify({ref: S.cfg.branch||'main'})
-    });
-    if(r.status===204){
-      toast('Fetch started — check back in a minute');
-    } else if(r.status===404){
-      toast('Workflow not found — add sync-media.yml first');
-    } else if(r.status===401 || r.status===403){
-      toast('Token needs Actions: write permission');
-    } else {
-      const j = await r.json().catch(()=>({}));
-      toast('Trigger failed: '+(j.message||r.status));
-    }
-  }catch(e){
-    toast('Trigger failed: '+e.message);
-  }
-}
-
-async function push(){
-  if(!S.cfg.token || !S.cfg.repo){ openSet(); return toast('Add repo + token first'); }
-  if(!S.dirty.size) return toast('Nothing to save');
-  const log=$('#pushlog'); log.classList.add('on'); log.textContent='Saving…\n';
-  setStatus('','saving…');
-  try{
-    for(const k of [...S.dirty]){
-      let sha = S.shas[k];
-      if(!sha){ const g = await ghGet(COLLECTIONS[k].file); sha = g && g.sha; }
-      S.shas[k] = await ghPut(COLLECTIONS[k].file, S.data[k], sha);
-      S.dirty.delete(k);
-      log.textContent += `${COLLECTIONS[k].file} committed\n`;
-    }
-    cacheData(); S.authError=null; setStatus('ok','saved'); toast('Saved to GitHub'); render(); checkToken();
-  }catch(e){
-    log.textContent += 'ERROR '+e.message+'\n';
-    setStatus('dirty', S.dirty.size+' unsaved');
-    S.authError = classifyError(e); checkToken();
-    toast(S.authError ? 'Token problem — see banner' : 'Save failed — see settings');
-  }
-}
-function setStatus(cls,txt){
-  const el=$('#syncStatus'); if(!el) return;
-  el.className = 'sync '+(cls==='ok'?'ok':cls==='dirty'?'dirty':'');
-  const t = el.querySelector('.txt'); if(t) t.textContent = txt;
-  const sb=$('#saveBtn'); if(sb) sb.classList.toggle('hidden', !S.dirty.size);
-}
-function markDirty(k){
-  S.data[k].updatedAt = new Date().toISOString();
-  S.dirty.add(k); cacheData();
-  setStatus('dirty', S.dirty.size+' unsaved');
-  const sb=$('#saveBtn'); if(sb) sb.classList.remove('hidden');
-  if(S.cfg.token && S.cfg.repo) syncOne(k);
-}
-
-/* auto-push a single file right after an edit; falls back silently to the
-   dirty-flag + manual pushBtn if it fails (e.g. offline, bad token) */
-async function syncOne(k){
-  try{
-    let sha = S.shas[k];
-    if(!sha){ const g = await ghGet(COLLECTIONS[k].file); sha = g && g.sha; }
-    S.shas[k] = await ghPut(COLLECTIONS[k].file, S.data[k], sha);
-    S.dirty.delete(k);
-    cacheData(); S.authError=null;
-    setStatus(S.dirty.size?'dirty':'ok', S.dirty.size ? S.dirty.size+' unsaved' : 'saved');
-    render(); checkToken();
-  }catch(e){
-    S.authError = classifyError(e); checkToken();
-    setStatus('dirty', S.dirty.size+' unsaved');
-  }
-}
-
-/* explicit pre-save check, using the values currently typed into the settings
-   form (not yet saved) — reports success/failure inline before committing */
-async function testConnection(){
-  const repo = $('#repoIn').value.trim().replace(/^https?:\/\/github\.com\//,'').replace(/\/$/,'');
-  const branch = $('#branchIn').value.trim()||'main';
-  const token = $('#tokIn').value.trim();
-  const hint = $('#connHint');
-  hint.style.display='block'; hint.className='note'; hint.textContent='Checking…';
-  if(!repo || !token){
-    hint.className='note warn'; hint.textContent='Enter a repo and token first.';
-    return;
-  }
-  try{
-    const r = await fetch(`https://api.github.com/repos/${repo}`, {
-      headers:{'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'}
-    });
-    if(r.status===401){ hint.className='note warn'; hint.textContent='Token is invalid or expired (401).'; return; }
-    if(r.status===404){ hint.className='note warn'; hint.textContent='Repo not found, or token can\'t see it (404).'; return; }
-    if(!r.ok){ hint.className='note warn'; hint.textContent=`GitHub said ${r.status}.`; return; }
-    const j = await r.json();
-    if(j.permissions && j.permissions.push===false){
-      hint.className='note warn'; hint.textContent='Connected, but token lacks write access to this repo.'; return;
-    }
-    const b = await fetch(`https://api.github.com/repos/${repo}/branches/${encodeURIComponent(branch)}`, {
-      headers:{'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'}
-    });
-    if(!b.ok){ hint.className='note warn'; hint.textContent=`Connected with write access, but branch "${branch}" wasn't found.`; return; }
-    hint.className='note ok'; hint.textContent='✓ Connected — repo found, write access confirmed.';
-  }catch(e){
-    hint.className='note warn'; hint.textContent='Couldn\'t reach GitHub: '+e.message;
-  }
-}
-
-/* silent check: is the stored token still good? */
-async function verifyToken(){
-  if(!S.cfg.token || !S.cfg.repo){ checkToken(); return; }
-  try{
-    const r = await fetch(`https://api.github.com/repos/${S.cfg.repo}`, {headers: ghHeaders()});
-    if(r.status===401){ S.authError='expired'; checkToken(); return; }
-    if(r.status===404){ S.authError='norepo'; checkToken(); return; }
-    if(r.ok){
-      const j = await r.json();
-      if(j.permissions && j.permissions.push === false){ S.authError='denied'; checkToken(); return; }
-      S.authError = null;
-    }
-    checkToken();
-  }catch(e){ checkToken(); }
+  if(!S.cfg.tmdbKey || !S.cfg.rawgKey) log.textContent += 'Tip: add TMDB/RAWG keys in settings for film/TV/game covers.\n';
+  btn.textContent='Fetch missing covers'; btn.disabled=false;
+  toast(filled ? filled+' covers found' : 'No new covers found');
 }
 
 /* ================= render ================= */
@@ -1138,14 +1308,15 @@ function scale(){ return COLLECTIONS[S.tab].scale; }
 function items(){ return (S.data[S.tab]&&S.data[S.tab].items)||[]; }
 
 /* ---- unified cross-category rows for the home table ---- */
-function allRows(){
+function allRowsFrom(data){
   const rows = [];
   ['films','games','tv','books'].forEach(k=>{
     const c = COLLECTIONS[k];
-    ((S.data[k]&&S.data[k].items)||[]).forEach(it=>rows.push({k, c, item:it}));
+    (((data&&data[k])&&data[k].items)||[]).forEach(it=>rows.push({k, c, item:it}));
   });
   return rows;
 }
+function allRows(){ return allRowsFrom(S.data); }
 function statusOf(k, it){
   if(it.inProgress){
     return {cls:'active', label:{books:'Reading',tv:'Watching',films:'Watching',games:'Playing'}[k]};
@@ -1167,14 +1338,14 @@ function tableRows(){
   const q = S.q.trim().toLowerCase();
   let rows = allRows();
   if(S.typeFilter!=='all') rows = rows.filter(r=>r.k===S.typeFilter);
-  if(S.starFilter>0) rows = rows.filter(r=>r.item.rating && (r.item.rating/r.c.scale*5) >= S.starFilter - 1e-9);
+  if(S.unratedOnly) rows = rows.filter(r=>quadOf(r.item, r.c.scale)==null);
   if(q) rows = rows.filter(r=>Object.values(r.item).some(v=>v!=null && String(v).toLowerCase().includes(q)));
   const dir = S.sortDir;
   const nameCmp = (a,b)=>String(a.item.name||'').localeCompare(String(b.item.name||''));
   rows.sort((a,b)=>{
     if(S.sortKey==='name') return nameCmp(a,b)*dir;
     if(S.sortKey==='year'){
-      const ay = +(a.item[yearField(a.k)]||0), by = +(b.item[yearField(b.k)]||0);
+      const ay = itemYear(a.k,a.item)||0, by = itemYear(b.k,b.item)||0;
       return (ay-by)*dir || nameCmp(a,b);
     }
     if(S.sortKey==='date'){
@@ -1185,22 +1356,21 @@ function tableRows(){
       if(!bd) return -1;
       return ad.localeCompare(bd)*dir || nameCmp(a,b);
     }
-    // rating: normalize each to a 0–1 fraction so /10 and /5 scales compare fairly
-    const an = (a.item.rating||0)/a.c.scale, bn = (b.item.rating||0)/b.c.scale;
-    return (an-bn)*dir || nameCmp(a,b);
+    return nameCmp(a,b);
   });
   return rows;
 }
 /* most-recently-dated items across every category, for "Recently added" */
-function recentlyLogged(n){
-  const rows = allRows().map(r=>{
+function recentlyLoggedFrom(rows, n){
+  const out = rows.map(r=>{
     const rf = (r.c.recentFields||[])[0];
     const d = rf ? r.item[rf] : null;
     return {...r, _d: d ? String(d) : ''};
   }).filter(r=>r._d);
-  rows.sort((a,b)=>b._d.localeCompare(a._d));
-  return rows.slice(0, n);
+  out.sort((a,b)=>b._d.localeCompare(a._d));
+  return out.slice(0, n);
 }
+function recentlyLogged(n){ return recentlyLoggedFrom(allRows(), n); }
 /* deterministic gradient from a title, used when no cover image exists */
 function hashStr(s){ let h=0; s=String(s); for(let i=0;i<s.length;i++){ h=(h*31 + s.charCodeAt(i))|0; } return Math.abs(h); }
 function gradFor(str){
@@ -1219,30 +1389,56 @@ function setNavActive(){
 }
 
 /* ---- home / landing ---- */
-function rateClassFor(r, sc){
-  if(!r) return 'lo';
-  if(r/sc >= 0.85) return 'hi';
-  if(r/sc >= 0.55) return 'mid';
-  return 'lo';
+/* ---- quadrant ratings ----
+   x = enjoyment, y = quality ("how well made"), both -100..100.
+   Old single-number ratings convert to the y-axis only:
+     y = rating/scale*200 - 100
+   x stays null (drawn hollow on the vertical axis) until re-rated. */
+function quadOf(item, sc){
+  if(item.ry!=null) return {x:(item.rx!=null ? item.rx : null), y:item.ry, legacy:item.rx==null};
+  if(item.rating!=null) return {x:null, y:Math.round((item.rating/sc)*200-100), legacy:true};
+  return null;
 }
-/* normalizes any X/sc rating to a proportional 5-star fill, so games/films
-   (out of 10) and tv/books (out of 5) read the same way at a glance.
-   Built from SVG paths rather than layered ★ text runs — text-clip tricks
-   rely on two glyph runs measuring pixel-identical, which mobile browsers'
-   emoji/symbol fallback fonts don't guarantee, so stars broke on phones. */
-let starUid = 0;
-const STAR_PATH = "M8 .6l2.17 4.53 4.94.73-3.58 3.5.85 4.95L8 11.9l-4.38 2.4.85-4.95-3.58-3.5 4.94-.73z";
-function starsHTML(rating, sc, tier){
-  if(!rating) return `<span class="stars-empty">–</span>`;
-  const pct = Math.max(4, Math.min(100, (rating/sc)*100));
-  const id = 'sc'+(starUid++);
-  const xs = [0,18,36,54,72];
-  const paths = xs.map(x=>`<path d="${STAR_PATH}" transform="translate(${x},2)"/>`).join('');
-  return `<span class="stars"><svg width="88" height="16" viewBox="0 0 88 16" aria-hidden="true">
-    <g class="stars-bg">${paths}</g>
-    <clipPath id="${id}" clipPathUnits="objectBoundingBox"><rect x="0" y="0" width="${(pct/100).toFixed(3)}" height="1"/></clipPath>
-    <g class="stars-fg ${tier}" clip-path="url(#${id})">${paths}</g>
-  </svg></span>`;
+function fmtSigned(n){ n = Math.round(n); return (n>0?'+':'')+n; }
+function quadLabel(q){
+  if(!q) return '';
+  return q.x==null
+    ? `quality ${fmtSigned(q.y)} — enjoyment not set`
+    : `enjoyment ${fmtSigned(q.x)} · quality ${fmtSigned(q.y)}`;
+}
+/* one colour family per quadrant, driven by the angle around the centre:
+     enjoyed + good      → greens
+     not enjoyed + good  → blues
+     not enjoyed + bad   → reds
+     enjoyed + bad       → oranges (guilty pleasure)
+   Distance from the centre controls intensity: mild opinions are pale,
+   extreme ones vivid. (angle, distance) is unique for every point. */
+/* hue anchored at the axes so each quadrant sweeps a wide arc:
+     Q1 (+,+): lime 65 → green → teal 190
+     Q2 (−,+): teal 190 → blue → purple 280
+     Q3 (−,−): purple 280 → magenta → red 380 (=20)
+     Q4 (+,−): red 20 → orange → lime 65 */
+const AXIS_HUES = [65, 190, 280, 380, 425]; // at +x, +y, −x, −y, back to +x
+function quadHue(angleDeg){
+  const a = ((angleDeg % 360) + 360) % 360;
+  const seg = Math.floor(a / 90), t = (a % 90) / 90;
+  return (AXIS_HUES[seg] + (AXIS_HUES[seg+1] - AXIS_HUES[seg]) * t) % 360;
+}
+function quadColorRGB(x, y){
+  const hue = quadHue(Math.atan2(y, x) * 180 / Math.PI);
+  const r = Math.max(Math.abs(x), Math.abs(y)) / 100;  // 0 centre → 1 edge
+  return hsl2rgb(hue, .30 + .65*r, .86 - .50*r);       // pastel centre → deep vivid edge
+}
+function quadColor(x, y){
+  const [r,g,b] = quadColorRGB(x, y);
+  return `rgb(${r},${g},${b})`;
+}
+function quadSwatchHTML(q, cls){
+  if(!q) return `<span class="rate-empty">–</span>`;
+  const col = quadColor(q.x==null?0:q.x, q.y);
+  const c = 'qswatch'+(q.legacy?' legacy':'')+(cls?' '+cls:'');
+  const st = q.legacy ? `border-color:${col}` : `background:${col}`;
+  return `<span class="${c}" title="${quadLabel(q)}" style="${st}"></span>`;
 }
 function computeHome(){
   const cats = [
@@ -1283,23 +1479,20 @@ function computeHome(){
   });
   return {cats, recents, totalAll, monthCounts, monthName, yearCatStats};
 }
-function computeCurrently(){
-  const cats = [['books','Reading'],['tv','Watching'],['games','Playing']];
-  const out = [];
-  cats.forEach(([k,verb])=>{
-    const c = COLLECTIONS[k];
-    const items = (S.data[k]&&S.data[k].items)||[];
-    items.filter(i=>i.inProgress).forEach(i=>out.push({k,verb,c,item:i}));
-  });
-  return out;
+const CURRENT_VERB = {books:'Reading', tv:'Watching', games:'Playing'};
+function computeCurrentlyFrom(rows){
+  return rows
+    .filter(r=>CURRENT_VERB[r.k] && r.item.inProgress)
+    .map(r=>({k:r.k, verb:CURRENT_VERB[r.k], c:r.c, item:r.item}));
 }
+function computeCurrently(){ return computeCurrentlyFrom(allRows()); }
 /* opens the add form pre-set to the right category with the
    "currently…" toggle already on — so cover fetch etc. all just work */
 function quickAddCurrent(k){
   S.tab = k;
   openEdit(null);
+  S.editing.status = 'inProgress';
   S.editing.inProgress = true;
-  $('#inProgressBtn').setAttribute('aria-pressed','true');
 }
 function renderHome(){
   const cur = computeCurrently();
@@ -1324,11 +1517,11 @@ function renderHome(){
 
   const recent = recentlyLogged(14);
   const recentTiles = recent.length ? recent.map(r=>{
-    const rt = r.item.rating ? (r.item.rating/r.c.scale*10).toFixed(1) : '';
+    const q = quadOf(r.item, r.c.scale);
     return `<div class="rtile" data-open="${r.k}:${r.item.id}">
       <div class="bg" style="${bgStyle(r.item)}"></div><div class="shade"></div>
       <div class="type">${TYPE_LABELS[r.k].toUpperCase()}</div>
-      ${rt?`<div class="rt">${rt}</div>`:''}
+      ${q?`<div class="rt">${quadSwatchHTML(q,'ondark')}</div>`:''}
       <div class="nm">${esc(r.item.name||'Untitled')}</div>
     </div>`;
   }).join('') : `<div class="empty" style="padding:26px 10px">Nothing with a date logged yet.</div>`;
@@ -1349,39 +1542,36 @@ function renderHome(){
 function renderTable(){
   const rows = tableRows();
   const total = rows.length;
-  const rated = rows.filter(r=>r.item.rating);
-  const avg5 = rated.length ? rated.reduce((s,r)=>s+(r.item.rating/r.c.scale*5),0)/rated.length : 0;
   const pills = [['all','All'],['films','Film'],['tv','TV'],['games','Game'],['books','Book']].map(([k,l])=>
     `<button class="pill" data-type="${k}" aria-pressed="${S.typeFilter===k}">${l}</button>`).join('');
   const arr = key => S.sortKey===key ? `<span class="arr">${S.sortDir<0?'↓':'↑'}</span>` : '';
   const sortVal = `${S.sortKey}:${S.sortDir}`;
-  const sortOpts = [['date:-1','Newest first'],['date:1','Oldest first'],['rating:-1','Highest rated'],['rating:1','Lowest rated'],['name:1','Title A–Z'],['name:-1','Title Z–A']];
+  const sortOpts = [['date:-1','Newest first'],['date:1','Oldest first'],['name:1','Title A–Z'],['name:-1','Title Z–A']];
   const sortSel = `<label class="tsel"><span>Sort</span><select id="sortSel">${sortOpts.map(([v,l])=>`<option value="${v}"${v===sortVal?' selected':''}>${l}</option>`).join('')}</select></label>`;
-  const starOpts = [['0','All ratings'],['5','5★ only'],['4','4★ &amp; up'],['3','3★ &amp; up'],['2','2★ &amp; up'],['1','1★ &amp; up']];
-  const starSel = `<label class="tsel"><span>Stars</span><select id="starSel">${starOpts.map(([v,l])=>`<option value="${v}"${+v===S.starFilter?' selected':''}>${l}</option>`).join('')}</select></label>`;
   const body = rows.length ? rows.map((r,ix)=>{
-    const yr = r.item[yearField(r.k)] || '';
+    const yr = itemYear(r.k, r.item) || '';
     const cr = r.item[creatorField(r.k)] || '';
     const dstr = fmtDate(dateAddedOf(r));
     const subParts = [TYPE_LABELS[r.k], yr, (dstr!=='—'?dstr:'')].filter(Boolean).join(' · ');
-    // call starsHTML separately for each placement so each SVG gets its own
-    // unique clipPath id — reusing one string duplicates the id and breaks the fill
-    const tier = rateClassFor(r.item.rating, r.c.scale);
+    const stars = quadSwatchHTML(quadOf(r.item, r.c.scale));
     return `<tr data-open="${r.k}:${r.item.id}">
       <td class="cell-idx col-idx num">${String(ix+1).padStart(2,'0')}</td>
-      <td class="col-title"><div class="titlecell"><div class="swatch" style="${bgStyle(r.item)}"></div><div class="t"><span class="cell-title">${esc(r.item.name||'Untitled')}</span><span class="row-rate">${starsHTML(r.item.rating, r.c.scale, tier)}</span><span class="row-sub">${subParts}</span></div></div></td>
+      <td class="col-title"><div class="titlecell"><div class="swatch" style="${bgStyle(r.item)}"></div><div class="t"><span class="cell-title">${esc(r.item.name||'Untitled')}</span><span class="row-rate">${stars}</span><span class="row-sub">${subParts}</span></div></div></td>
       <td class="col-creator cell-creator">${esc(String(cr))}</td>
       <td class="col-type"><span class="typebadge">${TYPE_LABELS[r.k]}</span></td>
       <td class="col-year cell-year num">${esc(String(yr))}</td>
       <td class="col-date cell-date">${dstr}</td>
-      <td class="col-rating"><div class="ratecell">${starsHTML(r.item.rating, r.c.scale, tier)}</div></td>
+      <td class="col-rating"><div class="ratecell">${stars}</div></td>
     </tr>`;
   }).join('') : `<tr><td colspan="7"><div class="empty"><b>Nothing here</b>Try a different filter or search.</div></td></tr>`;
+  const unratedChip = S.unratedOnly
+    ? `<button class="pill" data-clear-unrated="1" aria-pressed="true" style="background:var(--sig);color:#fff;border-color:var(--sig)">Unrated only ✕</button>`
+    : '';
   return `<div class="tablewrap">
     <div class="table-top">
-      <div class="type-pills">${pills}</div>
-      <div class="table-tools">${starSel}${sortSel}</div>
-      <div class="table-meta">${total} works${avg5?` &middot; avg ★${avg5.toFixed(1)}`:''}</div>
+      <div class="type-pills">${pills}${unratedChip}</div>
+      <div class="table-tools">${sortSel}</div>
+      <div class="table-meta">${total} works</div>
     </div>
     <table class="mtable">
       <thead><tr>
@@ -1391,7 +1581,7 @@ function renderTable(){
         <th class="col-type">Type</th>
         <th class="col-year num sortable" data-sort="year">Year${arr('year')}</th>
         <th class="col-date sortable" data-sort="date">Date added${arr('date')}</th>
-        <th class="col-rating sortable" data-sort="rating">Rating${arr('rating')}</th>
+        <th class="col-rating">Rating</th>
       </tr></thead>
       <tbody>${body}</tbody>
     </table>
@@ -1401,12 +1591,14 @@ function renderTable(){
 /* ---- stats tab: computed live from whatever's currently loaded, no separate file ---- */
 function computeStats(){
   const cats = [['films','Films'],['games','Games'],['tv','TV'],['books','Books']];
-  const totals={}, avg={}, topGenre={}, yearTrend={};
+  const totals={}, avgE={}, avgQ={}, topGenre={}, yearTrend={};
   cats.forEach(([k])=>{
     const items = (S.data[k]&&S.data[k].items)||[];
     totals[k] = items.length;
-    const rated = items.filter(i=>i.rating);
-    avg[k] = rated.length ? rated.reduce((s,i)=>s+i.rating,0)/rated.length : 0;
+    const qs = items.map(i=>quadOf(i, COLLECTIONS[k].scale)).filter(Boolean);
+    const ex = qs.filter(q=>q.x!=null);
+    avgE[k] = ex.length ? ex.reduce((s,q)=>s+q.x,0)/ex.length : null;
+    avgQ[k] = qs.length ? qs.reduce((s,q)=>s+q.y,0)/qs.length : null;
     const gc = {};
     items.forEach(i=>{
       String(i.genre||'').split(/[\/,]/).forEach(g=>{ g=g.trim(); if(g) gc[g]=(gc[g]||0)+1; });
@@ -1421,7 +1613,7 @@ function computeStats(){
       if(y && /^\d{4}$/.test(y)) yearTrend[y]=(yearTrend[y]||0)+1;
     });
   });
-  return {totals, avg, topGenre, yearTrend, cats};
+  return {totals, avgE, avgQ, topGenre, yearTrend, cats};
 }
 function renderOverviewStats(){
   const s = computeStats();
@@ -1435,9 +1627,10 @@ function renderOverviewStats(){
     return `<div class="yearbar" style="height:${h}px"><span>${n}</span><b>${y}</b></div>`;
   }).join('');
   const chips = s.cats.map(([k,label])=>{
-    const a = s.avg[k] ? s.avg[k].toFixed(1) : '–';
+    const e = s.avgE[k]!=null ? 'E'+fmtSigned(s.avgE[k]) : 'E–';
+    const qv = s.avgQ[k]!=null ? 'Q'+fmtSigned(s.avgQ[k]) : 'Q–';
     const g = s.topGenre[k] || '–';
-    return `<span class="stats-chip stats-chip-click" data-statcat="${k}" role="button" tabindex="0">${label}: ${a} avg &middot; ${esc(g)}</span>`;
+    return `<span class="stats-chip stats-chip-click" data-statcat="${k}" role="button" tabindex="0">${label}: ${e} &middot; ${qv} &middot; ${esc(g)}</span>`;
   }).join('');
   return `
     <div class="stats-grid">${cards}</div>
@@ -1447,7 +1640,7 @@ function renderOverviewStats(){
         <div class="yearbars">${bars || '<span class="stat-label">Not enough dated items yet</span>'}</div>
       </div>
       <div class="stats-tile wide">
-        <div class="stats-h">Averages &amp; top genres &mdash; tap to open a category</div>
+        <div class="stats-h">Avg enjoyment (E) &amp; quality (Q), top genre &mdash; tap to open a category</div>
         <div class="stats-chips">${chips}</div>
       </div>
     </div>`;
@@ -1470,9 +1663,10 @@ function computeCategoryStats(k, filter){
   const allItems = (S.data[k]&&S.data[k].items)||[];
   const items = applyStatsFilter(allItems, creatorField, filter, dateField);
   const sc = c.scale;
-  const dist = {};
-  for(let r=1;r<=sc;r++) dist[r]=0;
-  items.forEach(i=>{ if(dist[i.rating]!=null) dist[i.rating]++; });
+  const points = items.map(i=>quadOf(i, sc)).filter(Boolean);
+  const ex = points.filter(q=>q.x!=null);
+  const avgE = ex.length ? ex.reduce((s,q)=>s+q.x,0)/ex.length : null;
+  const avgQ = points.length ? points.reduce((s,q)=>s+q.y,0)/points.length : null;
 
   const gc = {};
   items.forEach(i=>{ genresOf(i).forEach(g=>{ gc[g]=(gc[g]||0)+1; }); });
@@ -1482,26 +1676,12 @@ function computeCategoryStats(k, filter){
   items.forEach(i=>{ creatorsOf(i,creatorField).forEach(name=>{ cc[name]=(cc[name]||0)+1; }); });
   const creators = Object.entries(cc).sort((a,b)=>b[1]-a[1]).slice(0,5);
 
-  const rated = items.filter(i=>i.rating);
-  const avgRating = rated.length ? rated.reduce((s,i)=>s+i.rating,0)/rated.length : 0;
-  const perfect = items.filter(i=>i.rating===sc).length;
 
   const extra = {};
   if(k==='films'){
     const gaps = items.filter(i=>i.yearReleased && i.dateWatched)
       .map(i=>Number(String(i.dateWatched).slice(0,4)) - i.yearReleased);
     extra.avgGap = gaps.length ? gaps.reduce((a,b)=>a+b,0)/gaps.length : null;
-  } else if(k==='games'){
-    const ss = {};
-    items.forEach(i=>{ if(i.studioStatus) ss[i.studioStatus]=(ss[i.studioStatus]||0)+1; });
-    extra.studioStatus = ss;
-    const pctVals = items.map(i=>+i.mainStoryPct).filter(v=>!isNaN(v));
-    extra.avgPct = pctVals.length ? pctVals.reduce((a,b)=>a+b,0)/pctVals.length : null;
-  } else if(k==='tv'){
-    const pctVals = items.map(i=>+i.watchedPct).filter(v=>!isNaN(v));
-    extra.avgPct = pctVals.length ? pctVals.reduce((a,b)=>a+b,0)/pctVals.length : null;
-    const seasonVals = items.map(i=>+i.seasons).filter(v=>!isNaN(v));
-    extra.avgSeasons = seasonVals.length ? seasonVals.reduce((a,b)=>a+b,0)/seasonVals.length : null;
   } else if(k==='books'){
     const dc = {};
     items.forEach(i=>{
@@ -1518,17 +1698,24 @@ function computeCategoryStats(k, filter){
   });
   const yearTrend = Object.entries(yc).sort((a,b)=>a[0]-b[0]);
 
-  return {sc, dist, genres, creators, creatorField, dateField, yearTrend, avgRating, perfect, extra, total: items.length};
+  return {sc, points, avgE, avgQ, genres, creators, creatorField, dateField, yearTrend, extra, total: items.length};
 }
 function renderCategoryStats(k){
   const c = COLLECTIONS[k];
   const filter = S.statsFilter;
   const s = computeCategoryStats(k, filter);
-  const distMax = Math.max(1, ...Object.values(s.dist));
-  const distBars = Array.from({length:s.sc}, (_,x)=>{
-    const r=x+1, n=s.dist[r], h=Math.round((n/distMax)*80)+4;
-    return `<div class="yearbar" style="height:${h}px"><span>${n}</span><b>${r}</b></div>`;
+  const scatterDots = s.points.map(q=>{
+    const cx = 100 + ((q.x==null?0:q.x)/100)*92;
+    const cy = 100 - (q.y/100)*92;
+    const col = quadColor(q.x==null?0:q.x, q.y);
+    const paint = q.legacy ? `fill="none" stroke="${col}" stroke-width="1.5"` : `fill="${col}"`;
+    return `<circle class="qs-dot${q.legacy?' legacy':''}" cx="${cx.toFixed(1)}" cy="${cy.toFixed(1)}" r="3" ${paint}/>`;
   }).join('');
+  const scatter = s.points.length ? `<svg class="qscatter" viewBox="0 0 200 200" aria-hidden="true">
+    <line class="qs-axis" x1="4" y1="100" x2="196" y2="100"/>
+    <line class="qs-axis" x1="100" y1="4" x2="100" y2="196"/>
+    ${scatterDots}
+  </svg>` : '<span class="stat-label">Nothing rated yet</span>';
 
   const genreMax = Math.max(1, ...s.genres.map(g=>g[1]));
   const genreRows = s.genres.map(([g,n])=>`
@@ -1555,14 +1742,7 @@ function renderCategoryStats(k){
   let extraLabel = '', extraChips = '';
   if(k==='films'){
     extraLabel = 'Viewing habits';
-    extraChips = `${s.extra.avgGap!=null?`<span class="stats-chip">${s.extra.avgGap.toFixed(1)} yr avg gap between release &amp; watch</span>`:''}<span class="stats-chip">${s.perfect} perfect ${c.scale}/${c.scale}</span>`;
-  } else if(k==='games'){
-    extraLabel = 'Studio size &amp; completion';
-    const chips = Object.entries(s.extra.studioStatus||{}).map(([lbl,n])=>`<span class="stats-chip">${esc(lbl)}: ${n}</span>`).join('');
-    extraChips = `${chips}${s.extra.avgPct!=null?`<span class="stats-chip">${Math.round(s.extra.avgPct)}% avg story completion</span>`:''}`;
-  } else if(k==='tv'){
-    extraLabel = 'Completion';
-    extraChips = `${s.extra.avgPct!=null?`<span class="stats-chip">${Math.round(s.extra.avgPct)}% avg watched</span>`:''}${s.extra.avgSeasons!=null?`<span class="stats-chip">${s.extra.avgSeasons.toFixed(1)} avg seasons</span>`:''}`;
+    extraChips = `${s.extra.avgGap!=null?`<span class="stats-chip">${s.extra.avgGap.toFixed(1)} yr avg gap between release &amp; watch</span>`:''}`;
   } else if(k==='books'){
     extraLabel = 'Published by decade';
     extraChips = s.extra.decades.map(([d,n])=>`<span class="stats-chip">${d}s: ${n}</span>`).join('') || '<span class="stat-label">No publication years logged</span>';
@@ -1572,13 +1752,13 @@ function renderCategoryStats(k){
     ${filterChip}
     <div class="stats-grid">
       <div class="stat-card"><div class="stat-num">${s.total}</div><div class="stat-label">Total</div></div>
-      <div class="stat-card"><div class="stat-num">${s.avgRating?s.avgRating.toFixed(1):'–'}</div><div class="stat-label">Avg rating</div></div>
-      <div class="stat-card"><div class="stat-num">${s.perfect}</div><div class="stat-label">Perfect ${c.scale}/${c.scale}</div></div>
+      <div class="stat-card"><div class="stat-num">${s.avgE!=null?fmtSigned(s.avgE):'–'}</div><div class="stat-label">Avg enjoyment</div></div>
+      <div class="stat-card"><div class="stat-num">${s.avgQ!=null?fmtSigned(s.avgQ):'–'}</div><div class="stat-label">Avg quality</div></div>
     </div>
     <div class="stats-tiles">
       <div class="stats-tile">
-        <div class="stats-h">Rating distribution</div>
-        <div class="yearbars">${distBars}</div>
+        <div class="stats-h">Rating map &mdash; enjoyment &times; quality</div>
+        ${scatter}
       </div>
       <div class="stats-tile">
         <div class="stats-h">${dateLabel} by year &mdash; tap to filter</div>
@@ -1592,10 +1772,10 @@ function renderCategoryStats(k){
         <div class="stats-h">Top ${creatorLabel} &mdash; tap to filter</div>
         <div class="stats-chips">${creatorChips || '<span class="stat-label">No data</span>'}</div>
       </div>
-      <div class="stats-tile wide">
+      ${extraLabel ? `<div class="stats-tile wide">
         <div class="stats-h">${extraLabel}</div>
         <div class="stats-chips">${extraChips}</div>
-      </div>
+      </div>` : ''}
     </div>`;
 }
 
@@ -1608,9 +1788,318 @@ function renderStatsTab(){
   $('#list').innerHTML = `<div class="stats-subnav">${subnav}</div>${body}`;
 }
 
+/* ================= profile ("You") =================
+   An editorial dashboard over the whole catalogue: identity, aggregate taste,
+   what's in progress, favourites, milestones, recent activity. Everything here
+   is derived from the loaded items — nothing is stored twice. */
+const PF_TYPES = [['films','Film'],['games','Game'],['tv','TV'],['books','Book']];
+/* the ambient taste gradient: each corner is that quadrant's colour family */
+const PF_FIELD = `radial-gradient(150% 150% at 100% 0%, hsl(140 68% 48%), transparent 60%),
+radial-gradient(150% 150% at 0% 0%, hsl(235 60% 55%), transparent 60%),
+radial-gradient(150% 150% at 0% 100%, hsl(330 68% 52%), transparent 58%),
+radial-gradient(150% 150% at 100% 100%, hsl(40 82% 55%), transparent 60%),
+hsl(45 24% 80%)`;
+
+/* the plotting area is inset 6% on every side, so (0,0) lands dead centre */
+function pfPos(x, y){ return {left: 6 + (x+100)/200*88, top: 6 + (100-y)/200*88}; }
+function pfAvg(rows){
+  const qs = rows.map(r=>quadOf(r.item, r.c.scale)).filter(Boolean);
+  const ex = qs.filter(q=>q.x!=null);
+  return {
+    n: rows.length, rated: qs.length,
+    e: ex.length ? ex.reduce((s,q)=>s+q.x,0)/ex.length : null,
+    q: qs.length ? qs.reduce((s,q)=>s+q.y,0)/qs.length : null
+  };
+}
+function pfTopOf(counts){
+  let best=null, n=0;
+  Object.entries(counts).forEach(([k,v])=>{ if(v>n){ best=k; n=v; } });
+  return best ? {name:best, n} : null;
+}
+function fmtMonthYear(v){
+  const m = String(v||'').match(/^(\d{4})-(\d{2})/);
+  if(!m) return null;
+  return new Date(+m[1], +m[2]-1, 1).toLocaleString('en-US',{month:'long'}) + ' ' + m[1];
+}
+function fmtShortMonthYear(v){
+  const m = String(v||'').match(/^(\d{4})-(\d{2})/);
+  if(!m) return String(v||'').slice(0,4) || '–';
+  return MONTHS[+m[2]-1] + ' ’' + m[1].slice(2);
+}
+/* day-granularity dates, so anything older than a month reads in months/years */
+function pfRelTime(v){
+  const m = String(v||'').match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  if(!m) return fmtDate(v);
+  const today = new Date(); today.setHours(0,0,0,0);
+  const d = Math.round((today - new Date(+m[1], +m[2]-1, +m[3]))/86400000);
+  if(d<0) return fmtDate(v);
+  if(d===0) return 'Today';
+  if(d===1) return 'Yesterday';
+  if(d<7) return d+' days ago';
+  if(d<28){ const w=Math.floor(d/7); return w===1 ? '1 week ago' : w+' weeks ago'; }
+  if(d<365){ const mo=Math.max(1,Math.round(d/30)); return mo===1 ? '1 month ago' : mo+' months ago'; }
+  const y = Math.floor(d/365); return y===1 ? '1 year ago' : y+' years ago';
+}
+/* single-user: the profile always reflects your own collection, with identity
+   pulled from the local config (name / handle / tagline). */
+function buildProfileCtx(){
+  return {
+    rows: allRows(),
+    prof: {display_name: S.cfg.name||'', tagline: S.cfg.tagline||''},
+    uname: S.cfg.handle || 'me',
+    joined: null,
+    isSelf: true, fromDirectory: false
+  };
+}
+function pfTasteWords(e, q){
+  return `${q>=0 ? 'Well made' : 'Poorly made'}<i> &amp;</i> ${e>=0 ? 'enjoyed' : 'not enjoyed'}`;
+}
+function pfDotStyle(q){
+  const col = quadColor(q.x==null?0:q.x, q.y);
+  return {col, css: q.legacy ? `border-color:${col}` : `background:${col}`};
+}
+
+function renderProfile(){
+  const ctx = buildProfileCtx();
+  const rows = ctx.rows;
+  const id = {
+    uname: ctx.uname,
+    name: (ctx.prof && ctx.prof.display_name) || (ctx.uname.charAt(0).toUpperCase()+ctx.uname.slice(1)),
+    tagline: (ctx.prof && ctx.prof.tagline) || null,
+    joined: ctx.joined
+  };
+  const all = pfAvg(rows);
+  const avgE = all.e==null ? 0 : all.e, avgQ = all.q==null ? 0 : all.q;
+  const curYear = String(new Date().getFullYear());
+
+  /* ---- aggregates ---- */
+  const yearCount = {}, genreCount = {}, creatorCount = {};
+  let firstLogged = '';
+  rows.forEach(r=>{
+    const d = String(dateAddedOf(r)||'');
+    const y = d.slice(0,4);
+    if(/^\d{4}$/.test(y)) yearCount[y] = (yearCount[y]||0)+1;
+    if(d && (!firstLogged || d < firstLogged)) firstLogged = d;
+    genresOf(r.item).forEach(g=>{ genreCount[g]=(genreCount[g]||0)+1; });
+    creatorsOf(r.item, creatorField(r.k)).forEach(n=>{ creatorCount[n]=(creatorCount[n]||0)+1; });
+  });
+  const busiest = pfTopOf(yearCount), topGenre = pfTopOf(genreCount), topCreator = pfTopOf(creatorCount);
+  const genreN = Object.keys(genreCount).length;
+  const since = id.joined || firstLogged;
+
+  /* ---- identity ---- */
+  const joinedTxt = fmtMonthYear(id.joined) || (firstLogged ? fmtMonthYear(firstLogged) : null);
+  /* bio is blank until the user writes one — no auto-generated placeholder */
+  const tagline = id.tagline || '';
+  const inProgress = computeCurrentlyFrom(rows);
+  const idHTML = `
+    <div class="pf-id">
+      <div class="pf-av" style="background:${quadColor(avgE, avgQ)}"><span>${esc(id.name.charAt(0).toUpperCase())}</span></div>
+      <div class="pf-idmain">
+        <div class="pf-nm"><h1>${esc(id.name)}</h1><span class="pf-handle">@${esc(id.uname)}</span></div>
+        ${tagline ? `<p class="pf-tag">${esc(tagline)}</p>` : ''}
+        <div class="pf-meta">
+          ${joinedTxt ? `<span>Joined ${esc(joinedTxt)}</span><span class="sep"></span>` : ''}
+          <span><b>${all.rated}</b> rated</span>
+          <span><b>${inProgress.length}</b> in progress</span>
+        </div>
+      </div>
+      <div class="pf-acts">
+        <button class="pf-btn" data-pf-edit="1">Edit profile</button>
+      </div>
+    </div>`;
+
+  /* ---- stat strip ---- */
+  const stats = [
+    [rows.length, 'Total works'],
+    [all.e!=null ? fmtSigned(all.e) : '–', 'Avg enjoyment'],
+    [all.q!=null ? fmtSigned(all.q) : '–', 'Avg quality'],
+    [yearCount[curYear]||0, 'Logged in '+curYear],
+    [all.rated, 'Rated'],
+  ].map(([n,l])=>`<div class="pf-tile"><div class="n">${esc(String(n))}</div><div class="l">${esc(l)}</div></div>`).join('');
+
+  /* ---- rating map ---- */
+  const pills = [['all','All'], ...PF_TYPES].map(([k,l])=>
+    `<button class="pf-pill" data-pf-filter="${k}" aria-pressed="${(S.pfFilter||'all')===k}">${l}</button>`).join('');
+  const dots = rows.map(r=>{
+    const q = quadOf(r.item, r.c.scale);
+    if(!q) return '';
+    const p = pfPos(q.x==null?0:q.x, q.y);
+    const {col, css} = pfDotStyle(q);
+    const rate = q.legacy ? `Quality ${fmtSigned(q.y)}` : `E ${fmtSigned(q.x)} · Q ${fmtSigned(q.y)}`;
+    /* the rating map is view-only: a dot shows its tooltip on hover/tap but
+       never opens the editor (no data-open) — otherwise a tap on touch, which
+       has no hover, would jump straight into editing. Edit from the table. */
+    return `<span class="pf-dot${q.legacy?' legacy':''}" data-k="${r.k}"
+      data-t="${esc(r.item.name||'Untitled')}" data-m="${esc(TYPE_LABELS[r.k].toUpperCase()+' · '+rate)}"
+      data-c="${col}"${q.legacy?' data-lg="1"':''}
+      style="left:${p.left.toFixed(2)}%;top:${p.top.toFixed(2)}%;${css}"></span>`;
+  }).join('');
+  const mapHTML = `
+    <div class="pf-panel">
+      <div class="pf-phead">
+        <span class="pf-plabel">Rating map — enjoyment × quality</span>
+        <div class="pf-pills">${pills}</div>
+      </div>
+      <div class="pf-plot" id="pfPlot" data-f="${S.pfFilter||'all'}">
+        <div class="ax-h"></div><div class="ax-v"></div>
+        <span class="pf-axlab t">Well made</span>
+        <span class="pf-axlab b">Poorly made</span>
+        <span class="pf-axlab l">Didn't enjoy</span>
+        <span class="pf-axlab r">Enjoyed</span>
+        ${dots || '<div class="empty">Nothing rated yet.</div>'}
+        <span class="pf-tip" id="pfTip"><span class="pf-tipt"><i></i><b></b></span><span class="pf-tipm"></span></span>
+      </div>
+    </div>`;
+
+  /* ---- taste signature ---- */
+  const mark = pfPos(avgE, avgQ);
+  const typeRows = PF_TYPES.map(([k,l])=>{
+    const a = pfAvg(rows.filter(r=>r.k===k));
+    const legacy = a.e==null;
+    const col = quadColor(a.e==null?0:a.e, a.q==null?0:a.q);
+    const val = a.rated
+      ? `E ${a.e!=null?fmtSigned(a.e):'–'} · Q ${a.q!=null?fmtSigned(a.q):'–'}`
+      : 'nothing rated';
+    return `<div class="pf-trow">
+      <span class="d${legacy?' legacy':''}" style="${legacy?'border-color':'background'}:${a.rated?col:'var(--line)'}"></span>
+      <span class="l">${l==='Film'?'Films':l==='Game'?'Games':l==='Book'?'Books':l}</span>
+      <span class="v">${val}</span>
+    </div>`;
+  }).join('');
+  const tasteHTML = `
+    <div class="pf-panel pf-taste">
+      <span class="pf-plabel">Taste signature</span>
+      <div class="pf-field" style="background:${PF_FIELD}">
+        <div class="ax-h"></div><div class="ax-v"></div>
+        <div class="pf-mark" style="left:${mark.left.toFixed(1)}%;top:${mark.top.toFixed(1)}%"></div>
+      </div>
+      <div class="pf-tastecap">${all.rated ? pfTasteWords(avgE, avgQ) : 'Unwritten<i> —</i> so far'}</div>
+      <div class="pf-tastesub">${all.rated
+        ? `Avg enjoyment ${all.e!=null?fmtSigned(all.e):'–'} · quality ${all.q!=null?fmtSigned(all.q):'–'}`
+        : 'Rate something to place your marker'}</div>
+      <div class="pf-div"></div>
+      <div class="pf-trows">${typeRows}</div>
+    </div>`;
+
+  /* ---- currently ---- */
+  const curCards = inProgress.map(r=>{
+    const pct = Number(r.c.pct(r.item));
+    const hasBar = Number.isFinite(pct) && pct>0;
+    return `<div class="pf-cc${hasBar?'':' nobar'}" data-open="${r.k}:${r.item.id}">
+      <div class="bg" style="${bgStyle(r.item)}"></div><div class="shade"></div>
+      <div class="lab">${r.verb}</div>
+      <div class="nm">${esc(r.item.name||'Untitled')}</div>
+      ${hasBar ? `<div class="bar"><i style="width:${Math.max(0,Math.min(100,pct))}%"></i></div>` : ''}
+    </div>`;
+  }).join('');
+  const curHTML = inProgress.length ? `
+    <div class="hero-h" style="margin:30px 0 14px">
+      <span class="lbl">Currently</span><span class="sub">${inProgress.length} in progress</span><span class="rule"></span>
+    </div>
+    <div class="pf-cur">${curCards}</div>` : '';
+
+  /* ---- favourites: the highest enjoyment + quality, whole catalogue ---- */
+  const favs = rows.map(r=>({r, q:quadOf(r.item, r.c.scale)}))
+    .filter(x=>x.q && x.q.x!=null)
+    .sort((a,b)=>(b.q.x+b.q.y)-(a.q.x+a.q.y))
+    .slice(0,8)
+    .map(({r,q})=>`<div class="pf-fc" data-open="${r.k}:${r.item.id}">
+      <div class="bg" style="${bgStyle(r.item)}"></div><div class="shade"></div>
+      <div class="type">${TYPE_LABELS[r.k].toUpperCase()}</div>
+      <div class="rt">${quadSwatchHTML(q,'ondark')}</div>
+      <div class="nm">${esc(r.item.name||'Untitled')}</div>
+    </div>`).join('');
+
+  /* ---- milestones ---- */
+  const miles = [
+    [String(rows.length), 'Works tracked'],
+    [busiest ? busiest.name : '–', busiest ? `Busiest year · ${busiest.n} works` : 'Busiest year'],
+    [topGenre ? topGenre.name : '–', topGenre ? `Top genre · ${topGenre.n} works` : 'Top genre'],
+    [topCreator ? topCreator.name : '–', topCreator ? `Most logged · ${topCreator.n} works` : 'Most logged creator'],
+    [since ? fmtShortMonthYear(since) : '–', 'Tracking since'],
+    [String(genreN), 'Genres explored'],
+  ].map(([big,l])=>`<div class="pf-tile sm"><div class="n" title="${esc(big)}">${esc(big)}</div><div class="l">${esc(l)}</div></div>`).join('');
+
+  /* ---- recent activity ---- */
+  const VERB = {dateWatched:'Watched', datePlayed:'Played', dateRead:'Read'};
+  const activity = recentlyLoggedFrom(rows, 6).map(r=>{
+    const q = quadOf(r.item, r.c.scale);
+    const {col} = q ? pfDotStyle(q) : {col:'var(--line)'};
+    const verb = r.item.inProgress ? 'Started' : (VERB[(r.c.recentFields||[])[0]] || 'Logged');
+    const rate = !q ? '' : q.legacy ? `Q ${fmtSigned(q.y)}` : `${fmtSigned(q.x)} · ${fmtSigned(q.y)}`;
+    return `<div class="pf-act" data-open="${r.k}:${r.item.id}">
+      <span class="d${q&&q.legacy?' legacy':''}" style="${q&&q.legacy?'border-color':'background'}:${col}"></span>
+      <div class="t">
+        <div class="nm">${esc(r.item.name||'Untitled')}</div>
+        <div class="sub">${verb} · ${TYPE_LABELS[r.k].toUpperCase()}</div>
+      </div>
+      <div class="r"><div class="rate">${rate}</div><div class="tm">${esc(pfRelTime(r._d))}</div></div>
+    </div>`;
+  }).join('');
+
+  $('#list').innerHTML = `<div class="pf${ctx.isSelf?'':' readonly'}">
+    ${idHTML}
+    <div class="pf-stats">${stats}</div>
+    <div class="pf-hero">${mapHTML}${tasteHTML}</div>
+    ${curHTML}
+    <div class="pf-bot">
+      <div>
+        <div class="hero-h"><span class="lbl">Favourites</span><span class="sub">Highest enjoyment × quality</span><span class="rule"></span></div>
+        <div class="pf-fav">${favs || '<div class="empty" style="padding:26px 10px">Nothing rated on both axes yet.</div>'}</div>
+        <div class="hero-h" style="margin:26px 0 8px"><span class="lbl">Milestones</span><span class="rule"></span></div>
+        <div class="pf-miles">${miles}</div>
+      </div>
+      <div>
+        <div class="hero-h" style="margin-bottom:6px"><span class="lbl">Recent activity</span><span class="rule"></span></div>
+        ${activity || '<div class="empty" style="padding:26px 10px">Nothing dated yet.</div>'}
+      </div>
+    </div>
+  </div>`;
+}
+/* one shared tooltip, moved to whichever dot is hovered */
+function pfTipShow(dot){
+  const tip = $('#pfTip'); if(!tip) return;
+  const col = dot.dataset.c;
+  tip.querySelector('i').style.cssText = dot.dataset.lg ? `border:2px solid ${col}` : `background:${col}`;
+  tip.querySelector('b').textContent = dot.dataset.t;
+  tip.querySelector('.pf-tipm').textContent = dot.dataset.m;
+  tip.style.left = dot.style.left;
+  tip.style.top = dot.style.top;
+  tip.classList.remove('below');
+  tip.classList.add('on');
+  /* the plot clips its overflow, so keep the tooltip inside it: flip below the
+     dot when there's no room above, and clamp horizontally at the side edges */
+  const plot = $('#pfPlot');
+  if(plot){
+    const pr = plot.getBoundingClientRect();
+    if(tip.getBoundingClientRect().top < pr.top + 2) tip.classList.add('below');
+    const pad = 8, w = tip.offsetWidth, inner = plot.clientWidth;
+    let cx = parseFloat(dot.style.left)/100 * inner;
+    cx = Math.max(pad + w/2, Math.min(inner - pad - w/2, cx));
+    tip.style.left = cx + 'px';
+  }
+}
+function pfTipHide(){ const t=$('#pfTip'); if(t) t.classList.remove('on'); }
+function openProfileEdit(){
+  $('#pfNameIn').value = S.cfg.name || '';
+  $('#pfHandleIn').value = S.cfg.handle || '';
+  $('#pfTagIn').value = S.cfg.tagline || '';
+  $('#pfErr').style.display = 'none';
+  openSheet('#profileSheet');
+}
+function saveProfileEdit(){
+  S.cfg.name = $('#pfNameIn').value.trim();
+  S.cfg.handle = $('#pfHandleIn').value.trim().replace(/^@/,'');
+  S.cfg.tagline = $('#pfTagIn').value.trim();
+  saveCfg();
+  closeSheets(); render(); toast('Profile saved');
+}
+
 function render(){
   setNavActive();
   if(S.view==='stats') renderStatsTab();
+  else if(S.view==='profile') renderProfile();
   else renderHome();
 }
 function esc(s){ return String(s).replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m])); }
@@ -1623,21 +2112,7 @@ function optionsFor(key){
 }
 
 /* ================= edit sheet ================= */
-function openEdit(item){
-  const c = COLLECTIONS[S.tab];
-  S.editing = item ? {...item} : {id:null, rating:null};
-  $('#editTitle').textContent = item ? 'Edit' : 'Add '+c.label.toLowerCase().replace(/s$/,'');
-  $('#delEdit').style.display = item ? 'block' : 'none';
-  $('#rlabel').textContent = `Rating / ${c.scale}`;
-
-  const tp = $('#typePick');
-  if(item){ tp.style.display='none'; }
-  else {
-    tp.style.display='flex';
-    tp.innerHTML = ['films','games','tv','books'].map(k=>
-      `<button type="button" data-addtype="${k}" aria-pressed="${S.tab===k}">${TYPE_LABELS[k]}</button>`).join('');
-  }
-
+function fieldFormHTML(c){
   let html='', pend='';
   c.fields.forEach(f=>{
     const v = S.editing[f.k] ?? '';
@@ -1656,25 +2131,150 @@ function openEdit(item){
     if(f.half){ pend += block; } else { html += block; }
   });
   if(pend) html += `<div class="two">${pend}</div>`;
-  $('#fields').innerHTML = html;
-  if($('#fields').children[0]){
-    $('#fields').children[0].insertAdjacentHTML('afterend', '<div class="suggest-list" id="titleSuggest"></div>');
+  return html;
+}
+/* which chrome shows per step: search = bare, detail = rating+date only,
+   form = the old fully editable sheet (edit & manual add) */
+/* status is a 3-way choice for every kind; "In progress" also feeds Currently */
+const STATUS_OPTS = [['completed','Completed'],['inProgress','In progress'],['dnf','Did not finish']];
+function renderStatusPick(){
+  const cur = S.editing.status || 'completed';
+  $('#statusPick').innerHTML = STATUS_OPTS.map(([k,l])=>
+    `<button type="button" data-status="${k}" aria-pressed="${cur===k}">${l}</button>`).join('');
+}
+function setEditChrome(mode){
+  const on = mode!=='search';
+  $('#coverRow').style.display = mode==='form' ? 'flex' : 'none';
+  $('#ratingWrap').style.display = on ? 'block' : 'none';
+  $('#saveEdit').style.display = on ? 'block' : 'none';
+  $('#statusWrap').style.display = on ? 'block' : 'none';
+  if(on) renderStatusPick();
+}
+function openEdit(item){
+  const c = COLLECTIONS[S.tab];
+  S.editing = item ? {...item} : {id:null, rating:null, rx:null, ry:null, status:'completed'};
+  if(!S.editing.status) S.editing.status = 'completed';
+  /* one-way conversion of an old rating: y from the score, x unknown */
+  if(S.editing.ry==null && S.editing.rating!=null){
+    S.editing.ry = Math.round((S.editing.rating/c.scale)*200-100);
+    S.editing.rx = null;
   }
-  updateCoverPreview(S.editing.coverUrl||'');
+  $('#editTitle').textContent = item ? 'Edit' : 'Add '+c.label.toLowerCase().replace(/s$/,'');
+  $('#delEdit').style.display = item ? 'block' : 'none';
+  $('#rlabel').textContent = 'Rating';
 
-  const ipVerb = {books:'Currently reading', tv:'Currently watching', games:'Currently playing'}[S.tab];
-  $('#inProgressWrap').style.display = ipVerb ? 'block' : 'none';
-  if(ipVerb){
-    $('#inProgressBtn').textContent = ipVerb;
-    $('#inProgressBtn').setAttribute('aria-pressed', S.editing.inProgress ? 'true' : 'false');
+  const tp = $('#typePick');
+  if(item){ tp.style.display='none'; }
+  else {
+    tp.style.display='flex';
+    tp.innerHTML = ['films','games','tv','books'].map(k=>
+      `<button type="button" data-addtype="${k}" aria-pressed="${S.tab===k}">${TYPE_LABELS[k]}</button>`).join('');
   }
 
-  $('#ratepick').innerHTML = Array.from({length:c.scale},(_,x)=>{
-    const r=x+1;
-    return `<button data-r="${r}" aria-pressed="${S.editing.rating===r}">${r}</button>`;
-  }).join('');
+  if(item){
+    S.addStep = null;
+    renderAddDetail();
+  } else {
+    renderAddSearch();
+  }
 
   openSheet('#editSheet');
+}
+/* ---- add step 1: just a search bar ---- */
+function renderAddSearch(){
+  const c = COLLECTIONS[S.tab];
+  S.addStep = 'search';
+  $('#fields').innerHTML = `
+    <label class="f"><span>Search</span><input class="in" id="addSearch" placeholder="Start typing a title…" autocomplete="off"></label>
+    <div class="suggest-list" id="titleSuggest"></div>
+    <div class="acts" style="margin-top:6px">
+      <button type="button" class="btn ghost" id="manualAddBtn">Can't find it? Enter manually</button>
+    </div>`;
+  updateCoverPreview('');
+  setEditChrome('search');
+  $('#addSearch').focus();
+}
+/* manual fallback = the old fully editable form */
+function renderAddManual(){
+  const c = COLLECTIONS[S.tab];
+  S.addStep = 'manual';
+  $('#fields').innerHTML = fieldFormHTML(c);
+  $('#fields').children[0].insertAdjacentHTML('afterend', '<div class="suggest-list" id="titleSuggest"></div>');
+  updateCoverPreview(S.editing.coverUrl||'');
+  setEditChrome('form');
+  renderQuadPicker();
+}
+/* ---- add step 2: locked-in metadata + rating & date ---- */
+async function openAddDetail(picked){
+  const k = S.tab, e = S.editing;
+  S.addStep = 'detail';
+  const crK = creatorField(k), yrK = yearField(k);
+  e.name = picked.title;
+  if(k!=='tv') e[yrK] = picked.year ? +picked.year : null;
+  $('#fields').innerHTML = `<p class="note">Loading details…</p>`;
+  let desc='', creator='', cover=null;
+  try{
+    if(k==='films'){
+      cover = picked.raw.poster_path ? `https://image.tmdb.org/t/p/w342${picked.raw.poster_path}` : null;
+      desc = picked.raw.overview || '';
+      const cj = await mediaDetail(k, picked.id);
+      const d = (cj.crew||[]).find(x=>x.job==='Director'); if(d) creator = d.name;
+    } else if(k==='tv'){
+      cover = picked.raw.poster_path ? `https://image.tmdb.org/t/p/w342${picked.raw.poster_path}` : null;
+      desc = picked.raw.overview || '';
+      const dj = await mediaDetail(k, picked.id);
+      creator = (dj.networks||[]).map(n=>n.name).slice(0,2).join('/');
+      e.genre = (dj.genres||[]).map(g=>g.name).join('/');
+      e.released = dj.first_air_date || (picked.raw && picked.raw.first_air_date) || null;
+    } else if(k==='games'){
+      cover = picked.raw.background_image || null;
+      e.genre = (picked.raw.genres||[]).map(g=>g.name).join('/');
+      e.console = (picked.raw.platforms||[]).map(p=>p.platform&&p.platform.name).filter(Boolean).slice(0,3).join('/');
+      const dj = await mediaDetail(k, picked.id);
+      creator = (dj.developers||[]).map(d=>d.name).join('/');
+      desc = dj.description_raw || '';
+    } else if(k==='books'){
+      cover = picked.raw.cover_i ? `https://covers.openlibrary.org/b/id/${picked.raw.cover_i}-M.jpg` : null;
+      creator = (picked.raw.author_name||[]).join('/');
+      if(picked.raw.key){
+        const wr = await fetch(`https://openlibrary.org${picked.raw.key}.json`);
+        if(wr.ok){
+          const wj = await wr.json();
+          desc = typeof wj.description==='string' ? wj.description : (wj.description && wj.description.value) || '';
+        }
+      }
+    }
+  }catch(_){}
+  if(S.addStep!=='detail' || S.editing!==e) return; // user backed out meanwhile
+  if(desc.length>420) desc = desc.slice(0,420).replace(/\s+\S*$/,'')+'…';
+  if(creator) e[crK] = creator;
+  if(cover) e.coverUrl = cover;
+  e.desc = desc || null;
+  renderAddDetail();
+}
+function renderAddDetail(){
+  const k = S.tab, c = COLLECTIONS[k], e = S.editing;
+  const crK = creatorField(k), yrK = yearField(k);
+  const dateF = (c.recentFields||[])[0];
+  const dateLbl = {dateWatched:'Date watched', datePlayed:'Date played', dateRead:'Date read'}[dateF] || 'Date';
+  const sub = [e[crK], itemYear(k, e)].filter(Boolean).join(' · ');
+  $('#fields').innerHTML = `
+    <div class="add-preview">
+      ${e.coverUrl?`<img class="add-preview-cover" src="${esc(e.coverUrl)}" alt="">`:'<div class="add-preview-cover"></div>'}
+      <div class="add-preview-meta">
+        <div class="add-preview-title">${esc(e.name||'')}</div>
+        <div class="add-preview-sub">${esc(sub)}</div>
+      </div>
+    </div>
+    ${e.desc?`<p class="add-desc">${esc(e.desc)}</p>`:''}
+    <label class="f"><span>${dateLbl}</span><input class="in" type="date" data-k="${dateF}" value="${esc(e[dateF]||'')}"></label>
+    <div class="acts" style="margin-top:0">
+      ${e.id
+        ? `<button type="button" class="btn ghost" id="editFieldsBtn">Edit details</button>`
+        : `<button type="button" class="btn ghost" id="backToSearch">&larr; Back to search</button>`}
+    </div>`;
+  setEditChrome('detail');
+  renderQuadPicker();
 }
 function readEdit(){
   const c = COLLECTIONS[S.tab], o = {...S.editing};
@@ -1684,6 +2284,8 @@ function readEdit(){
     if(v==='') { o[f.k]=null; return; }
     o[f.k] = (f.t==='number' && !isNaN(+v)) ? +v : v;
   });
+  o.status = o.status || 'completed';
+  o.inProgress = o.status==='inProgress';
   return o;
 }
 function saveEdit(){
@@ -1692,7 +2294,7 @@ function saveEdit(){
   const arr = S.data[S.tab].items;
   if(o.id){
     const ix = arr.findIndex(x=>x.id===o.id);
-    arr[ix] = o;
+    if(ix>=0) arr[ix] = o; else arr.unshift(o);
   } else {
     let n=1; const used=new Set(arr.map(x=>x.id));
     while(used.has(c.idp+String(n).padStart(4,'0'))) n++;
@@ -1723,6 +2325,7 @@ function openSet(){
   $('#tmdbIn').value = S.cfg.tmdbKey||'';
   $('#rawgIn').value = S.cfg.rawgKey||'';
   $('#connHint').style.display='none';
+  $('#pushlog').classList.remove('on');
   openSheet('#setSheet');
 }
 
@@ -1735,7 +2338,8 @@ function openItem(k, id){
 function logFinished(k, id){
   const it = (S.data[k]&&S.data[k].items||[]).find(x=>x.id===id);
   if(!it) return;
-  it.inProgress = false; markDirty(k); render(); toast('Logged as finished');
+  it.inProgress = false; it.status = 'completed';
+  markDirty(k); render(); toast('Logged as finished');
 }
 $('#nav').addEventListener('click', e=>{
   const b = e.target.closest('.navlink[data-view]'); if(!b) return;
@@ -1748,12 +2352,26 @@ $('#q').addEventListener('input', e=>{
   render();
 });
 $('#list').addEventListener('click', e=>{
+  /* tap away from a rating-map dot dismisses its tooltip (touch has no mouseout) */
+  if(!e.target.closest('.pf-dot')) pfTipHide();
+  /* rating-map type filter: dims in place, so no re-render (and no lost hover) */
+  const pff = e.target.closest('[data-pf-filter]');
+  if(pff){
+    S.pfFilter = pff.dataset.pfFilter;
+    const plot = $('#pfPlot'); if(plot) plot.dataset.f = S.pfFilter;
+    document.querySelectorAll('[data-pf-filter]').forEach(b=>
+      b.setAttribute('aria-pressed', b.dataset.pfFilter===S.pfFilter ? 'true' : 'false'));
+    pfTipHide();
+    return;
+  }
+  if(e.target.closest('[data-pf-edit]')){ openProfileEdit(); return; }
   const fin = e.target.closest('[data-finish]');
   if(fin){ e.stopPropagation(); const [k,id]=fin.dataset.finish.split(':'); logFinished(k,id); return; }
   const qa = e.target.closest('[data-quick-add]');
   if(qa){ quickAddCurrent(qa.dataset.quickAdd); return; }
   const tp = e.target.closest('[data-type]');
   if(tp){ S.typeFilter = tp.dataset.type; render(); return; }
+  if(e.target.closest('[data-clear-unrated]')){ S.unratedOnly = false; render(); return; }
   const so = e.target.closest('[data-sort]');
   if(so){
     const key = so.dataset.sort;
@@ -1776,7 +2394,13 @@ $('#list').addEventListener('click', e=>{
 });
 $('#list').addEventListener('change', e=>{
   if(e.target.id==='sortSel'){ const [k,d]=e.target.value.split(':'); S.sortKey=k; S.sortDir=+d; render(); }
-  else if(e.target.id==='starSel'){ S.starFilter=+e.target.value; render(); }
+});
+/* rating-map hover (a tap counts as a hover on touch): one shared tooltip */
+$('#list').addEventListener('mouseover', e=>{
+  const d = e.target.closest('.pf-dot'); if(d) pfTipShow(d);
+});
+$('#list').addEventListener('mouseout', e=>{
+  if(e.target.closest('.pf-dot')) pfTipHide();
 });
 $('#addBtn').addEventListener('click', ()=>{
   S.tab = (S.typeFilter!=='all') ? S.typeFilter : 'films';
@@ -1785,7 +2409,7 @@ $('#addBtn').addEventListener('click', ()=>{
 $('#saveBtn').addEventListener('click', push);
 $('#reloadBtn').addEventListener('click', pull);
 $('#themeBtn').addEventListener('click', ()=>{ renderThemeGrid(); openSheet('#themeSheet'); });
-$('#syncStatus').addEventListener('click', ()=>{ S.dirty.size ? push() : pull(); });
+$('#syncStatus').addEventListener('click', ()=>{ S.dirty.size ? push() : (S.cfg.token ? pull() : openSet()); });
 $('#typePick').addEventListener('click', e=>{
   const b = e.target.closest('[data-addtype]'); if(!b) return;
   S.tab = b.dataset.addtype; openEdit(null);
@@ -1796,6 +2420,22 @@ $('#cancelEdit').addEventListener('click', closeSheets);
 $('#saveEdit').addEventListener('click', saveEdit);
 $('#delEdit').addEventListener('click', delEdit);
 $('#closeSet').addEventListener('click', closeSheets);
+$('#pfCancel').addEventListener('click', closeSheets);
+$('#pfSave').addEventListener('click', saveProfileEdit);
+/* ---- secret dev menu (tap the version stamp) ---- */
+$('#verStamp').addEventListener('click', ()=>{
+  const b = $('#devUnratedBtn');
+  b.setAttribute('aria-pressed', S.unratedOnly ? 'true' : 'false');
+  b.textContent = S.unratedOnly ? 'Unrated only — on' : 'Show only unrated items';
+  openSheet('#devSheet');
+});
+$('#devUnratedBtn').addEventListener('click', ()=>{
+  S.unratedOnly = !S.unratedOnly;
+  S.view = 'home';
+  closeSheets(); render(); window.scrollTo({top:0});
+  toast(S.unratedOnly ? 'Filtering to unrated' : 'Showing all');
+});
+$('#devClose').addEventListener('click', closeSheets);
 $('#openThemeBtn').addEventListener('click', ()=>{
   closeSheets(); renderThemeGrid(); openSheet('#themeSheet');
 });
@@ -1804,23 +2444,106 @@ $('#themeGrid').addEventListener('click', e=>{
   const b = e.target.closest('[data-theme]'); if(!b) return;
   applyTheme(b.dataset.theme); toast('Theme applied');
 });
-$('#ratepick').addEventListener('click', e=>{
-  const b = e.target.closest('button[data-r]'); if(!b) return;
-  const r = +b.dataset.r;
-  S.editing.rating = (S.editing.rating===r) ? null : r;
-  $('#ratepick').querySelectorAll('button').forEach(x=>
-    x.setAttribute('aria-pressed', +x.dataset.r===S.editing.rating));
+/* ---- quadrant picker: tap or drag anywhere in the square ---- */
+function hsl2rgb(h, s, l){
+  h/=360;
+  const q = l < .5 ? l*(1+s) : l+s-l*s, p = 2*l-q;
+  const f = t=>{
+    if(t<0) t+=1; if(t>1) t-=1;
+    if(t<1/6) return p+(q-p)*6*t;
+    if(t<1/2) return q;
+    if(t<2/3) return p+(q-p)*(2/3-t)*6;
+    return p;
+  };
+  return [f(h+1/3), f(h), f(h-1/3)].map(v=>Math.round(v*255));
+}
+/* paint every pixel with that point's exact colour, once per open */
+function paintQuadCanvas(){
+  const cv = $('#quadCanvas'); if(!cv) return;
+  const N = 240; cv.width = N; cv.height = N;
+  const ctx = cv.getContext('2d');
+  const img = ctx.createImageData(N, N);
+  for(let py=0; py<N; py++){
+    const y = 100 - (py/(N-1))*200;
+    for(let px=0; px<N; px++){
+      const x = (px/(N-1))*200 - 100;
+      const [r,g,b] = quadColorRGB(x, y);
+      const o = (py*N+px)*4;
+      img.data[o]=r; img.data[o+1]=g; img.data[o+2]=b; img.data[o+3]=255;
+    }
+  }
+  ctx.putImageData(img, 0, 0);
+}
+function renderQuadPicker(){
+  $('#ratepick').innerHTML = `
+    <div class="quad" id="quadArea">
+      <canvas class="quad-canvas" id="quadCanvas" aria-hidden="true"></canvas>
+      <div class="ax h"></div><div class="ax v"></div>
+      <span class="quad-lab top">Well made</span>
+      <span class="quad-lab bottom">Poorly made</span>
+      <span class="quad-lab left">Didn't enjoy</span>
+      <span class="quad-lab right">Enjoyed</span>
+      <div class="quad-dot" id="quadDot" style="display:none"></div>
+    </div>
+    <div class="quad-foot">
+      <span class="quad-chip" id="quadChip" style="display:none"></span>
+      <span class="quad-read" id="quadRead"></span>
+      <button type="button" class="quad-clear" id="quadClear">Clear</button>
+    </div>`;
+  paintQuadCanvas();
+  updateQuadUI();
+}
+function updateQuadUI(){
+  const dot = $('#quadDot'), read = $('#quadRead'), clr = $('#quadClear'), chip = $('#quadChip');
+  const rx = S.editing.rx, ry = S.editing.ry;
+  if(ry==null){
+    dot.style.display = 'none';
+    chip.style.display = 'none';
+    read.textContent = 'Tap anywhere on the graph to rate';
+    clr.style.display = 'none';
+    return;
+  }
+  const col = quadColor(rx==null?0:rx, ry);
+  chip.style.display = 'block';
+  chip.classList.toggle('legacy', rx==null);
+  if(rx==null){ chip.style.background='none'; chip.style.borderColor=col; }
+  else { chip.style.background=col; chip.style.borderColor='rgba(0,0,0,.15)'; }
+  dot.style.display = 'block';
+  dot.classList.toggle('legacy', rx==null);
+  dot.style.left = (((rx==null?0:rx)+100)/200*100)+'%';
+  dot.style.top  = ((100-ry)/200*100)+'%';
+  read.textContent = rx==null
+    ? `Quality ${fmtSigned(ry)} — converted from the old rating. Tap to set enjoyment too.`
+    : `Enjoyment ${fmtSigned(rx)} · Quality ${fmtSigned(ry)}`;
+  clr.style.display = 'block';
+}
+let quadDragging = false;
+function quadPoint(e){
+  const r = $('#quadArea').getBoundingClientRect();
+  const x = Math.max(-100, Math.min(100, Math.round(((e.clientX-r.left)/r.width)*200-100)));
+  const y = Math.max(-100, Math.min(100, Math.round((1-(e.clientY-r.top)/r.height)*200-100)));
+  return {x,y};
+}
+$('#ratepick').addEventListener('pointerdown', e=>{
+  const area = e.target.closest('#quadArea'); if(!area) return;
+  e.preventDefault();
+  quadDragging = true;
+  try{ area.setPointerCapture(e.pointerId); }catch(_){}
+  const {x,y} = quadPoint(e);
+  S.editing.rx = x; S.editing.ry = y; updateQuadUI();
 });
-$('#bFix').addEventListener('click', openSet);
-$('#testConnBtn').addEventListener('click', testConnection);
-$('#saveSet').addEventListener('click', ()=>{
-  S.cfg.repo = $('#repoIn').value.trim().replace(/^https?:\/\/github\.com\//,'').replace(/\/$/,'');
-  S.cfg.branch = $('#branchIn').value.trim()||'main';
-  S.cfg.token = $('#tokIn').value.trim();
-  S.cfg.expires = $('#expIn').value || '';
-  S.cfg.tmdbKey = $('#tmdbIn').value.trim();
-  S.cfg.rawgKey = $('#rawgIn').value.trim();
-  saveCfg(); S.authError=null; toast('Settings saved'); closeSheets(); verifyToken();
+$('#ratepick').addEventListener('pointermove', e=>{
+  if(!quadDragging) return;
+  const {x,y} = quadPoint(e);
+  S.editing.rx = x; S.editing.ry = y; updateQuadUI();
+});
+$('#ratepick').addEventListener('pointerup', ()=>{ quadDragging = false; });
+$('#ratepick').addEventListener('pointercancel', ()=>{ quadDragging = false; });
+$('#ratepick').addEventListener('click', e=>{
+  if(e.target.closest('#quadClear')){
+    S.editing.rx = null; S.editing.ry = null; S.editing.rating = null;
+    updateQuadUI();
+  }
 });
 $('#fetchCoversBtn').addEventListener('click', fetchMissingCovers);
 $('#fetchCoverBtn').addEventListener('click', async ()=>{
@@ -1843,16 +2566,36 @@ $('#fields').addEventListener('input', e=>{
   onTitleInput(e);
 });
 $('#fields').addEventListener('click', e=>{
+  if(e.target.closest('#manualAddBtn')){ renderAddManual(); return; }
+  if(e.target.closest('#backToSearch')){ renderAddSearch(); return; }
+  if(e.target.closest('#editFieldsBtn')){ renderAddManual(); return; }
   const row = e.target.closest('[data-sid]'); if(!row) return;
   e.preventDefault();
   const picked = lastSuggestResults.find(r=>String(r.id)===row.dataset.sid);
-  if(picked) fillFromSuggestion(S.tab, picked);
+  if(!picked) return;
+  if(S.addStep==='search') openAddDetail(picked);
+  else fillFromSuggestion(S.tab, picked);
 });
-$('#inProgressBtn').addEventListener('click', ()=>{
-  S.editing.inProgress = !S.editing.inProgress;
-  $('#inProgressBtn').setAttribute('aria-pressed', S.editing.inProgress ? 'true' : 'false');
+$('#statusPick').addEventListener('click', e=>{
+  const b = e.target.closest('[data-status]'); if(!b) return;
+  S.editing.status = b.dataset.status;
+  S.editing.inProgress = S.editing.status==='inProgress';
+  renderStatusPick();
 });
-$('#triggerSyncBtn').addEventListener('click', triggerSync);
+
+/* ================= settings (github + api keys) ================= */
+$('#bFix').addEventListener('click', openSet);
+$('#testConnBtn').addEventListener('click', testConnection);
+$('#exportBtn').addEventListener('click', exportJson);
+$('#saveSet').addEventListener('click', ()=>{
+  S.cfg.repo = $('#repoIn').value.trim().replace(/^https?:\/\/github\.com\//,'').replace(/\/$/,'');
+  S.cfg.branch = $('#branchIn').value.trim()||'main';
+  S.cfg.token = $('#tokIn').value.trim();
+  S.cfg.expires = $('#expIn').value || '';
+  S.cfg.tmdbKey = $('#tmdbIn').value.trim();
+  S.cfg.rawgKey = $('#rawgIn').value.trim();
+  saveCfg(); S.authError=null; toast('Settings saved'); closeSheets(); verifyToken();
+});
 $('#forgetBtn').addEventListener('click', ()=>{
   S.cfg.token=''; $('#tokIn').value=''; saveCfg(); S.authError=null;
   toast('Token removed from this browser'); checkToken();
