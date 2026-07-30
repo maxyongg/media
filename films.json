@@ -3323,6 +3323,15 @@
    "rating": 6,
    "coverUrl": "https://image.tmdb.org/t/p/w342/ekstpH614fwDX8DUln1a2Opz0N8.jpg",
    "dateWatched": "2026-07-19"
+  },
+  {
+   "id": "f0333",
+   "name": "Silent Friend",
+   "director": "Ildikó Enyedi",
+   "genre": "Unknown",
+   "yearReleased": 2025,
+   "yearWatched": 2026,
+   "rating": 8
   }
  ]
 }
