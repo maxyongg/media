@@ -3377,6 +3377,15 @@
    "yearReleased": 1997,
    "yearWatched": 2026,
    "rating": 10
+  },
+  {
+   "id": "f0339",
+   "name": "Cinema Paradiso",
+   "director": "Giuseppe Tornatore",
+   "genre": "Unknown",
+   "yearReleased": 1988,
+   "yearWatched": 2026,
+   "rating": 9
   }
  ]
 }
