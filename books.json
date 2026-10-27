@@ -871,6 +871,15 @@
    "yearPublished": 1985,
    "yearRead": 2026,
    "rating": 5
+  },
+  {
+   "id": "b0090",
+   "name": "American Gods",
+   "author": "Neil Gaiman",
+   "genre": "Unknown",
+   "yearPublished": 2001,
+   "yearRead": null,
+   "rating": 3
   }
  ]
 }
