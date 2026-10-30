@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "ratingScale": 10,
- "updatedAt": "2026-07-19T15:28:40.404Z",
+ "updatedAt": "2026-10-30T01:54:04.000Z",
  "items": [
   {
    "id": "f0001",
@@ -3320,7 +3320,7 @@
    "genre": "Unknown",
    "yearReleased": 1976,
    "yearWatched": 2026,
-   "rating": 6,
+   "rating": 7,
    "coverUrl": "https://image.tmdb.org/t/p/w342/ekstpH614fwDX8DUln1a2Opz0N8.jpg",
    "dateWatched": "2026-07-19"
   },
@@ -3349,7 +3349,7 @@
    "genre": "Unknown",
    "yearReleased": 2025,
    "yearWatched": 2026,
-   "rating": 8
+   "rating": 7
   },
   {
    "id": "f0336",
@@ -3385,7 +3385,77 @@
    "genre": "Unknown",
    "yearReleased": 1988,
    "yearWatched": 2026,
-   "rating": 9
+   "rating": 10
+  },
+  {
+   "id": "f0340",
+   "name": "Ant-Man and the Wasp: Quantumania",
+   "director": "Peyton Reed",
+   "genre": "Action/Adventure/Science Fiction",
+   "yearReleased": 2023,
+   "rating": null,
+   "dateWatched": "2023-02-19",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/qnqGbB22YJ7dSs4o6M7exTpNxPz.jpg"
+  },
+  {
+   "id": "f0341",
+   "name": "The Wonderful Story of Henry Sugar",
+   "director": "Wes Anderson",
+   "genre": "Fantasy/Comedy/Adventure",
+   "yearReleased": 2023,
+   "rating": null,
+   "dateWatched": "2023-10-07",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/fDUywEHwHh6nsLnVXAdPN9m4ZUG.jpg"
+  },
+  {
+   "id": "f0342",
+   "name": "65",
+   "director": "Bryan Woods & Scott Beck",
+   "genre": "Action/Adventure/Science Fiction",
+   "yearReleased": 2023,
+   "rating": null,
+   "dateWatched": "2023-11-23",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/rzRb63TldOKdKydCvWJM8B6EkPM.jpg"
+  },
+  {
+   "id": "f0343",
+   "name": "Lonely Castle in the Mirror",
+   "director": "Keiichi Hara",
+   "genre": "Animation/Drama/Mystery",
+   "yearReleased": 2022,
+   "rating": null,
+   "dateWatched": "2024-07-13",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/cPV2etoFUkgQLWqKduWxXAeP4Oe.jpg"
+  },
+  {
+   "id": "f0344",
+   "name": "Captain America: Brave New World",
+   "director": "Julius Onah",
+   "genre": "Action/Thriller/Science Fiction",
+   "yearReleased": 2025,
+   "rating": null,
+   "dateWatched": "2025-06-03",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/pzIddUEMWhWzfvLI3TwxUG2wGoi.jpg"
+  },
+  {
+   "id": "f0345",
+   "name": "Violet Evergarden: The Movie",
+   "director": "Taichi Ishidate",
+   "genre": "Animation/Drama/Fantasy",
+   "yearReleased": 2020,
+   "rating": null,
+   "dateWatched": "2025-08-07",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/4b7uAGVtgA85Yd911yOJqIsHigx.jpg"
+  },
+  {
+   "id": "f0346",
+   "name": "Demon Slayer: Kimetsu no Yaiba Infinity Castle",
+   "director": "Haruo Sotozaki",
+   "genre": "Animation/Action/Fantasy",
+   "yearReleased": 2025,
+   "rating": null,
+   "dateWatched": "2025-08-16",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/aFRDH3P7TX61FVGpaLhKr6QiOC1.jpg"
   }
  ]
 }

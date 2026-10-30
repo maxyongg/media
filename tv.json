@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "ratingScale": 5,
- "updatedAt": "2026-07-23T10:08:21.395Z",
+ "updatedAt": "2026-10-30T01:54:04.000Z",
  "items": [
   {
    "id": "t0189",
@@ -1593,7 +1593,7 @@
    "watchedPct": 100,
    "firstSeasonYear": 2022,
    "lastSeasonYear": null,
-   "rating": 3,
+   "rating": 4,
    "dateWatched": "2024-08-14",
    "coverUrl": "https://image.tmdb.org/t/p/w342/7V0Ebks0GgpKvQ7QbLAIdX5dos4.jpg"
   },
@@ -2450,6 +2450,110 @@
    "rating": 1,
    "dateWatched": null,
    "coverUrl": "https://image.tmdb.org/t/p/w342/ykZ7hlShkdRQaL2aiieXdEMmrLb.jpg"
+  },
+  {
+   "id": "t0190",
+   "name": "Abbott Elementary",
+   "genre": "Sitcom",
+   "network": "ABC",
+   "seasons": 6,
+   "watchedPct": 100,
+   "firstSeasonYear": 2021,
+   "lastSeasonYear": null,
+   "rating": null,
+   "dateWatched": "2023-02-21",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/2olNk9hjnrIzoBDFF58GaxgmzKG.jpg"
+  },
+  {
+   "id": "t0191",
+   "name": "Physical: 100",
+   "genre": "Reality",
+   "network": "Netflix",
+   "seasons": 2,
+   "watchedPct": 100,
+   "firstSeasonYear": 2023,
+   "lastSeasonYear": 2024,
+   "rating": null,
+   "dateWatched": "2024-04-13",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/vl9XwsuGGzvbAWlHLTNTFIWcgK6.jpg"
+  },
+  {
+   "id": "t0192",
+   "name": "Next in Fashion",
+   "genre": "Reality",
+   "network": "Netflix",
+   "seasons": 2,
+   "watchedPct": 100,
+   "firstSeasonYear": 2020,
+   "lastSeasonYear": 2023,
+   "rating": null,
+   "dateWatched": "2023-03-21",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/r571zPr9McSe4UNhh7WKigt2Hys.jpg"
+  },
+  {
+   "id": "t0193",
+   "name": "Scott Pilgrim Takes Off",
+   "genre": "Anime",
+   "network": "Netflix",
+   "seasons": 1,
+   "watchedPct": 100,
+   "firstSeasonYear": 2023,
+   "lastSeasonYear": 2023,
+   "rating": null,
+   "dateWatched": "2023-12-01",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/nHROk2C6bv8LqtvyYd0tCMURbxC.jpg"
+  },
+  {
+   "id": "t0194",
+   "name": "Pokémon Concierge",
+   "genre": "Anime",
+   "network": "Netflix",
+   "seasons": 1,
+   "watchedPct": 100,
+   "firstSeasonYear": 2023,
+   "lastSeasonYear": 2023,
+   "rating": null,
+   "dateWatched": "2024-01-05",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/2k53AsWsLrMtcbFyH0nVOqQjj2x.jpg"
+  },
+  {
+   "id": "t0195",
+   "name": "Mashle: Magic and Muscles",
+   "genre": "Anime",
+   "network": null,
+   "seasons": 1,
+   "watchedPct": 100,
+   "firstSeasonYear": 2023,
+   "lastSeasonYear": null,
+   "rating": null,
+   "dateWatched": "2025-03-20",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/yORTvQOQTZzZ9JRIpRH4QaIaQBm.jpg"
+  },
+  {
+   "id": "t0196",
+   "name": "Steins;Gate 0",
+   "genre": "Anime",
+   "network": null,
+   "seasons": 1,
+   "watchedPct": 100,
+   "firstSeasonYear": 2018,
+   "lastSeasonYear": 2018,
+   "rating": null,
+   "dateWatched": "2026-01-06",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/zAlvi9hc7WrIVn1Z687EoLH3Xbl.jpg"
+  },
+  {
+   "id": "t0197",
+   "name": "Witch Hat Atelier",
+   "genre": "Anime/Fantasy",
+   "network": null,
+   "seasons": 1,
+   "watchedPct": 100,
+   "firstSeasonYear": 2026,
+   "lastSeasonYear": null,
+   "rating": null,
+   "dateWatched": "2026-09-01",
+   "coverUrl": "https://image.tmdb.org/t/p/w342/78m1Tv3suHmUryTI9VNPwKLKjHZ.jpg"
   }
  ]
 }
