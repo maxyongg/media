@@ -3456,6 +3456,15 @@
    "rating": null,
    "dateWatched": "2025-08-16",
    "coverUrl": "https://image.tmdb.org/t/p/w342/aFRDH3P7TX61FVGpaLhKr6QiOC1.jpg"
+  },
+  {
+   "id": "f0347",
+   "name": "Fjord",
+   "director": "Cristian Mungiu",
+   "genre": "Unknown",
+   "yearReleased": 2026,
+   "yearWatched": 2026,
+   "rating": 7
   }
  ]
 }
